@@ -1,0 +1,25 @@
+mixin card( imgSrc, imgAlt, cardText, cardPrice)
+
+	.card
+		a.card-heart-icon(href="#")
+			i.fas.fa-heart
+		.card__img
+			img(src="../img/"+ imgSrc alt =''+ imgAlt)
+		.card__text.
+			#{cardText}
+		.card__price #{cardPrice}
+		button(type="submit" class="btn") Купить
+
+mixin card--sale(prosent, imgSrc, imgAlt, cardText, priceOld, priceNew)
+	.card 
+		.card-label-sale #{prosent}
+		a.card-heart-icon(href="#")
+			i.fas.fa-heart
+		.card__img
+			img(src="../img/"+ imgSrc alt =''+ imgAlt)
+		.card__text.
+			#{cardText}
+		.card__price.card__price--sale
+			span.price-new #{priceOld}
+			span.price-old #{priceNew}
+		button(type="submit" class="btn") Купить
