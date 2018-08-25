@@ -1,0 +1,52 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Цветовая схема';
+	- var pageClass= "index-page";
+
+block content
+	.container.text-center
+		h3 Цветовая схема для кнопок
+		.basic-block
+			+basic-block-item('btn-cart','@btn-cart' )
+			+basic-block-item('btn-red','@btn-red' )
+			+basic-block-item('btn-blue','@btn-blue' )
+
+		h3 Цветовая схема для текста
+		.basic-block
+			+basic-block-item('color-text','@text' )
+			+basic-block-item('color-text-green','@color-text-green' )
+			+basic-block-item('color-text-red','@color-text-red' )
+			+basic-block-item('color-text','@text' )
+			+basic-block-item('color-text-grey-dark','@color-text-grey-dark' )
+
+		h3 Цветовая схема ассортимента для карточки товара
+		.basic-block
+			+basic-block-item('color-coral','@coral' )
+			+basic-block-item('color-seagreen','@seagreen' )
+			+basic-block-item('color-violet','@violet' )
+			+basic-block-item('color-gold','@gold' )
+			+basic-block-item('color-darkblue','@darkblue' )
+			+basic-block-item('color-brown','@brown' )
+
+		h3 Цветовая схема фонов
+		.basic-block
+			+basic-block-item('body-bg','@body-bg' )
+			+basic-block-item('color-blue','@blue' )
+			+basic-block-item('color-redlight','@redlight' )
+			+basic-block-item('color-fongreen','@fongreen' )
+			+basic-block-item('color-6','@red(лейбл скидка)' )
+
+		h3 Цветовая схема для градиентной линии
+		.basic-block
+			+basic-block-item('color-1','@color-1' )
+			+basic-block-item('color-2','@color-2' )
+			+basic-block-item('color-3','@color-3' )
+			+basic-block-item('color-4','@color-4' )
+			+basic-block-item('color-5','@color-5' )
+			+basic-block-item('color-6','@red' )
+			+basic-block-item('color-7','@color-7' )
+			+basic-block-item('color-8','@color-8' )
+			+basic-block-item('color-9','@color-9' )
+			+basic-block-item('color-10','@color-10' )
+			+basic-block-item('color-11','@color-11' )
