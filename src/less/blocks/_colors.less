@@ -1,0 +1,105 @@
+.basic-block {
+	width: 100%;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;	
+}
+
+.basic-block-item{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.basic-block-item__color{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+
+}
+.basic-block-item__color-name{
+	font-size: 16px;
+	font-weight: 700;
+}
+
+//-line-gradient
+.color-1 {background-color: @color-1;}
+.color-2 {background-color: @color-2;}
+.color-3 {background-color: @color-3;}
+.color-4 {background-color: @color-4;}
+.color-5 {background-color: @color-5;}
+.color-6 {background-color: @red;}
+.color-7 {background-color: @color-7;}
+.color-8 {background-color: @color-8;}
+.color-9 {background-color: @color-9;}
+.color-10 {background-color: @color-10;}
+.color-11 {background-color: @color-11;}
+
+//-text-color
+.color-text{background-color: @text;}
+.color-text-green{background-color: @text-green;}
+.color-text-red{background-color: @text-red;}
+.color-text-grey{background-color: @text-grey;}
+
+//-button-background
+.btn-cart{background-color: @btn-cart;}
+.btn-red{background-color: @btn-red;}
+.btn-blue{background-color: @btn-blue;}
+
+//-goods color
+.color-coral{background-color: @coral;}
+.color-seagreen{background-color: @seagreen;}
+.color-violet{background-color: @violet;}
+.color-gold{background-color: @gold;}
+.color-darkblue{background-color: @darkblue;}
+.color-brown{background-color: @brown;}
+
+//-fon color
+.body-bg{background-color: @body-bg;}
+.color-blue{background-color: @blue;}
+.color-redlight{background-color: @redlight;}
+.color-fongreen{background-color: @fongreen;}
+
+//line-gradient
+.line-gradient {
+	height: 3px;
+	background:linear-gradient(to right, 
+		@color-1 20%, 
+		@color-2 20%,@color-2 40%,
+		@color-3 40%,@color-3 60%,
+		@color-4 60%,@color-4 80%,
+		@color-5 80%,@color-5 100%);
+	
+	@media (min-width: 768px) {
+		background:linear-gradient(to right, 
+			@color-1 10%, 
+			@color-2 10%,@color-2 20%,
+			@color-3 20%,@color-3 30%,
+			@color-4 30%,@color-4 40%,
+			@color-5 40%,@color-5 50%,
+			@red 50%,@red 60%,
+			@color-7 60%,@color-7 70%,
+			@color-8 70%,@color-8 80%,
+			@color-9 80%,@color-9 90%,
+			@color-10 90%,@color-10 100%);
+	}
+
+	@media (min-width: 992px) {
+		background:linear-gradient(to right, 
+			@color-1 9.09%, 
+			@color-2 9.09%,@color-2 18.18%,
+			@color-3 18.18%,@color-3 27.27%,
+			@color-4 27.27%,@color-4 36.36%,
+			@color-5 36.36%,@color-5 45.45%,
+			@red 45.45%,@red 54.54%,
+			@color-7 54.54%,@color-7 63.63%,
+			@color-8 63.63%,@color-8 72.72%,
+			@color-9 72.72%,@color-9 81.81%,
+			@color-10 81.81%,@color-10 90.90%,
+			@color-11 90.90%,@color-11 99.99%);
+	}
+}
+
