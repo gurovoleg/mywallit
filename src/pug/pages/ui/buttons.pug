@@ -7,3 +7,63 @@ block variables
 block content
 	.container.container--left
 		.title Кнопки
+
+		p Кнопки Large
+		.section-ui
+			+button-cart-lg("В корзину", "#")
+		pre.
+			+button-cart-lg('В корзину','#')
+		.section-ui
+			+button-store-lg("Нет в наличии", "#")
+		pre.
+			+button-store-lg('Нет в наличии','#')
+		.section-ui(style="background-color: #004AAA;")
+			+button-detail-lg("Подробнее", "#")
+		pre.
+			+button-detail-lg('Подробнее','#')
+
+		p Кнопки Small
+		.section-ui
+			+button-cart-sm("В корзину", "#")
+		pre.
+			+button-cart-sm('В корзину','#')
+		.section-ui
+			+button-store-sm("Нет в наличии", "#")
+		pre.
+			+button-store-sm('Нет в наличии','#')
+		.section-ui(style="background-color: #004AAA;")
+			+button-detail-sm("Подробнее", "#")
+		pre.
+			+button-detail-sm('Подробнее','#')
+		
+		p Адаптивные кнопки
+		.section-ui
+			+button-buyclick("Купить в 1 клик", "#")
+		pre.
+			+button-buyclick("Купить в 1 клик", "#")
+		.section-ui
+			+button-addcart("Добавить в корзину", "#")
+		pre.
+			+button-addcart("Добавить в корзину", "#")
+
+		p Кнопки подписки Она / Он
+		.section-ui
+			+button-she("Она", "#")
+		pre.
+			+button-she("Она", "#")
+		.section-ui
+			+button-he("Он", "#")
+		pre.
+			+button-he("Он", "#")
+
+		p Кнопка оформить заказ
+		.section-ui
+			+button-order('Оформить заказ', '#', '14 679')
+		pre.
+			+button-order('Оформить заказ', '#', '14 679')
+
+		p Кнопка Показать еще
+		.section-ui
+			+button-more('Показать еще', '#')
+		pre.
+			+button-more('Показать еще', '#')

@@ -1,165 +1,232 @@
-.button {
-	.transition;
-	display: inline-block;
+@border-btn-detail: 7px;
+.button-cart {
+	display: block;
 	line-height: 1;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: @white;
+	background: @btn-cart;
+	text-transform: uppercase;
 	outline: none;
-
-	border-width: 2px;
-	border-color: rgb(221, 232, 238);
-	border-style: solid;
-	border-radius: 22px;
-
-	padding-bottom: 0.9em;
-	padding-top: 0.7em;
-	padding-left: 1.25em;
-	padding-right: 1.25em;
-
-	color: #037EC6;
-	background-color: #FFF;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: 700;
-
-	&:hover,
-	&:focus {
-		border-color: #DDE8EE;
-		background-color: #DDE8EE;
+	transition: 0.2s ease-in;
+	&:hover, &:focus {
+		text-decoration: none;
+		background: @btn-cart-hover;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		color: @white;
 	}
-
 	&:active {
-		border-color: #b4dff6;
-		background-color: #b4dff6;
+		text-decoration: none;
+		background: @btn-cart-hover;
+		color: @white;
+		box-shadow: none;
+	}
+	&--large {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+	&--small {		
+		font-size: 14px;
+		width: 140px;
+		padding-top: 13px;
+		padding-bottom: 13px;
 	}
 }
 
-.button--icon-right svg {
-	margin-left: 5px;
-}
-
-.button--icon-left svg {
-	margin-right: 5px;
-}
-
-.button--edit {
-	border-color: #FFBA00;
-	color: #FFF;
-	background-color: #FFBA00;
-
-	&:hover,
-	&:focus {
-		border-color: #FFCF3E;
-		background-color: #FFCF3E;
-	}
-
+.button-store {
+	display: block;
+	line-height: 1;
+	text-transform: uppercase;
+	outline: none;
+	color: @white;
+	background: @btn-store;
+	text-align: center;
+	letter-spacing: 0.05em;
+	transition: 0.2s ease-in;
+	&:hover, &:focus {
+		text-decoration: none;
+		background: @btn-store-hover;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		color: @white;
+		}
 	&:active {
-		border-color: #F29A00;
-		background-color: #F29A00;
+		text-decoration: none;
+		background: @btn-store-hover;
+		color: @white;
+		box-shadow: none;
+	}
+	&--large {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	&--small {
+		font-size: 14px;
+		width: 140px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 }
 
-.button--remove {
-	border-color: #b51919;
-	color: #FFF;
-	background-color: #b51919;
-
-	&:hover,
-	&:focus {
-		border-color: #e70c0c;
-		background-color: #e70c0c;
+.button-detail {
+	display: block;
+	line-height: 1;
+	text-align: center;
+	letter-spacing: 0.08em;
+	color: @white;
+	border: 1px solid @white;
+	border-radius: @border-btn-detail;
+	outline: none;
+	transition: 0.2s ease-in;
+	&:hover {
+		text-decoration: none;
+		color: @white;
 	}
-
-	&:active {
-		border-color: #990101;
-		background-color: #990101;
+	&--large {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	&--small {
+		font-size: 16px;
+		width: 140px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+.button-wide {
+	display: block;
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+	&--buyclick {
+	color: @btn-text-buy-click;
+	border: 1px solid @black;
+		&:hover, &focus {
+			text-decoration: none;
+			color: @btn-text-buy-click;
+		}
+	}
+	&--addcart {
+	background-color: @btn-cart;
+	color: @white;
+		&:hover, &focus {
+			text-decoration: none;
+			color: @white;
+			background: @btn-cart-hover;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			text-decoration: none;
+			background: @btn-cart-hover;
+			color: @white;
+			box-shadow: none;
+		}
+	}
+}
+@media @desktop {
+	.button-wide {
+		width: 344px;
+	}
+}
+@media @desktopXL {
+	.button-wide {
+		width: 330px;
 	}
 }
 
-.button--save {
-	border-color: #037ec6;
-	color: #FFF;
-	background-color: #037ec6;
-
-	&:hover,
-	&:focus {
-		border-color: #0094eb;
-		background-color: #0094eb;
-	}
-
-	&:active {
-		border-color: #0069a7;
-		background-color: #0069a7;
-	}
-}
-
-.button--enter {
-	.transition;
-	border-color: #fff;
-	color: #037ec6;
-	background-color: #fff;
-	box-shadow: 0px 6px 16px 1px rgba(0, 0, 0, 0.55);
-
-	&:hover,
-	&:focus {
-		border-color: #037ec6;
-		background-color: #037ec6;
-		color: #fff;
-	}
-
-	&:active {
-		border-color: #006ba9;
-		background-color: #006ba9;
-		color: #fff;
-	}
-}
-
-.button--profile {
-	border: none;
-	color: #FFF;
-	background-color: rgba(34, 34, 34, 0.25);
-
-	background: rgba(34, 34, 34, 0.25);
-
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
-	height: 26px;
-	
-
-	font-weight: 400;
-	font-size: 13px;
-
-	&:hover,
-	&:focus {
-		background-color: rgba(34, 34, 34, 0.34);
-	}
-
-	&:active {
-		background-color: rgba(34, 34, 34, 0.60);
-	}
-}
-
-.button--small {
-	padding-bottom: 0.8em;
-	padding-top: 0.45em;
+.button-subscribe {
+	display: block;
+	width: 60px;
+	line-height: 1;
 	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	&--she {
+		background-color: @btn-red;
+	}
+	&--he {
+		background-color: @btn-blue;
+	}
 }
 
-.button--editsmall {
-	.button--small;
-	.button--edit;
-	height: 2.25em;
-	padding-top: 0.4em;
+.button-order__link {
+	line-height: 1;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	color: @white;
+	&:hover {
+		color: @white;
+		text-decoration: none;
+	}
+}
+.button-order-block {
+	background-color: @btn-green;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 17px;
+	padding-bottom: 13px;
+	padding-left: 13px;
+	padding-right: 8px;
+}
+@media @tablet {
+	.button-order-block {
+		padding-right: 25px;
+	}
+}
+.button-order__text {
+	text-transform: uppercase;
 }
 
-.button--savesmall {
-	.button--small;
-	.button--save;
-	height: 2.25em;
-	padding-top: 0.4em;
+.button-apply {
+	display: block;
+	width: 254px;
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	background-color: @btn-green;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	text-transform: uppercase;
 }
 
-.button--removesmall {
-	.button--small;
-	.button--remove;
-	height: 2.25em;
-	padding-top: 0.4em;
+.button-more {
+	display: block;
+	width: 100%;
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	background-color: @btn-green;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	text-transform: uppercase;
+}
+@media @desktop {
+	.button-more {
+		width: 407px;
+	}
+}
+@media @desktopXL {
+	.button-more {
+		width: 472px;
+	}
 }
