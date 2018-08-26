@@ -1,0 +1,8 @@
+mixin card-product-text(cardColor, cardTitle, cardText )
+	.card-description.card-description--color(style="background-color:"+ cardColor)
+		.card-description__title #{cardTitle}
+		.card-description__text  #{cardText}
+		button(type="submit") BUTTON
+
+mixin card-product-img(bgColor, imgSrc, imgHeight )
+	.card-description.card-description--img(style="background:"+ bgColor+" url('../img/"+imgSrc+"') center no-repeat; background-size: cover; height: "+imgHeight)

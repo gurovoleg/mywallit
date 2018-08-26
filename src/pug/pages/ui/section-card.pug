@@ -6,8 +6,24 @@ block variables
 
 block content
 	.container.container--left
-		.title Карточка раздела
-		.card-description
-			.card-description__title Title
-			.card-description__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tempora corporis accusamus dolores fugiat consequuntur minima nihil vel  Corporis, error.
-			button(type="submit") BUTTON
+		.title Карточка раздела с описанием
+		.row
+			.col-md-6.col-xl-4
+				+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+			.col-md-6.col-xl-4
+				+card-product-text('#DC1019;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+			.col-md-6.col-xl-4
+				+card-product-text('#61B39B;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+		.title-4 добавить карточку с описанием 
+		pre.
+			.col-md-6.col-xl-4
+				+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+		.title-4 миксин для карточки с описание
+		pre.
+			mixin card-product-text(cardColor, cardTitle, cardText )
+				.card-description.card-description--color(style="background-color:"+ cardColor)
+					.card-description__title #{cardTitle}
+					.card-description__text  #{cardText}
+					button(type="submit") BUTTON
+
+		
