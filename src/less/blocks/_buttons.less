@@ -13,19 +13,23 @@
 	width: 140px;
 	padding-top: 13px;
 	padding-bottom: 13px;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 		background: @btn-cart-hover;
 		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 		color: @white;
+		
+
 	}
 	&:active {
 		text-decoration: none;
-		background: @btn-cart-hover;
+		background: @btn-cart-active;
 		color: @white;
 		box-shadow: none;
 	}
 }
+
 @media @desktop {
 	.button-cart {
 		font-size: 16px;
@@ -49,12 +53,13 @@
 	width: 140px;
 	padding-top: 14px;
 	padding-bottom: 14px;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 		background: @btn-store-hover;
 		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 		color: @white;
-		}
+	}
 	&:active {
 		text-decoration: none;
 		background: @btn-store-hover;
@@ -62,6 +67,7 @@
 		box-shadow: none;
 	}
 }
+
 @media @desktop {
 	.button-store {
 		font-size: 16px;
@@ -87,19 +93,21 @@
 	width: 140px;
 	padding-top: 7px;
 	padding-bottom: 7px;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 		color: @white;
-		background-color: fade(@white, 10%);
+		background-color: fade(@white, 30%);
 		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 	}
 	&:active {
 		text-decoration: none;
-		background: transparent;
+		background-color: fade(@white, 15%);
 		color: @white;
 		box-shadow: none;
 	}
 }
+
 @media @desktop {
 	.button-detail {
 		font-size: 16px;
@@ -123,24 +131,32 @@
 	transition: 0.2s ease-in;
 	border: 1px solid transparent;
 	&--buyclick {
-	color: @btn-text-buy-click;
-	border: 1px solid @black;
-		&:hover, &focus {
+		color: @btn-text-buy-click;
+		border: 1px solid @black;
+		&:hover,
+		&focus {
 			text-decoration: none;
 			color: @btn-text-buy-click;
-			background-color: darken(@white, 20%);
+			background-color: @black;
+			color: @white;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+			
 		}
 		&:active {
 			text-decoration: none;
 			background-color: transparent;
 			color: @btn-text-buy-click;
 			box-shadow: none;
+			color: @white;
+			background-color: lighten(@black, 30%);
+			border-color: lighten(@black, 30%);
 		}
 	}
 	&--addcart {
-	background-color: @btn-cart;
-	color: @white;
-		&:hover, &focus {
+		background-color: @btn-cart;
+		color: @white;
+		&:hover,
+		&focus {
 			text-decoration: none;
 			color: @white;
 			background: @btn-cart-hover;
@@ -154,11 +170,13 @@
 		}
 	}
 }
+
 @media @desktop {
 	.button-wide {
 		width: 344px;
 	}
 }
+
 @media @desktopXL {
 	.button-wide {
 		width: 330px;
@@ -178,7 +196,8 @@
 	transition: 0.2s ease-in;
 	&--she {
 		background-color: @btn-red;
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background-color: lighten(@btn-red, 5%);
 			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 		}
@@ -189,7 +208,8 @@
 	}
 	&--he {
 		background-color: @btn-blue;
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background-color: lighten(@btn-blue, 5%);
 			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 		}
@@ -198,7 +218,8 @@
 			box-shadow: none;
 		}
 	}
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: @white;
 		text-decoration: none;
 	}
@@ -215,6 +236,7 @@
 		text-decoration: none;
 	}
 }
+
 .button-order-block {
 	background-color: @btn-green;
 	display: flex;
@@ -224,25 +246,27 @@
 	padding-left: 13px;
 	padding-right: 8px;
 	transition: 0.2s ease-in;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: lighten(@btn-green, 5%);
 	}
 	&:active {
 		background-color: @btn-green;
 	}
 }
+
 @media @tablet {
 	.button-order-block {
 		padding-right: 25px;
 	}
 }
+
 .button-order__text {
 	text-transform: uppercase;
 }
 
 .button-apply {
 	display: block;
-	width: 254px;
 	line-height: 1;
 	font-size: 16px;
 	text-align: center;
@@ -253,7 +277,8 @@
 	padding-bottom: 16px;
 	text-transform: uppercase;
 	transition: 0.2s ease-in;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: @white;
 		text-decoration: none;
 		background-color: lighten(@btn-green, 5%);
@@ -276,7 +301,8 @@
 	padding-bottom: 13px;
 	text-transform: uppercase;
 	transition: 0.2s ease-in;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: @white;
 		text-decoration: none;
 		background-color: lighten(@btn-green, 5%);
@@ -285,14 +311,15 @@
 		background-color: @btn-green;
 	}
 }
+
 @media @desktop {
 	.button-more {
-		width: 407px;
 		font-size: 16px;
 		padding-top: 16px;
 		padding-bottom: 16px;
 	}
 }
+
 @media @desktopXL {
 	.button-more {
 		width: 472px;
