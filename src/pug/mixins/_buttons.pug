@@ -1,25 +1,14 @@
 mixin button(text, link)
 	a(class="button" href=link)&attributes(attributes) #{text}
 
-//- Button Large
-mixin button-cart-lg(text, link, width)
-	a(class="button-cart button-cart--large" href=link)&attributes(attributes) #{text}
+mixin button-cart(text, link)
+	a(class="button-cart" href=link)&attributes(attributes) #{text}
 
-mixin button-store-lg(text, link)
-	a(class="button-store button-store--large" href=link)&attributes(attributes) #{text}
+mixin button-store(text, link)
+	a(class="button-store" href=link)&attributes(attributes) #{text}
 
-mixin button-detail-lg(text, link)
-	a(class="button-detail button-detail--large" href=link)&attributes(attributes) #{text}
-
-//- Button Small
-mixin button-cart-sm(text, link)
-	a(class="button-cart button-cart--small" href=link)&attributes(attributes) #{text}
-
-mixin button-store-sm(text, link)
-	a(class="button-store button-store--small" href=link)&attributes(attributes) #{text}
-
-mixin button-detail-sm(text, link)
-	a(class="button-detail button-detail--small" href=link)&attributes(attributes) #{text}
+mixin button-detail(text, link)
+	a(class="button-detail" href=link)&attributes(attributes) #{text}
 
 //- Buttons add in cart and buy on 1 click
 mixin button-buyclick(text, link)

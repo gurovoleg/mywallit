@@ -9,6 +9,10 @@
 	text-transform: uppercase;
 	outline: none;
 	transition: 0.2s ease-in;
+	font-size: 14px;
+	width: 140px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 	&:hover, &:focus {
 		text-decoration: none;
 		background: @btn-cart-hover;
@@ -21,17 +25,13 @@
 		color: @white;
 		box-shadow: none;
 	}
-	&--large {
+}
+@media @desktop {
+	.button-cart {
 		font-size: 16px;
 		width: 160px;
-		padding-top: 18px;
-		padding-bottom: 18px;
-	}
-	&--small {		
-		font-size: 14px;
-		width: 140px;
-		padding-top: 13px;
-		padding-bottom: 13px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 	}
 }
 
@@ -45,6 +45,10 @@
 	text-align: center;
 	letter-spacing: 0.05em;
 	transition: 0.2s ease-in;
+	font-size: 14px;
+	width: 140px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 	&:hover, &:focus {
 		text-decoration: none;
 		background: @btn-store-hover;
@@ -57,19 +61,15 @@
 		color: @white;
 		box-shadow: none;
 	}
-	&--large {
+}
+@media @desktop {
+	.button-store {
 		font-size: 16px;
 		width: 160px;
-		padding-top: 18px;
-		padding-bottom: 18px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 		padding-left: 2px;
 		padding-right: 2px;
-	}
-	&--small {
-		font-size: 14px;
-		width: 140px;
-		padding-top: 14px;
-		padding-bottom: 14px;
 	}
 }
 
@@ -83,23 +83,32 @@
 	border-radius: @border-btn-detail;
 	outline: none;
 	transition: 0.2s ease-in;
-	&:hover {
+	font-size: 16px;
+	width: 140px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	&:hover, &:focus {
 		text-decoration: none;
 		color: @white;
+		background-color: fade(@white, 10%);
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 	}
-	&--large {
+	&:active {
+		text-decoration: none;
+		background: transparent;
+		color: @white;
+		box-shadow: none;
+	}
+}
+@media @desktop {
+	.button-detail {
 		font-size: 16px;
 		width: 160px;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
-	&--small {
-		font-size: 16px;
-		width: 140px;
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
 }
+
 .button-wide {
 	display: block;
 	line-height: 1;
@@ -111,12 +120,21 @@
 	padding-bottom: 15px;
 	text-transform: uppercase;
 	font-weight: 500;
+	transition: 0.2s ease-in;
+	border: 1px solid transparent;
 	&--buyclick {
 	color: @btn-text-buy-click;
 	border: 1px solid @black;
 		&:hover, &focus {
 			text-decoration: none;
 			color: @btn-text-buy-click;
+			background-color: darken(@white, 20%);
+		}
+		&:active {
+			text-decoration: none;
+			background-color: transparent;
+			color: @btn-text-buy-click;
+			box-shadow: none;
 		}
 	}
 	&--addcart {
@@ -155,13 +173,34 @@
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: @white;
-	padding-top: 18px;
-	padding-bottom: 18px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	transition: 0.2s ease-in;
 	&--she {
 		background-color: @btn-red;
+		&:hover, &:focus {
+			background-color: lighten(@btn-red, 5%);
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			background-color: @btn-red;
+			box-shadow: none;
+		}
 	}
 	&--he {
 		background-color: @btn-blue;
+		&:hover, &:focus {
+			background-color: lighten(@btn-blue, 5%);
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			background-color: @btn-blue;
+			box-shadow: none;
+		}
+	}
+	&:hover, &:focus {
+		color: @white;
+		text-decoration: none;
 	}
 }
 
@@ -170,6 +209,7 @@
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	color: @white;
+	transition: 0.2s ease-in;
 	&:hover {
 		color: @white;
 		text-decoration: none;
@@ -179,10 +219,17 @@
 	background-color: @btn-green;
 	display: flex;
 	justify-content: space-between;
-	padding-top: 17px;
-	padding-bottom: 13px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	padding-left: 13px;
 	padding-right: 8px;
+	transition: 0.2s ease-in;
+	&:hover, &:focus {
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
 }
 @media @tablet {
 	.button-order-block {
@@ -202,27 +249,48 @@
 	letter-spacing: 0.05em;
 	color: @white;
 	background-color: @btn-green;
-	padding-top: 18px;
-	padding-bottom: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	text-transform: uppercase;
+	transition: 0.2s ease-in;
+	&:hover, &:focus {
+		color: @white;
+		text-decoration: none;
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
 }
 
 .button-more {
 	display: block;
 	width: 100%;
 	line-height: 1;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: @white;
 	background-color: @btn-green;
-	padding-top: 18px;
-	padding-bottom: 18px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 	text-transform: uppercase;
+	transition: 0.2s ease-in;
+	&:hover, &:focus {
+		color: @white;
+		text-decoration: none;
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
 }
 @media @desktop {
 	.button-more {
 		width: 407px;
+		font-size: 16px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 	}
 }
 @media @desktopXL {

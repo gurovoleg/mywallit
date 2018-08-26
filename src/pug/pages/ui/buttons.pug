@@ -8,33 +8,47 @@ block content
 	.container.container--left
 		.title Кнопки
 
-		p Кнопки Large
+		p Кнопки
 		.section-ui
-			+button-cart-lg("В корзину", "#")
+			+button-cart("В корзину", "#")
 		pre.
-			+button-cart-lg('В корзину','#')
+			+button-cart('В корзину','#')
 		.section-ui
-			+button-store-lg("Нет в наличии", "#")
+			+button-store("Нет в наличии", "#")
 		pre.
-			+button-store-lg('Нет в наличии','#')
+			+button-store('Нет в наличии','#')
 		.section-ui(style="background-color: #004AAA;")
-			+button-detail-lg("Подробнее", "#")
+			+button-detail("Подробнее", "#")
 		pre.
-			+button-detail-lg('Подробнее','#')
+			+button-detail('Подробнее','#')
 
-		p Кнопки Small
-		.section-ui
-			+button-cart-sm("В корзину", "#")
-		pre.
-			+button-cart-sm('В корзину','#')
-		.section-ui
-			+button-store-sm("Нет в наличии", "#")
-		pre.
-			+button-store-sm('Нет в наличии','#')
-		.section-ui(style="background-color: #004AAA;")
-			+button-detail-sm("Подробнее", "#")
-		pre.
-			+button-detail-sm('Подробнее','#')
+		//- p Кнопки Large
+		//- .section-ui
+		//- 	+button-cart-lg("В корзину", "#")
+		//- pre.
+		//- 	+button-cart-lg('В корзину','#')
+		//- .section-ui
+		//- 	+button-store-lg("Нет в наличии", "#")
+		//- pre.
+		//- 	+button-store-lg('Нет в наличии','#')
+		//- .section-ui(style="background-color: #004AAA;")
+		//- 	+button-detail-lg("Подробнее", "#")
+		//- pre.
+		//- 	+button-detail-lg('Подробнее','#')
+
+		//- p Кнопки Small
+		//- .section-ui
+		//- 	+button-cart-sm("В корзину", "#")
+		//- pre.
+		//- 	+button-cart-sm('В корзину','#')
+		//- .section-ui
+		//- 	+button-store-sm("Нет в наличии", "#")
+		//- pre.
+		//- 	+button-store-sm('Нет в наличии','#')
+		//- .section-ui(style="background-color: #004AAA;")
+		//- 	+button-detail-sm("Подробнее", "#")
+		//- pre.
+		//- 	+button-detail-sm('Подробнее','#')
 		
 		p Адаптивные кнопки
 		.section-ui
@@ -61,6 +75,12 @@ block content
 			+button-order('Оформить заказ', '#', '14 679')
 		pre.
 			+button-order('Оформить заказ', '#', '14 679')
+		
+		p Кнопка Применить
+		.section-ui
+			+button-apply('Применить', '#')
+		pre.
+			+button-apply('Применить', '#')
 
 		p Кнопка Показать еще
 		.section-ui
