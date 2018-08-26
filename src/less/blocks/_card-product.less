@@ -31,14 +31,24 @@
 .card-heart-icon:hover {color: @red;}
 
 .card-product__img {
+	
 	height: 125px;	
 	overflow:hidden;
 	margin-bottom: 8px;	
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	transition: 1s;
 	@media @mobile {height: 176px;}	
-	@media @desktop {height: 196px;}
+	@media @desktop {
+		cursor:pointer;
+		width: 200px;
+		height: 196px;}
+}
+
+.card-product__img:hover img {
+	@media @desktop {
+	display: none;}
 }
 .card-product__text {
 	font-size: 11px;

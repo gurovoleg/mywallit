@@ -1,21 +1,21 @@
-mixin card( imgSrc, imgAlt, cardText, cardPrice)
+mixin card( imgHover, imgSrc, imgAlt, cardText, cardPrice)
 
 	.card-product
 		a.card-heart-icon(href="#")
 			i.fas.fa-heart
-		.card-product__img
+		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
 			img(src="../img/"+ imgSrc alt =''+ imgAlt)
 		.card-product__text.
 			#{cardText}
 		.card-product__price #{cardPrice}
 		button(type="submit" class="btn") Купить
 
-mixin card--sale(prosent, imgSrc, imgAlt, cardText, priceOld, priceNew)
+mixin card--sale(prosent,imgHover, imgSrc, imgAlt, cardText, priceOld, priceNew)
 	.card-product 
 		.card-label-sale #{prosent}
 		a.card-heart-icon(href="#")
 			i.fas.fa-heart
-		.card-product__img
+		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
 			img(src="../img/"+ imgSrc alt =''+ imgAlt)
 		.card-product__text.
 			#{cardText}
