@@ -1,165 +1,327 @@
-.button {
-	.transition;
-	display: inline-block;
+@border-btn-detail: 7px;
+.button-cart {
+	display: block;
 	line-height: 1;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: @white;
+	background: @btn-cart;
+	text-transform: uppercase;
 	outline: none;
-
-	border-width: 2px;
-	border-color: rgb(221, 232, 238);
-	border-style: solid;
-	border-radius: 22px;
-
-	padding-bottom: 0.9em;
-	padding-top: 0.7em;
-	padding-left: 1.25em;
-	padding-right: 1.25em;
-
-	color: #037EC6;
-	background-color: #FFF;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: 700;
-
-	&:hover,
-	&:focus {
-		border-color: #DDE8EE;
-		background-color: #DDE8EE;
-	}
-
-	&:active {
-		border-color: #b4dff6;
-		background-color: #b4dff6;
-	}
-}
-
-.button--icon-right svg {
-	margin-left: 5px;
-}
-
-.button--icon-left svg {
-	margin-right: 5px;
-}
-
-.button--edit {
-	border-color: #FFBA00;
-	color: #FFF;
-	background-color: #FFBA00;
-
-	&:hover,
-	&:focus {
-		border-color: #FFCF3E;
-		background-color: #FFCF3E;
-	}
-
-	&:active {
-		border-color: #F29A00;
-		background-color: #F29A00;
-	}
-}
-
-.button--remove {
-	border-color: #b51919;
-	color: #FFF;
-	background-color: #b51919;
-
-	&:hover,
-	&:focus {
-		border-color: #e70c0c;
-		background-color: #e70c0c;
-	}
-
-	&:active {
-		border-color: #990101;
-		background-color: #990101;
-	}
-}
-
-.button--save {
-	border-color: #037ec6;
-	color: #FFF;
-	background-color: #037ec6;
-
-	&:hover,
-	&:focus {
-		border-color: #0094eb;
-		background-color: #0094eb;
-	}
-
-	&:active {
-		border-color: #0069a7;
-		background-color: #0069a7;
-	}
-}
-
-.button--enter {
-	.transition;
-	border-color: #fff;
-	color: #037ec6;
-	background-color: #fff;
-	box-shadow: 0px 6px 16px 1px rgba(0, 0, 0, 0.55);
-
-	&:hover,
-	&:focus {
-		border-color: #037ec6;
-		background-color: #037ec6;
-		color: #fff;
-	}
-
-	&:active {
-		border-color: #006ba9;
-		background-color: #006ba9;
-		color: #fff;
-	}
-}
-
-.button--profile {
-	border: none;
-	color: #FFF;
-	background-color: rgba(34, 34, 34, 0.25);
-
-	background: rgba(34, 34, 34, 0.25);
-
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
-	height: 26px;
-	
-
-	font-weight: 400;
-	font-size: 13px;
-
-	&:hover,
-	&:focus {
-		background-color: rgba(34, 34, 34, 0.34);
-	}
-
-	&:active {
-		background-color: rgba(34, 34, 34, 0.60);
-	}
-}
-
-.button--small {
-	padding-bottom: 0.8em;
-	padding-top: 0.45em;
+	transition: 0.2s ease-in;
 	font-size: 14px;
+	width: 140px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background: @btn-cart-hover;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		color: @white;
+		
+
+	}
+	&:active {
+		text-decoration: none;
+		background: @btn-cart-active;
+		color: @white;
+		box-shadow: none;
+	}
 }
 
-.button--editsmall {
-	.button--small;
-	.button--edit;
-	height: 2.25em;
-	padding-top: 0.4em;
+@media @desktop {
+	.button-cart {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
 }
 
-.button--savesmall {
-	.button--small;
-	.button--save;
-	height: 2.25em;
-	padding-top: 0.4em;
+.button-store {
+	display: block;
+	line-height: 1;
+	text-transform: uppercase;
+	outline: none;
+	color: @white;
+	background: @btn-store;
+	text-align: center;
+	letter-spacing: 0.05em;
+	transition: 0.2s ease-in;
+	font-size: 14px;
+	width: 140px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background: @btn-store-hover;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		color: @white;
+	}
+	&:active {
+		text-decoration: none;
+		background: @btn-store-hover;
+		color: @white;
+		box-shadow: none;
+	}
 }
 
-.button--removesmall {
-	.button--small;
-	.button--remove;
-	height: 2.25em;
-	padding-top: 0.4em;
+@media @desktop {
+	.button-store {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+
+.button-detail {
+	display: block;
+	line-height: 1;
+	text-align: center;
+	letter-spacing: 0.08em;
+	color: @white;
+	border: 1px solid @white;
+	border-radius: @border-btn-detail;
+	outline: none;
+	transition: 0.2s ease-in;
+	font-size: 16px;
+	width: 140px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: @white;
+		background-color: fade(@white, 30%);
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+	}
+	&:active {
+		text-decoration: none;
+		background-color: fade(@white, 15%);
+		color: @white;
+		box-shadow: none;
+	}
+}
+
+@media @desktop {
+	.button-detail {
+		font-size: 16px;
+		width: 160px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+.button-wide {
+	display: block;
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+	transition: 0.2s ease-in;
+	border: 1px solid transparent;
+	&--buyclick {
+		color: @btn-text-buy-click;
+		border: 1px solid @black;
+		&:hover,
+		&focus {
+			text-decoration: none;
+			color: @btn-text-buy-click;
+			background-color: @black;
+			color: @white;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+			
+		}
+		&:active {
+			text-decoration: none;
+			background-color: transparent;
+			color: @btn-text-buy-click;
+			box-shadow: none;
+			color: @white;
+			background-color: lighten(@black, 30%);
+			border-color: lighten(@black, 30%);
+		}
+	}
+	&--addcart {
+		background-color: @btn-cart;
+		color: @white;
+		&:hover,
+		&focus {
+			text-decoration: none;
+			color: @white;
+			background: @btn-cart-hover;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			text-decoration: none;
+			background: @btn-cart-hover;
+			color: @white;
+			box-shadow: none;
+		}
+	}
+}
+
+@media @desktop {
+	.button-wide {
+		width: 344px;
+	}
+}
+
+@media @desktopXL {
+	.button-wide {
+		width: 330px;
+	}
+}
+
+.button-subscribe {
+	display: block;
+	width: 60px;
+	line-height: 1;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	transition: 0.2s ease-in;
+	&--she {
+		background-color: @btn-red;
+		&:hover,
+		&:focus {
+			background-color: lighten(@btn-red, 5%);
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			background-color: @btn-red;
+			box-shadow: none;
+		}
+	}
+	&--he {
+		background-color: @btn-blue;
+		&:hover,
+		&:focus {
+			background-color: lighten(@btn-blue, 5%);
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			background-color: @btn-blue;
+			box-shadow: none;
+		}
+	}
+	&:hover,
+	&:focus {
+		color: @white;
+		text-decoration: none;
+	}
+}
+
+.button-order__link {
+	line-height: 1;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	color: @white;
+	transition: 0.2s ease-in;
+	&:hover {
+		color: @white;
+		text-decoration: none;
+	}
+}
+
+.button-order-block {
+	background-color: @btn-green;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 13px;
+	padding-right: 8px;
+	transition: 0.2s ease-in;
+	&:hover,
+	&:focus {
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
+}
+
+@media @tablet {
+	.button-order-block {
+		padding-right: 25px;
+	}
+}
+
+.button-order__text {
+	text-transform: uppercase;
+}
+
+.button-apply {
+	display: block;
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	background-color: @btn-green;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	text-transform: uppercase;
+	transition: 0.2s ease-in;
+	&:hover,
+	&:focus {
+		color: @white;
+		text-decoration: none;
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
+}
+
+.button-more {
+	display: block;
+	width: 100%;
+	line-height: 1;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @white;
+	background-color: @btn-green;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	text-transform: uppercase;
+	transition: 0.2s ease-in;
+	&:hover,
+	&:focus {
+		color: @white;
+		text-decoration: none;
+		background-color: lighten(@btn-green, 5%);
+	}
+	&:active {
+		background-color: @btn-green;
+	}
+}
+
+@media @desktop {
+	.button-more {
+		font-size: 16px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+}
+
+@media @desktopXL {
+	.button-more {
+		width: 472px;
+	}
 }
