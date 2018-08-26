@@ -6,7 +6,7 @@ block variables
 
 block content
 
-	.container.container--left
+	.container.container--left.bg-color
 		.title Карточки
 		.title-2 Карточка
 		
@@ -17,26 +17,15 @@ block content
 				.col-6.col-md-3
 					+card(  'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', 'Кошелек для монет N/S|Морской пейзаж', '4 863 р')
 				.col-6.col-md-3
-					+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
 				.col-6.col-md-3
-					+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', 'Кошелек для монет N/S|Морской пейзаж', '4 863 р')
-					
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
+		.title-2 Карточка обычная					
 		pre.
 			.col-6.col-md-3
 				+card( 'goods/purse-brown-hover.png','goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
 
 		.title-2 Карточка со скидкой
-		
-		.section-ui
-			.row
-				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
-				.col-6.col-md-3
-					+card--sale( '- 40%', 'goods/purse-brown-hover.png','goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
-				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
-				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
 		pre.
 			.col-6.col-md-3
 				+card--sale( '- 40%', 'purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р', '4 863 р' )

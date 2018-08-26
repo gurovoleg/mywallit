@@ -8,11 +8,12 @@
 	padding-top: 30px;	
 	text-align: center;
 	margin-bottom: 24px;
+	background-color: #fff;
 	@media @mobile {
 		padding: 24px 8px;
 		height: 376px;	}
 	
-	@media @desktop {
+	@media (min-width: 992px) {
 		padding: 24px 16px;
 		height: 400px;
 	}
@@ -22,11 +23,11 @@
 	width: 16px;
 	height: 16px;	
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 16px;
+	right: 16px;
 	color: @lightgrey;
 	transition: color 1s;
-	@media @tablet {right: 0px; top:-5px;}
+	
 }
 .card-heart-icon:hover {color: @red;}
 
@@ -51,6 +52,7 @@
 	display: none;}
 }
 .card-product__text {
+	color:@darkgrey;
 	font-size: 11px;
 	line-height: 12px;	
 	height: 64px;
@@ -70,6 +72,7 @@
 	}
 }
 .card-product__price{
+	color:@darkgrey;
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 8px;
@@ -80,8 +83,8 @@
 }
 .card-label-sale{
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 16px;
+	left: 0;
 	width: 50px;
 	height: 30px;
 	border-top-right-radius: 15px;
@@ -92,7 +95,7 @@
 	color: @white;
 	line-height: 16px;
 	padding-top: 8px;
-	@media @tablet {left: 0px; top:0;}
+	
 }
 .card__price--sale{
 	width: 140px;	
@@ -100,7 +103,7 @@
 	justify-content: space-around;
 	align-items: center;
 	@media (min-width: 992px){
-		width: 160px;
+		width: 160px;		
 	}
 }
 .price-new {
@@ -120,9 +123,30 @@
 	top: 49%;
 	left: -9%;
 }
+
+.colors-product {	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 140px;
+	@media (min-width: 992px){width: 160px;}
+}
+.colors-product__circle{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+
+}
+.card-product--colorscheme{
+	padding-bottom: 16px;
+	height: 392px;
+	@media (min-width: 768px){height: 434px;}
+}
 button {
 	width: 140px;
-	@media (min-width: 992px){
-		width: 160px;
-	}
+	margin-bottom: 16px;
+	@media (min-width: 992px){width: 160px;}
+}
+.bg-color{
+	background-color: #f3f3f3;
 }

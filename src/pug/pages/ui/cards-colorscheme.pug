@@ -1,0 +1,32 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточки - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left.bg-color
+		.title Карточки с цветовой схемой
+		.title-2 Карточка
+		
+		.section-ui
+			.row
+				.col-6.col-md-3
+					+card-with-colors( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+				.col-6.col-md-3
+					+card-with-colors(  'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', 'Кошелек для монет N/S|Морской пейзаж', '4 863 р')
+				.col-6.col-md-3
+					+card-sale-with-colors( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
+				.col-6.col-md-3
+					+card-sale-with-colors( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
+
+		.title-4 код для обычной карточки		
+		pre.
+			.col-6.col-md-3
+				+card-with-colors( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+
+		.title-4 код для карточки со скидкой		
+		pre.
+			.col-6.col-md-3
+				+card-sale-with-colors( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
