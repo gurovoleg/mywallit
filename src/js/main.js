@@ -2,13 +2,23 @@ $(document).ready(function() {
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
-	console.log(currentWindowSize);
-	
+		
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
+	});
+
+
+	$('#toggle-menu').on('click', function(){
+		$('.header-nav').slideToggle(200);
+		// if ($('.header-nav').css('display') == 'none') {
+		// 	$('.header-nav').show().animate({'left': '16px'},500);	
+		// } else {
+		// 	$('.header-nav').animate({'left': '-330px'},300).hide(500);	
+		// }
+		
 	});
 
 
@@ -53,6 +63,7 @@ $(document).ready(function() {
 				$('#menu-level-1 > li > ul').fadeOut();		
 			} else {
 				$('#menu-level-1 > li > ul').slideUp();		
+				// $('.header-nav').slideUp();		
 			}
 		}
 		
@@ -63,6 +74,7 @@ $(document).ready(function() {
 		var w = $(window).width();
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
 		    $('#menu-level-1 ul').hide();
+		    $('.header-nav').show();	
 		}
 		currentWindowSize = w;
 	});
