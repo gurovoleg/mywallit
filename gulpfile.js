@@ -180,6 +180,12 @@ gulp.task('copy:js', function() {
 		.pipe(browserSync.stream());
 });
 
+gulp.task('copy:fonts', function() {
+	return gulp.src('./src/fonts/**/*.*')
+		.pipe(gulp.dest('./build/fonts'))
+		.pipe(browserSync.stream());
+});
+
 gulp.task('clean:build', function() {
     return del('./build');
 });
@@ -197,7 +203,7 @@ gulp.task('copy:build:files', function(callback) {
 gulp.task('default', function(callback){
     runSequence(
     	'clean:build',
-    	['styles', 'pug', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:js'],
+    	['styles', 'pug', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:fonts', 'copy:js'],
     	'server',
 		callback
     )
