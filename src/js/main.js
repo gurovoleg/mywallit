@@ -55,8 +55,8 @@ $(document).ready(function() {
 	/* //Show search result */
 
 	$('#toggle-menu').on('click', function(){
-		$('.header-nav').slideToggle(200);
-		$('#header-search-section').fadeOut();
+		$('.header-nav').slideToggle(100);
+		$('#header-search-section').fadeOut(100);
 		// if ($('.header-nav').css('display') == 'none') {
 		// 	$('.header-nav').show().animate({'left': '16px'},500);	
 		// } else {
@@ -68,7 +68,7 @@ $(document).ready(function() {
 	// header menu navigation
 	$('#menu-level-1 > li > a').on('click', function(){
 		var $clickedItem = $(this);
-		$('#header-search-section').fadeOut();
+		$('#header-search-section').fadeOut(100);
 		
 
 		if ($(window).width() >= tabletWidth) {
@@ -78,14 +78,14 @@ $(document).ready(function() {
 			
 			// Проверяем, если клик по закрытому элемету, то сворачиваем открытые
 			if ($clickedItem.next().css('display') == 'none' || $clickedItem.next().css('display') == undefined) {
-				$('#menu-level-1 > li > ul').fadeOut();
-				$clickedItem.next().fadeIn().css('display','flex');		
+				$('#menu-level-1 > li > ul').fadeOut(100);
+				$clickedItem.next().fadeIn(100).css('display','flex');		
 			} else {
-				$clickedItem.next().fadeOut();		
+				$clickedItem.next().fadeOut(100);		
 			}
 		} else {
 			
-			$clickedItem.next().slideToggle();	
+			$clickedItem.next().slideToggle(100);	
 		}
 		
 	});
@@ -94,7 +94,7 @@ $(document).ready(function() {
 		var $clickedItem = $(this);
 			
 		if ($(window).width() <= tabletWidth) {
-			$clickedItem.parent().find('ul').slideToggle();	
+			$clickedItem.parent().find('ul').slideToggle(100);	
 		}
 		
 	});
