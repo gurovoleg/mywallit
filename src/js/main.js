@@ -2,13 +2,14 @@ $(document).ready(function() {
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
-		
+
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
+
 
 
 	$('#toggle-menu').on('click', function(){
@@ -20,7 +21,6 @@ $(document).ready(function() {
 		// }
 		
 	});
-
 
 	// header menu navigation
 	$('#menu-level-1 > li > a').on('click', function(){
@@ -63,7 +63,9 @@ $(document).ready(function() {
 				$('#menu-level-1 > li > ul').fadeOut();		
 			} else {
 				$('#menu-level-1 > li > ul').slideUp();		
+
 				// $('.header-nav').slideUp();		
+
 			}
 		}
 		
