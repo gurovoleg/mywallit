@@ -13,7 +13,11 @@ block content
 				.container
 					.row.justify-content-between.align-items-center
 						.col-6.col-lg-4.d-flex
-							+header-info__item("../../img/icons/marker.svg", "Санкт-Петербург")
+							.header-info__block.d-flex
+								img(src="../../img/icons/marker.svg", "Санкт-Петербург" alt="иконка")
+								span 
+									a(href="#!").menu-icon Санкт-Петербург
+							//- +header-info__item("../../img/icons/marker.svg", "Санкт-Петербург")
 						.col-lg-4.d-none.d-lg-flex
 							+header-info__item("../../img/icons/car.svg", "Доставка по всей России")(class="mr-20")
 							+header-info__item("../../img/icons/warranty.svg", "Гарантия 1 год")
@@ -40,7 +44,7 @@ block content
 							.menu-block.cart
 								.cart__image
 									img(src="../../img/icons/cart-color.svg" alt="иконка")
-								.cart__amount 5850р.
+								.cart__amount.menu-icon 5850р.
 			include ../../sections/header-nav.pug
 			.line-gradient
 				

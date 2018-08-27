@@ -52,3 +52,17 @@
     margin-@{margin}: @level;
 	.level-mixin-media(@margin,10,11,12);
 }
+
+// Иконка треугольник
+.icon-mixin(@color, @right, @top) {
+	position:relative;
+	
+	&::after {
+		content:'';
+		border: 5px solid transparent;	
+		border-top:7px solid @color;
+		position:absolute;
+		right:@right;
+		top:@top;
+	}
+}
