@@ -10,6 +10,14 @@
 	img {
 		margin-right: 6px;
 	}
+	a {
+		color:@white;
+		text-decoration: none;
+	}
+
+	.menu-icon {
+		.icon-mixin(@white, -20px, 6px);
+	}
 }
 
 // блок лого, регистрация, корзина и тд
@@ -91,6 +99,14 @@
 	align-items: top;
 	padding-top: 20px;
 
+	@media @desktop {
+		margin-right: 20px;
+	}
+
+	@media @desktopXL {
+		margin-right: 40px;
+	}
+
 	.cart__image {
 		@media @desktop {
 			margin-right: 8px;
@@ -107,4 +123,15 @@
 			display: block;
 		}
 	}
+	
+	.menu-icon {
+		.icon-mixin(@textMenu, -12px, 10px);
+	}
+
 }
+
+
+
+
+
+

@@ -22,6 +22,11 @@
 			padding:8px 16px;
 		}
 	}
+
+	// Иконка треугольник
+	.menu-icon {
+		.icon-mixin(@textMenu, 16px, 16px);
+	}
 }
 
 // Menu
@@ -111,7 +116,12 @@ ul.menu-level-2 > li > a {
 	@media @desktop {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+}
 
+// Убираем иконки на большем разрешении у меню второго уровня
+ul.menu-level-2 > li > a.menu-icon {
+	@media @desktop {
 		&::after {
 			border:none;
 		}
@@ -140,16 +150,18 @@ ul.menu-level-3 > li > a {
 	}
 }
 
-// Иконка 
-li a.menu-icon-open {
-	position:relative;
+
+
+// .menu-icon(@textMenu, 16px, 16px) {
+// 	position:relative;
 	
-	&::after {
-		content:'';
-		border: 5px solid transparent;	
-		border-top:7px solid @textMenu;
-		position:absolute;
-		right:16px;
-		top:16px;
-	}
-}
+// 	&::after {
+// 		content:'';
+// 		border: 5px solid transparent;	
+// 		border-top:7px solid @color;
+// 		position:absolute;
+// 		right:@right;
+// 		top:@top;
+// 	}
+// }
+

@@ -1,4 +1,22 @@
 $(document).ready(function() {
+
+		//-card hover effect
+	$(".product-img").hover(
+		function() {			
+			if($(window).width() >= 1152){
+			$this = $(this);
+			$this.attr("src", $this.attr('data-hover'));
+			}
+		},
+		function() {
+			if($(window).width() >= 1152){
+			$this = $(this);
+			$this.attr("src", $this.attr('data-src'));
+			}
+		}
+	);
+	//-end card hover effect
+	
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
@@ -9,7 +27,52 @@ $(document).ready(function() {
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
+  
+	/* Show search result */
+	$('input.header-search__input').keydown(function(){
+		var inputVal = $(this).val().length;
+		keycode = window.event.keyCode;
 
+		if( $(document).width() <= 784 ) {
+			$('.header-search-result-mobile').slideDown(400);
+			if( keycode == 8 && inputVal == 1 ) {
+				$('.header-search-result-mobile').slideUp(400);
+			}
+		}
+
+		if( $(document).width() > 784 ) {
+			$('.header-search-result-desktop').slideDown(400).css("display", "flex");
+			if( keycode == 8 && inputVal == 1 ) {
+				$('.header-search-result-desktop').slideUp(400);
+			}
+		}
+
+
+
+		$('.header-search__close').on('click', function(){
+			$('input.header-search__input').val('');
+			if( $(document).width() <= 784 ) {
+				$('.header-search-result-mobile').slideUp(400);
+				$('.header-search-result-desktop').slideUp(400);
+			}
+			if( $(document).width() > 784 ) {
+				$('.header-search-result-mobile').slideUp(400);
+				$('.header-search-result-desktop').slideUp(400);
+			}
+		});
+
+		$(window).resize(function(){
+			if( $(window).width() <= 784 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "none");
+				$('.header-search-result-mobile').css("display", "block");
+			}
+			if( $(window).width() > 784 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "flex");
+				$('.header-search-result-mobile').css("display", "none");
+			}
+		});
+	});
+	/* //Show search result */
 
 
 	$('#toggle-menu').on('click', function(){
