@@ -191,9 +191,10 @@
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: @white;
-	padding-top: 17px;
-	padding-bottom: 17px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 	transition: 0.2s ease-in;
+	outline: none;
 	&--she {
 		background-color: @btn-red;
 		&:hover,
@@ -224,7 +225,12 @@
 		text-decoration: none;
 	}
 }
-
+@media @desktop {
+	.button-subscribe {
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+}
 .button-order__link {
 	line-height: 1;
 	font-size: 16px;
