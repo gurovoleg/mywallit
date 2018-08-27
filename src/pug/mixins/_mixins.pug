@@ -1,1 +1,7 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+mixin header-info__item(img, title)
+	.header-info__block.d-flex&attributes(attributes)
+		img(src=img alt="иконка")
+		span #{title}
+
+
