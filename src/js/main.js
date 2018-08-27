@@ -11,7 +11,6 @@ $(document).ready(function() {
 	$('input.header-search__input').keydown(function(){
 		var inputVal = $(this).val().length;
 		keycode = window.event.keyCode;
-		console.log(keycode);
 
 		if( $(document).width() <= 784 ) {
 			$('.header-search-result-mobile').slideDown(400);
