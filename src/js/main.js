@@ -10,7 +10,7 @@ $(document).ready(function() {
 		$('.container').toggleClass('container--left');
 	});
 
-<<<<<<< HEAD
+
 	//-card hover effect
 	$(".product-img").hover(
 		function() {
@@ -26,10 +26,9 @@ $(document).ready(function() {
 			}
 		}
 	);	
-	//-end card hover effect*/
-	
-=======
 
+	//-end card hover effect
+  
 
 	$('#toggle-menu').on('click', function(){
 		$('.header-nav').slideToggle(200);
@@ -100,5 +99,4 @@ $(document).ready(function() {
 		currentWindowSize = w;
 	});
 
->>>>>>> develop
 });
