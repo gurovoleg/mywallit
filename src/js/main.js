@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 	//-card hover effect
 	$(".product-img").hover(
-		function() {
+		function() {			
 			if($(window).width() >= 1152){
 			$this = $(this);
 			$this.attr("src", $this.attr('data-hover'));
