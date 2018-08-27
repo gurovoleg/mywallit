@@ -1,4 +1,22 @@
 $(document).ready(function() {
+
+		//-card hover effect
+	$(".product-img").hover(
+		function() {			
+			if($(window).width() >= 1152){
+			$this = $(this);
+			$this.attr("src", $this.attr('data-hover'));
+			}
+		},
+		function() {
+			if($(window).width() >= 1152){
+			$this = $(this);
+			$this.attr("src", $this.attr('data-src'));
+			}
+		}
+	);
+	//-end card hover effect
+	
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
@@ -29,22 +47,7 @@ $(document).ready(function() {
 			}
 		}
 
-	//-card hover effect
-	$(".product-img").hover(
-		function() {			
-			if($(window).width() >= 1152){
-			$this = $(this);
-			$this.attr("src", $this.attr('data-hover'));
-			}
-		},
-		function() {
-			if($(window).width() >= 1152){
-			$this = $(this);
-			$this.attr("src", $this.attr('data-src'));
-			}
-		}
-	);
-	//-end card hover effect
+
 
 		$('.header-search__close').on('click', function(){
 			$('input.header-search__input').val('');
