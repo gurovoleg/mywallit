@@ -12,3 +12,15 @@ block content
 			.title-2.sales-hits__title Хиты продаж
 			.sales-hits-wrapper
 				.row
+					.col-6.col-md-3
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р', '6 990 р' )
+							+button-cart('В корзину','#')
+					.col-6.col-md-3
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р', '6 990 р' )
+							+button-cart('В корзину','#')
+					.col-6.col-md-3
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', 'Сумка большая, коллекция "Рига"', '1 990 р')
+							+button-store('Нет в наличии','#')
+					.col-6.col-md-3
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 893 р')
+							+button-cart('В корзину','#')
