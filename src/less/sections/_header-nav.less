@@ -1,0 +1,152 @@
+.header-menu {
+	position:absolute;
+	font-size: 16px;
+	letter-spacing: 0px;
+	
+	@media @desktop {
+		position:relative;
+	}
+
+	ul,li {
+		margin:0;
+		padding:0;
+		list-style: none;
+
+		a{
+			text-decoration:none;
+			display: block;
+			color:@textMenu;
+			padding:8px 16px;
+		}
+	}
+}
+
+// Menu
+ul.menu-level-1 {
+	display: flex;
+	width: 320px;
+	flex-direction: column;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+	@media @desktop {
+		flex-direction: row;	
+		width: 100%;
+		box-shadow: none;
+	}
+
+	@media @desktopXL {
+		font-size: 18px;
+	}
+
+	.text-salad {
+		color:@text-salad;
+	}
+	.text-red {
+		color:@text-red;
+	}
+}
+
+ul.menu-level-1 > li > a{
+	text-transform: uppercase;
+	border-bottom: 1px solid @borderMenu;
+
+	@media @desktop {
+		border:none;
+		padding-right: 40px;
+	}
+
+	&:hover {
+		text-decoration: none;	
+	}
+}
+
+
+// Submenu 1st level
+ul.menu-level-2 {
+	display: none;
+	position:static;
+	flex-direction: column;	
+	padding-bottom: 16px;
+	
+	@media @desktop {
+		position:absolute;
+		left:0px;
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 100%;
+		padding:8px 62px;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	}
+	
+	@media @desktopXL {
+		padding:8px 85px;
+	}
+}
+
+ul.menu-level-2 > li {
+
+	@media @desktop {
+		margin-right: 16px;
+	}
+	@media @desktopXL {
+		margin-right: 32px;
+	}
+
+	.line-gradient--menu {
+		margin-left: 16px;
+		margin-bottom: 8px;
+	
+		@media @desktop {
+			margin-left: 0;
+		}
+	}
+}
+
+ul.menu-level-2 > li > a {
+	color:@text-red;
+
+	@media @desktop {
+		padding-left: 0px;
+		padding-right: 0px;
+
+		&::after {
+			border:none;
+		}
+	}
+}
+
+// Submenu 2nd level
+ul.menu-level-3{
+	display: none;
+	
+	@media @desktop {
+		display: block;
+	}
+}
+
+ul.menu-level-3 > li > a {
+	@media @desktop {
+		padding:2px 0px;
+		transition: 0.5s;
+	}
+
+	&:hover {
+		color:@text-red;
+		text-decoration: underline;
+		transition:all 0.5s;
+	}
+}
+
+// Иконка 
+li a.menu-icon-open {
+	position:relative;
+	
+	&::after {
+		content:'';
+		border: 5px solid transparent;	
+		border-top:7px solid @textMenu;
+		position:absolute;
+		right:16px;
+		top:16px;
+	}
+}
