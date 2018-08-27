@@ -1,0 +1,110 @@
+// блок контакты, преимущества
+.header-info {
+	background-color: @text-green;
+	color:@white;
+	font-size: 14px;
+	padding:8px 0px;
+}
+
+.header-info__block {
+	img {
+		margin-right: 6px;
+	}
+}
+
+// блок лого, регистрация, корзина и тд
+.header-menu {
+	position:relative;
+	// border:1px dashed grey;
+
+	@media @desktop {
+		height: 114px;
+	}	
+
+	.row {
+		justify-content: space-between;
+		
+		@media @desktop {
+			justify-content: flex-end;
+		}
+	}
+	
+	.logo {
+		position:absolute;
+		background-image: url(../../img/logo/logo-mobile.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 45px;
+		height: 35px;
+		top:16px;
+		left:50%;
+		transform:translate(-50%);
+
+		@media @desktop {
+			background-image: url(../../img/logo/logo.svg);
+			width: 80px;
+			height: 74px;
+		}
+	}
+}
+
+.menu-block {
+	padding: 24px 24px;
+	cursor: pointer;
+
+	@media @desktop {
+		padding:24px 0px;
+	}
+}
+
+// регистрация
+.user-registration {
+	@media @desktop {
+		img {
+			display: none;
+		}
+	}
+}
+
+.user-registration__text {
+	display: none;
+	font-size: 14px;
+
+	@media @desktop {
+		display: block;
+	}
+
+	a {
+		text-decoration: underline;
+		color:@textMenu;
+
+		&:hover {
+			color:@text-red;
+		}
+	}
+}
+
+// корзина
+.cart {
+	display: flex;
+	align-items: top;
+	padding-top: 20px;
+
+	.cart__image {
+		@media @desktop {
+			margin-right: 8px;
+			margin-left: 8px;
+		}
+
+	}
+
+	.cart__amount {
+		display: none;
+		padding-top: 4px;
+		
+		@media @desktop {
+			display: block;
+		}
+	}
+}

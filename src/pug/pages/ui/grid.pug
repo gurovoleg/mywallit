@@ -9,21 +9,27 @@ block content
 		
 		.title Сетка на основе Bootstrap-grid-4
 		.title-5 Файл <code>"libs/bootstrap4-grid_customized/custom-grid.css"</code> подключен к основному шаблону
-		p Ширина колонок и отступов заданы согласно дизайну.
-		p Переопределены точки перелома и ширина контейнеров:
+		p Отступы между колонками:
+		pre.
+			Mobile: 8px
+			Tablet: 16px
+			Desktop: 16px
+			DesktopXL: 24px
+		p Переопределены точки перелома, ширина контейнеров, отступы контейнеров, рядов и колонок.
 		pre.
 			@media (min-width: 360px) {
 			  .container {
 			    max-width: 100%; } }
 			@media (min-width: 784px) {
 			  .container {
-			    max-width: 100%; } }
+			    max-width: 752px; } }
 			@media (min-width: 1152px) {
 			  .container {
-			    max-width: 1152px; } }
+			    max-width: 1064px; } }
 			@media (min-width: 1440px) {
 			  .container {
-			    max-width: 1440px; } } 
+			    max-width: 1392px; } } 
+
 		p Заданы переменные для медиа-запросов:
 		pre.
 			@mobile: ~"(min-width: 360px)";

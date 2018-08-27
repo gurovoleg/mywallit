@@ -1,0 +1,23 @@
+.social-block {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.social-block__title {
+	margin-bottom: 8px;
+}
+.social-block__item {	
+	margin-right: 20px;
+	margin-bottom: 8px;
+	width: 40px;
+	height: 40px;
+	transition: opacity 1s;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+.social-block__item:last-child {
+	margin-right: 0;
+}
