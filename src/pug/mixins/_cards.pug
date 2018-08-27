@@ -1,57 +1,56 @@
 //-миксин для обычной карточки
 mixin card( imgHover, imgSrc, imgAlt, cardText, cardPrice)
-
-	.card-product
-		a.card-heart-icon(href="#")
-			i.fas.fa-heart
-		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
-			img(src="../img/"+ imgSrc alt =''+ imgAlt)
-		.card-product__text.
-			#{cardText}
-		.card-product__price #{cardPrice}		
-		button(type="submit" class="btn") Купить
+	if block
+		.card-product
+			a.card-heart-icon(href="#")
+				i.fas.fa-heart
+			.card-product__img
+				img.product-img(src="../img/"+ imgSrc data= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
+			.card-product__text #{cardText}			
+			.card-product__price #{cardPrice}			
+			block
 
 //-миксин для карточки со скидкой
 mixin card--sale(prosent,imgHover, imgSrc, imgAlt, cardText, priceOld, priceNew)
-	.card-product 
-		.card-label-sale #{prosent}
-		a.card-heart-icon(href="#")
-			i.fas.fa-heart
-		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
-			img(src="../img/"+ imgSrc alt =''+ imgAlt)
-		.card-product__text.
-			#{cardText}
-		.card-product__price.card__price--sale
-			span.price-new #{priceOld}
-			span.price-old #{priceNew}
-		button(type="submit" class="btn") Купить
+	if block
+		.card-product 
+			.card-label-sale #{prosent}
+			a.card-heart-icon(href="#")
+				i.fas.fa-heart
+			.card-product__img
+				img.product-img(src="../img/"+ imgSrc data= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
+			.card-product__text.
+				#{cardText}
+			.card-product__price.card__price--sale
+				span.price-new #{priceOld}
+				span.price-old #{priceNew}
+			block
 
 //-миксин для обычной карточки с цветовой схемой товаров
 mixin card-with-colors( imgHover, imgSrc, imgAlt, cardText, cardPrice)
-
-	.card-product.card-product--colorscheme
-		a.card-heart-icon(href="#")
-			i.fas.fa-heart
-		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
-			img(src="../img/"+ imgSrc alt =''+ imgAlt)
-		.card-product__text.
-			#{cardText}
-		.card-product__price #{cardPrice}		
-		button(type="submit" class="btn") Купить
-		+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
-
+	if block
+		.card-product.card-product--colorscheme
+			a.card-heart-icon(href="#")
+				i.fas.fa-heart
+			.card-product__img
+				img.product-img(src="../img/"+ imgSrc data= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
+			.card-product__text.
+				#{cardText}
+			.card-product__price #{cardPrice}
+			block
+			
 //-миксин для карточки со скидкой и цветовой схемой
 mixin card-sale-with-colors(prosent,imgHover, imgSrc, imgAlt, cardText, priceOld, priceNew)
-	.card-product.card-product--colorscheme 
-		.card-label-sale #{prosent}
-		a.card-heart-icon(href="#")
-			i.fas.fa-heart
-		.card-product__img(style="background: url('../img/"+imgHover+"') bottom no-repeat; background-size: contain;")
-			img(src="../img/"+ imgSrc alt =''+ imgAlt)
-		.card-product__text.
-			#{cardText}
-		.card-product__price.card__price--sale
-			span.price-new #{priceOld}
-			span.price-old #{priceNew}
-		button(type="submit" class="btn") Купить
-		+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+	if block
+		.card-product.card-product--colorscheme
+			.card-label-sale #{prosent}
+			a.card-heart-icon(href="#")
+				i.fas.fa-heart
+			.card-product__img
+				img.product-img(src="../img/"+ imgSrc data= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
+			.card-product__text.
+				#{cardText}
+			.card-product__price.card__price--sale
+				span.price-new #{priceOld}
+				span.price-old #{priceNew}
+			block

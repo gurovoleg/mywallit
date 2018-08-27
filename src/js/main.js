@@ -7,4 +7,17 @@ $(document).ready(function() {
 		$('.container').toggleClass('container--left');
 	});
 
+	//-card hover effect
+	$(".product-img").hover(
+		function() {
+			$this = $(this);
+			$this.attr("src", $this.attr('data-hover'));
+		},
+		function() {
+			$this = $(this);
+			$this.attr("src", $this.attr('data'));
+			}
+	);	
+	//-end card hover effect*/
+	
 });
