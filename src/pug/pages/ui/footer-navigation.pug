@@ -1,0 +1,62 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Подвал - Навигация - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content
+			.section-ui
+				.title Подвал - Навигация
+			.section-ui
+				.footer-navigation
+					.footer-navigation-devide
+					.footer-navigation.footer-navigation--mobile
+						span.footer-navigation--item
+							a.footer-navigation--link(href="#") О компании
+						span.footer-navigation--item
+							a.footer-navigation--link(href="#") Адреса магазинов
+						span.footer-navigation--item
+							a.footer-navigation--link(href="#") Контакты
+						span.footer-navigation--item
+							a.footer-navigation--link(href="#") Оплата и доставка
+						span.footer-navigation--item
+							a.footer-navigation--link(href="#") Покупателю
+					.footer-navigation.footer-navigation--desktop
+						.footer-navigation--desktop-block
+							a.footer-navigation--desktop--title(href="#") 
+								strong О компании
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") О бренде
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Вакансии
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Сотрудничество
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Блог
+						.footer-navigation--desktop-block
+							a.footer-navigation--desktop--title(href="#")
+								strong Покупателю
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Клубная карта
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Подарочная карта
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Хранение и уход
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Конфиденциальность
+						.footer-navigation--desktop-block
+							a.footer-navigation--desktop--title(href="#") 
+								strong Оплата и доставка
+							span.footer-navigation--item
+								a.footer-navigation--link(href="#") Гарантия
+						.footer-navigation--desktop-block
+							a.footer-navigation--desktop--title(href="#")
+								strong Адреса магазинов
+						.footer-navigation--desktop-block
+							a.footer-navigation--desktop--title(href="#")
+								strong Контакты
+			.section-ui
+				pre.
+					ui/footer-navigation.pug
