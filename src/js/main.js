@@ -2,15 +2,67 @@ $(document).ready(function() {
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
-	console.log(currentWindowSize);
-	
+
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
+  
+	/* Show search result */
+	$('input.header-search__input').keydown(function(){
+		var inputVal = $(this).val().length;
+		keycode = window.event.keyCode;
 
+		if( $(document).width() <= 784 ) {
+			$('.header-search-result-mobile').slideDown(400);
+			if( keycode == 8 && inputVal == 1 ) {
+				$('.header-search-result-mobile').slideUp(400);
+			}
+		}
+
+		if( $(document).width() > 784 ) {
+			$('.header-search-result-desktop').slideDown(400).css("display", "flex");
+			if( keycode == 8 && inputVal == 1 ) {
+				$('.header-search-result-desktop').slideUp(400);
+			}
+		}
+
+		$('.header-search__close').on('click', function(){
+			$('input.header-search__input').val('');
+			if( $(document).width() <= 784 ) {
+				$('.header-search-result-mobile').slideUp(400);
+				$('.header-search-result-desktop').slideUp(400);
+			}
+			if( $(document).width() > 784 ) {
+				$('.header-search-result-mobile').slideUp(400);
+				$('.header-search-result-desktop').slideUp(400);
+			}
+		});
+
+		$(window).resize(function(){
+			if( $(window).width() <= 784 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "none");
+				$('.header-search-result-mobile').css("display", "block");
+			}
+			if( $(window).width() > 784 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "flex");
+				$('.header-search-result-mobile').css("display", "none");
+			}
+		});
+	});
+	/* //Show search result */
+
+	$('#toggle-menu').on('click', function(){
+		$('.header-nav').slideToggle(200);
+		// if ($('.header-nav').css('display') == 'none') {
+		// 	$('.header-nav').show().animate({'left': '16px'},500);	
+		// } else {
+		// 	$('.header-nav').animate({'left': '-330px'},300).hide(500);	
+		// }
+		
+	});
 
 	// header menu navigation
 	$('#menu-level-1 > li > a').on('click', function(){
@@ -53,6 +105,9 @@ $(document).ready(function() {
 				$('#menu-level-1 > li > ul').fadeOut();		
 			} else {
 				$('#menu-level-1 > li > ul').slideUp();		
+
+				// $('.header-nav').slideUp();		
+
 			}
 		}
 		
@@ -63,6 +118,7 @@ $(document).ready(function() {
 		var w = $(window).width();
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
 		    $('#menu-level-1 ul').hide();
+		    $('.header-nav').show();	
 		}
 		currentWindowSize = w;
 	});
