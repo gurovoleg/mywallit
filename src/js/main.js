@@ -18,7 +18,7 @@ $(document).ready(function() {
 		function() {
 			if($(window).width() >= 1152){
 			$this = $(this);
-			$this.attr("src", $this.attr('data'));
+			$this.attr("src", $this.attr('data-src'));
 			}
 		}
 	);	
