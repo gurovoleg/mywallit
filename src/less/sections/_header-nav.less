@@ -61,6 +61,7 @@ ul.menu-level-1 > li > a{
 	@media @desktop {
 		border:none;
 		padding-right: 40px;
+		padding-left: 0;
 	}
 
 	&:hover {
@@ -150,18 +151,23 @@ ul.menu-level-3 > li > a {
 	}
 }
 
+// Блок поиска в шапке навигация
+.search-block__title {
+	font-size: 16px;
+	padding-top:8px;
+	margin-right: 24px;
 
+	@media @desktopXL {
+		font-size: 18px;
+		margin-right: 90px;
+	}
+}
 
-// .menu-icon(@textMenu, 16px, 16px) {
-// 	position:relative;
-	
-// 	&::after {
-// 		content:'';
-// 		border: 5px solid transparent;	
-// 		border-top:7px solid @color;
-// 		position:absolute;
-// 		right:@right;
-// 		top:@top;
-// 	}
-// }
+.search-block__icon {
+	padding-top:8px;
+}
 
+// кдасс для вызова блока с поиском
+.toggle-search-block {
+	cursor: pointer;
+}

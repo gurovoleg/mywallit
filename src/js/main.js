@@ -123,4 +123,10 @@ $(document).ready(function() {
 		currentWindowSize = w;
 	});
 
+	// Вызываем меню с поиском
+	$('.toggle-search-block').on('click', function(){
+		console.log('search');
+		$('#header-search-section').fadeToggle();
+	});
+
 });
