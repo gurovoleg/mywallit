@@ -12,17 +12,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;	
-	margin-bottom: 16px;
+	//margin-bottom: 16px;
 	color: @white;
-	@media (min-width: 768px){
+	@media @tablet{
 		margin-bottom: 16px;
 		height: 250px;}
 	@media @desktop {
 		padding-top: 30px;
-		height: 335px;}
+		height: 321px;}
 	@media @desktopXL {
 		margin-bottom: 24px;
-		height: 321px;}
+		height: 335px;}
 }
 .card-description--color{
 	margin-bottom: 0;
@@ -33,7 +33,9 @@
 		margin-bottom: 24px;}
 }
 .card-description__title{
-	margin-bottom: 14px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
 	font-size: 16px;
 	@media @mobile {
 		font-size: 18px;		
@@ -43,21 +45,25 @@
 }
 .card-description__text{
 	font-size: 12px;
-	line-height: 1.2em;
-	height: 130px;
+	line-height: 1.4em;
+	height: 96px;
 	margin-bottom: 24px;
-	@media @mobile {		
+	@media @mobile {
+		line-height: 1.2em;		
 		font-size: 14px;}
 	@media (min-width: 480px) {
 		line-height: 1.5;
+		height: 91px;
 		}
-	@media (min-width: 768px) {line-height: 1.2em;}	
+	@media (min-width: 768px) {line-height: 1.3em;}	
 	@media @desktop {
+		height: 115px;
 		font-size: 18px;}
 }
 .card-description--img {
-	//background: url('../../img/bg/bg-blue-purse.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	height: 286px;
+	@media @tablet {height: 307px !important;}
+	@media (min-width: 480px) {height: 344px !important;}
+	@media @desktop {height: 340px !important;}
+	@media @desktopXL {height: 435px !important;}
 }
