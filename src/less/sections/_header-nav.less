@@ -25,7 +25,7 @@
 
 	// Иконка треугольник
 	.menu-icon {
-		.icon-mixin(@textMenu, 16px, 16px)
+		.icon-mixin(@textMenu, 16px, 16px);
 	}
 }
 
@@ -116,7 +116,12 @@ ul.menu-level-2 > li > a {
 	@media @desktop {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+}
 
+// Убираем иконки на большем разрешении у меню второго уровня
+ul.menu-level-2 > li > a.menu-icon {
+	@media @desktop {
 		&::after {
 			border:none;
 		}
