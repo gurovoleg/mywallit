@@ -1,3 +1,7 @@
+nav {
+	display: flex;
+	position:relative;
+}
 
 .header-nav {
 	display: none;
@@ -7,7 +11,7 @@
 	
 	@media @desktop {
 		display: flex;
-		position:relative;
+		position:static;
 	}
 
 	ul,li {
@@ -152,6 +156,16 @@ ul.menu-level-3 > li > a {
 }
 
 // Блок поиска в шапке навигация
+.search-block {
+	display: none;
+	margin-left: auto;
+
+	@media @desktop {
+		display: flex;
+	}
+
+}
+
 .search-block__title {
 	font-size: 16px;
 	padding-top:8px;

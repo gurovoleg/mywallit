@@ -56,6 +56,7 @@ $(document).ready(function() {
 
 	$('#toggle-menu').on('click', function(){
 		$('.header-nav').slideToggle(200);
+		$('#header-search-section').fadeOut();
 		// if ($('.header-nav').css('display') == 'none') {
 		// 	$('.header-nav').show().animate({'left': '16px'},500);	
 		// } else {
@@ -67,6 +68,8 @@ $(document).ready(function() {
 	// header menu navigation
 	$('#menu-level-1 > li > a').on('click', function(){
 		var $clickedItem = $(this);
+		$('#header-search-section').fadeOut();
+		
 
 		if ($(window).width() >= tabletWidth) {
 			
@@ -100,13 +103,12 @@ $(document).ready(function() {
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
 	$(document).on('click', function(e){
-		if ($('#menu-level-1').has(e.target).length == 0) {
+		if (($('#menu-level-1').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
 			if ($(window).width() > tabletWidth) {
 				$('#menu-level-1 > li > ul').fadeOut();		
 			} else {
 				$('#menu-level-1 > li > ul').slideUp();		
-
-				// $('.header-nav').slideUp();		
+				$('.header-nav').slideUp();		
 
 			}
 		}
