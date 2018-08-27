@@ -50,17 +50,12 @@
 }
 
 .menu-block {
-	padding: 24px 0px;
+	padding: 24px 24px;
 	cursor: pointer;
 
-	&:first-child {
-		margin-right: 48px;
-
-		@media @desktop {
-			margin-right: 0;
-		}	
+	@media @desktop {
+		padding:24px 0px;
 	}
-	
 }
 
 // регистрация
@@ -78,7 +73,6 @@
 
 	@media @desktop {
 		display: block;
-		padding-right: 0;
 	}
 
 	a {
