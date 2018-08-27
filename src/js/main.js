@@ -53,8 +53,6 @@ $(document).ready(function() {
 		});
 	});
 	/* //Show search result */
-=======
-
 
 	$('#toggle-menu').on('click', function(){
 		$('.header-nav').slideToggle(200);
