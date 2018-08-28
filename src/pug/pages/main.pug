@@ -8,5 +8,61 @@ block content
 	include ../sections/header-top.pug
 	include ../sections/header-nav.pug
 	.line-gradient
-	include ../sections/header-search.pug		
+	include ../sections/header-search.pug
+	
+	//- секция банер 1
+	.section-banner-1
+	
+	//- секция банер 2
+	.section-banner-2
+	
+	//- хиты продаж
+	.section-top-sales
+		.container
+			.title-1 Хиты продаж
+			.row
+				.col-6.col-md-3
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '6 990 р' )
+						+button-cart('В корзину','#')
+				.col-6.col-md-3
+					+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+						+button-cart('В корзину','#')
+				.col-6.col-md-3
+					+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', 'Кошелек для монет N/S|Морской пейзаж', '1 990 р')
+						+button-store('Нет в наличии','#')
+				.col-6.col-md-3
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '6 990 р' )
+						+button-cart('В корзину','#')
+
+	//- аксессуары
+	.section-accessories
+		.container
+			.title-3 Посмотреть все аксессуары
+			.row.d-flex.d-md-none.d-xl-flex
+				.col-md-6.col-xl-4
+					+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+					+card-product-img('#004AAA', 'bg/blue-purse.jpg', '286px;')
+				.col-md-6.col-xl-4
+					+card-product-img('#004AAA', 'bg/red-purse.jpg', '218px;')
+					+card-product-text('#DC1019;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+				
+				.col-md-6.col-xl-4
+					+card-product-text('#61B39B;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+					+card-product-img('#004AAA', 'bg/heart-purse.jpg', '262px;')
+
+			.row.d-none.d-md-flex.d-xl-none
+				.col-md-6
+					+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+					+card-product-img('#004AAA', 'bg/blue-purse.jpg', '307px;')(class="card-description--img-1")
+					+card-product-text('#DC1019;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+				.col-md-6
+					+card-product-img('#004AAA', 'bg/red-purse.jpg', '234px;')(class="card-description--img-2")
+					+card-product-text('#61B39B;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+					+card-product-img('#004AAA', 'bg/heart-purse.jpg', '281px;')(class="card-description--img-3")
+
+
+	//- Подвал
+	.footer
+
+
 	
