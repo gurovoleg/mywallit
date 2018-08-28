@@ -3,7 +3,10 @@
 		.container
 			.row.justify-content-between.align-items-center
 				.col-6.col-lg-4.d-flex
-					+header-info__item("../../img/icons/marker.svg", "Санкт-Петербург")
+					.header-info__block.d-flex
+						img(src="../../img/icons/marker.svg" alt="иконка")
+						a(href="#").menu-icon
+							span Санкт-Петербург
 				.col-lg-4.d-none.d-lg-flex
 					+header-info__item("../../img/icons/car.svg", "Доставка по всей России")(class="mr-20")
 					+header-info__item("../../img/icons/warranty.svg", "Гарантия 1 год")
