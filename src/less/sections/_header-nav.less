@@ -1,39 +1,38 @@
 nav {
 	display: flex;
-	position:relative;
+	position: relative;
 }
 
 .header-nav {
 	display: none;
-	position:absolute;
+	position: absolute;
 	font-size: 16px;
 	letter-spacing: 0.5px;
-	
+
 	@media @desktop {
 		display: flex;
-		position:static;
+		position: static;
 	}
 
-	ul,li {
-		margin:0;
-		padding:0;
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
 		list-style: none;
 
-		a{
-			text-decoration:none;
+		a {
+			text-decoration: none;
 			display: block;
-			color:@textMenu;
-			padding:12px 16px;
-		
+			color: @textMenu;
+			padding: 12px 16px;
+
 			@media @desktop {
-				padding:8px 16px;		
+				padding: 8px 16px;
 			}
 		}
-	}
-
-	// Иконка треугольник
+	} // Иконка треугольник
 	.menu-icon {
-		.icon-mixin(@textMenu, 16px, 16px);
+		.icon-mixin(@textMenu, 20px, 15px);
 	}
 }
 
@@ -45,7 +44,7 @@ ul.menu-level-1 {
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
 	@media @desktop {
-		flex-direction: row;	
+		flex-direction: row;
 		width: 100%;
 		box-shadow: none;
 	}
@@ -55,25 +54,26 @@ ul.menu-level-1 {
 	}
 
 	.text-salad {
-		color:@text-salad;
+		color: @text-salad;
 	}
 	.text-red {
-		color:@text-red;
+		color: @text-red;
 	}
 }
 
-ul.menu-level-1 > li > a{
+ul.menu-level-1>li>a {
 	text-transform: uppercase;
 	border-bottom: 1px solid @borderMenu;
 
 	@media @desktop {
-		border:none;
+		border: none;
 		padding-right: 40px;
+		margin-right: 10px;
 		padding-left: 0;
 	}
 
 	&:hover {
-		text-decoration: none;	
+		text-decoration: none;
 	}
 }
 
@@ -81,26 +81,26 @@ ul.menu-level-1 > li > a{
 // Submenu 1st level
 ul.menu-level-2 {
 	display: none;
-	position:static;
-	flex-direction: column;	
+	position: static;
+	flex-direction: column;
 	padding-bottom: 8px;
-	
+
 	@media @desktop {
-		position:absolute;
-		left:0px;
+		position: absolute;
+		left: 0px;
 		flex-direction: row;
 		justify-content: flex-start;
 		width: 100%;
-		padding:16px 62px 36px;
+		padding: 16px 62px 36px;
 		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 	}
-	
+
 	@media @desktopXL {
-		padding:16px 85px 48px;
+		padding: 16px 85px 48px;
 	}
 }
 
-ul.menu-level-2 > li {
+ul.menu-level-2>li {
 
 	@media @desktop {
 		margin-right: 16px;
@@ -112,15 +112,15 @@ ul.menu-level-2 > li {
 	.line-gradient--menu {
 		margin-left: 16px;
 		margin-bottom: 8px;
-	
+
 		@media @desktop {
 			margin-left: 0;
 		}
 	}
 }
 
-ul.menu-level-2 > li > a {
-	color:@text-red;
+ul.menu-level-2>li>a {
+	color: @text-red;
 
 	@media @desktop {
 		padding-left: 0px;
@@ -129,33 +129,33 @@ ul.menu-level-2 > li > a {
 }
 
 // Убираем иконки на большем разрешении у меню второго уровня
-ul.menu-level-2 > li > a.menu-icon {
+ul.menu-level-2>li>a.menu-icon {
 	@media @desktop {
 		&::after {
-			border:none;
+			border: none;
 		}
 	}
 }
 
 // Submenu 2nd level
-ul.menu-level-3{
+ul.menu-level-3 {
 	display: none;
-	
+
 	@media @desktop {
 		display: block;
 	}
 }
 
-ul.menu-level-3 > li > a {
+ul.menu-level-3>li>a {
 	@media @desktop {
-		padding:2px 0px;
+		padding: 2px 0px;
 		transition: 0.5s;
 	}
 
 	&:hover {
-		color:@text-red;
+		color: @text-red;
 		text-decoration: underline;
-		transition:all 0.5s;
+		transition: all 0.5s;
 	}
 }
 
@@ -167,12 +167,11 @@ ul.menu-level-3 > li > a {
 	@media @desktop {
 		display: flex;
 	}
-
 }
 
 .search-block__title {
 	font-size: 16px;
-	padding-top:8px;
+	padding-top: 8px;
 	margin-right: 24px;
 
 	@media @desktopXL {
@@ -182,7 +181,7 @@ ul.menu-level-3 > li > a {
 }
 
 .search-block__icon {
-	padding-top:8px;
+	padding-top: 8px;
 }
 
 // кдасс для вызова блока с поиском
