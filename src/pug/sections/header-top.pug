@@ -1,0 +1,33 @@
+.bg-header
+	.header-info
+		.container
+			.row.justify-content-between.align-items-center
+				.col-6.col-lg-4.d-flex
+					+header-info__item("../../img/icons/marker.svg", "Санкт-Петербург")
+				.col-lg-4.d-none.d-lg-flex
+					+header-info__item("../../img/icons/car.svg", "Доставка по всей России")(class="mr-20")
+					+header-info__item("../../img/icons/warranty.svg", "Гарантия 1 год")
+				.col-6.col-lg-4.d-flex.justify-content-end
+					+header-info__item("../../img/icons/phone.svg", "+7 (495) 132-62-60")
+					.header-info__block.d-none.d-md-block.ml-10 +7 (800) 222-63-30
+
+	.header-menu
+		.container
+			.logo
+			.row
+				.col-6.d-flex.d-lg-none
+					.menu-block#toggle-menu
+						img(src="../../img/icons/gamburger.svg" alt="иконка")
+					.menu-block
+						img(src="../../img/icons/search.svg" alt="иконка")
+				.col-6.d-flex.justify-content-end
+					.menu-block.user-registration
+						img(src="../../img/icons/profile.svg" alt="иконка")
+						.user-registration__text
+							a(href="#!") Вход 
+							| или 
+							a(href="#!") Регистрация |
+					.menu-block.cart
+						.cart__image
+							img(src="../../img/icons/cart-color.svg" alt="иконка")
+						.cart__amount.menu-icon 5850р.

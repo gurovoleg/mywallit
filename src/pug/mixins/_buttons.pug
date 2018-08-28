@@ -1,2 +1,40 @@
 mixin button(text, link)
-    a(class="button" href=link)&attributes(attributes) #{text}
+	a(class="button" href=link)&attributes(attributes) #{text}
+
+mixin button-cart(text, link)
+	a(class="button-cart" href=link)&attributes(attributes) #{text}
+
+mixin button-store(text, link)
+	a(class="button-store" href=link)&attributes(attributes) #{text}
+
+mixin button-detail(text, link)
+	a(class="button-detail" href=link)&attributes(attributes) #{text}
+
+//- Buttons add in cart and buy on 1 click
+mixin button-buyclick(text, link)
+	a(class="button-wide button-wide--buyclick" href=link)&attributes(attributes) #{text}
+
+mixin button-addcart(text, link)
+	a(class="button-wide button-wide--addcart" href=link)&attributes(attributes) #{text}
+
+//- Buttons she he
+mixin button-she(text, link)
+	a(class="button-subscribe button-subscribe--she" href=link)&attributes(attributes) #{text}
+
+mixin button-he(text, link)
+	a(class="button-subscribe button-subscribe--he" href=link)&attributes(attributes) #{text}
+
+//- Button order
+mixin button-order(text, link, price)
+	a(class="button-order__link" href=link)&attributes(attributes)
+		.button-order-block
+			.button-order__text #{text}
+			.button-order__price #{price} р.
+
+//- Button apply
+mixin button-apply(text, link)
+	a(class="button-apply" href=link)&attributes(attributes) #{text}
+
+//- Button more
+mixin button-more(text, link)
+	a(class="button-more" href=link)&attributes(attributes) #{text}
