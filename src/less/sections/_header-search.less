@@ -25,7 +25,7 @@
 	align-items: center;
 	padding-left: 22px;
 	padding-right: 22px;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 .header-search-result-mobile {
 	box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.4);
@@ -64,9 +64,8 @@
 }
 .header-search-result {
 	display: flex;
-	margin-left: 24px;
-	margin-right: 24px;
 }
+
 .header-search-result__category, .header-search-result__goods {
 	display: flex;
 	-webkit-flex-direction: column;
@@ -75,48 +74,57 @@
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	color: @text-red;
-	padding-top: 16px;
 }
 .header-search-result__goods {
-	margin-left: 35px;
+	margin-left: 24px;
+
+	@media @desktopXL {
+		margin-left: 32px;
+	}
 }
 .header-search-result-desktop {
-	display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
 	box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.3);
+	padding-top: 16px;
 	padding-bottom: 22px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	@media @desktop {
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+	@media @desktopXL {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+
 }
 .header-search-result__link {
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 }
 .header-search-result__link-item {
 	line-height: normal;
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	color: @text-light-grey;
-	&:hover, &:focus {
+	&:hover, &:focus, &:active {
 		color: @text-red;
 		text-decoration: none;
-	}
-	&:active {
-		text-decoration: none;
 		border-bottom: 1px solid @text-red;
-		color: @text-red;
-		padding-bottom: 5px;
-	}
-	&--active {
-		border-bottom: 1px solid @text-red;
-		color: @text-red;
-		padding-bottom: 5px;
 	}
 }
 .header-search-result-img {
 	width: 200px;
+	margin-left: 90px;
+
+	@media @desktop {
+		margin-left: 164px;
+	}
 }
-.header-search-result-desktop {
-	display: none;
-}
+// .header-search-result-desktop {
+// 	display: none;
+// }
 .header-search-result-mobile {
 	display: none;
 }
@@ -125,21 +133,21 @@
 		display: none;
 	}
 }
-@media @tablet {
-	.header-search-result-desktop {
-		display: none;
-	}
-}
-@media @desktop {
-	.header-search-result-desktop {
-		display: flex;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-	}
-}
-.header-search-result-desktop {
-	display: none;
-}
-.header-search-result-mobile {
-	display: none;
-}
+// @media @tablet {
+// 	.header-search-result-desktop {
+// 		display: none;
+// 	}
+// }
+// @media @desktop {
+// 	.header-search-result-desktop {
+// 		display: flex;
+// 		-webkit-justify-content: space-between;
+// 		justify-content: space-between;
+// 	}
+// }
+// .header-search-result-desktop {
+// 	display: none;
+// }
+// .header-search-result-mobile {
+// 	display: none;
+// }
