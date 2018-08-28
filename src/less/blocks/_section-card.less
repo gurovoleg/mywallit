@@ -1,0 +1,79 @@
+.card-description{
+	width: 100%;
+	max-width: 524px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 233px;
+	text-align: center;	
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-left: 24px;
+	padding-right: 24px;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 300;
+	color: @white;
+	@media @tablet{
+		margin-bottom: 16px;
+		min-height: 250px;
+		float: left;
+	}
+	@media @desktop {
+		padding-top: 48px;
+		min-height: 348px;}
+	@media @desktopXL {
+		padding-top: 32px;
+		margin-bottom: 24px;
+		min-height: 321px;}
+}
+.card-description:nth-child(2n){
+	margin-bottom: 16px;
+	@media @desktopXL {margin-bottom: 24px;}
+
+}
+
+.card-description--color{
+	//margin-bottom: 0;
+	@media @tablet{
+		margin-bottom: 16px;
+	}
+	@media @desktopXL {
+		margin-bottom: 24px;}
+}
+.card-description__title{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 18px;
+	
+	@media @desktop {font-size: 24px;}
+
+}
+
+.card-description__text{	
+	min-height: 96px;
+	margin-bottom: 24px;
+	line-height: 1.28em;		
+	font-size: 14px;
+	@media (min-width: 480px) {
+		line-height: 1.5;
+		min-height: 91px;
+		}
+	@media @tablet {line-height: 1.38em;}	
+	@media @desktop {
+		min-height: 115px;
+		font-size: 18px;}
+}
+
+ .card-description--img {	
+	@media @desktop {min-height: 340px !important;}
+	@media @desktopXL {min-height: 435px !important;}
+}
+@media @desktop {
+	.card-description--img-1{min-height: 437px !important;}
+	.card-description--img-2{min-height: 333px !important;}
+	.card-description--img-3{min-height: 399px !important;}
+	}
+
+	

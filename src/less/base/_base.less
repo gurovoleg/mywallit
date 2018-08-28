@@ -15,6 +15,7 @@ body {
 }
 
 
+
 /* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
 
 body::before {
@@ -117,18 +118,22 @@ blockquote p {
 }
 
 .clear {
-    clear: both;
-    display: table;
+	clear: both;
+	display: table;
 }
 
 .body--dashboard {
 	padding-left: 330px;
 	padding-right: 15px;
-	
+
 	&.ui-nav--hidden {
 		padding-left: 0;
 		padding-right: 0;
 	}
+}
+
+.body-bg {
+	background-color: #f3f3f3;
 }
 
 .container--left {
@@ -153,6 +158,7 @@ blockquote p {
 	border-bottom: 1px solid #e9eff3;
 }
 
+
 /***style for sticky-footer***/
 
 .wrapper {
@@ -167,17 +173,17 @@ blockquote p {
 
 
 //Тестовые классы
-.block{
+.block {
 	background-color: @body-bg;
 	display: inline-block;
 }
+
 [class^="block-"] {
 	width: 150px;
-	padding:10px;
+	padding: 10px;
 	background-color: @blue;
-	color:#fff;
+	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
-	.mixin-margin(bottom,@l3);
+	.mixin-margin(bottom, @l3);
 }
-

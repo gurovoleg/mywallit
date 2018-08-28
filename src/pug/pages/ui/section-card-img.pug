@@ -1,0 +1,24 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка раздела';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Карточка раздела с изображением
+		.row
+			.col-md-6.col-xl-4
+				+card-product-img('#DC1019', 'bg/red-purse.jpg', '285px;')
+			.col-md-6.col-xl-4
+				+card-product-img('#004AAA', 'bg/blue-purse.jpg', '340px;')
+			.col-md-6.col-xl-4
+				+card-product-img('#61B39B', 'bg/heart-purse.jpg', '341px;')
+		.title-4 добавить карточку с описанием 
+		pre.
+			.col-md-6.col-xl-4
+				+card-product-img('#DC1019', 'bg/red-purse.jpg', '285px;')
+		.title-4 миксин для карточки с описание
+		pre.
+			mixin card-product-img(bgColor, imgSrc, imgHeight )
+				.card-description.card-description--img(style="background:"+ bgColor+" url('../img/"+imgSrc+"') center no-repeat; background-size: cover; height: "+imgHeight)
