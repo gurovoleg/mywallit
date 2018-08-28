@@ -5,10 +5,10 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
-	include ../sections/header-top.pug
-	include ../sections/header-nav.pug
-	.line-gradient
-	include ../sections/header-search.pug
+	
+	//- шапка
+	.header
+		include ../sections/header.pug
 	
 	//- секция банер 1
 	.section-banner-1
@@ -39,7 +39,8 @@ block content
 		include ../sections/section-accessories.pug
 
 	//- Подвал
-	include ../sections/footer.pug
+	.footer
+		include ../sections/footer.pug
 	
 
 
