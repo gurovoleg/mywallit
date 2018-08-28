@@ -1,12 +1,16 @@
 .footer-navigation-devide {
-		display: block;
-		width: 100%;
-		.line-gradient;
+	display: block;
+	width: 100%;
+	.line-gradient;
 }
 @media @desktop {
 	.footer-navigation-devide {
 		margin-bottom: 20px;
 	}
+}
+.footer-navigation--mobile {
+	display: flex;
+	flex-direction: column;
 }
 .footer-navigation {
 	width: 100%;
@@ -54,7 +58,7 @@
 	}
 	.footer-navigation--desktop--title {
 		line-height: 1;
-		color: @text-card;
+		color: @text;
 		margin-bottom: 18px;
 		text-transform: uppercase;
 		&:hover, &:focus, &:active {
@@ -70,5 +74,6 @@
 	.footer-navigation--link {
 		font-size: 16px;
 		text-transform: none;
+		color: @text;
 	}
 }
