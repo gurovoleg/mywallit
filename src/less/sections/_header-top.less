@@ -84,11 +84,15 @@
 	}
 
 	a {
-		text-decoration: underline;
+		// text-decoration: underline;
 		color:@textMenu;
+		padding-bottom:1px;
+		border-bottom:1px solid @textMenu;
 
 		&:hover {
 			color:@text-red;
+			text-decoration: none;
+			border-color: @text-red;
 		}
 	}
 }
@@ -108,11 +112,21 @@
 	}
 
 	.cart__image {
+		position:relative;
 		@media @desktop {
 			margin-right: 8px;
 			margin-left: 8px;
 		}
 
+	}
+
+	.cart__image-total {
+		color:@white;
+		font-size: 14px;
+		font-weight: bold;
+		position:absolute;
+		top:6px;
+		left:6px;
 	}
 
 	.cart__amount {

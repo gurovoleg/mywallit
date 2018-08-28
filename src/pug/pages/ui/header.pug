@@ -1,0 +1,12 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Шапка - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		include ../../sections/header-top.pug
+		include ../../sections/header-nav.pug
+		.line-gradient
+		include ../../sections/header-search.pug	

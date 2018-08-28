@@ -8,75 +8,80 @@ block content
 		br
 		h1 Шапка - выпадающее меню
 
-		nav.header-nav.d-block
+		nav
+			.header-nav
+				ul#menu-level-1.menu-level-1
+						li
+							a(href="#!") Все аксеcсуары
+						li
+							a(href="#!").text-salad.menu-icon Новая коллекция
+						li
+							a(href="#!").menu-icon Для женщин
+							
+							ul#menu-level-2.menu-level-2
+								li
+									a(href="#!").menu-icon Все сумки
+									.line-gradient--menu
+									ul#menu-level-3.menu-level-3
+										li
+											a(href="#!") Сумки на плечо
+										li
+											a(href="#!") Сумки через плечо
+										li
+											a(href="#!") Шопперы и Тоут
+										li
+											a(href="#!") Фрукты
+										li
+											a(href="#!") Рюкзаки
+								li
+									a(href="#!").menu-icon Все кошельки
+									.line-gradient--menu
+									ul#menu-level-3.menu-level-3
+										li
+											a(href="#!") Малые коешльки
+										li
+											a(href="#!") Средние кошельки
+										li
+											a(href="#!") Большие кошельки
+										li
+											a(href="#!") Кошельки на круговой молнии
+								li
+									a(href="#!").menu-icon Аксессуары
+									.line-gradient--menu
+									ul#menu-level-3.menu-level-3
+										li
+											a(href="#!") Визитницы и кардхолдеры
+										li
+											a(href="#!") Обложки для документов
+										li
+											a(href="#!") Косметички
+										li
+											a(href="#!") Ключницы
+										li
+											a(href="#!") Монетницы
+										li
+											a(href="#!") Брелоки
+										li
+											a(href="#!") Перчатки		
+						li
+							a(href="#!").menu-icon Для мужчин
+								//- span.menu-icon-open
+							ul#menu-level-2.menu-level-2
+								li 
+									a(href="#!").menu-icon Офис и Тревел
+									.line-gradient--menu
+									ul#menu-level-3.menu-level-3
+										li
+											a(href="#!") Портфели
+										li
+											a(href="#!") Сумки-органайзеры
+										li
+											a(href="#!") Тревел-органайзеры
+						li
+							a(href="#!").text-red Summer Sale
+			.search-block
+				.search-block__title.toggle-search-block ПОИСК
+				.search-block__icon.toggle-search-block 
+					img(src="../../img/icons/search.svg" alt="иконка")
 
-			ul#menu-level-1.menu-level-1
-				li
-					a(href="#!") Все аксеcсуары
-				li
-					a(href="#!").text-salad.menu-icon Новая коллекция
-				li
-					a(href="#!").menu-icon Для женщин
-					
-					ul#menu-level-2.menu-level-2
-						li
-							a(href="#!").menu-icon Все сумки
-							.line-gradient--menu
-							ul#menu-level-3.menu-level-3
-								li
-									a(href="#!") Сумки на плечо
-								li
-									a(href="#!") Сумки через плечо
-								li
-									a(href="#!") Шопперы и Тоут
-								li
-									a(href="#!") Фрукты
-								li
-									a(href="#!") Рюкзаки
-						li
-							a(href="#!").menu-icon Все кошельки
-							.line-gradient--menu
-							ul#menu-level-3.menu-level-3
-								li
-									a(href="#!") Малые коешльки
-								li
-									a(href="#!") Средние кошельки
-								li
-									a(href="#!") Большие кошельки
-								li
-									a(href="#!") Кошельки на круговой молнии
-						li
-							a(href="#!").menu-icon Аксессуары
-							.line-gradient--menu
-							ul#menu-level-3.menu-level-3
-								li
-									a(href="#!") Визитницы и кардхолдеры
-								li
-									a(href="#!") Обложки для документов
-								li
-									a(href="#!") Косметички
-								li
-									a(href="#!") Ключницы
-								li
-									a(href="#!") Монетницы
-								li
-									a(href="#!") Брелоки
-								li
-									a(href="#!") Перчатки		
-				li
-					a(href="#!").menu-icon Для мужчин
-						//- span.menu-icon-open
-					ul#menu-level-2.menu-level-2
-						li 
-							a(href="#!").menu-icon Офис и Тревел
-							.line-gradient--menu
-							ul#menu-level-3.menu-level-3
-								li
-									a(href="#!") Портфели
-								li
-									a(href="#!") Сумки-органайзеры
-								li
-									a(href="#!") Тревел-органайзеры
-				li
-					a(href="#!").text-red Summer Sale
 		.line-gradient
