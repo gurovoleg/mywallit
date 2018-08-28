@@ -5,4 +5,4 @@ mixin card-product-text(cardColor, cardTitle, cardText )
 		+button-detail('Подробнее','#')
 
 mixin card-product-img(bgColor, imgSrc, imgHeight )
-	.card-description.card-description--img(style="background:"+ bgColor+" url('../img/"+imgSrc+"') center no-repeat; background-size: cover; height: "+imgHeight)
+	.card-description.card-description--img(style="background:"+ bgColor+" url('../img/"+imgSrc+"') center no-repeat; background-size: cover; min-height: "+imgHeight)
