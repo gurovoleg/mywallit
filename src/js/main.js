@@ -150,10 +150,7 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 	// Фокус на custom checkbox
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
