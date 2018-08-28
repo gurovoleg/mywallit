@@ -1,0 +1,45 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Баннеры';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Банеры
+		.section-ui
+			.red-banner
+				picture
+					source(srcset='../img/banners/banner_desktopxl_red.png 1392w', media='(min-width: 1440px)')
+					source(srcset='../img/banners/banner_desktop_red.png 1064w', media='(min-width: 1152px)')
+					source(srcset='../img/banners/banner_tablet_red.png 752w', media='(min-width: 784px)')
+					source(srcset='../img/banners/banner_mobile_red.png 344w', media='(min-width: 360px)')
+					img(src='../img/banners/banner_mobile_red.png')
+		.section-ui
+			pre.
+				.red-banner
+					picture
+						source(srcset='../img/banners/banner_desktopxl_red.png 1392w', media='(min-width: 1440px)')
+						source(srcset='../img/banners/banner_desktop_red.png 1064w', media='(min-width: 1152px)')
+						source(srcset='../img/banners/banner_tablet_red.png 752w', media='(min-width: 784px)')
+						source(srcset='../img/banners/banner_mobile_red.png 344w', media='(min-width: 360px)')
+						img(src='../img/banners/banner_mobile_red.png')
+		.section-ui
+				.blue-banner
+				picture
+					source(srcset='../img/banners/banner-desktopxl-blue.png 1392w', media='(min-width: 1440px)')
+					source(srcset='../img/banners/banner-desktop-blue.png 1064w', media='(min-width: 1152px)')
+					source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
+					source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
+					img(src='../img/banners/banner-mobile-blue.png')
+		.section-ui
+			pre.
+				.blue-banner
+					picture
+						source(srcset='../img/banners/banner-desktopxl-blue.png 1392w', media='(min-width: 1440px)')
+						source(srcset='../img/banners/banner-desktop-blue.png 1064w', media='(min-width: 1152px)')
+						source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
+						source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
+						img(src='../img/banners/banner-mobile-blue.png')
+			
