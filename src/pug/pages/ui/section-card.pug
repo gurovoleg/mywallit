@@ -1,0 +1,30 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка раздела';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Карточка раздела с описанием
+		.row
+			.col-md-6.col-xl-4
+				+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+				+card-product-img('#004AAA', 'bg/blue-purse.jpg', '286px;')
+			
+		.title-4 добавить карточку с описанием 
+		pre.
+			.col-md-6.col-xl-4
+				+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
+				+card-product-img('#004AAA', 'bg/blue-purse-tab.jpg', '340px;')
+		.title-4 миксин для карточки с описание
+		pre.
+			mixin card-product-text(cardColor, cardTitle, cardText )
+				.card-description.card-description--color(style="background-color:"+ cardColor)
+					.card-description__title #{cardTitle}
+					.card-description__text  #{cardText}
+					+button-detail('Подробнее','#')
+			mixin card-product-img(bgColor, imgSrc, imgHeight )
+				.card-description.card-description--img(style="background:"+ bgColor+" url('../img/"+imgSrc+"') center no-repeat; background-size: cover; min-height: "+imgHeight)
+
+		
