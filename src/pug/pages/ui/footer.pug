@@ -1,15 +1,16 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Подвал - Навигация - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Подвал - общий - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
-	.main-wrapper
-		.container.container--left.user-content
-			.section-ui
-				.title Подвал - Навигация
-			.section-ui
+
+	.container.container--left
+		.title Подвал общий
+
+		.section-ui
+			.container
 				.footer-navigation
 					.footer-navigation-devide
 					.footer-navigation--mobile
@@ -23,7 +24,7 @@ block content
 							a.footer-navigation--link(href="#") Оплата и доставка
 						span.footer-navigation--item
 							a.footer-navigation--link(href="#") Покупателю
-					.footer-navigation--desktop
+					.footer-navigation--desktop.col-10.offset-xl-1.offset-lg-1
 						.footer-navigation--desktop-block
 							a.footer-navigation--desktop--title(href="#") 
 								strong О компании
@@ -58,7 +59,15 @@ block content
 								strong Адреса магазинов
 						.footer-navigation--desktop-block
 							a.footer-navigation--desktop--title(href="#")
-								strong Контакты						
-			.section-ui
-				pre.
-					ui/footer-navigation.pug
+								strong Контакты
+				.container
+					.row.footer-bottom
+						.col-12.col-lg-5.offset-lg-1.col-md-8.offset-md-2
+							include ../../sections/_footer-subscribe.pug
+						.col-12.col-lg-5
+							.social.text-center
+								.title-4.social-block__title Мы в социальных сетях
+								.social-block
+									+social-icon('#', 'instagram.svg','instagram')
+									+social-icon('#', 'vk.svg','vk')
+									+social-icon('#', 'fb.svg','fb')

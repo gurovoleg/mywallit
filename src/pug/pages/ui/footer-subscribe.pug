@@ -15,10 +15,11 @@ block content
 					.title-4 Выбери цвет своей индивидуальности!
 					.footer-subscribe--subtitle Будь в курсе новостей и специальных предложениях!
 					form.footer-subscribe--form(action="")
-						input.footer-subscribe--input.footer-subscribe--border(type="text" placeholder="Email")
-						.footer-subscribe--buttons
-							+button-she("Она", "#")
-							+button-he("Он", "#")
+						.footer-subscribe-wrapper
+							input.footer-subscribe--input.footer-subscribe--border(type="text" placeholder="Email")
+							.footer-subscribe--buttons
+								+button-she("Она", "#")
+								+button-he("Он", "#")
 						label.footer-subscribe--checkbox-label
 							span.footer-subscribe--checkbox-label-focus Email
 							input.footer-subscribe--checkbox(type="checkbox")
@@ -26,4 +27,4 @@ block content
 							p.footer-subscribe--checkbox-label-text Я принимаю политику конфиденциальности.
 		.section-ui
 			pre.
-				include section/_footer-subscribe.pug
+				include ../../sections/_footer-subscribe.pug
