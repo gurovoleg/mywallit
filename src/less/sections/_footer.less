@@ -1,9 +1,26 @@
 .footer-bottom {
 	display: flex;
 	align-items: center;
+
+	.title-4{
+		margin:0;
+	}
+
+	.social-block__title {
+		margin-bottom: 16px;
+	}
 }
-@media @desktop {
-	.social {
-		margin-top: -15px;
+.social {
+	padding-bottom: 36px;
+
+	@media @tablet {
+		padding-bottom: 56px;
+	}
+	@media @desktop {
+		padding-top: 25px;
+		padding-bottom: 0;
+	}
+	@media @desktopXL {
+		padding-top: 0px;
 	}
 }

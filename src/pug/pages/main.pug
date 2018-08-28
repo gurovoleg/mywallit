@@ -2,7 +2,7 @@ extends ../layouts/page-layout/page.pug
 
 block variables
 	- var title = 'Главная страница';
-	- var pageClass = 'index-page footer-bottom';
+	- var pageClass = 'index-page';
 
 block content
 	include ../sections/header-top.pug
@@ -36,33 +36,11 @@ block content
 
 	//- аксессуары
 	.section-accessories
-		.container
-			.title-3 Посмотреть все аксессуары
-			.row.d-flex.d-md-none.d-xl-flex
-				.col-md-6.col-xl-4
-					+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-					+card-product-img('#004AAA', 'bg/blue-purse.jpg', '286px;')
-				.col-md-6.col-xl-4
-					+card-product-img('#004AAA', 'bg/red-purse.jpg', '218px;')
-					+card-product-text('#DC1019;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-				
-				.col-md-6.col-xl-4
-					+card-product-text('#61B39B;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-					+card-product-img('#004AAA', 'bg/heart-purse.jpg', '262px;')
-
-			.row.d-none.d-md-flex.d-xl-none
-				.col-md-6
-					+card-product-text('#004AAA;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-					+card-product-img('#004AAA', 'bg/blue-purse.jpg', '307px;')(class="card-description--img-1")
-					+card-product-text('#DC1019;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-				.col-md-6
-					+card-product-img('#004AAA', 'bg/red-purse.jpg', '234px;')(class="card-description--img-2")
-					+card-product-text('#61B39B;', 'Кошелек', 'Ожидайте яркий взрыв в вашей сумке с женскими кошельками mywalit: кожа лучшего качества, элегантные дизайны и уникальные детали для уникального продукта, который вы можете наслаждаться каждый день!'  )
-					+card-product-img('#004AAA', 'bg/heart-purse.jpg', '281px;')(class="card-description--img-3")
-
+		include ../sections/section-accessories.pug
 
 	//- Подвал
-	.footer
+	include ../sections/footer.pug
+	
 
 
 	

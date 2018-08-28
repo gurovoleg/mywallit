@@ -1,10 +1,15 @@
 .header-search-section {
 	display: none;
+	position: relative;
+	z-index: 100;
+
 }
 .header-search {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.3);
+	z-index: 110;
+
 }
 .header-search__input {
 	height: 56px;
@@ -29,11 +34,17 @@
 	padding-left: 22px;
 	padding-right: 22px;
 	margin-bottom: 12px;
+
 }
 .header-search-result-mobile {
+	display: none;
+	// position:absolute;
+	// top:56px; // высота Input блока - строки поиска
+	border-top: 1px solid #C4C4C4;
 	box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.4);
 	padding-bottom: 22px;
 	padding-top: 17px;
+	background-color: @white;
 }
 @media @desktop {
 	.header-search-result-mobile {
@@ -86,14 +97,19 @@
 	}
 }
 .header-search-result-desktop {
+	// position:absolute;
+	// top:56px; // высота Input блока - строки поиска
+	display: none;
+	border-top: 1px solid #C4C4C4;
 	box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.3);
 	padding-top: 16px;
 	padding-bottom: 22px;
 	padding-left: 40px;
 	padding-right: 40px;
+	background-color: @white;
 
 	@media @desktop {
-		display: flex;
+		// display: flex;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
 	}
@@ -125,32 +141,12 @@
 		margin-left: 164px;
 	}
 }
-// .header-search-result-desktop {
+
+// .header-search-result-mobile {
 // 	display: none;
 // }
-.header-search-result-mobile {
-	display: none;
-}
-@media @mobile {
-	.header-search-result-desktop {
-		display: none;
-	}
-}
-// @media @tablet {
+// @media @mobile {
 // 	.header-search-result-desktop {
 // 		display: none;
 // 	}
-// }
-// @media @desktop {
-// 	.header-search-result-desktop {
-// 		display: flex;
-// 		-webkit-justify-content: space-between;
-// 		justify-content: space-between;
-// 	}
-// }
-// .header-search-result-desktop {
-// 	display: none;
-// }
-// .header-search-result-mobile {
-// 	display: none;
 // }
