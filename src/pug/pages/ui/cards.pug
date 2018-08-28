@@ -2,16 +2,50 @@ extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
 	- var title = 'Карточки - UI-kit и HTML фреймворк - Документация';
-	- var pageClass = 'body--dashboard';
+	- var pageClass = 'body--dashboard body-bg';
 
 block content
 
 	.container.container--left
 		.title Карточки
-		.title-2 Карточка - Пост в блоге
 		
 		.section-ui
-			.card Замечательная карточка
+			.row
+				.col-6.col-md-3
+					+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+						+button-store('Нет в наличии','#')
 
+				.col-6.col-md-3
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
+						+button-cart('В корзину','#')
+
+				.col-6.col-md-3
+					+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')(class="card-product--colorscheme")
+						+button-cart('В корзину','#')
+						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+
+				.col-6.col-md-3
+					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )(class="card-product--colorscheme")
+						+button-store('Нет в наличии','#')
+						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+		.title-4 Карточка обычная 				
 		pre.
-			.card Замечательная карточка
+			.col-6.col-md-3
+				+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')
+					+button-store('Нет в наличии','#')
+		.title-4 Карточка со скидкой				
+		pre.
+			.col-6.col-md-3
+				+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )
+					+button-cart('В корзину','#')
+
+		.title-4 Карточка обычная с цветовой палитрой 				
+		pre.
+			+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', 'Сумка большая, коллекция "Рига"', '4 863 р')(class="card-product--colorscheme")
+				+button-cart('В корзину','#')
+				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+		.title-4 Карточка со скидкой с цветовой палитрой				
+		pre.
+			+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863 р', '4 863 р' )(class="card-product--colorscheme")
+				+button-store('Нет в наличии','#')
+				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')

@@ -1,0 +1,146 @@
+.card-product {	
+	position: relative;
+	width: 100%;
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;	
+	text-align: center;
+	margin-bottom: 8px;
+	background-color: #fff;
+	padding-bottom: 24px;
+	@media @desktop { padding: 24px 8px; }
+}
+
+.card-product--colorscheme{	
+	height: 392px;
+	padding-bottom: 10px;
+	@media @tablet { height: 434px; }
+	@media @desktop { padding-bottom: 22px; }
+}
+
+.card-heart-icon {
+	display: block;
+	width: 16px;
+	height: 16px;	
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	color: #e1e1e1;
+	transition: color 1s;
+	&:hover {color: @red;}
+	@media @desktop { top: 10px; }
+}
+
+.card-product__img {
+	overflow: hidden;
+	margin-bottom: 8px;	
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;	
+	height: 168px;
+	flex-shrink: 0;
+	
+	@media @desktop {
+		cursor:pointer;
+		width: 200px;
+		height: 193px;
+	}
+}
+
+.product-img {
+	height: 170px;	
+	@media @tablet { height: 150px; }
+	@media @desktop { height: 176px; }
+}
+
+.card-product__text {
+	color: @text-card;		
+	min-height: 64px;
+	margin-bottom: 8px;
+	font-size: 14px;
+	line-height: 16px;
+
+	@media @tablet {
+		margin-bottom: 16px;
+		min-height: 75px;
+	}
+
+	@media @desktop {
+		min-height: 55px;
+		line-height: 18px;		
+	}
+
+	@media @desktopXL {
+		margin-bottom: 24px;
+	}
+
+}
+
+.card-product__price{
+	color:@text-card;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	@media @desktop {
+		font-size: 18px;
+	}
+}
+
+.card-label-sale{
+	position: absolute;
+	top: 16px;
+	left: 0;
+	width: 50px;
+	height: 30px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: @red;
+	text-align: center;
+	font-size: 14px;
+	color: @white;
+	line-height: 16px;
+	padding-top: 8px;
+}
+
+.card__price--sale{
+	width: 140px;	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	@media @desktop {
+		width: 160px;		
+	}
+}
+.price-new { color: @text-red; }
+
+.price-old{
+	font-weight: 300;
+	display: inline-block;
+	position: relative;
+}
+
+.price-old:after{
+	content:"";
+	width: 115%;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	top: 42%;
+	left: -9%;
+}
+
+.colors-product {	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 140px;
+	@media @desktop { width: 160px; }
+}
+
+.colors-product__circle{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin-top: 16px;
+}
