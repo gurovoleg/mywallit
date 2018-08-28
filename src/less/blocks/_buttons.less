@@ -1,4 +1,5 @@
 @border-btn-detail: 7px;
+@border-btn-radius: 4px;
 .button-cart {
 	display: block;
 	line-height: 1;
@@ -219,16 +220,13 @@
 			box-shadow: none;
 		}
 	}
+	&--border {
+		border-radius: @border-btn-radius;
+	}
 	&:hover,
 	&:focus {
 		color: @white;
 		text-decoration: none;
-	}
-}
-@media @desktop {
-	.button-subscribe {
-		padding-top: 17px;
-		padding-bottom: 17px;
 	}
 }
 .button-order__link {

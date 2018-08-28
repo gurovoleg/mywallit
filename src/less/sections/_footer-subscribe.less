@@ -1,45 +1,47 @@
+@border-input-radius: 4px;
 .footer-subscribe {
 	display: flex;
 	flex-direction: column;
+	&--input {
+		position: relative;
+		display: inline-block;
+		height: 40px;
+		padding-left: 15px;
+		line-height: 0.8;
+		font-size: 14px;
+		color: @active-checkbox;
+		padding-top: 0;
+		padding-bottom: 0;
+		float: left;
+		outline: none;
+		border: 1px solid @gray;
+		line-height: 18px;
+		&:after {
+			display: block;
+			clear: both;
+		}
+		&:focus {
+			border: 1px solid @active-checkbox;
+		}
+	}
+	&--border {
+		border-radius: @border-input-radius;
+	}
 }
 .footer-subscribe--form {
 	align-self: center;
 }
 .footer-subscribe--input {
-	position: relative;
-	display: inline-block;
-	height: 40px;
-	padding-left: 15px;
-	line-height: 0.8;
-	font-size: 14px;
-	color: @active-checkbox;
-	padding-top: 0;
-	padding-bottom: 0;
-	margin-bottom: 8px;
-	float: left;
-	outline: none;
-	border: 1px solid @gray;
-	line-height: 18px;
-	&:after {
-		display: block;
-		clear: both;
-	}
-	&:focus {
-		border: 1px solid @active-checkbox;
-	}
-}
-@media @desktop {
-	.footer-subscribe--input {
-		height: 48px;
-	}
+	transition: 0.2s ease-in;
 }
 .footer-subscribe--subtitle {
-	margin-bottom: 8px;
+	margin-bottom: 20px;
 	text-align: center;
+	color: @text;
 }
 .footer-subscribe--buttons {
 	display: flex;
-	margin-bottom: 8px;
+	padding-left: 14px;
 }
 .button-subscribe {
 	margin-left: 8px;
@@ -77,12 +79,17 @@
 }
 .footer-subscribe--checkbox-label {
 	position: relative;
-	margin-top: 11px;
+	padding-top: 8px;
 	&-text {
 		display: inline-block;
 		padding-left: 11px;
 		font-size: 12px;
 		color: @active-checkbox;
+	}
+}
+@media @desktop {
+	.footer-subscribe--checkbox-label {
+			padding-top: 3px;
 	}
 }
 .footer-subscribe--checkbox-label-focus {
@@ -91,14 +98,14 @@
 	font-size: 12px;
 	text-align: center;
 	color: @active-checkbox;
-	top: -66px;
+	top: -47px;
 	left: 16px;
 	background-color: @white;
 	display: none;
 }
 @media @desktop {
 	.footer-subscribe--checkbox-label-focus {
-		top: -74px;
+		top: -55px;
 	}
 }
 .footer-subscribe--checkbox:focus + .footer-subscribe--checkbox-custom,
