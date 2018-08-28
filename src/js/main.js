@@ -171,5 +171,5 @@ $(document).ready(function() {
 		})
 		.on( 'blur', function(){ 
 			$(this).removeClass( 'has-focus' ); 
-
+	});	
 });
