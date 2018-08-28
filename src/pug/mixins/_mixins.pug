@@ -1,1 +1,32 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+mixin colors-product(color1, color2, color3, color4, color5, color6)
+	.colors-product
+		.colors-product__circle(style="background-color: "+ color1)
+			a.colors-product-link(href="#")
+		.colors-product__circle(style="background-color: "+ color2)
+			a.colors-product-link(href="#")
+		.colors-product__circle(style="background-color: "+ color3)
+			a.colors-product-link(href="#")
+		.colors-product__circle(style="background-color: "+ color4)
+			a.colors-product-link(href="#")
+		.colors-product__circle(style="background-color: "+ color5)
+			a.colors-product-link(href="#")
+		.colors-product__circle(style="background-color: "+ color6)
+			a.colors-product-link(href="#")
+
+//- Mixn for search result
+mixin searchResult (img, text)
+	.header-search__result
+		.header-search__result-img
+			img(src="../img/good_thumbnail/" + img , alt=img)
+		.header-search__result-description !{text}
+
+mixin header-info__item(img, title)
+	.header-info__block.d-flex&attributes(attributes)
+		img(src=img alt="иконка")
+		span #{title}
+
+mixin header-info__item(img, title)
+	.header-info__block.d-flex&attributes(attributes)
+		img(src=img alt="иконка")
+		span #{title}
