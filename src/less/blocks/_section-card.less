@@ -3,7 +3,7 @@
 	max-width: 524px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 233px;
+	min-height: 233px;
 	text-align: center;	
 	padding-top: 24px;
 	padding-bottom: 24px;
@@ -11,18 +11,19 @@
 	padding-right: 24px;	
 	display: flex;
 	flex-direction: column;
-	align-items: center;	
-	//margin-bottom: 16px;
+	align-items: center;
+	font-weight: 300;
 	color: @white;
 	@media @tablet{
 		margin-bottom: 16px;
-		height: 250px;}
+		min-height: 250px;}
 	@media @desktop {
-		padding-top: 30px;
-		height: 321px;}
+		padding-top: 48px;
+		min-height: 348px;}
 	@media @desktopXL {
+		padding-top: 32px;
 		margin-bottom: 24px;
-		height: 335px;}
+		min-height: 321px;}
 }
 .card-description--color{
 	margin-bottom: 0;
@@ -43,27 +44,25 @@
 	@media @desktop {font-size: 24px;}
 
 }
-.card-description__text{
-	font-size: 12px;
-	line-height: 1.4em;
-	height: 96px;
+
+.card-description__text{	
+	min-height: 96px;
 	margin-bottom: 24px;
-	@media @mobile {
-		line-height: 1.2em;		
-		font-size: 14px;}
+	line-height: 1.28em;		
+	font-size: 14px;
 	@media (min-width: 480px) {
 		line-height: 1.5;
-		height: 91px;
+		min-height: 91px;
 		}
-	@media (min-width: 768px) {line-height: 1.3em;}	
+	@media (min-width: 768px) {line-height: 1.38em;}	
 	@media @desktop {
-		height: 115px;
+		min-height: 115px;
 		font-size: 18px;}
 }
 .card-description--img {
-	height: 286px;
-	@media @tablet {height: 307px !important;}
-	@media (min-width: 480px) {height: 344px !important;}
-	@media @desktop {height: 340px !important;}
-	@media @desktopXL {height: 435px !important;}
+	min-height: 218px;
+	@media @tablet {min-height: 307px !important;}
+	@media (min-width: 480px) {min-height: 344px !important;}
+	@media @desktop {min-height: 340px !important;}
+	@media @desktopXL {min-height: 435px !important;}
 }
