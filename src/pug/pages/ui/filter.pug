@@ -1,0 +1,58 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр - Навигация - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Фильтр
+		
+		form.form-filter
+			.filter-header
+				.filter__title ФИЛЬТРЫ
+				.filter__clean-button Очистить
+			.line-gradient
+			ul.filter-menu-l1
+				li ПО ПОЛУ
+					ul.filter-menu-l2
+						li
+							+filter-item('gerder1','Женщинам')
+						li
+							+filter-item('gender2','Мужчинам')
+				li ПО КАТЕГОРИЯМ
+					ul.filter-menu-l2
+						li
+							+filter-item('category1','Кошельки')
+						li
+							+filter-item('category2','Сумки')
+						li
+							+filter-item('category3','Аксессуары')
+						li
+							+filter-item('category4','Офис и Тревел')
+				li ПО РАЗМЕРУ
+					ul.filter-menu-l2
+						li
+							+filter-item('size1','Большой')
+						li
+							+filter-item('size2','Малый')
+						li
+							+filter-item('size3','Средний')
+				li ПО ЦВЕТУ
+					ul.filter-menu-l2
+						li
+							+filter-item('gerder','Цвет1')
+						li
+							+filter-item('gender','Цвет2')
+				li ПО ЦЕНЕ
+					ul.filter-menu-l2
+						li
+							+filter-item('price1','До 2 000р.')
+						li
+							+filter-item('price2','От 5 000р. до 10 000р.')
+						li
+							+filter-item('price3','От 10 000р.')
+
+			+button-apply('Применить', '#')
+			label.filter-reset Очисить фильтр
+				input(type='Reset' value='Очистить фильтр')

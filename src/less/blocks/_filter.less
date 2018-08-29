@@ -1,0 +1,85 @@
+// Форма
+.form-filter {
+	width: 270px;
+	border:1px dashed lightgrey;
+	color:@textMenu;
+	line-height: 1;
+	text-align: center;
+
+	ul {
+		list-style: none;
+	}
+	.filter-label {
+		margin:0;
+		margin-left: 8px;
+		cursor: pointer;
+	}
+}
+
+// Заголовок формы
+.filter-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:12px 0;
+}
+
+.filter__title {
+	font-size: 20px;
+	color:@text-red;	
+}
+
+.filter__clean-button {
+	font-size: 16px;
+	color:@textMenu;	
+}
+
+
+// Меню 1 уровня
+.filter-menu-l1 {
+	margin:0;
+	padding:0 8px;
+	text-transform: uppercase;
+	text-align: left;
+	li {
+		padding-top: 16px;
+
+		// отступ от кнопки
+		&:last-child .filter-menu-l2{
+			margin-bottom: 22px;
+			border-bottom:none;
+		}
+	}
+}
+
+// Меню 2 уровня
+.filter-menu-l2 {
+	margin:0;
+	padding:0;
+	text-transform: none;
+
+	color:@borderMenu;
+	border-bottom:1px solid @borderMenu;
+	padding: 8px 0;
+	
+	li {
+		padding: 8px 0;
+	}
+}
+
+.filter-checkbox:checked {
+	color:@textMenu;
+
+	& + .filter-label {color:@textMenu;}
+}
+
+// Кнопка сброс RESET
+.filter-reset {
+	text-align: center;
+	padding: 12px 0;
+	cursor: pointer;
+	input[type='reset'] {
+		display: none;
+	}
+}
+
