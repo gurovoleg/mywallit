@@ -109,8 +109,6 @@ $(document).ready(function() {
 		
 	});
 
-
-
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
 	$(document).on('click', function(e){
 		if (($('#menu-level-1').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
