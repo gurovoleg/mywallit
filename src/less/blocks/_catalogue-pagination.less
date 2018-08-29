@@ -23,18 +23,25 @@
 .page-toggle__item {
   display: inline-block;
   height: 40px;
+  min-width: 40px;
   text-align: center;  
   float: left;  
   line-height: 40px;  
   text-align: center;
-  padding: 0px 16px;
+  padding: 0px 12px;
   text-decoration: none;
   font-size: 14px;
   color:@active-checkbox;
   border: 1px solid @color-line; 
   border-left: 0px;
   transition: background-color 1s;
-    @media @desktopXL{font-size: 16px;}
+    @media @desktopXL{
+      font-size: 16px;
+      min-width: 48px;
+      line-height: 45px;
+      padding: 0px 15px;
+      height: 48px;
+    }
 }
 .page-toggle__item:first-child,
 .page-toggle__item--last{border-left:1px solid @color-line;}   
