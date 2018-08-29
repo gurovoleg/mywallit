@@ -21,7 +21,7 @@
 	}
 	@media @desktop {
 		padding-top: 48px;
-		min-height: 348px;}
+		min-height: 335px;}
 	@media @desktopXL {
 		padding-top: 32px;
 		margin-bottom: 24px;
@@ -66,10 +66,21 @@
 		font-size: 18px;}
 }
 
-//  .card-description--img {	
-// 	@media @desktop {min-height: 340px !important;}
-// 	@media @desktopXL {min-height: 435px !important;}
-// }
+@media (min-width: 380px) {
+	.card-description--img-1{min-height: 320px !important;}
+	.card-description--img-2{min-height: 300px !important;}
+	//.card-description--img-3{min-height: 399px !important;}
+	}
+@media (min-width: 480px) {
+	.card-description--img-1{min-height: 350px !important;}
+	.card-description--img-2{min-height: 350px !important;}
+	//.card-description--img-3{min-height: 399px !important;}
+	}
+@media @tablet {
+	.card-description--img-1{min-height: 307px !important;}
+	.card-description--img-2{min-height: 234px !important;}
+	.card-description--img-3{min-height: 281px !important;}
+	}
 @media @desktop {
 	.card-description--img-1{min-height: 437px !important;}
 	.card-description--img-2{min-height: 333px !important;}
