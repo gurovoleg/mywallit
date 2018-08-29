@@ -59,13 +59,22 @@
 	}
 }
 .checkbox:focus + .checkbox-custom,
-.checkbox.has-focus + .checkbox-custom,
+.checkbox.has-focus + .checkbox-custom {
+	box-shadow: 0 0 8px 3px @gray;
+}
 .checkbox:checked + .checkbox-custom {
 	border: 1px solid @active-checkbox;
 }
+.checkbox:checked ~ .checkbox-label-text--small {
+	color: @active-checkbox;
+}
 .checkbox-label-text {
 	width: 50%;
+	&--small {
+		color: @gray;
+	}
 }
+
 @media @tablet {
 	.checkbox-label-text {
 		width: auto;
