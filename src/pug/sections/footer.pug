@@ -1,13 +1,14 @@
+//- footer
+.footer-navigation-devide
 .container
 	.footer-navigation
-		.footer-navigation-devide
 		.footer-navigation-mobile
 			a.footer-navigation-mobile__link(href="#") О компании
 			a.footer-navigation-mobile__link(href="#") Адреса магазинов
 			a.footer-navigation-mobile__link(href="#") Контакты
 			a.footer-navigation-mobile__link(href="#") Оплата и доставка
 			a.footer-navigation-mobile__link(href="#") Покупателю
-		.footer-navigation-desktop.col-10.offset-xl-1.offset-lg-1
+		.footer-navigation-desktop.col-10.offset-xl-1.offset-lg-1.col-xl-8
 			.footer-navigation-desktop__block
 				a.footer-navigation-desktop__title(href="#") 
 					strong О компании
@@ -35,9 +36,9 @@
 					strong Контакты
 	.container
 		.row.footer-bottom
-			.col-12.col-lg-5.offset-lg-1.col-md-8.offset-md-2
-				include ../../sections/_footer-subscribe.pug
-			.col-12.col-lg-5
+			.col-12.offset-md-2.col-md-8.col-lg-6.offset-lg-1.col-xl-5.offset-xl-2
+				include _footer-subscribe.pug
+			.col-12.col-lg-4.col-xl-3
 				.social.text-center
 					.title-4.social-block__title Мы в социальных сетях
 					.social-block

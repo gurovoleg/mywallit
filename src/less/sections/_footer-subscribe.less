@@ -2,6 +2,23 @@
 .footer-subscribe {
 	display: flex;
 	flex-direction: column;
+	padding-top: 48px;
+	padding-bottom: 44px;
+
+	@media @tablet {
+		padding-top: 48px;
+		padding-bottom: 64px;
+	}
+	@media @desktop {
+		padding-top: 56px;
+		padding-bottom: 64px;
+	}
+	@media @desktopXL {
+		padding-top: 64px;
+		padding-bottom: 96px;
+	}
+	
+
 	&--input {
 		position: relative;
 		display: inline-block;
@@ -28,6 +45,7 @@
 		border-radius: @border-input-radius;
 	}
 }
+
 @media @tablet {
 	.footer-subscribe {
 		align-items: flex-start;		
@@ -35,6 +53,13 @@
 }
 .footer-subscribe--form {
 	align-self: center;
+
+	label {
+		margin:0;
+	}
+	p {
+		margin: 0;
+	}
 }
 @media @tablet {
 	.footer-subscribe--form {
@@ -55,13 +80,12 @@
 	}
 }
 .footer-subscribe--subtitle {
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	text-align: center;
 	color: @text;
 }
 .footer-subscribe--buttons {
 	display: flex;
-	padding-left: 14px;
 }
 .button-subscribe {
 	margin-left: 8px;

@@ -6,8 +6,10 @@ nav {
 .header-nav {
 	display: none;
 	position: absolute;
+	z-index: 100;
 	font-size: 16px;
 	letter-spacing: 0.5px;
+	background-color: @white;
 
 	@media @desktop {
 		display: flex;
@@ -84,10 +86,13 @@ ul.menu-level-2 {
 	position: static;
 	flex-direction: column;
 	padding-bottom: 8px;
+	background-color: @white;
 
 	@media @desktop {
 		position: absolute;
 		left: 0px;
+		bottom:-4px; // высота градиента
+		transform:translateY(100%);
 		flex-direction: row;
 		justify-content: flex-start;
 		width: 100%;
