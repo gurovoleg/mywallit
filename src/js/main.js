@@ -144,7 +144,7 @@ $(document).ready(function() {
 
 
 	// Фокус на custom checkbox
-	$('.footer-subscribe--checkbox-custom')
+	$('.checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 	});
