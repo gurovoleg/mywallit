@@ -21,8 +21,12 @@ $(document).ready(function() {
 	);
 	//-end card hover effect
 	
+	
+	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
-
+	
+	
+	// Убрать/Добавить боковую панель (меню)
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
@@ -47,58 +51,58 @@ $(document).ready(function() {
 			if( keycode == 8 && inputVal == 1 ) {
 				$('.header-search-result-desktop').slideUp(400);
 			}
-	}
-
-	$('.header-search__close').on('click', function(){
-		$('input.header-search__input').val('');
-		$('.header-search-result-mobile').slideUp(400);
-		$('.header-search-result-desktop').slideUp(400);
-	});
-
-
-	$(window).resize(function(){
-		if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
-			$('.header-search-result-desktop').css("display", "none");
-			$('.header-search-result-mobile').css("display", "block");
 		}
-		if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
-			$('.header-search-result-desktop').css("display", "flex");
-			$('.header-search-result-mobile').css("display", "none");
-		}
+
+		$('.header-search__close').on('click', function(){
+			$('input.header-search__input').val('');
+			$('.header-search-result-mobile').slideUp(400);
+			$('.header-search-result-desktop').slideUp(400);
+		});
+
+
+		$(window).resize(function(){
+			if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "none");
+				$('.header-search-result-mobile').css("display", "block");
+			}
+			if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
+				$('.header-search-result-desktop').css("display", "flex");
+				$('.header-search-result-mobile').css("display", "none");
+			}
+		});
 	});
-});
-/* //Show search result */
+	/* //Show search result */
 
 
+	// Функия показа меню на мобильных экранах
 	function mobileNavToggle() {
 		if ($('.bg-header-nav').css('display') == 'none') {
 			
 			$('.bg-header-nav').show();
 			$('.header-nav').animate().addClass('mobile-nav-open')	
+			// $('.header-nav').addClass('mobile-nav-open')	
 			
 		} else {
 			
 			$('.header-nav').removeClass('mobile-nav-open');
 			$('.bg-header-nav').delay(500).hide(1);	
 		}
-	
-
 	}
 
 	// Открываем меню на мобильных экранах
 	$('#toggle-menu').on('click', function(){
 		mobileNavToggle();
 		
+		// Убираем блок с поиском
 		$('#header-search-section').fadeOut(100);
 	});
 
-	// header menu navigation
+	// Обработка меню 2 уровня
 	$('#menu-level-1 > li > a').on('click', function(){
 		var $clickedItem = $(this);
 		$('#header-search-section').fadeOut(100);
 
 		if ($(window).width() >= tabletWidth) {
-			
 			// Открываем подменю 2 уровня, если были закрыты после мобильного варианта
 			$('.menu-level-2 ul').show();	
 			
@@ -114,17 +118,22 @@ $(document).ready(function() {
 			
 			if ($clickedItem.parent().find('.menu-level-2').css('display') == 'none' || $clickedItem.parent().find('.menu-level-2').css('display') == undefined) {
 				$('.menu-level-2').slideUp(200);
-				$clickedItem.parent().find('.menu-level-2').slideDown(200);
-			} else {
-				$clickedItem.parent().find('.menu-level-2').slideUp(200);
 			}
+			$clickedItem.parent().find('.menu-level-2').slideToggle(200);
+
 		}
 	});
 
+	
+	// Обработка меню 3 уровня
 	$('.menu-level-2 > li > a').on('click', function(){
 		var $clickedItem = $(this);
 			
 		if ($(window).width() <= tabletWidth) {
+			// Проверяем, если клик по закрытому элемету, то сворачиваем открытые
+			if ($clickedItem.parent().find('.menu-level-3').css('display') == 'none') {
+				$('.menu-level-3').slideUp(200);
+			}
 			$clickedItem.parent().find('.menu-level-3').slideToggle(100);	
 		}
 		
