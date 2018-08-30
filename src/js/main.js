@@ -149,21 +149,61 @@ $(document).ready(function() {
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 	});
 
-	// Фокус на input
-	$('.footer-subscribe--input')
-		.on( 'keydown', function(){
-			var inputVal = $(this).val().length;
-			keycode = window.event.keyCode;
-			if( keycode != 9 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeIn(400);
+	// UI KID input
+	$('.input-field')
+	.on('focus', function(){
+		$(this).addClass('input-field--has-focus');
+	})
+	.on('blur', function(){
+		var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		$(this).removeClass('input-field--has-focus');
+		if(pattern.test($(this).val())){
+			$(this).addClass('input-field--has-focus');
+			$(this).addClass('input-field--has-focus-success');
+			$('.input-field--success-icon').show();
+			$(this).addClass('input-field--success');
+		} else {
+			$(this).addClass('input-field--has-focus');
+			$(this).addClass('input-field--has-focus-error');
+			$('.input-field--error-icon').show();
+			$(this).addClass('input-field--error');
+			$('.input-field__error-text').show();
+		}
+		if ($(this).val() == '') {
+			$(this).removeClass('input-field--has-focus');
+			$(this).removeClass('input-field--error');
+			$(this).removeClass('input-field--has-focus-error');
+			$('.input-field--error-icon').hide();
+			$('.input-field__error-text').hide();
+		}
+	})
+	.on( 'keydown', function(){
+		var keycode = window.event.keyCode; // 13 - enter 9 - tab 8 - backspace
+		var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		var inputVal = $(this).val().length;
+		if ( keycode == '13') {
+			if(pattern.test($(this).val())){
+				$(this).addClass('input-field--has-focus');
+				$(this).addClass('input-field--has-focus-success');
+				$('.input-field--success-icon').show();
+				$(this).addClass('input-field--success');
+			} else {
+				$(this).addClass('input-field--has-focus');
+				$(this).addClass('input-field--has-focus-error');
+				$('.input-field--error-icon').show();
+				$(this).addClass('input-field--error');
+				$('.input-field__error-text').show();
 			}
-			if( keycode == 8 && inputVal == 1 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeOut(400);
-			}
-		})
-		.on( 'blur', function(){ 
-			$(this).removeClass( 'has-focus' ); 
-
+		} else {
+			$(this).removeClass('input-field--success');
+			$(this).removeClass('input-field--has-focus-success');
+			$('.input-field--success-icon').hide();
+			$(this).removeClass('input-field--error');
+			$(this).removeClass('input-field--has-focus-error');
+			$('.input-field--error-icon').hide();
+			$('.input-field__error-text').hide();
+		}
 	});
+
 
 });
