@@ -2,6 +2,12 @@ mixin  filter-item (id, text)
 	input.filter-checkbox(type='checkbox', id = id)
 	label.filter-label(for = id) #{text}
 
+mixin  filter-checkbox (text)
+	label.filter-label 
+		input.filter-checkbox(type='checkbox')
+		span.filter-checkbox-custom
+		span.filter-label-custom #{text}	
+
 mixin  filter-color-checkbox (color)
 	label.label-color-checkbox
 		input(type='checkbox')

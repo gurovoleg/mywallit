@@ -14,7 +14,7 @@
 	}
 	.filter-label {
 		margin:0;
-		margin-left: 8px;
+		// margin-left: 8px;
 		cursor: pointer;
 	}
 }
@@ -124,11 +124,32 @@
 	}
 }
 
-.filter-checkbox:checked {
-	color:@textMenu;
-
-	& + .filter-label {color:@textMenu;}
+// Кастомный чекбокс
+.filter-checkbox-custom {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border:1px solid @gray;
+	margin-right: 8px;
+	background-image: url('../../img/icons/checkbox-marker.svg');
+	background-repeat: no-repeat;
+	background-position: center -10px;
+	transition: 0.1s ease-out;
 }
+
+.filter-checkbox{
+	display: none;	
+}
+
+.filter-checkbox:checked  ~ .filter-label-custom{
+	 color:@textMenu;
+}
+
+.filter-checkbox:checked + .filter-checkbox-custom {
+	background-position: center;
+	border-color:@textMenu;
+}
+
 
 // Кнопка сброс RESET
 .filter-reset {

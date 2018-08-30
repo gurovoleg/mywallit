@@ -21,29 +21,29 @@ block content
 					.filter-icon-close
 					ul.filter-menu-l2
 						li
-							+filter-item('gerder1','Женщинам')
+							+filter-checkbox('Женщинам')
 						li
-							+filter-item('gender2','Мужчинам')
+							+filter-checkbox('Мужчинам')
 				li ПО КАТЕГОРИЯМ
 					.filter-icon-close
 					ul.filter-menu-l2
 						li
-							+filter-item('category1','Кошельки')
+							+filter-checkbox('Кошельки')
 						li
-							+filter-item('category2','Сумки')
+							+filter-checkbox('Сумки')
 						li
-							+filter-item('category3','Аксессуары')
+							+filter-checkbox('Аксессуары')
 						li
-							+filter-item('category4','Офис и Тревел')
+							+filter-checkbox('Офис и Тревел')
 				li ПО РАЗМЕРУ
 					.filter-icon-close
 					ul.filter-menu-l2
 						li
-							+filter-item('size1','Большой')
+							+filter-checkbox('Большой')
 						li
-							+filter-item('size2','Малый')
+							+filter-checkbox('Малый')
 						li
-							+filter-item('size3','Средний')
+							+filter-checkbox('Средний')
 				li ПО ЦВЕТУ
 					.filter-icon-close
 					ul.filter-menu-l2.font-size-null
@@ -65,11 +65,11 @@ block content
 					.filter-icon-close
 					ul.filter-menu-l2
 						li
-							+filter-item('price1','До 2 000р.')
+							+filter-checkbox('До 2 000р.')
 						li
-							+filter-item('price2','От 5 000р. до 10 000р.')
+							+filter-checkbox('От 5 000р. до 10 000р.')
 						li
-							+filter-item('price3','От 10 000р.')
+							+filter-checkbox('От 10 000р.')
 
 			+button-apply('Применить', '#')
 			label.filter-reset Очисить фильтр
