@@ -60,23 +60,31 @@
 	margin-bottom: 8px;
 	font-size: 14px;
 	line-height: 16px;
-
+	text-decoration: none;
+	transition: color 0.5s;
 	@media @tablet {
+		
 		margin-bottom: 16px;
 		min-height: 75px;
 	}
 
 	@media @desktop {
-		min-height: 55px;
-		line-height: 18px;		
+		font-size: 16px;
+		line-height: 18px;
+		min-height: 55px;				
 	}
 
 	@media @desktopXL {
+		min-height: 60px;
+		font-size: 18px;
+		line-height: 20px;
 		margin-bottom: 24px;
 	}
-
 }
-
+.card-product__text:hover {
+	text-decoration: none;
+	color: lighten(@text-card, 25%);
+	}
 .card-product__price{
 	color:@text-card;
 	font-size: 16px;
