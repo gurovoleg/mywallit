@@ -2,6 +2,10 @@ $(document).ready(function() {
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
 
+	$(document).on('click',function(e){
+		console.log(e.target);
+	})
+
 	// Показать/закрыть категории фильтра
 	$('.filter-menu-l1 li').on('click', function(e){
 		if (this == e.target) {
@@ -10,6 +14,12 @@ $(document).ready(function() {
 				$(this).children(':first').toggleClass('is-opened');
 			}
 		}	
+	});
+
+	// Показать/закрыть категории фильтра по иконке
+	$('.filter-icon-close').on('click', function(e){
+		$(this).parent().find('ul').slideToggle();
+		$(this).toggleClass('is-opened');
 	});
 
 	// Показываем все внутренние меню при переходе на десктоп
@@ -28,5 +38,12 @@ $(document).ready(function() {
 		currentWindowSize = w;
 
 	}); 
+
+	// Очищием форму
+	$('.filter__clean-button a').on('click', function(e){
+		e.preventDefault();
+		$(".form-filter")[0].reset();	
+	});
+	
 
 });

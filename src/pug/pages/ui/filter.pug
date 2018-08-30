@@ -11,7 +11,8 @@ block content
 		form.form-filter(style="border:1px dashed lightgrey;")
 			.filter-header
 				.filter__title ФИЛЬТРЫ
-				.filter__clean-button Очистить
+				.filter__clean-button 
+					a(href="#!") Очистить
 				.filter__close-icon#filter__close-icon
 					+icon-close
 			.line-gradient.d-none.d-lg-block
@@ -45,7 +46,7 @@ block content
 							+filter-item('size3','Средний')
 				li ПО ЦВЕТУ
 					.filter-icon-close
-					ul.filter-menu-l2
+					ul.filter-menu-l2.font-size-null
 						li
 							+filter-color-checkbox('#FF7979')
 							+filter-color-checkbox('#6BAC89')
