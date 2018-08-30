@@ -25,3 +25,10 @@ mixin header-info__item(img, title)
 	.header-info__block.d-flex&attributes(attributes)
 		img(src=img alt="иконка")
 		span #{title}
+
+//- Миксин для бейджа в фильтре
+mixin badgeFilter(text, color)
+	.badge-filter(style="background-color: "+ color)= text
+//- Миксин для бейджа статус заказа в аккаунте
+mixin badgeOrderStatus(text, color)
+	.badge-order-status(style="background-color: "+ color)= text
