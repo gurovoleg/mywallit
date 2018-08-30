@@ -63,6 +63,18 @@
 
 a.title-1, a.title-2, a.title-3, a.title-4, a.title-5, a.title-6, a.title,
 .title-1 a, .title-2 a, .title-3 a, .title-4 a, .title-5 a, .title-6 a, .title a {
-	color: #000;
-	text-decoration: underline;
+	
+	text-decoration: none;
+}
+
+a.title--link{	
+	display: block;	
+
+	&:hover {
+		color: @text-red;		
+	}
+}
+
+a:hover {
+	color: @text-red;		
 }

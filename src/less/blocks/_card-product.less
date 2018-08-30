@@ -55,28 +55,41 @@
 }
 
 .card-product__text {
+	padding-left: 6px;
+	padding-right: 6px;
 	color: @text-card;		
 	min-height: 64px;
 	margin-bottom: 8px;
 	font-size: 14px;
 	line-height: 16px;
-
+	text-decoration: none;
+	transition: color 0.5s;
 	@media @tablet {
+		padding-left: 10px;
+		padding-right: 10px;
 		margin-bottom: 16px;
 		min-height: 75px;
 	}
-
-	@media @desktop {
-		min-height: 55px;
-		line-height: 18px;		
+	@media (min-width: 730px){
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	@media @desktop {		
+		font-size: 16px;
+		line-height: 18px;					
 	}
 
 	@media @desktopXL {
+		min-height: 60px;
+		font-size: 18px;
+		line-height: 20px;
 		margin-bottom: 24px;
 	}
-
 }
-
+.card-product__text:hover {
+	text-decoration: none;
+	color:@text-red ;
+	}
 .card-product__price{
 	color:@text-card;
 	font-size: 16px;
@@ -106,8 +119,7 @@
 .card__price--sale{
 	width: 140px;	
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-around;	
 	@media @desktop {
 		width: 160px;		
 	}
@@ -126,7 +138,7 @@
 	height: 1px;
 	background-color: #000;
 	position: absolute;
-	top: 42%;
+	top: 45%;
 	left: -9%;
 }
 

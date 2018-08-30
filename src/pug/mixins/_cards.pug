@@ -1,22 +1,22 @@
 //-миксин для обычной карточки
-mixin card( imgHover, imgSrc, imgAlt, cardText, cardPrice )
+mixin card( imgHover, imgSrc, imgAlt, href, cardText, cardPrice )
 	.card-product&attributes(attributes)
 		a.card-heart-icon(href="#")
 			i.fas.fa-heart
 		.card-product__img
 			img.product-img(src="../img/"+ imgSrc data-src= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
-		.card-product__text #{cardText}
+		a.card-product__text(href = href) #{cardText}
 		.card-product__price #{cardPrice}
 		block
 
-mixin card--sale( prosent, imgHover, imgSrc, imgAlt, cardText, priceOld, priceNew )
+mixin card--sale( prosent, imgHover, imgSrc, imgAlt, href, cardText, priceOld, priceNew )
 	.card-product&attributes(attributes)
 		.card-label-sale #{prosent}
 		a.card-heart-icon(href="#")
 			i.fas.fa-heart
 		.card-product__img
 			img.product-img(src="../img/"+ imgSrc data-src= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
-		.card-product__text.
+		a.card-product__text(href = href).
 			#{cardText}
 		.card-product__price.card__price--sale
 			span.price-new #{priceOld}
