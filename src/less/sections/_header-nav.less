@@ -1,17 +1,43 @@
 nav {
-	display: flex;
-	position: relative;
+	display: flex;	
+}
+
+.bg-header-nav {
+	display: none;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.25);
+	// -webkit-filter: blur(3px);
+  	// filter: blur(3px);
+
+  	@media @desktop {
+		position:static;
+		display: block;
+		background-color: transparent;
+	}	
 }
 
 .header-nav {
-	display: none;
-	position: absolute;
-	z-index: 100;
+	position: fixed;
+	bottom:0;
+	top:0;
+	left:-320px;
+	z-index: 1000;
+	// transform: translateX(-320px);
+					
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	background-color: @white;
+	overflow-y: auto;
+	transition: all 0.5s;
 
 	@media @desktop {
+		overflow-y: visible;
+		transition: all 0s;
 		display: flex;
 		position: static;
 	}
@@ -38,12 +64,18 @@ nav {
 	}
 }
 
+// Добавляем/убираем класс через toggle для мобильной версии меню
+.mobile-nav-open {
+	left:0;
+	transition: all 0.5s;
+}
+
 // Menu
 ul.menu-level-1 {
 	display: flex;
 	width: 320px;
 	flex-direction: column;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+	// box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
 	@media @desktop {
 		flex-direction: row;
@@ -66,12 +98,17 @@ ul.menu-level-1 {
 ul.menu-level-1>li>a {
 	text-transform: uppercase;
 	border-bottom: 1px solid @borderMenu;
+	transition:color 0.3s;
 
 	@media @desktop {
 		border: none;
 		padding-right: 40px;
 		margin-right: 10px;
 		padding-left: 0;
+
+		&:hover {
+			color:@text-red;
+		}
 	}
 
 	&:hover {
@@ -81,27 +118,44 @@ ul.menu-level-1>li>a {
 
 
 // Submenu 1st level
+
+// Обертку добавили, чтобы вынести меню абсолюно относительно header с полной шириной экрана
+// при этом чтобы содержимое меню было в контейнере
+.menu-level-2-wrapper {
+	@media @desktop {
+		position: absolute;
+		left: 0px;
+		bottom:0; // высота градиента
+		transform:translateY(100%);
+		width: 100%;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+	}
+}
+
+
 ul.menu-level-2 {
 	display: none;
 	position: static;
 	flex-direction: column;
 	padding-bottom: 8px;
 	background-color: @white;
-
+		
 	@media @desktop {
-		position: absolute;
-		left: 0px;
-		bottom:-4px; // высота градиента
-		transform:translateY(100%);
+		// position: absolute;
+		// left: 0px;
+		// bottom:0;
+		// transform:translateY(100%);
 		flex-direction: row;
 		justify-content: flex-start;
-		width: 100%;
-		padding: 16px 62px 36px;
-		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+		// width: 100%;
+		// padding: 16px 62px 36px;
+		padding: 16px 0px 36px;
+		// box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	@media @desktopXL {
-		padding: 16px 85px 48px;
+		padding: 16px 0px 48px;
 	}
 }
 
