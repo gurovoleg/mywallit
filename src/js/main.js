@@ -25,18 +25,16 @@ $(document).ready(function() {
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
-	$(".city-selection-wrapper").customScrollbar({
-		preventDefaultScroll: true,
-		fixedThumbHeight: 40,
-		wheelSpeed:20
-	});
-
-	$(".city-selection-wrapper").customScrollbar("scrollToY",200);
-
-
 	
 	//Scrollbar mobile menu
 	$(".header-nav").niceScroll({
+			cursorcolor:"#ACACAC",
+			cursorwidth:"8px",
+			background:"#DBDBDB",
+			cursorborder:"none",
+			cursorborderradius:4
+	});
+	$(".city-selection-list").niceScroll({
 			cursorcolor:"#ACACAC",
 			cursorwidth:"8px",
 			background:"#DBDBDB",
