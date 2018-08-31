@@ -1,0 +1,30 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Социальные сети';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Социальные сети
+			.social.text-center
+				.title-4.social-block__title Мы в социальных сетях
+				.social-block
+					+social-icon('#', 'instagram.svg','instagram')
+					+social-icon('#', 'vk.svg','vk')
+					+social-icon('#', 'fb.svg','fb')
+
+		strong как вставить в проект				
+		pre.
+			.title-4.social-block__title Мы в социальных сетях
+			.social-block
+				+social-icon('#', 'instagram.svg','instagram')
+				+social-icon('#', 'vk.svg','vk')
+				+social-icon('#', 'fb.svg','fb')
+		strong используемый миксин
+		pre.
+			mixin social-icon(href, imgSrc, imgAlt)
+				.social-block__item
+					a(href= href)
+						img(src="../img/social/"+ imgSrc, alt=""+ imgAlt)
+

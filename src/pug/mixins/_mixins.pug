@@ -25,3 +25,17 @@ mixin header-info__item(img, title)
 	.header-info__block.d-flex&attributes(attributes)
 		img(src=img alt="иконка")
 		span #{title}
+
+//- Миксин для checkbox
+
+mixin checkbox (text)
+	label.checkbox-label
+		input.checkbox(type="checkbox")
+		span.checkbox-custom
+		span.checkbox-label-text #{text}
+
+mixin checkboxFilter (text)
+	label.checkbox-label
+		input.checkbox(type="checkbox")
+		span.checkbox-custom.checkbox-custom--filter
+		span.checkbox-label-text.checkbox-label-text--filter #{text}
