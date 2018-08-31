@@ -34,12 +34,14 @@ $(document).ready(function() {
 			cursorborder:"none",
 			cursorborderradius:4
 	});
-	$(".city-selection-list").niceScroll({
+
+	$(".city-selection-wrapper").niceScroll({
 			cursorcolor:"#ACACAC",
 			cursorwidth:"8px",
 			background:"#DBDBDB",
 			cursorborder:"none",
-			cursorborderradius:4
+			cursorborderradius:4,
+			autohidemode: false			
 	}); 
 	
 	
