@@ -223,5 +223,6 @@ $(document).ready(function() {
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
+	});		
 
 });
