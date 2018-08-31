@@ -106,5 +106,110 @@
 	@media @desktop {
 		top: 25px;
 		font-size: 16px;
+
+    
+.checkbox {
+	position: absolute;
+	opacity: 0;
+	outline: none;
+	&:focus, &:active, &:hover {
+		outline: none;
+	}
+}
+
+.checkbox-custom {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border: 1px solid @gray;
+	transition: all 0.1s ease-in;
+	outline: none;
+    vertical-align: middle;
+    
+	&--filter {
+		width: 12px;
+		height: 12px;
+	}
+
+	&:focus, &:active, &:hover {
+		outline: none;
+	}
+}
+
+.checkbox-label {
+	width: 100%;
+	position: relative;
+	padding-top: 8px;
+	p {
+		margin-bottom: 0;
+	}
+	&-text {
+		
+	}
+	@media @desktop {
+		padding-top: 3px;
+	}
+}
+
+.checkbox-label-text {
+	display: inline-block;
+	padding-left: 11px;
+	color: @active-checkbox;
+	font-size: 16px;
+	width: 50%;
+    vertical-align: middle;
+}
+
+.checkbox-custom,
+.checkbox-label {
+	display: inline-block;
+}
+
+.checkbox:checked+.checkbox-custom::before {
+	content: url('../../img/icons/checkbox.svg');
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 2px;
+}
+
+.checkbox:checked+.checkbox-custom--filter::before {
+	content: url('../../img/icons/checkbox-small.svg');
+	display: block;
+	position: absolute;
+	top: -8px;
+	left: 1px;
+}
+
+
+
+.checkbox-label-text--filter {
+	font-size: 16px;
+	width: 100%;
+}
+
+.checkbox:focus+.checkbox-custom,
+.checkbox.has-focus+.checkbox-custom {
+	box-shadow: 0 0 15px 0 @gray;
+}
+
+.checkbox:checked+.checkbox-custom {
+	border: 1px solid @active-checkbox;
+}
+
+.checkbox:checked~.checkbox-label-text--filter {
+	color: @active-checkbox;
+}
+
+.checkbox-label-text {
+	width: 90%;
+	&--filter {
+		color: @gray;
+	}
+	@media @tablet {
+		width: 90%;
+	}
+	@media @desktop {
+		width: 90%;
 	}
 }

@@ -1,7 +1,7 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Элементы формы - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Формы - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
@@ -29,3 +29,15 @@ block content
 		+inputField('Введите пароль', 'Вы ничего не ввели', 'pass', 'password')
 		pre.
 			+inputField('Введите пароль', 'Вы ничего не ввели', 'pass', 'password')
+
+
+    .title Формы
+
+		.section-ui
+			+checkbox('Текст lable checkbox')
+			pre.
+				+checkbox('Текст lable checkbox')
+		.section-ui
+			+checkboxFilter('Текст lable checkbox фильтры')
+			pre.
+				+checkboxFilter('Текст lable checkbox фильтры')
