@@ -124,7 +124,7 @@
 	content: url('../../img/icons/checkbox.svg');
 	display: block;
 	position: absolute;
-	top: -6px;
+	top: -5px;
     left: 2px;
 }
 .footer-subscribe--checkbox-label {
@@ -159,19 +159,7 @@
 	}
 }
 .footer-subscribe--checkbox:focus + .footer-subscribe--checkbox-custom,
-.footer-subscribe--checkbox.has-focus + .footer-subscribe--checkbox-custom{
+.footer-subscribe--checkbox.has-focus + .footer-subscribe--checkbox-custom,
+.footer-subscribe--checkbox:checked + .footer-subscribe--checkbox-custom{
 	border: 1px solid @active-checkbox;
-}
-.footer-subscribe--checkbox-label-text {
-	width: 50%;
-}
-@media @tablet {
-	.footer-subscribe--checkbox-label-text {
-		width: auto;
-	}
-}
-@media @desktop {
-	.footer-subscribe--checkbox-label-text {
-		width: auto;
-	}
 }

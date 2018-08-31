@@ -1,13 +1,19 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Элементы формы - UI-kit и HTML фреймворк - Документация';
+	- var title = 'Формы - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
 
 block content
 	.container.container--left
 		
-		.title Элементы формы
+		.title Формы
 
 		.section-ui
-		title Элементы формы
+			+checkbox('Текст lable checkbox')
+			pre.
+				+checkbox('Текст lable checkbox')
+		.section-ui
+			+checkboxFilter('Текст lable checkbox фильтры')
+			pre.
+				+checkboxFilter('Текст lable checkbox фильтры')

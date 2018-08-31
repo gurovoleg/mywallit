@@ -142,13 +142,6 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
-
-	// Фокус на custom checkbox
-	$('.footer-subscribe--checkbox-custom')
-		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
-		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
-	});
-
 	// Фокус на input
 	$('.footer-subscribe--input')
 		.on( 'keydown', function(){
