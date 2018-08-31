@@ -24,7 +24,7 @@ $(document).ready(function() {
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
-<<<<<<< HEAD
+
 	$(".city-selection-wrapper").customScrollbar({
 		preventDefaultScroll: true,
 		fixedThumbHeight: 40,
@@ -33,11 +33,11 @@ $(document).ready(function() {
 
 	$(".city-selection-wrapper").customScrollbar("scrollToY",200);
 
-=======
+
 	
 	
 	// Убрать/Добавить боковую панель (меню)
->>>>>>> develop
+
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
