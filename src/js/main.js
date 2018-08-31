@@ -42,10 +42,28 @@ $(document).ready(function() {
 			background:"#DBDBDB",
 			cursorborder:"none",
 			cursorborderradius:4,
+			cursorfixedheight: 70,
+			scrollspeed: 300,
 			autohidemode: false			
 	}); 
 	
 	
+	// Меню выбор города
+	$('.city-toggle').on('click', function(){
+
+		$('.city-selection-wrapper').toggleClass('d-block');
+		$("body").toggleClass('overflow-hidden');
+
+	});
+
+	$('.close-selection').on('click', function(){
+		$('.city-selection-wrapper').removeClass('d-block');
+		$("body").toggleClass('overflow-hidden');
+	});
+
+
+
+
 	// Убрать/Добавить боковую панель (меню)
 
 	$('#ui-nav-toggle').click(function(){
