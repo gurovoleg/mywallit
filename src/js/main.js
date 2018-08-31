@@ -61,23 +61,23 @@ $(document).ready(function() {
 		$('input.header-search__input').val('');
 		$('.header-search-result-mobile').slideUp(400);
 		$('.header-search-result-desktop').slideUp(400);
+		
 		setTimeout(function(){
 			$('#header-search-section').fadeToggle();	
 		},400);
-		
-		
-		$(window).resize(function(){
-			if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
-				$('.header-search-result-desktop').css("display", "none");
-				$('.header-search-result-mobile').css("display", "block");
-			}
-			if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
-				$('.header-search-result-desktop').css("display", "flex");
-				$('.header-search-result-mobile').css("display", "none");
-			}
-		});
-
 	});
+	
+	$(window).resize(function(){
+		if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
+			$('.header-search-result-desktop').css("display", "none");
+			$('.header-search-result-mobile').css("display", "block");
+		}
+		if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
+			$('.header-search-result-desktop').css("display", "flex");
+			$('.header-search-result-mobile').css("display", "none");
+		}
+	});
+
 	/* //Show search result */
 
 
@@ -106,6 +106,7 @@ $(document).ready(function() {
 
 	// Открываем меню на мобильных экранах
 	$('#toggle-menu').on('click', function(){
+		console.log('icon click');
 		mobileNavToggle();
 		// Убираем блок с поиском
 		$('#header-search-section').fadeOut(100);
@@ -161,11 +162,13 @@ $(document).ready(function() {
 		if (($('nav').has(e.target).length == 0) && e.target.id != 'toggle-menu') {
 			
 			if ($(window).width() > tabletWidth) {
+			
 				$('.menu-level-2').fadeOut();		
+			
 			} else {
 
-				$('#menu-level-1 > li > ul').slideUp();		
-				$('.header-nav').slideUp();		
+				// $('#menu-level-1 > li > ul').slideUp();		
+				// $('.header-nav').slideUp();		
 
 				if (($('.bg-header-nav').css('display') == 'block')) {
 					mobileNavToggle();
