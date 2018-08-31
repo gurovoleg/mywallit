@@ -26,6 +26,13 @@ mixin header-info__item(img, title)
 		img(src=img alt="иконка")
 		span #{title}
 
+//- Миксин для бейджа в фильтре
+mixin badgeFilter(text, colorClass)
+	.badge-filter(class= colorClass)= text
+//- Миксин для бейджа статус заказа в аккаунте
+mixin badgeOrderStatus(text, colorStatus)
+	.badge-order-status(class= colorStatus)= text
+
 //- Миксин для checkbox
 
 mixin checkbox (text)
