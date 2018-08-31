@@ -1,0 +1,32 @@
+.breadcrumb-list{
+	display: none;
+	width: 100%;
+	@media @tablet {
+		display: block;
+	}
+}
+.breadcrumb-item {
+	display: inline-block;
+	position: relative;
+	margin-right: 16px;
+	font-size: 16px;
+	color: @btn-text-buy-click;	
+}
+.breadcrumb-item:not(:last-child):hover{
+	color: @text-red;
+}
+.breadcrumb-item:last-child:hover{
+	color: @btn-text-buy-click;
+	text-decoration: none;
+	cursor: default;	
+}
+
+
+.breadcrumb-item:not(:last-child):after{
+	content: ">";
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	right: -15px;
+
+}
