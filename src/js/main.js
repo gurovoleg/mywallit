@@ -34,11 +34,10 @@ $(document).ready(function() {
   
 	/* Show search result */
 	$('input.header-search__input').keydown(function(){
-		console.log('input');
+
 		var inputVal = $(this).val().length;
 		keycode = window.event.keyCode;
-		console.log(inputVal);
-		console.log(keycode);
+
 
 		if( $(document).width() < tabletWidth ) {
 			$('.header-search-result-mobile').slideDown(400);
@@ -55,14 +54,17 @@ $(document).ready(function() {
 				$('.header-search-result-desktop').slideUp(400);
 			}
 		}
+	});	
 
-	// $('body').on('click', 'new-button', function(){});
 
 	$('.header-search__close').on('click', function(){
 		$('input.header-search__input').val('');
-		$('.header-search-section').slideUp(400);
 		$('.header-search-result-mobile').slideUp(400);
 		$('.header-search-result-desktop').slideUp(400);
+		setTimeout(function(){
+			$('#header-search-section').fadeToggle();	
+		},400);
+		
 		
 		$(window).resize(function(){
 			if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
@@ -109,7 +111,7 @@ $(document).ready(function() {
 		$('#header-search-section').fadeOut(100);
 	});
 
-	
+
 
 
 	// Обработка меню 2 уровня
@@ -139,7 +141,7 @@ $(document).ready(function() {
 		}
 	});
 
-	
+
 	// Обработка меню 3 уровня
 	$('.menu-level-2 > li > a').on('click', function(){
 		var $clickedItem = $(this);

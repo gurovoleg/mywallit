@@ -9,6 +9,7 @@
 	z-index: 100;
 
 }
+// Строка поиска
 .header-search__input {
 	height: 56px;
 	border: none;
@@ -19,6 +20,13 @@
 	color: @text-light-grey;
 	width: 100%;
 }
+
+// Обертка для инпута с нижней границей
+.wrapper-border-bottom {
+	border-bottom: 1px solid #C4C4C4;
+}
+
+// Иконка крестик
 .header-search__close {
 	position: absolute;
 	z-index: 200;
@@ -38,7 +46,7 @@
 	display: none;
 	// position:absolute;
 	// top:56px; // высота Input блока - строки поиска
-	border-top: 1px solid #C4C4C4;
+	// border-top: 1px solid #C4C4C4;
 	// box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.4);
 	padding-bottom: 22px;
 	padding-top: 17px;
@@ -96,24 +104,17 @@
 }
 .header-search-result-desktop {
 	// position:absolute;
-	// top:56px; // высота Input блока - строки поиска
 	display: none;
-	border-top: 1px solid #C4C4C4;
-	// box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.3);
-	padding-top: 16px;
+	padding-top: 15px;
 	padding-bottom: 22px;
-	padding-left: 40px;
-	padding-right: 40px;
 	background-color: @white;
 
 	@media @desktop {
 		// display: flex;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-	}
-	@media @desktopXL {
-		padding-left: 70px;
-		padding-right: 70px;
+		justify-content: flex-start;
+		padding-bottom: 22px;
+		padding-top: 20px;
+
 	}
 
 }
