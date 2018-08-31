@@ -187,15 +187,17 @@
 .button-subscribe {
 	display: block;
 	width: 60px;
+	height: 40px;
 	line-height: 1;
 	font-size: 14px;
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: @white;
-	padding-top: 13px;
+	padding-top: 14px;
 	padding-bottom: 13px;
 	transition: 0.2s ease-in;
 	outline: none;
+	text-transform: uppercase;
 	&--she {
 		background-color: @btn-red;
 		&:hover,
@@ -227,6 +229,12 @@
 	&:focus {
 		color: @white;
 		text-decoration: none;
+	}
+}
+@media @desktop {
+	.button-subscribe {
+		height: 48px;
+		line-height: 1.5;
 	}
 }
 .button-order__link {

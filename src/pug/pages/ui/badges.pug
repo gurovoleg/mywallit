@@ -10,18 +10,18 @@ block content
 		.title Карточки
 		p Бейджик для фильтра
 		.badge-wrapper
-			+badgeFilter('Бумажники', '#DC1019')
-			+badgeFilter('Портмоне', '#DB5C93')
-			+badgeFilter('Органайзеры', '#E77C0B')
+			+badgeFilter('Бумажники', 'badge-red')
+			+badgeFilter('Портмоне', 'badge-pink')
+			+badgeFilter('Органайзеры', 'badge-orange')
 		pre.
-			+badgeFilter('Бумажники', '#DC1019')
+			+badgeFilter('Бумажники', 'badge-red')
 		p Бейджик - статус заказа в аккаунте
-		+badgeOrderStatus('Принят', '#86A138')
-		+badgeOrderStatus('Изменен', '#0073AF')
-		+badgeOrderStatus('Отменен', '#DB0F19')
-		+badgeOrderStatus('Выполнен', '#86A138')
+		+badgeOrderStatus('Принят', 'badge-done')
+		+badgeOrderStatus('Изменен', 'badge-change')
+		+badgeOrderStatus('Отменен', 'badge-cancel')
+		+badgeOrderStatus('Выполнен', 'badge-done')
 		pre.
-			+badgeOrderStatus('Принят', '#86A138')
+			+badgeOrderStatus('Принят', 'badge-done')
 
 
 
