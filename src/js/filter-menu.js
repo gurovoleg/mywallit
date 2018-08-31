@@ -2,10 +2,6 @@ $(document).ready(function() {
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
 
-	$(document).on('click',function(e){
-		console.log(e.target);
-	})
-
 	// Показать/закрыть категории фильтра
 	$('.filter-menu-l1 li').on('click', function(e){
 		if (this == e.target) {
