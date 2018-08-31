@@ -42,6 +42,8 @@ $(document).ready(function() {
 			background:"#DBDBDB",
 			cursorborder:"none",
 			cursorborderradius:4,
+			cursorfixedheight: 70,
+			scrollspeed: 300,
 			autohidemode: false			
 	}); 
 	
