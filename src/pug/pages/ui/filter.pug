@@ -1,0 +1,76 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр - Навигация - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Фильтр
+		
+		form.form-filter(style="border:1px dashed lightgrey;")
+			.filter-header
+				.filter__title ФИЛЬТРЫ
+				.filter__clean-button 
+					a(href="#!") Очистить
+				.filter__close-icon#filter__close-icon
+					+icon-close
+			.line-gradient.d-none.d-lg-block
+			ul.filter-menu-l1
+				li ПО ПОЛУ
+					.filter-icon-close
+					ul.filter-menu-l2
+						li
+							+filter-checkbox('Женщинам')
+						li
+							+filter-checkbox('Мужчинам')
+				li ПО КАТЕГОРИЯМ
+					.filter-icon-close
+					ul.filter-menu-l2
+						li
+							+filter-checkbox('Кошельки')
+						li
+							+filter-checkbox('Сумки')
+						li
+							+filter-checkbox('Аксессуары')
+						li
+							+filter-checkbox('Офис и Тревел')
+				li ПО РАЗМЕРУ
+					.filter-icon-close
+					ul.filter-menu-l2
+						li
+							+filter-checkbox('Большой')
+						li
+							+filter-checkbox('Малый')
+						li
+							+filter-checkbox('Средний')
+				li ПО ЦВЕТУ
+					.filter-icon-close
+					ul.filter-menu-l2.font-size-null
+						li
+							+filter-color-checkbox('#FF7979')
+							+filter-color-checkbox('#6BAC89')
+							+filter-color-checkbox('#C3499E')
+							+filter-color-checkbox('#FFB047')
+							+filter-color-checkbox('#002D76')
+							+filter-color-checkbox('#AF674F')
+							+filter-color-checkbox('#FF7979')
+							+filter-color-checkbox('#6BAC89')
+							+filter-color-checkbox('#C3499E')
+							+filter-color-checkbox('#FFB047')
+							+filter-color-checkbox('#FF7979')
+							+filter-color-checkbox('#6BAC89')
+							
+				li ПО ЦЕНЕ
+					.filter-icon-close
+					ul.filter-menu-l2
+						li
+							+filter-checkbox('До 2 000р.')
+						li
+							+filter-checkbox('От 5 000р. до 10 000р.')
+						li
+							+filter-checkbox('От 10 000р.')
+
+			+button-apply('Применить', '#')
+			label.filter-reset Очисить фильтр
+				input(type='Reset' value='Очистить фильтр')

@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Хлебные крошки';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Хлебные крошки
+		.section-ui
+			.breadcrumb
+				nav.breadcrumb-list
+					+breadcrumb-item('#', 'Главная страница')
+					+breadcrumb-item('#', 'Каталог')
+		.string Миксин			
+		pre.
+			
+			mixin breadcrumb-item(href, text)
+				a.breadcrumb-item(href=href) #{text}
+		.string Добавать новый пункт меню
+
+		pre.
+			+breadcrumb-item('#', 'Главная страница')
+			+breadcrumb-item('#', 'Каталог')

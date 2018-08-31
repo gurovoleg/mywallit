@@ -1,31 +1,31 @@
 nav {
-	display: flex;	
+	display: flex;
 }
 
 .bg-header-nav {
 	display: none;
-	position:fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	z-index: 1000;
 	background-color: rgba(0, 0, 0, 0.25);
 
-  	@media @desktop {
-		position:static;
+	@media @desktop {
+		position: static;
 		display: block;
 		background-color: transparent;
-	}	
+	}
 }
 
 .header-nav {
 	position: fixed;
-	bottom:0;
-	top:0;
-	left:-320px;
+	bottom: 0;
+	top: 0;
+	left: -320px;
 	z-index: 1100;
-						
+
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	background-color: @white;
@@ -63,7 +63,7 @@ nav {
 
 // Добавляем/убираем класс через toggle для мобильной версии меню
 .mobile-nav-open {
-	left:0;
+	left: 0;
 	transition: all 0.5s;
 }
 
@@ -71,9 +71,7 @@ nav {
 ul.menu-level-1 {
 	display: flex;
 	width: 320px;
-	flex-direction: column;
-	// box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-
+	flex-direction: column; // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 	@media @desktop {
 		flex-direction: row;
 		width: 100%;
@@ -95,7 +93,7 @@ ul.menu-level-1 {
 ul.menu-level-1>li>a {
 	text-transform: uppercase;
 	border-bottom: 1px solid @borderMenu;
-	transition:color 0.3s;
+	transition: color 0.3s;
 
 	@media @desktop {
 		border: none;
@@ -104,7 +102,7 @@ ul.menu-level-1>li>a {
 		padding-left: 0;
 
 		&:hover {
-			color:@text-red;
+			color: @text-red;
 		}
 	}
 
@@ -115,18 +113,16 @@ ul.menu-level-1>li>a {
 
 
 // Submenu 1st level
-
 // Обертку добавили, чтобы вынести меню абсолюно относительно header с полной шириной экрана
 // при этом чтобы содержимое меню было в контейнере
 .menu-level-2-wrapper {
 	@media @desktop {
 		position: absolute;
 		left: 0px;
-		bottom:0; // высота градиента
-		transform:translateY(100%);
+		bottom: 0; // высота градиента
+		transform: translateY(100%);
 		width: 100%;
 		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-
 	}
 }
 
@@ -137,18 +133,16 @@ ul.menu-level-2 {
 	flex-direction: column;
 	padding-bottom: 8px;
 	background-color: @white;
-		
+
 	@media @desktop {
 		// position: absolute;
 		// left: 0px;
 		// bottom:0;
 		// transform:translateY(100%);
 		flex-direction: row;
-		justify-content: flex-start;
-		// width: 100%;
+		justify-content: flex-start; // width: 100%;
 		// padding: 16px 62px 36px;
-		padding: 16px 0px 36px;
-		// box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+		padding: 16px 0px 36px; // box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	@media @desktopXL {
@@ -226,13 +220,13 @@ ul.menu-level-3>li>a {
 }
 
 .search-block__title {
-	font-size: 16px;
-	padding-top: 8px;
-	margin-right: 24px;
+	font-size: 14px;
+	padding-top: 10px;
+	margin-right: 18px;
 
 	@media @desktopXL {
-		font-size: 18px;
-		margin-right: 90px;
+		font-size: 14px;
+		margin-right: 32px;
 	}
 }
 

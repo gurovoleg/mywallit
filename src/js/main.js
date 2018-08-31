@@ -45,13 +45,15 @@ $(document).ready(function() {
   
 	/* Show search result */
 	$('input.header-search__input').keydown(function(){
+
 		var inputVal = $(this).val().length;
 		keycode = window.event.keyCode;
+
 
 		if( $(document).width() < tabletWidth ) {
 			$('.header-search-result-mobile').slideDown(400);
 			
-			if( keycode == 8 && inputVal == 1 ) {
+			if( keycode == 8 && inputVal <= 1 ) {
 				$('.header-search-result-mobile').slideUp(400);
 			}
 		}
@@ -59,29 +61,34 @@ $(document).ready(function() {
 		if( $(document).width() >= tabletWidth ) {
 			$('.header-search-result-desktop').slideDown(400).css("display", "flex");
 			
-			if( keycode == 8 && inputVal == 1 ) {
+			if( keycode == 8 && inputVal <= 1 ) {
 				$('.header-search-result-desktop').slideUp(400);
 			}
 		}
-
-		$('.header-search__close').on('click', function(){
-			$('input.header-search__input').val('');
-			$('.header-search-result-mobile').slideUp(400);
-			$('.header-search-result-desktop').slideUp(400);
-		});
+	});	
 
 
-		$(window).resize(function(){
-			if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
-				$('.header-search-result-desktop').css("display", "none");
-				$('.header-search-result-mobile').css("display", "block");
-			}
-			if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
-				$('.header-search-result-desktop').css("display", "flex");
-				$('.header-search-result-mobile').css("display", "none");
-			}
-		});
+	$('.header-search__close').on('click', function(){
+		$('input.header-search__input').val('');
+		$('.header-search-result-mobile').slideUp(400);
+		$('.header-search-result-desktop').slideUp(400);
+		
+		setTimeout(function(){
+			$('#header-search-section').fadeToggle();	
+		},400);
 	});
+	
+	$(window).resize(function(){
+		if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
+			$('.header-search-result-desktop').css("display", "none");
+			$('.header-search-result-mobile').css("display", "block");
+		}
+		if( $(window).width() > 1152 && $('input.header-search__input').val() != '') {
+			$('.header-search-result-desktop').css("display", "flex");
+			$('.header-search-result-mobile').css("display", "none");
+		}
+	});
+
 	/* //Show search result */
 
 
@@ -110,12 +117,13 @@ $(document).ready(function() {
 
 	// Открываем меню на мобильных экранах
 	$('#toggle-menu').on('click', function(){
+		console.log('icon click');
 		mobileNavToggle();
 		// Убираем блок с поиском
 		$('#header-search-section').fadeOut(100);
 	});
 
-	
+
 
 
 	// Обработка меню 2 уровня
@@ -145,7 +153,7 @@ $(document).ready(function() {
 		}
 	});
 
-	
+
 	// Обработка меню 3 уровня
 	$('.menu-level-2 > li > a').on('click', function(){
 		var $clickedItem = $(this);
@@ -162,14 +170,21 @@ $(document).ready(function() {
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
 	$(document).on('click', function(e){
-		if (($('nav').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
+		if (($('nav').has(e.target).length == 0) && e.target.id != 'toggle-menu') {
 			
 			if ($(window).width() > tabletWidth) {
+			
 				$('.menu-level-2').fadeOut();		
+			
 			} else {
+
+				// $('#menu-level-1 > li > ul').slideUp();		
+				// $('.header-nav').slideUp();		
+
 				if (($('.bg-header-nav').css('display') == 'block')) {
 					mobileNavToggle();
 				}
+
 			}
 		}
 	});
