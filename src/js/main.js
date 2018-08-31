@@ -32,6 +32,7 @@ $(document).ready(function() {
 			cursorwidth:"8px",
 			background:"#DBDBDB",
 			cursorborder:"none",
+			nativeparentscrolling: false,
 			cursorborderradius:4
 	});
 	$(".city-selection-list").niceScroll({

@@ -16,17 +16,11 @@ block content
 					.footer-subscribe--subtitle Будь в курсе новостей и специальных предложениях!
 					form.footer-subscribe--form(action="")
 						.footer-subscribe-wrapper
-							.input-wrapper
-								.input-field--success-icon
-								.input-field--error-icon
-								input.input-field(type="text")
-								span.input-field__label Email
-								.input-field__error-text Пожалуйста, введите действительный адрес электронной почты
+							+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
 							.footer-subscribe--buttons
 								+button-she("Она", "#")
 								+button-he("Он", "#")
-						label.footer-subscribe--checkbox-label
-							span.footer-subscribe--checkbox-label-focus Email
+						.footer-subscribe--checkbox
 							+checkbox('Я принимаю политику конфиденциальности.')
 		.section-ui
 			pre.
