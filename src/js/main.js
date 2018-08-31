@@ -22,11 +22,13 @@ $(document).ready(function() {
 	//-end card hover effect
 	
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
-	$(".selection-block-body").customScrollbar({
+	$(".city-selection-wrapper").customScrollbar({
 		preventDefaultScroll: true,
 		fixedThumbHeight: 40,
 		wheelSpeed:20
 	});
+
+	$(".city-selection-wrapper").customScrollbar("scrollToY",200);
 
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
