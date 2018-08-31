@@ -181,7 +181,8 @@ $(document).ready(function() {
 
 	// Вызываем меню с поиском
 	$('.toggle-search-block').on('click', function(){
-		console.log('search');
+		// закрываем навинацию
+		$('.menu-level-2').fadeOut(100);
 		$('#header-search-section').fadeToggle();
 	});
 
