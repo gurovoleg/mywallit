@@ -78,24 +78,34 @@ $(document).ready(function() {
 	function mobileNavToggle() {
 		if ($('.bg-header-nav').css('display') == 'none') {
 			
+			$('nav').insertBefore('.blur-wrapper')
+
 			$('.bg-header-nav').show();
 			$('.header-nav').animate().addClass('mobile-nav-open')	
-			// $('.header-nav').addClass('mobile-nav-open')	
+			$('.blur-wrapper').addClass('filter-blur')		
 			
 		} else {
 			
-			$('.header-nav').removeClass('mobile-nav-open');
-			$('.bg-header-nav').delay(500).hide(1);	
+			$('.header-nav').animate().removeClass('mobile-nav-open');
+								
+			setTimeout(function(){
+				$('nav').appendTo('.bg-header-nav .container');
+				$('.bg-header-nav').hide();
+				$('.blur-wrapper').removeClass('filter-blur');			
+			}, 500);
 		}
 	}
+
 
 	// Открываем меню на мобильных экранах
 	$('#toggle-menu').on('click', function(){
 		mobileNavToggle();
-		
 		// Убираем блок с поиском
 		$('#header-search-section').fadeOut(100);
 	});
+
+	
+
 
 	// Обработка меню 2 уровня
 	$('#menu-level-1 > li > a').on('click', function(){
@@ -141,7 +151,7 @@ $(document).ready(function() {
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
 	$(document).on('click', function(e){
-		if (($('.bg-header-nav').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
+		if (($('nav').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
 			
 			if ($(window).width() > tabletWidth) {
 				$('.menu-level-2').fadeOut();		
