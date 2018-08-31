@@ -10,10 +10,15 @@ block content
 		.title Элементы формы
 		
 		.section-ui
-		p Input с текстом
-		.input-wrapper
-			.input-field--success-icon
-			.input-field--error-icon
-			input.input-field(type="text")
-			span.input-field__label Email
-			.input-field__error-text Пожалуйста, введите действительный адрес электронной почты
+		p Input email с проверкой
+		+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+		.section-ui
+		p Input текстовое с проверкой на заполненность
+		+inputField('Введите текст', 'Вы ничего не ввели', 'notEmpty', 'text')
+		.section-ui
+		p Input текстовое без проверки
+		+inputField('', '', 'notCheck', 'text')
+		.section-ui
+		p Input текстовое для пароля
+		+inputField('Введите пароль', 'Вы ничего не ввели', 'pass', 'password')
+

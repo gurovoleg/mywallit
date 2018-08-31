@@ -1,0 +1,9 @@
+mixin inputField(textLable, textError, dataType, typeField)
+	.input-wrapper
+		.input-field--success-icon
+		.input-field--error-icon
+		input.input-field(type= typeField data-type= dataType)
+		if textLable !=''
+			span.input-field__label= textLable
+		if textError !=''
+			.input-field__error-text= textError
