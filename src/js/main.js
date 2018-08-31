@@ -35,6 +35,15 @@ $(document).ready(function() {
 
 
 	
+	//Scrollbar mobile menu
+	$(".header-nav").niceScroll({
+			cursorcolor:"#ACACAC",
+			cursorwidth:"8px",
+			background:"#DBDBDB",
+			cursorborder:"none",
+			cursorborderradius:4
+	}); 
+	
 	
 	// Убрать/Добавить боковую панель (меню)
 
@@ -165,7 +174,6 @@ $(document).ready(function() {
 			}
 			$clickedItem.parent().find('.menu-level-3').slideToggle(100);	
 		}
-		
 	});
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
@@ -226,5 +234,6 @@ $(document).ready(function() {
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
+	});		
 
 });
