@@ -16,7 +16,12 @@ block content
 					.footer-subscribe--subtitle Будь в курсе новостей и специальных предложениях!
 					form.footer-subscribe--form(action="")
 						.footer-subscribe-wrapper
-							input.footer-subscribe--input.footer-subscribe--border(type="text" placeholder="Email")
+							.input-wrapper
+								.input-field--success-icon
+								.input-field--error-icon
+								input.input-field(type="text")
+								span.input-field__label Email
+								.input-field__error-text Пожалуйста, введите действительный адрес электронной почты
 							.footer-subscribe--buttons
 								+button-she("Она", "#")
 								+button-he("Он", "#")

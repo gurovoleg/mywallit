@@ -178,9 +178,6 @@ $(document).ready(function() {
 			
 			} else {
 
-				// $('#menu-level-1 > li > ul').slideUp();		
-				// $('.header-nav').slideUp();		
-
 				if (($('.bg-header-nav').css('display') == 'block')) {
 					mobileNavToggle();
 				}
@@ -189,14 +186,27 @@ $(document).ready(function() {
 		}
 	});
 
-	// Закрываем все открытые меню при переходе с мобильного на большой экран
+	// Обрабатываем переходы между мобильным и десктоп вариантами 
 	$(window).resize(function(){
 		var w = $(window).width();
+		
+		// Переход на десктоп
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
 		    $('#menu-level-1 ul').hide();
-		    $('.bg-header-nav').show();	
+		    
+		    // Проверка меню на открытость при переходе
+		    if ($('.bg-header-nav').css('display') == 'block') {
+
+		    	$('nav').appendTo('.bg-header-nav .container');
+		    	$('.blur-wrapper').removeClass('filter-blur');
+		    }
+				
+			$('.bg-header-nav').show();			    
+	
+		// Переход на мобильный
 		} else {
 			if ((w < tabletWidth) && currentWindowSize >= tabletWidth)  {
+		
 		    	$('.bg-header-nav').hide();	
 			}
 		}
@@ -212,21 +222,9 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
-	// Фокус на input
-	$('.footer-subscribe--input')
-		.on( 'keydown', function(){
-			var inputVal = $(this).val().length;
-			keycode = window.event.keyCode;
-			if( keycode != 9 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeIn(400);
-			}
-			if( keycode == 8 && inputVal == 1 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeOut(400);
-			}
-		})
-		.on( 'blur', function(){ 
-			$(this).removeClass( 'has-focus' ); 
-
-	});
+	// Фокус на custom checkbox
+	$('.footer-subscribe--checkbox-custom')
+		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
+		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 
 });
