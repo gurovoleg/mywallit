@@ -1,0 +1,38 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Баннеры';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Пагинация
+		.section-ui
+			.paginator
+				.page-toggle
+					+pagination-toggle('#', 1)
+					+pagination-toggle('#', 2)(class="page-toggle__item--current")
+					+pagination-toggle('#', 3)
+					
+					span.page-toggle__item.paginator__span &hellip;
+					+pagination-toggle('#', 62)(class="page-toggle__item--last")
+
+				+button-more('Показать еще', '#')
+				.page-toggle
+					+pagination-toggle('#', 'Назад')(class="page-toggle__item--prev")
+					+pagination-toggle('#', 'Вперед')(class="page-toggle__item--next")
+		pre.
+			.paginator
+				.page-toggle
+					+pagination-toggle('#', 1)
+					+pagination-toggle('#', 2)(class="page-toggle__item--current")
+					+pagination-toggle('#', 3)
+					
+					span.page-toggle__item.paginator__span &hellip;
+					+pagination-toggle('#', 62)(class="page-toggle__item--last")
+
+				+button-more('Показать еще', '#')
+				.page-toggle
+					+pagination-toggle('#', 'Назад')(class="page-toggle__item--prev")
+					+pagination-toggle('#', 'Вперед')(class="page-toggle__item--next")

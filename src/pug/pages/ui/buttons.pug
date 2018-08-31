@@ -7,55 +7,57 @@ block variables
 block content
 	.container.container--left
 		.title Кнопки
-
-		p Кнопки
+		
 		.section-ui
-			+button-cart("В корзину", "#")
+			.ui-title Общие кнопки
+			.row
+				.col-auto
+					+button-cart("В корзину", "#")
+				.col-auto
+					+button-store("Нет в наличии", "#")
+				.col-auto(style="background-color: #004AAA; padding: 15px;")
+					+button-detail("Подробнее", "#")
 		pre.
 			+button-cart('В корзину','#')
-		.section-ui
-			+button-store("Нет в наличии", "#")
-		pre.
 			+button-store('Нет в наличии','#')
-		.section-ui(style="background-color: #004AAA;")
-			+button-detail("Подробнее", "#")
-		pre.
 			+button-detail('Подробнее','#')
 		
-		p Адаптивные кнопки
 		.section-ui
-			+button-buyclick("Купить в 1 клик", "#")
+			.ui-title Адаптивные кнопки
+			.row
+				.col-auto
+					+button-buyclick("Купить в 1 клик", "#")
+				.col-auto
+					+button-addcart("Добавить в корзину", "#")
 		pre.
 			+button-buyclick("Купить в 1 клик", "#")
-		.section-ui
-			+button-addcart("Добавить в корзину", "#")
-		pre.
 			+button-addcart("Добавить в корзину", "#")
 
-		p Кнопки подписки Она / Он
 		.section-ui
-			+button-she("Она", "#")
+			.ui-title Кнопки подписки Она / Он
+			.row
+				.col-auto
+					+button-she("Она", "#")
+				.col-auto
+					+button-he("Он", "#")
 		pre.
 			+button-she("Она", "#")
-		.section-ui
 			+button-he("Он", "#")
-		pre.
-			+button-he("Он", "#")
-
-		p Кнопка оформить заказ
-		.section-ui
-			+button-order('Оформить заказ', '#', '14 679')
-		pre.
-			+button-order('Оформить заказ', '#', '14 679')
 		
-		p Кнопка Применить
 		.section-ui
+			.ui-title Кнопка оформить заказ
+			+button-order('Оформить заказ', '#', '14 679')
+		pre.
+			+button-order('Оформить заказ', '#', '14 679')
+
+		.section-ui
+			.ui-title Кнопка Применить
 			+button-apply('Применить', '#')
 		pre.
 			+button-apply('Применить', '#')
 
-		p Кнопка Показать еще
 		.section-ui
+			.ui-title Кнопка Показать еще
 			+button-more('Показать еще', '#')
 		pre.
 			+button-more('Показать еще', '#')

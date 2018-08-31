@@ -1,0 +1,226 @@
+// Форма
+.form-filter {
+	width: 360px;
+	color: @textMenu;
+	line-height: 1;
+	text-align: center;
+
+	@media @desktop {
+		width: 270px;
+	}
+
+	ul {
+		list-style: none;
+	}
+	.filter-label {
+		margin: 0; // margin-left: 8px;
+		cursor: pointer;
+	}
+}
+
+// Заголовок формы
+.filter-header {
+	display: block;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 0;
+	position: relative;
+	border-bottom: 1px solid @borderMenu;
+
+	@media @desktop {
+		display: flex;
+	}
+}
+
+.filter__title {
+	font-size: 20px;
+	color: @text-red;
+}
+
+.filter__clean-button {
+	display: none;
+	font-size: 16px;
+	color: @textMenu;
+
+	@media @desktop {
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		&:hover {
+			color: @text-red;
+		}
+	}
+}
+
+// Иконка крестик
+.filter__close-icon {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+
+
+	@media @desktop {
+		display: none;
+	}
+}
+
+
+// Меню 1 уровня
+.filter-menu-l1 {
+	margin: 0;
+	padding: 0 0;
+	text-transform: uppercase;
+	text-align: left;
+	>li {
+		position: relative;
+		padding: 12px 16px;
+		cursor: pointer;
+		border-bottom: 1px solid @borderMenu; // отступ от кнопки
+		&:last-child {
+			margin-bottom: 94px;
+		}
+
+		@media @desktop {
+			padding: 16px 8px 0px 8px;
+			border: none;
+
+			&:last-child {
+				margin-bottom: 22px;
+			}
+		} // Убрать border у послденего
+		&:last-child .filter-menu-l2 {
+			border-bottom: none;
+		}
+	}
+}
+
+// Меню 2 уровня
+.filter-menu-l2 {
+	display: none;
+	margin: 0;
+	padding: 0;
+	text-transform: none; // border-bottom:none;
+	color: @borderMenu;
+	padding: 8px 0;
+
+	>li {
+		padding: 8px 0;
+	}
+
+	@media @desktop {
+		display: block;
+		border-bottom: 1px solid @borderMenu;
+	}
+}
+
+// Кастомный чекбокс
+.filter-checkbox-custom {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid @gray;
+	margin-right: 8px;
+	background-image: url('../../img/icons/checkbox-marker.svg');
+	background-repeat: no-repeat;
+	background-position: center -10px;
+	transition: 0.1s ease-out;
+}
+
+.filter-checkbox {
+	display: none;
+}
+
+.filter-checkbox:checked~.filter-label-custom {
+	color: @textMenu;
+}
+
+.filter-checkbox:checked+.filter-checkbox-custom {
+	background-position: center;
+	border-color: @textMenu;
+}
+
+
+// Кнопка сброс RESET
+.filter-reset {
+	text-align: center;
+	padding: 12px 0;
+	cursor: pointer;
+	input[type='reset'] {
+		display: none;
+	}
+}
+
+// Чекбоксы цвета - label обертка для чекбокса и псевдо чекбоска
+.label-color-checkbox {
+	font-size: 0px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	input {
+		display: none;
+	}
+}
+
+// Псевдо чекбокс
+.filter-color-checkbox {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+// Жобавляем рамку при выборе
+.label-color-checkbox input:checked+.filter-color-checkbox {
+	box-shadow: 0 0 0 1px @white,
+	0 0 0 3px @color-11;
+}
+
+// Иконка крестик
+.filter-icon-close {
+	&:before {
+		content: "+";
+		position: absolute;
+		right: 14px;
+		top: 7px;
+		color: @textMenu;
+		font-size: 28px;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		height: 2px;
+		width: 15px;
+		background-color: transparent;
+	}
+
+	@media @desktop {
+		display: none;
+	}
+}
+
+// класс для открытия/закрытия иконки
+.is-opened.filter-icon-close:before {
+	content: '';
+}
+
+.is-opened.filter-icon-close:after {
+	background-color: @textMenu;
+}
