@@ -151,7 +151,7 @@ $(document).ready(function() {
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
 	$(document).on('click', function(e){
-		if (($('nav').has(e.target).length == 0) && ($('#toggle-menu').has(e.target).length == 0)) {
+		if (($('nav').has(e.target).length == 0) && e.target.id != 'toggle-menu') {
 			
 			if ($(window).width() > tabletWidth) {
 				$('.menu-level-2').fadeOut();		
