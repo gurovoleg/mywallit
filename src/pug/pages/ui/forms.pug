@@ -12,12 +12,20 @@ block content
 		.section-ui
 		p Input email с проверкой
 		+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+		pre.
+			+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
 		.section-ui
 		p Input текстовое с проверкой на заполненность
 		+inputField('Введите текст', 'Вы ничего не ввели', 'notEmpty', 'text')
+		pre.
+			+inputField('Введите текст', 'Вы ничего не ввели', 'notEmpty', 'text')
 		.section-ui
 		p Input текстовое без проверки
 		+inputField('', '', 'notCheck', 'text')
+		pre.
+			+inputField('', '', 'notCheck', 'text')
 		.section-ui
 		p Input текстовое для пароля
 		+inputField('Введите пароль', 'Вы ничего не ввели', 'pass', 'password')
+		pre.
+			+inputField('Введите пароль', 'Вы ничего не ввели', 'pass', 'password')
