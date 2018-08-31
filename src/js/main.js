@@ -46,6 +46,22 @@ $(document).ready(function() {
 	}); 
 	
 	
+	// Меню выбор города
+	$('.city-toggle').on('click', function(){
+
+		$('.city-selection-wrapper').toggleClass('d-block');
+		$("body").toggleClass('overflow-hidden');
+
+	});
+
+	$('.close-selection').on('click', function(){
+		$('.city-selection-wrapper').removeClass('d-block');
+		$("body").toggleClass('overflow-hidden');
+	});
+
+
+
+
 	// Убрать/Добавить боковую панель (меню)
 
 	$('#ui-nav-toggle').click(function(){
