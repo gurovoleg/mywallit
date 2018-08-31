@@ -211,21 +211,9 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
-	// Фокус на input
-	$('.footer-subscribe--input')
-		.on( 'keydown', function(){
-			var inputVal = $(this).val().length;
-			keycode = window.event.keyCode;
-			if( keycode != 9 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeIn(400);
-			}
-			if( keycode == 8 && inputVal == 1 ) {
-				$('.footer-subscribe--checkbox-label-focus').fadeOut(400);
-			}
-		})
-		.on( 'blur', function(){ 
-			$(this).removeClass( 'has-focus' ); 
-
-	});
+	// Фокус на custom checkbox
+	$('.footer-subscribe--checkbox-custom')
+		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
+		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 
 });
