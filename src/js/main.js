@@ -24,6 +24,7 @@ $(document).ready(function() {
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
+
 	
 	//Scrollbar mobile menu
 	$(".header-nav").niceScroll({
@@ -33,10 +34,20 @@ $(document).ready(function() {
 			cursorborder:"none",
 			nativeparentscrolling: false,
 			cursorborderradius:4
+	});
+
+	$(".city-selection-wrapper").niceScroll({
+			cursorcolor:"#ACACAC",
+			cursorwidth:"8px",
+			background:"#DBDBDB",
+			cursorborder:"none",
+			cursorborderradius:4,
+			autohidemode: false			
 	}); 
 	
 	
 	// Убрать/Добавить боковую панель (меню)
+
 	$('#ui-nav-toggle').click(function(){
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
