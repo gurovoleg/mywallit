@@ -32,10 +32,10 @@ mixin checkbox (text)
 	label.checkbox-label
 		input.checkbox(type="checkbox")
 		span.checkbox-custom
-		p.checkbox-label-text= text
+		span.checkbox-label-text #{text}
 
 mixin checkboxFilter (text)
 	label.checkbox-label
 		input.checkbox(type="checkbox")
 		span.checkbox-custom.checkbox-custom--filter
-		p.checkbox-label-text.checkbox-label-text--filter= text
+		span.checkbox-label-text.checkbox-label-text--filter #{text}
