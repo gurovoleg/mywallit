@@ -25,6 +25,15 @@ $(document).ready(function() {
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 	
+	//Scrollbar mobile menu
+	$(".header-nav").niceScroll({
+			cursorcolor:"#ACACAC",
+			cursorwidth:"8px",
+			background:"#DBDBDB",
+			cursorborder:"none",
+			cursorborderradius:4
+	}); 
+	
 	
 	// Убрать/Добавить боковую панель (меню)
 	$('#ui-nav-toggle').click(function(){
@@ -154,7 +163,6 @@ $(document).ready(function() {
 			}
 			$clickedItem.parent().find('.menu-level-3').slideToggle(100);	
 		}
-		
 	});
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
