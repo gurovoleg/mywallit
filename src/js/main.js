@@ -32,35 +32,11 @@ $(document).ready(function() {
 			background:"#DBDBDB",
 			cursorborder:"none",
 			nativeparentscrolling: false,
-			cursorborderradius:4
-	});
-
-	$(".city-selection-wrapper").niceScroll({
-			cursorcolor:"#ACACAC",
-			cursorwidth:"8px",
-			background:"#DBDBDB",
-			cursorborder:"none",
-			cursorborderradius:4,
 			cursorfixedheight: 70,
 			scrollspeed: 300,
-			autohidemode: false			
-	}); 
-	
-	
-	// Меню выбор города
-	$('.city-toggle').on('click', function(){
-
-		$('.city-selection-wrapper').toggleClass('d-block');
-		$("body").toggleClass('overflow-hidden');
-
+			autohidemode: "scroll",
+			cursorborderradius:4
 	});
-
-	$('.close-selection').on('click', function(){
-		$('.city-selection-wrapper').removeClass('d-block');
-		$("body").toggleClass('overflow-hidden');
-	});
-
-
 
 
 	// Убрать/Добавить боковую панель (меню)
@@ -126,8 +102,9 @@ $(document).ready(function() {
 			$('nav').insertBefore('.blur-wrapper')
 
 			$('.bg-header-nav').show();
-			$('.header-nav').animate().addClass('mobile-nav-open')	
-			$('.blur-wrapper').addClass('filter-blur')		
+			$('.header-nav').animate().addClass('mobile-nav-open');	
+			$('.blur-wrapper').addClass('filter-blur');
+			$("body").addClass('overflow-hidden');		
 			
 		} else {
 			
@@ -136,7 +113,8 @@ $(document).ready(function() {
 			setTimeout(function(){
 				$('nav').appendTo('.bg-header-nav .container');
 				$('.bg-header-nav').hide();
-				$('.blur-wrapper').removeClass('filter-blur');			
+				$('.blur-wrapper').removeClass('filter-blur');
+				$("body").removeClass('overflow-hidden');			
 			}, 500);
 		}
 	}
@@ -144,7 +122,6 @@ $(document).ready(function() {
 
 	// Открываем меню на мобильных экранах
 	$('#toggle-menu').on('click', function(){
-		console.log('icon click');
 		mobileNavToggle();
 		// Убираем блок с поиском
 		$('#header-search-section').fadeOut(100);
@@ -178,6 +155,7 @@ $(document).ready(function() {
 			$clickedItem.parent().find('.menu-level-2').slideToggle(200);
 
 		}
+		
 	});
 
 
@@ -192,6 +170,7 @@ $(document).ready(function() {
 			}
 			$clickedItem.parent().find('.menu-level-3').slideToggle(100);	
 		}
+		
 	});
 
 	// При клике по области, которая не является меню или его частью, сворачиваем меню
@@ -222,7 +201,7 @@ $(document).ready(function() {
 		    
 		    // Проверка меню на открытость при переходе
 		    if ($('.bg-header-nav').css('display') == 'block') {
-
+		    	console.log('sfsf');	
 		    	$('nav').appendTo('.bg-header-nav .container');
 		    	$('.blur-wrapper').removeClass('filter-blur');
 		    }
