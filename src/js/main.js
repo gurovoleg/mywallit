@@ -19,6 +19,32 @@ $(document).ready(function() {
 			}
 		}
 	);
+	/* accordeon*/
+	
+	// $('.accordion-item__title').on('click',function(){
+	// 	var accordContent = $('.accordion-item__content');
+
+	// 	$(this).parent().find('.accordion-item__content').toggleClass('accordion-item__content--hide');
+	// 	$(this).toggleClass('accordion-item__title--active');
+	// 	setTimeout( function(){
+	// 		console.log('test555');
+
+	// 		$(this).siblings('.accordion-item__content').toggleClass('accordion-item__content--hide');
+
+	// 	}, 2000);
+
+
+			 
+	// 	// $(this).siblings('.accordion-item__content').toggleClass('accordion-item__content--hide');
+	// 	console.log($(this).next());
+	// 	console.log($(this).siblings());
+
+		/*accordContent.toggleClass('accordion-item__content--hide');
+		$(this).parents('.accordion-item').siblings('.accordion-item').children('.accordion-item__title--active').remove();
+		$(this).parents('.accordion-item').siblings('.accordion-item').children('.accordion-item__content').addClass('accordion-item__content--hide');*/
+
+	//});
+
 	//-end card hover effect
 	
 	
