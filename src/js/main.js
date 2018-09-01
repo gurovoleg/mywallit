@@ -226,39 +226,38 @@ $(document).ready(function() {
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 	});
 
-	// Small filter
-	var activeText = $('.filter-small-item--active').text();
-	$('.filter-small-check').text(activeText);
-
-	$('.filter-small').on('click', function(){
-		$('filter-small-item-block').slideDown();
+	// Выпадающий список
+	var activeText = $('.drop-down-item--active').text();
+	$('.drop-down-check').text(activeText);
+	// показывается список
+	$('.drop-down').on('click', function(){
+		$('drop-down-item-block').slideDown();
 	});
 
 	$(document).on('mouseup', function (e){
-		if (!$('.filter-small').is(e.target)
-			&& $('.filter-small').has(e.target).length === 0) {
+		if (!$('.drop-down').is(e.target)
+			&& $('.drop-down').has(e.target).length === 0) {
 		}
 	});
 
-	$('.filter-small-check').on('click', function(){
-		$('.filter-small-item-block').toggleClass('filter-small-item-block--show');
+	$('.drop-down-check').on('click', function(){
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
 		console.log('нааж');
 	});
-
-	$('.filter-small-item').on('click', function(e){
+	// при клике на элемент списка
+	$('.drop-down-item').on('click', function(e){
 		e.preventDefault();
 		var clickedElemnt = e.target.getAttribute('class');
-		var filterActive = 'filter-small-item--active';
+		var filterActive = 'drop-down-item--active';
 		var activeText = $(this).text();
-		
+		// снятие и установка активного элемента списка
 		if ( clickedElemnt.indexOf(filterActive) == -1 ) {
-			$(this).parent().children('.filter-small-item').removeClass('filter-small-item--active');
-			$(this).addClass('filter-small-item--active');
-
-			$('.filter-small-check').text(activeText);
+			$(this).parent().children('.drop-down-item').removeClass('drop-down-item--active');
+			$(this).addClass('drop-down-item--active');
+			$('.drop-down-check').text(activeText);
 		}
 
-		$('.filter-small-item-block').toggleClass('filter-small-item-block--show');
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
 
     });
 
