@@ -224,6 +224,34 @@ $(document).ready(function() {
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
-	});		
+	});
+
+	// Small filter
+	var activeText = $('.filter-small-item--active').text();
+	$('.filter-small-check').text(activeText);
+	$(document).on('mouseup', function (e){
+        if (!$('.filter-small').is(e.target)
+            && $('.filter-small').has(e.target).length === 0) {
+            $('.filter-small-item').removeClass('filter-small-item--show');
+        }
+    });
+	$('.filter-small-check').on('click', function(){
+		$('.filter-small-item').toggleClass('filter-small-item--show');
+	});
+
+	$('.filter-small-item').on('click', function(e){
+		e.preventDefault();
+		var clickedElemnt = e.target.getAttribute('class');
+		var filterActive = 'filter-small-item--active';
+		var activeText = $(this).text();
+		
+		if ( clickedElemnt.indexOf(filterActive) == -1 ) {
+			$(this).parent().children('.filter-small-item').removeClass('filter-small-item--active');
+			$(this).addClass('filter-small-item--active');
+
+			$('.filter-small-check').text(activeText);
+		}
+
+    });
 
 });

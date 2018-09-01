@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр - популярные';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Фильтр - популярные
+		.section-ui
+			.filter-small
+				.filter-small-check.menu-icon
+				.filter-small-item.filter-small-item--active По популярности
+				.filter-small-item Новинки
+				.filter-small-item По возрастанию цены
+				.filter-small-item По убыванию цены
+			pre.
+				.filter-small
+					.filter-small-check.menu-icon
+					.filter-small-item.filter-small-item--active По популярности
+					.filter-small-item Новинки
+					.filter-small-item По возрастанию цены
+					.filter-small-item По убыванию цены
+
