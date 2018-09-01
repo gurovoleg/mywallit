@@ -1,7 +1,6 @@
 .filter-small {
 	position: relative;
 	width: 184px;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 	line-height: 1;
 	font-size: 16px;
 	color: @text-light-grey;
@@ -10,15 +9,30 @@
 	.icon-mixin(@textMenu, 15px, 12px);
 	}
 }
+.filter-small-check {
+	padding-bottom: 14px;
+	padding-top: 8px;
+	position: relative;
+	line-height: 1;
+}
+.filter-small-item-block {
+	position: absolute;
+	background-color: @white;
+	top: 37px;
+	display: none;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	&--show {
+		display: inline-block;
+	}
+}
 .filter-small-item {
 	margin-left: 14px;
 	padding-top: 12px;
 	padding-bottom: 2px;
 	font-size: 16px;
-	width: auto;
+	display: inline-block;
 	line-height: 1;
 	border-bottom: 1px solid transparent;
-	display: none;
 	&--active {
 		color: @red;
 		border-bottom: 1px solid @red;
@@ -29,8 +43,4 @@
 	&:hover {
 		color: @red;
 	}
-}
-.filter-small-check {
-	padding-bottom: 14px;
-	padding-top: 8px;
 }

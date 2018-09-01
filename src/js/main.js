@@ -229,14 +229,20 @@ $(document).ready(function() {
 	// Small filter
 	var activeText = $('.filter-small-item--active').text();
 	$('.filter-small-check').text(activeText);
+
+	$('.filter-small').on('click', function(){
+		$('filter-small-item-block').slideDown();
+	});
+
 	$(document).on('mouseup', function (e){
-        if (!$('.filter-small').is(e.target)
-            && $('.filter-small').has(e.target).length === 0) {
-            $('.filter-small-item').removeClass('filter-small-item--show');
-        }
-    });
+		if (!$('.filter-small').is(e.target)
+			&& $('.filter-small').has(e.target).length === 0) {
+		}
+	});
+
 	$('.filter-small-check').on('click', function(){
-		$('.filter-small-item').toggleClass('filter-small-item--show');
+		$('.filter-small-item-block').toggleClass('filter-small-item-block--show');
+		console.log('нааж');
 	});
 
 	$('.filter-small-item').on('click', function(e){
@@ -251,6 +257,8 @@ $(document).ready(function() {
 
 			$('.filter-small-check').text(activeText);
 		}
+
+		$('.filter-small-item-block').toggleClass('filter-small-item-block--show');
 
     });
 
