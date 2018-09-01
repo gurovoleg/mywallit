@@ -200,8 +200,7 @@ $(document).ready(function() {
 		    $('#menu-level-1 ul').hide();
 		    
 		    // Проверка меню на открытость при переходе
-		    if ($('.bg-header-nav').css('display') == 'block') {
-		    	console.log('sfsf');	
+		    if ($('.bg-header-nav').css('display') == 'block') {	
 		    	$('nav').appendTo('.bg-header-nav .container');
 		    	$('.blur-wrapper').removeClass('filter-blur');
 		    }
@@ -237,14 +236,14 @@ $(document).ready(function() {
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
 	$('.catalog-filters__title').on('click', function(e){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
-		$("html,body").css("overflow","hidden");
+		$("body").css("overflow","hidden");
 		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in'});
 	});
 
 	// Закрываем фильтр при нажатии крестик
 	$('#filter__close-icon').on('click', function(){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
-		$("html,body").css("overflow","auto");
+		$("body").css("overflow","auto");
 	});
 
 	// Переход между мобильной версией и дестопом
@@ -253,12 +252,16 @@ $(document).ready(function() {
 
 		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
 			$('.catalog-filter').css({'transition' : 'none'});
-			$("html,body").css("overflow","hidden");
 		}
 
-		if ( w >= tabletWidth ) {
-			$("html,body").css("overflow","auto");
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
+			$("body").css("overflow","auto");
 		}
+
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
+			$("body").css("overflow","hidden");
+		}
+
 	});
 
 
