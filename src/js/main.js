@@ -21,6 +21,35 @@ $(document).ready(function() {
 	);
 	//-end card hover effect
 	
+
+	// Product counter
+	$('.product-counter > .btn-counter--plus').on('click', function(){
+		updateCounter('up');
+	});
+
+	$('.product-counter > .btn-counter--minus').on('click', function(){
+		updateCounter('down');
+	});
+
+
+	function updateCounter(action) {
+		var currentValue = parseInt($('.product-counter span').text());
+		console.log(currentValue);
+		
+		if (action == 'up') {
+			currentValue++;
+			console.log(currentValue);
+
+		} else if (action == 'down' && currentValue > 1) {
+			currentValue--;
+			console.log(currentValue);
+
+		}
+
+		$('.product-counter span').text(currentValue);
+	}
+	//-- Product counter
+
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
