@@ -19,34 +19,25 @@ $(document).ready(function() {
 			}
 		}
 	);
-	/* accordeon*/
 	
-	// $('.accordion-item__title').on('click',function(){
-	// 	var accordContent = $('.accordion-item__content');
-
-	// 	$(this).parent().find('.accordion-item__content').toggleClass('accordion-item__content--hide');
-	// 	$(this).toggleClass('accordion-item__title--active');
-	// 	setTimeout( function(){
-	// 		console.log('test555');
-
-	// 		$(this).siblings('.accordion-item__content').toggleClass('accordion-item__content--hide');
-
-	// 	}, 2000);
-
-
-			 
-	// 	// $(this).siblings('.accordion-item__content').toggleClass('accordion-item__content--hide');
-	// 	console.log($(this).next());
-	// 	console.log($(this).siblings());
-
-		/*accordContent.toggleClass('accordion-item__content--hide');
-		$(this).parents('.accordion-item').siblings('.accordion-item').children('.accordion-item__title--active').remove();
-		$(this).parents('.accordion-item').siblings('.accordion-item').children('.accordion-item__content').addClass('accordion-item__content--hide');*/
-
-	//});
-
-	//-end card hover effect
-	
+	// Аккордеон	
+	$('.accordion-item__title').on('click',function(){
+		var hideClass = 'accordion-item__content--hide';
+		var activeClass = 'accordion-item__title--active';
+		var $item = $(this).next();
+		
+		if ( $item.hasClass(hideClass) ) {
+			$('.accordion').find('.accordion-item__content').addClass(hideClass);
+			$('.accordion').find('.accordion-item__title').removeClass(activeClass);
+			
+			$(this).addClass(activeClass);
+			$item.removeClass(hideClass);
+		} else {
+			$(this).removeClass(activeClass);
+			$item.addClass(hideClass);
+		}
+	});
+	//-- Аккордеон	
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
