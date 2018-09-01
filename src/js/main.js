@@ -248,6 +248,7 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
+	
 	// Фокус на custom checkbox
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
@@ -255,9 +256,10 @@ $(document).ready(function() {
 	});
 
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
-	$('.catalog-filters__title').on('click', function(){
+	$('.catalog-filters__title').on('click', function(e){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
 		$("html,body").css("overflow","hidden");
+		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in'});
 	});
 
 	// Закрываем фильтр при нажатии крестик
@@ -269,11 +271,15 @@ $(document).ready(function() {
 	// Переход между мобильной версией и дестопом
 	$(window).resize(function(){
 		var w = $(window).width();
+
 		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
-			$('.catalog-filter--show').css({'transition' : 'none'});
 			$('.catalog-filter').css({'transition' : 'none'});
+			$("html,body").css("overflow","hidden");
 		}
 
+		if ( w >= tabletWidth ) {
+			$("html,body").css("overflow","auto");
+		}
 	});
 
 

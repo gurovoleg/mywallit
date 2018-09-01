@@ -13,7 +13,14 @@ block content
 			.catalog-breadcrumb
 				+breadcrumb-item('#', 'Главная страница')
 				+breadcrumb-item('#', 'Каталог')
-			.title-2.uppercase Все аксессуары - 235
+			.title-2.uppercase.catalog__title Мужские кошельки
+				span.catalog__title-count - 235
+			p.catalog__title-description Ожидайте яркий взрыв в вашей сумке с нашими уникальными кошельками для мужчин: кожа лучшего качества, элегантные конструкции и уникальные детали для непревзойденного продукта, который вы Можете наслаждаться каждый день!
+			.catalog-badge
+				.badge-wrapper
+					+badgeFilter('Бумажники', 'badge-red')
+					+badgeFilter('Портмоне', 'badge-pink')
+					+badgeFilter('Органайзеры', 'badge-orange')
 			.catalog-filters
 				.catalog-filters__title Фильтр
 				.catalog-filters-small__title Фильтр маленький
