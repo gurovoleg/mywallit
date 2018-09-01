@@ -1,0 +1,86 @@
+.accordion-container{width: 100%;}
+.accordion-container .accordion-input-label{	
+	padding: 16px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 54px;
+	cursor: pointer;
+	color: @accordeon-bg;
+	font-size: 16px;
+	background: @white;
+	border: 1px solid  @accordeon-bg;;
+	margin-bottom: 0;
+	transition: all 1s;
+	@media @desktop{font-size: 18px;}
+}
+
+.accordion-container .accordion-input-label:after{
+    content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 0px;
+	top: 20px; 	
+    background-image: url(../../img/icons/ac-arrow-right.svg);
+    background-repeat: no-repeat;   
+}
+
+.accordion-container .accordion-input-label:hover{
+	background: darken(@white, 1%);
+}
+.accordion-container .accordion-input:checked + .accordion-input-label,
+.accordion-container .accordion-input:checked + .accordion-input-label:hover{
+	background: @accordeon-bg;
+	color: @white;
+}
+
+.accordion-container .accordion-input:checked, 
+.accordion-container .accordion-input:checked + .accordion-input-label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 16px;
+	top: 16px;
+	background: transparent url(../../img/icons/ac-arrow-down.svg) no-repeat center center;	
+}
+.accordion-container .accordion-input{
+	display: none;
+}
+.accordion-container .accordion-article{
+	font-size: 14px;
+	color: @text-light-grey;	
+	background: #fff;
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	padding-left: 24px;
+	position: relative;
+	z-index: 10;	
+	transition: height 0.3s ease-in-out;
+	@media @desktop{font-size: 16px;}
+}
+.accordion-article__item{
+	padding: 0;
+	margin: 0;		
+}
+.accordion-article__item:first-child{
+	padding-top: 24px;
+}
+.accordion-container .accordion-input:checked ~ .accordion-article{	
+	transition: height 0.5s ease-in-out;
+	border: 1px solid @accordeon-bg;
+}
+.accordion-container .accordion-input:checked ~ .accordion-article.accordion-small{
+	height: 120px;
+	@media @desktop{height: 140px;}
+}
+.accordion-container .accordion-input:checked ~ .accordion-article.accordion-medium{
+	height: 160px;
+	@media @desktop{height: 180px;}
+}
+.accordion-container .accordion-input:checked ~ .accordion-article.accordion-large{
+	height: 230px;
+	@media @desktop{height: 257px;}
+}

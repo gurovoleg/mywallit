@@ -1,0 +1,54 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Аккордеон';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Аккордеон
+		
+		.section-ui
+			.row
+				.col-lg-6
+					.accordion-container
+						.accordion-container-item
+							input.accordion-input(id="accordion-1" name="accordion-1" type="checkbox")
+							label.accordion-input-label(for="accordion-1") Описание
+							article.accordion-article.accordion-large
+								p.accordion-article__item Высота: 12см
+								p.accordion-article__item Ширина: 12см
+								p.accordion-article__item Размер: 12см
+								p.accordion-article__item Отделений для пластиковых карт: 12см
+								p.accordion-article__item Отделений для купюр: 12см
+								p.accordion-article__item Застежка: 12см
+								p.accordion-article__item Отделение для монет: 12см
+								p.accordion-article__item Тип сложения: 12см
+								p.accordion-article__item Ремешок: 12см
+						.accordion-container-item
+							input.accordion-input(id="accordion-2" name="accordion-2" type="checkbox")
+							label.accordion-input-label(for="accordion-2") Характеристики
+							article.accordion-article.accordion-medium
+								p.accordion-article__item Отделений для пластиковых карт: 12см
+								p.accordion-article__item Отделений для купюр: 12см
+								p.accordion-article__item Застежка: 12см
+								p.accordion-article__item Отделение для монет: 12см
+								p.accordion-article__item Тип сложения: 12см
+								p.accordion-article__item Ремешок: 12см
+						.accordion-container-item
+							input.accordion-input(id="accordion-3" name="accordion-3" type="checkbox")
+							label.accordion-input-label(for="accordion-3") Доставка
+							article.accordion-article.accordion-medium
+								p.accordion-article__item Отделений для пластиковых карт: 12см
+								p.accordion-article__item Отделений для купюр: 12см
+								p.accordion-article__item Застежка: 12см
+								p.accordion-article__item Отделение для монет: 12см
+								p.accordion-article__item Тип сложения: 12см
+								p.accordion-article__item Ремешок: 12см
+						.accordion-container-item
+							input.accordion-input(id="accordion-4" name="accordion-4" type="checkbox")
+							label.accordion-input-label(for="accordion-4") Наличие в 3 магазинах
+							article.accordion-article.accordion-small
+								p.accordion-article__item ТЦ Оранж, ул. Мирная, дом 125
+								p.accordion-article__item ТЦ Гранд, ул. Мирная, дом 125
+								p.accordion-article__item ТД Центральный, ул. Мирная, дом 125
