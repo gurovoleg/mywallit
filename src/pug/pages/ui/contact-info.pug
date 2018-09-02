@@ -1,0 +1,76 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Баннеры';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Контактная информация
+		.section-ui
+			.row
+				.col-md-6.col-lg-5.offset-lg-1
+					section.contacts
+						.contacts-info
+							.contacts-block
+								.title-4.contacts-title Контактная информация
+								.subtitle-block
+									.contacts-text Вы уже зарегистрированы?
+									a.contacts-link(href="#") Войти
+								form.form-user-data(action="" method="" name="form-user-data")
+
+									+inputField('Имя Фамилия', 'Вы ничего не ввели', 'notEmpty', 'text')
+									+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+									+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text')
+
+							.contacts-block
+								.title-4.contacts-title Адрес доставки
+								.subtitle-block
+									.contacts-text.contacts-address Санкт-Петербург
+									a.contacts-link.select-address(href="#") Выбрать город
+								
+								.contacts-block--border.contacts-block--active
+									.subtitle-block
+										.contacts-text.contacts-text--large #[strong Пункты самовывоза]
+										a.contacts-link.contacts-link--notbold(href="#") Изменить
+									.pickup-points.
+										Постамат: ТК Нео 7801-003, Заневский пр-т, д. 38
+									.delivery-info
+										.delivery-date Доставка: #[span.delivery-date__val] Сегодня
+										.delivery-price Стоимость доставки: #[span.delivery-price__val] Бесплатно
+
+								.contacts-block--border
+									.subtitle-block
+										.contacts-text.contacts-text--large #[strong Курьерская доставка]
+									.delivery-info
+										.delivery-date Доставка: #[span.delivery-date__val] Сегодня
+										.delivery-price Стоимость доставки: #[span.delivery-price__val] 350р.
+
+								form.form-user-address(action="" method="")
+									.form-user-address__group
+										.row
+											.col
+												+inputField('Название улицы', 'Вы ничего не ввели', 'notEmpty', 'text')
+										.row
+											.col
+												+inputField('№ дома', 'Вы ничего не ввели', 'notEmpty', 'text')(class="field-mr-16")
+											.col
+												+inputField('№ кв./офис', 'Вы ничего не ввели', 'notEmpty', 'text')
+
+
+								.delivery-comments
+									a.add-comments(href="#")
+										i.fas.fa-plus
+									a.contacts-link.contacts-link--active(href="#") Добавить комментарий
+
+							.contacts-block
+								.title-4.contacts-title Способ оплаты
+								.subtitle-block
+									.contacts-text Выберите удобный способ оплаты
+									
+								.payment
+									.payment-type.payment-type-card(data-type="payment-card")
+										i.far.fa-credit-card
+										p  Оплата кредитной картой
+									.payment-type.payment-type-cash(data-type="payment-cash") Оплата наличными

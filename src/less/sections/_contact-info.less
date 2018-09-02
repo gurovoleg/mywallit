@@ -1,0 +1,81 @@
+.contacts{
+	width: 100%;
+	font-size: 14px;
+	color: @contacts-text;
+}
+.contacts-block{
+	margin-bottom: 24px;
+	width: 100%;
+}
+.subtitle-block{
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 16px;
+}
+.contacts-title{
+	margin-bottom: 16px;
+	text-align: left;
+}
+.contacts-text{margin-right: 24px;}
+.contacts-text--large{font-size: 16px;}
+.contacts-link{
+	color: @contacts-text;
+	font-weight: 500;
+	border-bottom: 1px solid @contacts-text; 	
+}
+.contacts-link:hover{
+	color: @text-red;
+	text-decoration: none;
+	border-bottom-color: @text-red;
+}
+.contacts input {
+	margin-bottom: 8px;
+}
+.contacts-address{
+	position: relative;
+	padding-left: 15px;
+}
+.contacts-address:before{
+	position: absolute;
+	content: "";
+	width: 12px;
+	height: 12px;
+	left: 0;
+	top: 4px;
+	background-image: url('../../img/icons/marker-black.svg');
+	background-position: center;
+	background-size: cover;
+}
+.contacts-link--notbold{
+	font-weight: 300;
+}
+.contacts-link--active{
+	border-bottom: 0px;
+}
+.contacts-block--border{
+	border: 1px solid @border-passive;
+	padding: 16px;
+	margin-bottom: 9px;
+}
+.contacts-block--border:last-child{border-bottom: 16px;}
+.contacts-block--active{
+	border-color: @textMenu;
+}
+.pickup-points{
+	margin-bottom: 10px;
+}
+.delivery-info{
+	color: @border-passive;
+}
+.add-comments{
+	display: inline-block;
+	color:@textMenu;;
+	margin-right: 8px;
+	font-size: 10px;
+	font-weight: 300;
+}
+.form-user-address__group{
+	margin-right: -8px;
+	margin-left: -8px;
+}
