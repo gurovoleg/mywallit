@@ -17,15 +17,17 @@ block content
 				span.catalog__title-count - 235
 			p.catalog__title-description Ожидайте яркий взрыв в вашей сумке с нашими уникальными кошельками для мужчин: кожа лучшего качества, элегантные конструкции и уникальные детали для непревзойденного продукта, который вы Можете наслаждаться каждый день!
 			.catalog-badge
-				.badge-wrapper
+				a.catalog-badge__item(href="#")
 					+badgeFilter('Бумажники', 'badge-red')
+				a.catalog-badge__item(href="#")
 					+badgeFilter('Портмоне', 'badge-pink')
+				a.catalog-badge__item(href="#")
 					+badgeFilter('Органайзеры', 'badge-orange')
 			.catalog-filters
 				.catalog-filters__badge
-					.filter-name.catalog-filters__badge-item Мужчины
+					a.filter-name.catalog-filters__badge-item(href="#") Мужчины	
 						.filter-close
-					.filter-name.catalog-filters__badge-item Кошельки
+					a.filter-name.catalog-filters__badge-item(href="#") Кошельки
 						.filter-close
 				.catalog-filters__title Фильтр
 				.catalog-filters-small__title Фильтр маленький

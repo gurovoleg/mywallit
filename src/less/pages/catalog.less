@@ -124,6 +124,17 @@
 }
 .catalog-filters__badge-item {
 	@media @desktop {
+		&:hover {
+			color: @text-light-grey;
+			text-decoration: none;
+		}
+		&:not(:first-child) {
+			margin-left: 16px;
+		}
+	}
+}
+.catalog-badge__item {
+	@media @desktop {
 		&:not(:first-child) {
 			margin-left: 16px;
 		}
