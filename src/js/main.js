@@ -21,33 +21,27 @@ $(document).ready(function() {
 	);
 	//-end card hover effect
 	
-
 	// Product counter
-	$('.product-counter > .btn-counter--plus').on('click', function(){
-		updateCounter('up');
-	});
-
-	$('.product-counter > .btn-counter--minus').on('click', function(){
-		updateCounter('down');
-	});
-
-
-	function updateCounter(action) {
+	(function productCounter() {
 		var currentValue = parseInt($('.product-counter span').text());
-		console.log(currentValue);
 		
-		if (action == 'up') {
-			currentValue++;
-			console.log(currentValue);
+		$('.product-counter > .btn-counter--plus').on('click', function(){
+			updateCounter('up');	
+		});
+		
+		$('.product-counter > .btn-counter--minus').on('click', function(){
+			updateCounter('down');	
+		});
+		
+		function updateCounter(action) {
+		
+			if (action == 'up') currentValue++;
+			else if (currentValue > 1) currentValue--;
 
-		} else if (action == 'down' && currentValue > 1) {
-			currentValue--;
-			console.log(currentValue);
-
+			$('.product-counter span').text(currentValue);	
 		}
-
-		$('.product-counter span').text(currentValue);
-	}
+		
+	}());
 	//-- Product counter
 
 	
