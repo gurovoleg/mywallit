@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Бейдж - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Карточки
+		p Бейджик для фильтра
+		.badge-wrapper
+			+badgeFilter('Бумажники', 'badge-red')
+			+badgeFilter('Портмоне', 'badge-pink')
+			+badgeFilter('Органайзеры', 'badge-orange')
+		pre.
+			+badgeFilter('Бумажники', 'badge-red')
+		p Бейджик - статус заказа в аккаунте
+		+badgeOrderStatus('Принят', 'badge-done')
+		+badgeOrderStatus('Изменен', 'badge-change')
+		+badgeOrderStatus('Отменен', 'badge-cancel')
+		+badgeOrderStatus('Выполнен', 'badge-done')
+		pre.
+			+badgeOrderStatus('Принят', 'badge-done')
+
+
+
