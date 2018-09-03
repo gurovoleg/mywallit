@@ -4,6 +4,11 @@ $(document).ready(function() {
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
 
+	// Иконка с сердечком
+	$('.toggle-heart-icon').on('click', function(){
+		$(this).toggleClass('icon--red');
+	});
+
 	// Изменение картинки в блоке Фото товара в Каталоге
 	$('.thumbnails__image').on('click',function(){
 		var imgPath = $(this).attr('data-img-path');
@@ -13,6 +18,7 @@ $(document).ready(function() {
 			mainImage.attr('src', imgPath).fadeIn(200);	
 		});
 	});	
+
 
 	//-card hover effect
 	$(".product-img").hover(
