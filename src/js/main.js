@@ -4,16 +4,6 @@ $(document).ready(function() {
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
 
-	// Изменение картинки в блоке Фото товара в Каталоге
-	$('.thumbnails__image').on('click',function(){
-		var imgPath = $(this).attr('data-img-path');
-		var mainImage = $('.switch-block__main-photo img')	
-		
-		mainImage.fadeOut(200, function(){
-			mainImage.attr('src', imgPath).fadeIn(200);	
-		});
-	});	
-
 	// Иконка с сердечком
 	$('.toggle-heart-icon').on('click', function(){
 		$(this).toggleClass('icon--red');
