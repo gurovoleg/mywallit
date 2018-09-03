@@ -1,7 +1,7 @@
 //-миксин для обычной карточки
 mixin card( imgHover, imgSrc, imgAlt, href, cardText, cardPrice )
 	.card-product&attributes(attributes)
-		a.card-heart-icon(href="#")
+		.card-heart-icon.toggle-heart-icon
 			i.fas.fa-heart
 		.card-product__img
 			img.product-img(src="../img/"+ imgSrc data-src= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
@@ -12,7 +12,7 @@ mixin card( imgHover, imgSrc, imgAlt, href, cardText, cardPrice )
 mixin card--sale( prosent, imgHover, imgSrc, imgAlt, href, cardText, priceOld, priceNew )
 	.card-product&attributes(attributes)
 		.card-label-sale #{prosent}
-		a.card-heart-icon(href="#")
+		.card-heart-icon.toggle-heart-icon
 			i.fas.fa-heart
 		.card-product__img
 			img.product-img(src="../img/"+ imgSrc data-src= "../img/"+ imgSrc data-hover="../img/"+ imgHover alt =''+ imgAlt )
