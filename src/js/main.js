@@ -19,8 +19,6 @@ $(document).ready(function() {
 			}
 		}
 	);
-	//-end card hover effect
-	
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
@@ -234,6 +232,7 @@ $(document).ready(function() {
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 	});
 
+
 	// Открываем всплывающее окно Закать в 1 клик
 	$('a[href="#order-one-click"]').on('click', function(){
 		$('.order-one-click').fadeIn(400);
@@ -251,5 +250,40 @@ $(document).ready(function() {
 	$('.order-subscribe__close-icon').on('click', function(){
 		$('.order-subscribe').fadeOut(400);
 	});
+
+	// Выпадающий список
+	var activeText = $('.drop-down-item--active').text();
+	$('.drop-down-check').text(activeText);
+	// показывается список
+	$('.drop-down').on('click', function(){
+		$('drop-down-item-block').slideDown();
+	});
+
+	$(document).on('mouseup', function (e){
+		if (!$('.drop-down').is(e.target)
+			&& $('.drop-down').has(e.target).length === 0) {
+		}
+	});
+
+	$('.drop-down-check').on('click', function(){
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
+	});
+	// при клике на элемент списка
+	$('.drop-down-item').on('click', function(e){
+		e.preventDefault();
+		var clickedElemnt = e.target.getAttribute('class');
+		var filterActive = 'drop-down-item--active';
+		var activeText = $(this).text();
+		// снятие и установка активного элемента списка
+		if ( clickedElemnt.indexOf(filterActive) == -1 ) {
+			$(this).parent().children('.drop-down-item').removeClass('drop-down-item--active');
+			$(this).addClass('drop-down-item--active');
+			$('.drop-down-check').text(activeText);
+		}
+
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
+
+    });
+
 
 });
