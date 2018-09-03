@@ -1,17 +1,20 @@
 .notice-stock{
-	width: 120px;
-	height: 21px;
+	width: 100%;	
+	padding-top: 2px;
+	padding-bottom: 2px;
 	position: relative;
+	padding-left: 19px;
 	font-size: 14px;
 	@media @desktop {font-size: 16px;}
 }
 .notice-stock:after{
 	content: "";
 	position: absolute;
-	left: -18px;
+	left: 0px;
 	top: 6px;
 	width: 12px;
 	height: 12px;
+	@media @desktop {top: 7px;}
 }
 .notice-stock--exist{color: @notify-exist;}
 .notice-stock--exist:after{background: url(../../img/icons/available.svg) center no-repeat;}
