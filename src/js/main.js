@@ -20,25 +20,6 @@ $(document).ready(function() {
 		}
 	);
 	
-	// Аккордеон	
-	$('.accordion-item__title').on('click',function(){
-		var hideClass = 'accordion-item__content--hide';
-		var activeClass = 'accordion-item__title--active';
-		var $item = $(this).next();
-		
-		if ( $item.hasClass(hideClass) ) {
-			$('.accordion').find('.accordion-item__content').addClass(hideClass);
-			$('.accordion').find('.accordion-item__title').removeClass(activeClass);
-			
-			$(this).addClass(activeClass);
-			$item.removeClass(hideClass);
-		} else {
-			$(this).removeClass(activeClass);
-			$item.addClass(hideClass);
-		}
-	});
-	//-- Аккордеон	
-	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
