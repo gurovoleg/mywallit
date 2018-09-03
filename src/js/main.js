@@ -233,11 +233,12 @@ $(document).ready(function() {
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
 	});
 
+
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
 	$('.catalog-filters__title').on('click', function(e){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
 		$("body").css("overflow","hidden");
-		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in'});
+		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in-out'});
 	});
 
 	// Закрываем фильтр при нажатии крестик
@@ -263,11 +264,44 @@ $(document).ready(function() {
 			$("body").css("overflow","hidden");
 		}
 
-		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
-		// 	$("body").css("overflow","hidden");
-		// }
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+			$("body").css("overflow","auto");
+		}
 	});
 
 
+	// Выпадающий список
+	var activeText = $('.drop-down-item--active').text();
+	$('.drop-down-check').text(activeText);
+	// показывается список
+	$('.drop-down').on('click', function(){
+		$('drop-down-item-block').slideDown();
+	});
+
+	$(document).on('mouseup', function (e){
+		if (!$('.drop-down').is(e.target)
+			&& $('.drop-down').has(e.target).length === 0) {
+		}
+	});
+
+	$('.drop-down-check').on('click', function(){
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
+	});
+	// при клике на элемент списка
+	$('.drop-down-item').on('click', function(e){
+		e.preventDefault();
+		var clickedElemnt = e.target.getAttribute('class');
+		var filterActive = 'drop-down-item--active';
+		var activeText = $(this).text();
+		// снятие и установка активного элемента списка
+		if ( clickedElemnt.indexOf(filterActive) == -1 ) {
+			$(this).parent().children('.drop-down-item').removeClass('drop-down-item--active');
+			$(this).addClass('drop-down-item--active');
+			$('.drop-down-check').text(activeText);
+		}
+
+		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
+
+    });
 
 });
