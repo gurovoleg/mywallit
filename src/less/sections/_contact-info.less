@@ -97,10 +97,31 @@
 	}
 }
 .payment-type {
+	position: relative;
 	cursor: pointer;
 	padding: 16px;
 	border: 1px solid @border-passive;
 	margin-bottom: 8px;
+	
+	& p{
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		padding-left: 40px;
+	}
+}
+.payment-type:before{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 30px;
+	top: 8px;
+	left: 16px;
+	
+}
+.payment-type-card:before{
+	
+	background: url('../../img/icons/credit-card.svg') no-repeat center;
 }
 .payment-type--active{
 	border-color: @textMenu;
@@ -111,10 +132,7 @@
 }
 .contacts-block-footer{
 	margin-top: 8px;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	@media @desktop {width: 340px;}
+	text-align: center;	
 }
 .contacts-block-footer a{
 	font-weight: 300;
