@@ -3,30 +3,34 @@
 	padding-right: 8px;
 }
 .catalog-filter {
-	position: absolute;
+	position: fixed;
+	overflow-y: scroll;
 	z-index: 1001;
 	background-color: @white;
-	top: 51px;
-	left: -360px;
-	height: 100vh;
-	overflow: hidden;
+	top: 0;
+	left: -100vw;
+	height: 100%;
+	width: 100%;
 	transition: left 0.5s ease-in;
 	@media @tablet {
-		top: 37px;
+		width: 360px;
+		height: 100%;
+		// top: 37px;
+		overflow-y: scroll;
 	}
 	@media @desktop {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		flex-basis: 0;
+		flex-basis: 360px;
 		width: 100%;
 		left: 0;
 		top: 0;
 		transition: none;
-		overflow: visible;
 	}
 }
 .form-filter {
+	width: 100%;
 	@media @desktop {
 		display: block;
 		margin-left: 8px;

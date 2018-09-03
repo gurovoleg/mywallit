@@ -252,6 +252,7 @@ $(document).ready(function() {
 
 		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
 			$('.catalog-filter').css({'transition' : 'none'});
+			$("body").css("overflow","auto");
 		}
 
 		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
@@ -262,6 +263,9 @@ $(document).ready(function() {
 			$("body").css("overflow","hidden");
 		}
 
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+		// 	$("body").css("overflow","hidden");
+		// }
 	});
 
 
