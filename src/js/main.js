@@ -14,11 +14,6 @@ $(document).ready(function() {
 		});
 	});	
 
-	// Иконка с сердечком
-	$('.toggle-heart-icon').on('click', function(){
-		$(this).toggleClass('icon--red');
-	});
-
 	//-card hover effect
 	$(".product-img").hover(
 		function() {			
