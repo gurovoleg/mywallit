@@ -242,7 +242,6 @@ $(document).ready(function() {
 
 	$('.drop-down-check').on('click', function(){
 		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
-		console.log('нааж');
 	});
 	// при клике на элемент списка
 	$('.drop-down-item').on('click', function(e){
