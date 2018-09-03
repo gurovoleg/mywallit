@@ -12,14 +12,14 @@ block content
 			.row
 				.col-md-6.col-lg-5.offset-lg-1
 					section.contacts
-						.contacts-info
+						form.contacts-info(action="" method="")
 							.contacts-block
 								.title-4.contacts-title Контактная информация
 								.subtitle-block
 									.contacts-text Вы уже зарегистрированы?
 									a.contacts-link(href="#") Войти
-								form.form-user-data(action="" method="" name="form-user-data")
-
+								
+								.form-group-user-data
 									+inputField('Имя Фамилия', 'Вы ничего не ввели', 'notEmpty', 'text')
 									+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
 									+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text')
@@ -44,33 +44,41 @@ block content
 									.subtitle-block
 										.contacts-text.contacts-text--large #[strong Курьерская доставка]
 									.delivery-info
-										.delivery-date Доставка: #[span.delivery-date__val] Сегодня
-										.delivery-price Стоимость доставки: #[span.delivery-price__val] 350р.
+										.delivery-date.contacts-text-small Доставка: #[span.delivery-date__val] Сегодня
+										.delivery-price.contacts-text-small Стоимость доставки: #[span.delivery-price__val] 350р.
 
-								form.form-user-address(action="" method="")
-									.form-user-address__group
-										.row
-											.col
-												+inputField('Название улицы', 'Вы ничего не ввели', 'notEmpty', 'text')
-										.row
-											.col
-												+inputField('№ дома', 'Вы ничего не ввели', 'notEmpty', 'text')(class="field-mr-16")
-											.col
-												+inputField('№ кв./офис', 'Вы ничего не ввели', 'notEmpty', 'text')
+								
+								.form-group-user-address
+									.row
+										.col
+											+inputField('Название улицы', 'Вы ничего не ввели', 'notEmpty', 'text')
+									.row
+										.col
+											+inputField('№ дома', 'Вы ничего не ввели', 'notEmpty', 'text')(class="field-mr-16")
+										.col
+											+inputField('№ кв./офис', 'Вы ничего не ввели', 'notEmpty', 'text')
 
 
 								.delivery-comments
 									a.add-comments(href="#")
 										i.fas.fa-plus
 									a.contacts-link.contacts-link--active(href="#") Добавить комментарий
+									textarea.comments-field(name="comments-field" )
 
 							.contacts-block
 								.title-4.contacts-title Способ оплаты
 								.subtitle-block
 									.contacts-text Выберите удобный способ оплаты
 									
-								.payment
-									.payment-type.payment-type-card(data-type="payment-card")
-										i.far.fa-credit-card
-										p  Оплата кредитной картой
+								.form-group-payment
+									.payment-type.payment-type-card.payment-type--active(data-type="payment-card") Оплата кредитной картой
 									.payment-type.payment-type-cash(data-type="payment-cash") Оплата наличными
+							.contacts-block
+								+button-apply('Оформить заказ', '#')
+								.contacts-block-footer.contacts-text-small
+									|Нажимая кнопку "Оформить заказ", вы соглашаетесь с
+									br
+									| 
+									a.contacts-link.a.contacts-link-small условиями оферты 
+									| и 
+									a.contacts-link.a.contacts-link-small политикой конфиденциальности.

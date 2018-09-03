@@ -5,6 +5,7 @@
 }
 .contacts-block{
 	margin-bottom: 24px;
+	.mixin-margin(bottom,@l3);
 	width: 100%;
 }
 .subtitle-block{
@@ -14,8 +15,10 @@
 	margin-bottom: 16px;
 }
 .contacts-title{
+	font-size: 18px;
 	margin-bottom: 16px;
 	text-align: left;
+	@media @desktop{font-size: 20px;}
 }
 .contacts-text{margin-right: 24px;}
 .contacts-text--large{font-size: 16px;}
@@ -55,10 +58,12 @@
 }
 .contacts-block--border{
 	border: 1px solid @border-passive;
-	padding: 16px;
+	padding: 12px;
 	margin-bottom: 9px;
+	@media @tablet{padding: 16px;}
 }
 .contacts-block--border:last-child{border-bottom: 16px;}
+
 .contacts-block--active{
 	border-color: @textMenu;
 }
@@ -72,10 +77,49 @@
 	display: inline-block;
 	color:@textMenu;;
 	margin-right: 8px;
+	margin-bottom: 8px;
 	font-size: 10px;
 	font-weight: 300;
 }
-.form-user-address__group{
-	margin-right: -8px;
-	margin-left: -8px;
+.comments-field{
+	resize: none;
+	width: 100%;
+	height: 88px;
+	font-size: 14px;
+	color:@textMenu;
+}
+.form-group-user-address{
+	margin-right: -4px;
+	margin-left: -4px;
+	@media @tablet{
+		margin-right: -8px;
+		margin-left: -8px;
+	}
+}
+.payment-type {
+	cursor: pointer;
+	padding: 16px;
+	border: 1px solid @border-passive;
+	margin-bottom: 8px;
+}
+.payment-type--active{
+	border-color: @textMenu;
+	color:@textMenu;
+}
+.payment-type:last-child{
+	margin-bottom: 0;
+}
+.contacts-block-footer{
+	margin-top: 8px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	@media @desktop {width: 340px;}
+}
+.contacts-block-footer a{
+	font-weight: 300;
+}
+.contacts-text-small{
+	font-size: 12px;
+	@media @desktop {font-size: 14;}
 }
