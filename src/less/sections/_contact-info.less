@@ -2,6 +2,12 @@
 	width: 100%;
 	font-size: 14px;
 	color: @contacts-text;
+	padding-right: 12px;
+	padding-left: 12px;
+	@media @tablet{
+		padding-right: 20px;
+		padding-left: 20px;}
+	
 }
 .contacts-block{
 	margin-bottom: 24px;
@@ -12,16 +18,21 @@
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
-	margin-bottom: 16px;
+	.mixin-margin(bottom,@l1);
 }
 .contacts-title{
+	margin: 0;
+	padding: 0;
 	font-size: 18px;
 	margin-bottom: 16px;
 	text-align: left;
 	@media @desktop{font-size: 20px;}
 }
 .contacts-text{margin-right: 24px;}
-.contacts-text--large{font-size: 16px;}
+.contacts-text--large{
+	font-size: 16px;
+	
+}
 .contacts-link{
 	color: @contacts-text;
 	font-weight: 500;
@@ -34,6 +45,7 @@
 }
 .contacts input {
 	margin-bottom: 8px;
+	@media @desktop{margin-bottom: 16px;}
 }
 .contacts-address{
 	position: relative;
@@ -59,8 +71,9 @@
 .contacts-block--border{
 	border: 1px solid @border-passive;
 	padding: 12px;
-	margin-bottom: 9px;
+	margin-bottom: 8px;
 	@media @tablet{padding: 16px;}
+	@media @desktop{margin-bottom: 16px;}
 }
 .contacts-block--border:last-child{border-bottom: 16px;}
 
@@ -69,18 +82,38 @@
 }
 .pickup-points{
 	margin-bottom: 10px;
+	letter-spacing: -0.5px;
+	@media @tablet{letter-spacing: 0px}
 }
 .delivery-info{
 	color: @border-passive;
 }
-.add-comments{
-	display: inline-block;
-	color:@textMenu;;
-	margin-right: 8px;
-	margin-bottom: 8px;
-	font-size: 10px;
-	font-weight: 300;
+.delivery-comments{
+	position: relative;
 }
+.delivery-comments--link{
+	display: inline-block;
+	margin-left: 30px;
+	margin-bottom: 8px;
+	@media @desktop {margin-bottom: 16px;}
+	&:hover{
+		color:@border-passive;
+		border-bottom-color:@border-passive;
+	}
+}
+.icon-comments{
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	cursor:pointer;
+	
+}
+.icon-comments--plus{background: url('../../img/icons/plus.svg') no-repeat center center;}	
+
+.icon-comments--minus{background: url('../../img/icons/minus.svg') no-repeat center center;}
+
 .comments-field{
 	resize: none;
 	width: 100%;
@@ -91,37 +124,38 @@
 .form-group-user-address{
 	margin-right: -4px;
 	margin-left: -4px;
+	margin-bottom: 16px;
 	@media @tablet{
 		margin-right: -8px;
 		margin-left: -8px;
 	}
+	@media @desktopXL{
+		margin-right: -12px;
+		margin-left: -12px;
+	}
 }
-.payment-type {
-	position: relative;
+.payment-type {		
+	display: flex;
+	align-items: center;
 	cursor: pointer;
 	padding: 16px;
 	border: 1px solid @border-passive;
 	margin-bottom: 8px;
+	@media @desktop {margin-bottom: 16px;}
 	
 	& p{
 		margin: 0;
 		padding: 0;
-		display: inline-block;
-		padding-left: 40px;
 	}
 }
-.payment-type:before{
-	position: absolute;
-	content: "";
-	width: 30px;
+.paiment-icon {
+	width: 30px !important;
 	height: 30px;
-	top: 8px;
-	left: 16px;
-	
+	margin-right: 16px;	
+	fill: @border-passive;	
 }
-.payment-type-card:before{
-	
-	background: url('../../img/icons/credit-card.svg') no-repeat center;
+.payment-type--active .paiment-icon {
+	fill: @textMenu;	
 }
 .payment-type--active{
 	border-color: @textMenu;
@@ -133,11 +167,12 @@
 .contacts-block-footer{
 	margin-top: 8px;
 	text-align: center;	
+	@media @desktop {margin-top: 16px;}
 }
 .contacts-block-footer a{
 	font-weight: 300;
 }
 .contacts-text-small{
 	font-size: 12px;
-	@media @desktop {font-size: 14;}
+	@media @desktop {font-size: 14px;}
 }
