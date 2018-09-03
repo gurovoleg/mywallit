@@ -19,8 +19,6 @@ $(document).ready(function() {
 			}
 		}
 	);
-	//-end card hover effect
-	
 	
 	// Scrollbar боковой панели (меню)
 	$(".left-panel").customScrollbar({preventDefaultScroll: true});
