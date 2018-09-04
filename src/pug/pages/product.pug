@@ -20,7 +20,7 @@ block content
 							a(href="").order-subscribe__info-link условиями оферты 
 							| и 
 							a(href="").order-subscribe__info-link политикой конфиденциальности.
-				.order-subscribe__close-icon
+				.order-subscribe__close-icon(class='close-modal-window' data-modal='#order-subscribe')
 			//- Форма Купить в 1 клик
 			.form.order-one-click(id="order-one-click")
 				.order-one-click__title Оформить заказ в 1 клик
@@ -36,8 +36,8 @@ block content
 							| и 
 							a(href="").order-one-click__info-link политикой конфиденциальности.
 					+button-buyclick("Оформить заказ", "#")
-				.order-one-click__close-icon
-
+				.order-one-click__close-icon(class='close-modal-window' data-modal='#order-one-click')
+				
 	
 	//- Обертка для фильтра blur
 	.blur-wrapper
@@ -93,10 +93,13 @@ block content
 								.notice-stock.notice-stock--exist Есть в  наличии
 								.notice-stock.notice-stock--not.d-none Нет в  наличии
 							.product-order__buttons-block
+								//- Добавить в козину
 								+button-addcart("Добавить в корзину", "#")
-								+button-buyclick("Купить в 1 клик", "#")(id="one-click-button")
+								//- Купить в 1 клик (запуск модального окна)
+								+button-buyclick("Купить в 1 клик", "#")(id="one-click-button" class='show-modal-window' data-modal='#order-one-click')
+								//- Подписаться (запуск модального окна)
 								.button-subscribe-block.d-none.d-lg-block
-									+button-store('Подписаться','#')(id="subscribe-button")
+									+button-store('Подписаться','#')(id="subscribe-button" class='show-modal-window' data-modal='#order-subscribe')
 									p Укажите свой email и мы уведомим вас о поступлении отсутствующего товара
 							.product-order__colors
 								.colors__title Доступные цвета
@@ -109,8 +112,7 @@ block content
 									img(src="img/good_colors/color-6.png" alt="Картинка")
 									img(src="img/good_colors/color-7.png" alt="Картинка")
 									img(src="img/good_colors/color-8.png" alt="Картинка")
-									//- img(src="img/good_colors/color-9.png" alt="Картинка")
-
+						
 						.d-none.d-lg-block
 							include  ../sections/accordeon.pug	
 					//- Аккордеон
