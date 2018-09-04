@@ -3,7 +3,7 @@ $(document).ready(function() {
 	(function(){
 
 		var $modalWindow = $('.bg-modal-window'),
-			$wrapper = $('.product-blur-wrapper'),
+			$wrapper = $('.blur-wrapper'),
 			$subscribeOpen = $('#subscribe-button'),
 			$oneClickOpen = $('#one-click-button'),
 			$subscribeClose = $('.order-subscribe__close-icon'),
