@@ -27,8 +27,9 @@ block content
 						.title-4.contacts-title Адрес доставки
 						.subtitle-block
 							.contacts-text.contacts-address Санкт-Петербург
-							a.contacts-link.select-address(href="#") Выбрать город
-						
+							a.contacts-link.select-address.city-toggle(href="#") Выбрать город
+							include ../../sections/_city-selection.pug
+
 						.contacts-block--border#delivery-pickup.contacts-block--active
 							.subtitle-block.subtitle-block--justify
 								.contacts-text.contacts-text--large #[strong Пункты самовывоза]
