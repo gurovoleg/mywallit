@@ -1,0 +1,52 @@
+.color-line {font-size: 0px;}
+
+[class^="color-line-color"] {
+	height: 4px;
+	width: 20%;
+	display: none;
+
+	@media @tablet {width: 10%;}
+	@media @desktopXL {width: 9.09%;}
+}
+
+.color-line-color-1 {background-color: @color-1;}
+.color-line-color-2 {background-color: @color-2;}
+.color-line-color-3 {background-color: @color-3;}
+.color-line-color-4 {background-color: @color-4;}
+.color-line-color-5 {background-color: @color-5;}
+.color-line-color-6 {background-color: @red;}
+.color-line-color-7 {background-color: @color-7;}
+.color-line-color-8 {background-color: @color-8;}
+.color-line-color-9 {background-color: @color-9;}
+.color-line-color-10 {background-color: @color-10;}
+.color-line-color-11 {background-color: @color-11;}
+
+.color-line-color-1,
+.color-line-color-2,
+.color-line-color-3,
+.color-line-color-4,
+.color-line-color-5 {
+	display: inline-block;
+}
+
+@media @tablet {
+	.color-line-color-6,
+	.color-line-color-7,
+	.color-line-color-8,
+	.color-line-color-9,
+	.color-line-color-10 {
+		display: inline-block;
+	}
+}
+
+@media @desktopXL {
+	.color-line-color-11 {
+		display: inline-block;
+	}
+}
+
+.color-line--menu {
+	height: 2px;
+	width: 9.09%;
+	display: inline-block;
+}
