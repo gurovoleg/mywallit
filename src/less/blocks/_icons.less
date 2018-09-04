@@ -1,0 +1,21 @@
+// Иконка сердечко с рамкой
+.product-heart-icon {
+	position:relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border:1px solid @heart;
+	color: @heart;
+
+	.fa-heart {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		cursor: pointer;
+	}
+}
+
+.icon--red {
+	color:@red;
+}
