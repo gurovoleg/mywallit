@@ -8,12 +8,14 @@ block content
 
 	.container.container--left
 		.title Показать заказ
-		
+		.ordered-header Показать заказ ( #[span.ordered-header-amount 3] товара)&mdash; #[span.ordered-header-cost 15 000 р.]
+			.ordered-header-arrow
+				i.fas.fa-sort-down
 		.ordered
 			.ordered-wrapper
 				.ordered-goods
 					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
-					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
+					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
 					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
 
 				.ordered-item.ordered-promo
