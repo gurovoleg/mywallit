@@ -1,0 +1,17 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Извещение о наличии товара';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Извещение о наличии товара
+		.notice-stock.notice-stock--exist Есть в  наличии
+		pre.
+			.notice-stock.notice-stock--exist Есть в  наличии
+
+		.notice-stock.notice-stock--not Нет в  наличии
+		pre.
+			.notice-stock.notice-stock--not Нет в  наличии
