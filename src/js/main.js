@@ -276,24 +276,6 @@ $(document).ready(function() {
 	});
 
 
-	// Открываем всплывающее окно Закать в 1 клик
-	$('a[href="#order-one-click"]').on('click', function(){
-		$('.order-one-click').fadeIn(400);
-	});
-	// Закрытие формы Заказа
-	$('.order-one-click__close-icon').on('click', function(){
-		$('.order-one-click').fadeOut(400);
-	});
-
-	// Открываем всплывающее окно Подписки
-	$('a[href="#order-subscribe"]').on('click', function(){
-		$('.order-subscribe').fadeIn(400);
-	});
-	// Закрытие Подкиски
-	$('.order-subscribe__close-icon').on('click', function(){
-		$('.order-subscribe').fadeOut(400);
-	});
-
 	// Выпадающий список
 	var activeText = $('.drop-down-item--active').text();
 	$('.drop-down-check').text(activeText);
@@ -328,5 +310,23 @@ $(document).ready(function() {
 
     });
 
+	// Скрипт только для UI 
+    	// // Открываем всплывающее окно Закать в 1 клик
+	// $('a[href="#order-one-click"]').on('click', function(){
+	// 	$('.order-one-click').fadeIn(400);
+	// });
+	// // Закрытие формы Заказа
+	// $('.order-one-click__close-icon').on('click', function(){
+	// 	$('.order-one-click').fadeOut(400);
+	// });
+
+	// // Открываем всплывающее окно Подписки
+	// $('a[href="#order-subscribe"]').on('click', function(){
+	// 	$('.order-subscribe').fadeIn(400);
+	// });
+	// // Закрытие Подкиски
+	// $('.order-subscribe__close-icon').on('click', function(){
+	// 	$('.order-subscribe').fadeOut(400);
+	// });
 
 });
