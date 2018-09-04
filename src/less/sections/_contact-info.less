@@ -88,6 +88,7 @@
 	border: 1px solid @border-passive;
 	padding: 12px;
 	margin-bottom: 8px;
+	cursor: pointer;
 	@media @tablet{padding: 16px;}
 	@media @desktop{margin-bottom: 16px;}
 }
@@ -134,16 +135,21 @@
 }
 .icon-comments--plus{background: url('../../img/icons/plus.svg') no-repeat center center;}	
 
-.icon-comments--minus{background: url('../../img/icons/minus.svg') no-repeat center center;}
+.icon-comments--minus{background: url('../../img/icons/minus.svg') no-repeat center center;} 
 
 .comments-field{
-	resize: none;
-	width: 100%;
-	height: 88px;
-	font-size: 14px;
-	color:@textMenu;
+	display: none;
+	
+	textarea {
+		resize: none;
+		width: 100%;
+		height: 88px;
+		font-size: 14px;
+		color:@textMenu;	
+	}
 }
 .form-group-user-address{
+	display: none;
 	margin-right: -4px;
 	margin-left: -4px;
 	margin-bottom: 16px;

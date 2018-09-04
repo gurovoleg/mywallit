@@ -29,7 +29,7 @@ block content
 							.contacts-text.contacts-address Санкт-Петербург
 							a.contacts-link.select-address(href="#") Выбрать город
 						
-						.contacts-block--border.contacts-block--active
+						.contacts-block--border#delivery-pickup.contacts-block--active
 							.subtitle-block.subtitle-block--justify
 								.contacts-text.contacts-text--large #[strong Пункты самовывоза]
 								a.contacts-link.contacts-link--notbold(href="#") Изменить
@@ -39,7 +39,7 @@ block content
 								.delivery-date Доставка: #[span.delivery-date__val] Сегодня
 								.delivery-price Стоимость доставки: #[span.delivery-price__val] Бесплатно
 
-						.contacts-block--border.contacts-block--curier
+						.contacts-block--border#delivery-courier
 							.subtitle-block
 								.contacts-text.contacts-text--large #[strong Курьерская доставка]
 							.delivery-info
@@ -60,10 +60,10 @@ block content
 
 						.delivery-comments
 							.icon-comments.icon-comments--plus
-							.icon-comments.icon-comments--minus
 							a.contacts-link.delivery-comments--link(href="#") Добавить комментарий
-							textarea.comments-field(name="comments-field" )
-
+							.comments-field
+								textarea(name="comments-field" )
+					
 					.contacts-block
 						.title-4.contacts-title Способ оплаты
 						.subtitle-block
