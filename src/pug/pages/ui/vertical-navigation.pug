@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Вертикальное меню';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Личный кабинет - вертикальное меню
+		.section-ui
+			ul.cabinet-menu
+				+cabinet-menu-item('#', 'профиль')
+				+cabinet-menu-item('#', 'мои заказы')(class="cabinet-menu-item__link--active")
+				+cabinet-menu-item('#', 'корзина')
+				+cabinet-menu-item('#', 'избранное')
+				+cabinet-menu-item('#', 'выйти')
+		pre.
+			ul.cabinet-menu
+				+cabinet-menu-item('#', 'профиль')
+				+cabinet-menu-item('#', 'мои заказы')(class="cabinet-menu-item__link--active")
+				+cabinet-menu-item('#', 'корзина')
+				+cabinet-menu-item('#', 'избранное')
+				+cabinet-menu-item('#', 'выйти')
+
+		string миксин для элемента меню
+		pre.
+			mixin cabinet-menu-item(href, itemTitle)
+
+				li.cabinet-menu-item
+					a.cabinet-menu-item__link(href= href)&attributes(attributes) # {itemTitle}
