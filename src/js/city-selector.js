@@ -2,12 +2,13 @@ $(document).ready(function() {
 
 	(function(){
 
-		var $cityList = $('.city-selection-wrapper'), // обертка
+		var wrapper = '.city-selection-wrapper', // обертка по умолчанию есть в разметке блока городов
 			$toggle = $('.city-toggle'), // переключатель
-			$close = $('.close-selection'); // выключатель
+			$close = $('.close-selection'), // выключатель
+			$cityList = $(wrapper); // блок с городами
 
 		// Касмтоный скролл для списка
-		$($cityList).niceScroll({
+		$(wrapper).niceScroll({
 				cursorcolor:"#ACACAC",
 				cursorwidth:"8px",
 				background:"#DBDBDB",
@@ -25,15 +26,24 @@ $(document).ready(function() {
 			},
 
 			_setupListners: function(){
-				$toggle.on('click', citySelector._toggle);
-				$close.on('click', citySelector._toggle);
+				
+				$toggle.on('click', function(e){
+					var id = $(this).attr('data-city-selector');
+					$cityList = $(id);
+					citySelector._toggle(e);
+				});
+				
+				$close.on('click', function(e){
+					citySelector._toggle(e);
+				});
 			},
 
 			_toggle: function(e) {
-								
+				
 				e.preventDefault();
 				
 				if ($cityList.css('display') == 'none') {
+					
 					$cityList.addClass('d-block');
 					$("body").addClass('overflow-hidden');
 				} else {

@@ -290,24 +290,24 @@ $(document).ready(function() {
 
 	// Переход между мобильной версией и дестопом
 	$(window).resize(function(){
-		var w = $(window).width();
+		// var w = $(window).width();
 
-		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
-			$('.catalog-filter').css({'transition' : 'none'});
-			$("body").css("overflow","auto");
-		}
+		// if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
+		// 	$('.catalog-filter').css({'transition' : 'none'});
+		// 	$("body").css("overflow","auto");
+		// }
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
-			$("body").css("overflow","auto");
-		}
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
+		// 	$("body").css("overflow","auto");
+		// }
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
-			$("body").css("overflow","hidden");
-		}
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
+		// 	$("body").css("overflow","hidden");
+		// }
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
-			$("body").css("overflow","auto");
-		}
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+		// 	$("body").css("overflow","auto");
+		// }
 	});
 
 
@@ -350,24 +350,5 @@ $(document).ready(function() {
 		console.log('ordered');
 		$('#ordered-products').slideToggle();
 	});
-
-	// Скрипт только для UI 
-    	// // Открываем всплывающее окно Закать в 1 клик
-	// $('a[href="#order-one-click"]').on('click', function(){
-	// 	$('.order-one-click').fadeIn(400);
-	// });
-	// // Закрытие формы Заказа
-	// $('.order-one-click__close-icon').on('click', function(){
-	// 	$('.order-one-click').fadeOut(400);
-	// });
-
-	// // Открываем всплывающее окно Подписки
-	// $('a[href="#order-subscribe"]').on('click', function(){
-	// 	$('.order-subscribe').fadeIn(400);
-	// });
-	// // Закрытие Подкиски
-	// $('.order-subscribe__close-icon').on('click', function(){
-	// 	$('.order-subscribe').fadeOut(400);
-	// });
 
 });

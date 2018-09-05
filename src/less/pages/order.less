@@ -7,6 +7,23 @@
 			padding-right: 0px;
 		}
 	}
+
+	// Убираем отступы для мобильной версии
+	.col-12 {
+		padding-left: 0;
+		padding-right: 0;
+		
+		@media @tablet {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+
+		@media @desktopXL {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+		
+	}
 }
 
 .order-title-block {
@@ -54,4 +71,9 @@
 	transform:translateX(-50%);
 	background-color: @white;
 	padding: 0 10px;
+}
+
+.col--no-padding {
+	padding-left: 0;
+	padding-right: 0;
 }
