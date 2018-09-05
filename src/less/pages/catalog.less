@@ -12,6 +12,7 @@
 	height: 100%;
 	width: 100%;
 	transition: left 0.5s ease-in-out;
+	width: 270px;
 	@media @tablet {
 		width: 360px;
 		height: 100%;
@@ -20,15 +21,15 @@
 	}
 	@media @desktop {
 		position: relative;
-		display: flex;
+		display: block;
+		// display: flex;
 		justify-content: space-between;
-		flex-basis: 360px;
+		flex-basis: 270px;
 		width: 100%;
 		left: 0;
 		top: 0;
 		transition: none;
 		overflow: hidden;
-		
 	}
 }
 .form-filter {
@@ -39,19 +40,26 @@
 	}
 }
 .catalog-wrapper {
-	display: flex;
+	@media @desktopXL {
+		margin-right: 49px;
+	}
 }
 .catalog-filters {
 	display: flex;
-	position: relative;
+	// position: relative;
+	justify-content: space-between;
 	&__title {
-		margin-left: 16px;
-		padding-left: 23px;
+		padding-left: 30px;
 		position: relative;
+		cursor: pointer;
 		&:before {
 			position: absolute;
 			content: url('../img/icons/filter-icon.svg');
-			left: -8px;
+			left: 7px;
+			cursor: pointer;
+		}
+		@media @tablet {
+			flex-basis: 60%;
 		}
 		@media @desktop {
 				display: none;
@@ -76,11 +84,18 @@
 	}
 	@media @desktopXL {
 		padding-bottom: 48px;
+		padding-left: 49px;
 	}
 }
 .catalog-paginator {
+	margin-bottom: 32px;
 	@media @desktop {
-		padding-top: 47px;	
+		margin-bottom: 41px;
+		margin-top: 15px;
+	}
+	@media @desktopXL {
+		margin-bottom: 48px;
+		margin-top: 46px;
 	}
 }
 .catalog-filter--show {
@@ -122,19 +137,23 @@
 }
 .catalog-filters__badge {
 	display: none;
+	width: 80%;
 	@media @desktop {
 		display: block;
-		margin-left: 300px;
 	}
 }
 .catalog-filters__badge-item {
 	@media @desktop {
+		margin-bottom: 16px;
 		&:hover {
 			color: @text-light-grey;
 			text-decoration: none;
 		}
-		&:not(:first-child) {
-			margin-left: 16px;
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+		&:last-child {
+			margin-bottom: 45px;
 		}
 	}
 }
@@ -145,6 +164,6 @@
 		}
 	}
 }
-.catalog-filters-small__title {
-	z-index: 1;
-}
+// .catalog-filters-small__title {
+// 	z-index: 1;
+// }
