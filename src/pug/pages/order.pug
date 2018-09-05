@@ -9,3 +9,27 @@ block content
 	//- шапка
 	.header
 		include ../sections/header_order-page.pug
+	
+	//- Основной контент
+	.blur-wrapper
+		
+		.section-order
+			.container
+				.col
+					.order-title-block.d-none.d-md-flex
+						.order__tile.title-1 ОФОРМИТЬ И ОПЛАТИТЬ
+						+button-buyclick("Купить в 1 клик", "#")
+				.row
+					.col-12.col-md-6
+						include ../sections/show-order.pug
+					
+					.col-12
+						.order-title-mobile-block.d-md-none
+							+button-buyclick("Купить в 1 клик", "#")
+							.order__mobile-title Или оформить и оплатить
+					
+					.col-12.col-md-6.order-md-first
+						//- (style="border:1px dashed grey;")
+						.contacts
+							include ../sections/contacts-info.pug
+

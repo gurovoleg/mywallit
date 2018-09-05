@@ -24,8 +24,7 @@
 // блок лого, регистрация, корзина и тд
 .header-menu {
 	position:relative;
-	border:1px dashed grey;
-
+	
 	@media @desktop {
 		height: 114px;
 	}	
@@ -144,6 +143,13 @@
 		.icon-mixin(@textMenu, -12px, 10px);
 	}
 
+}
+
+// Класс для пустой шапки без навигации и корзины
+.header-menu--empty {
+	height: 68px;
+
+	@media @desktop {height: 114px;}	
 }
 
 
