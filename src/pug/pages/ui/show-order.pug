@@ -8,9 +8,10 @@ block content
 
 	.container.container--left
 		.title Показать заказ
-		.ordered-header Показать заказ ( #[span.ordered-header-amount 3] товара)&mdash; #[span.ordered-header-cost 15 000 р.]
-			.ordered-header-arrow
-				i.fas.fa-sort-down
+		.ordered-header
+			.ordered-header__title Показать заказ ( #[span.ordered-header-amount 3] товара)&mdash; #[span.ordered-header__cost 15 000 р.]
+				.ordered-header-arrow
+					i.fas.fa-sort-down
 		.ordered
 			.ordered-wrapper
 				.ordered-goods
@@ -34,3 +35,6 @@ block content
 					.ordered-calc__item.ordered-calc__item--bold
 						span.ordered-calc-text Всего к оплате
 						span.ordered-calc-price 14 229р.
+
+		pre.
+			include ../sections/show-order.pug

@@ -15,11 +15,11 @@
 		padding-bottom: 20px;
 	}
 }
-.ordered-header{
+.ordered-header__title{
 	cursor: pointer;
 	position: relative;
  	font-size: 16px;
- 	letter-spacing: 1px;
+ 	letter-spacing: 0.5px;
  	padding: 16px;
  	border-bottom: 1px solid @color-line;
 }
@@ -57,9 +57,7 @@
 .ordered-goods-item__price {
 	font-size: 14px;
 	padding-top: 16px;
-	text-align: right;
-	//align-self: center;
-	//width: 15%;
+	text-align: right;	
 	min-width: 70px;
 	@media @desktop{font-weight: 700;}
 	@media @desktopXL {
@@ -91,8 +89,7 @@
 	color: @white;
 	background-color: @text-green;
 	text-align: center;
-	font-size: 12px;
-	//@media @desktop {line-height: 1.3;}	
+	font-size: 12px;	
 }
 .ordered-goods-item__descrip{
 	min-width: 201px;
@@ -132,9 +129,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 8px;
+	padding-bottom: 4px;
 	font-size: 14px;
 	color: @order-calc;
+	@media @desktop {padding-bottom: 8px;}
 	@media @desktopXL {font-size: 18px;}
 }
 .ordered-calc__item--bold{
@@ -143,5 +141,3 @@
 	color: @text-card;
 	@media @desktopXL {font-size: 20px;}
 }
-
-
