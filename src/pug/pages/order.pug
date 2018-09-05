@@ -6,30 +6,50 @@ block variables
 
 block content
 	
-	//- шапка
-	.header
-		include ../sections/header_order-page.pug
+	//- Модальное окно
+	.bg-modal-window
+		.modal-window
+			//- Форма Купить в 1 клик
+			.form.order-one-click(id="order-one-click")
+				.order-one-click__title Оформить заказ в 1 клик
+				.order-one-click__subtitle Перезвоним в течение часа (будни с 10:00 до 19:00)
+				.order-one-click__inputs
+					.order-one-click__info
+						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
+					+inputField('Имя', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+button-buyclick("Оформить заказ", "#")
+					.order-one-click__info
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="").order-one-click__info-link условиями оферты 
+							| и 
+							a(href="").order-one-click__info-link политикой конфиденциальности.
+				.order-one-click__close-icon(class='close-modal-window' data-modal='#order-one-click')
 	
-	//- Основной контент
+	//- Обертка для фильтра
 	.blur-wrapper
+
+		//- шапка
+		.header
+			include ../sections/header_order-page.pug
 		
+		//- Основной контент
 		.section-order
 			.container
 				.col
 					.order-title-block.d-none.d-md-flex
 						.order__tile.title-1 ОФОРМИТЬ И ОПЛАТИТЬ
-						+button-buyclick("Купить в 1 клик", "#")
+						+button-buyclick("Купить в 1 клик", "#")(class='show-modal-window' data-modal='#order-one-click')
 				.row
-					.col-12.col-md-6
+					.col-12.col-md-6.col-lg-5.offset-xl-1.col-xl-5
 						include ../sections/show-order.pug
 					
 					.col-12
 						.order-title-mobile-block.d-md-none
-							+button-buyclick("Купить в 1 клик", "#")
+							+button-buyclick("Купить в 1 клик", "#")(class='show-modal-window' data-modal='#order-one-click')
 							.order__mobile-title Или оформить и оплатить
 					
-					.col-12.col-md-6.order-md-first
-						//- (style="border:1px dashed grey;")
-						.contacts
-							include ../sections/contacts-info.pug
+					.col-12.col-md-6.order-md-first.offset-lg-1.col-lg-6.offset-xl-2.col-xl-4
+						include ../sections/contacts-info.pug
 

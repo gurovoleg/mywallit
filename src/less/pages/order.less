@@ -1,3 +1,14 @@
+.section-order {
+	.contacts {
+		@media @desktop {
+			padding-right: 83px;
+		}
+		@media @desktopXL {
+			padding-right: 0px;
+		}
+	}
+}
+
 .order-title-block {
 	border-bottom:1px solid @gray;
 	display: flex;
@@ -34,6 +45,8 @@
 }
 
 .order__mobile-title {
+	text-align: center;
+	min-width:220px;
 	position:absolute;
 	font-size: 16px;
 	bottom:-12px;

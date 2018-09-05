@@ -292,22 +292,22 @@ $(document).ready(function() {
 	$(window).resize(function(){
 		var w = $(window).width();
 
-		// if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
-		// 	$('.catalog-filter').css({'transition' : 'none'});
-		// 	$("body").css("overflow","auto");
-		// }
+		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
+			$('.catalog-filter').css({'transition' : 'none'});
+			$("body").css("overflow","auto");
+		}
 
-		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
-		// 	$("body").css("overflow","auto");
-		// }
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
+			$("body").css("overflow","auto");
+		}
 
-		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
-		// 	$("body").css("overflow","hidden");
-		// }
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
+			$("body").css("overflow","hidden");
+		}
 
-		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
-		// 	$("body").css("overflow","auto");
-		// }
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+			$("body").css("overflow","auto");
+		}
 	});
 
 
@@ -344,6 +344,12 @@ $(document).ready(function() {
 		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
 
     });
+
+    // Показать заказ на странице Заказа на мобильной версии
+    $('#ordered-products-toggle').on('click', function(){
+		console.log('ordered');
+		$('#ordered-products').slideToggle();
+	});
 
 	// Скрипт только для UI 
     	// // Открываем всплывающее окно Закать в 1 клик
