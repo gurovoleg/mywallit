@@ -23,18 +23,25 @@
 	display: block;
 	align-items: center;
 	justify-content: space-between;
-	padding: 12px 0;
+	padding: 16px 0;
 	position: relative;
-	// border-bottom: 1px solid @borderMenu;
+	border-bottom: 1px solid @borderMenu;
 
 	@media @desktop {
 		display: flex;
+		border:none;
+		padding: 12px 0;
 	}
 }
 
 .filter__title {
-	font-size: 20px;
-	color: @text-red;
+	font-size: 18px;
+	color: @textMenu;
+
+	@media @desktop {
+		color: @text-red;	
+		font-size: 20px;
+	}
 }
 
 .filter__clean-button {
