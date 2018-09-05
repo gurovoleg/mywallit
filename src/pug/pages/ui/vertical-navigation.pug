@@ -10,22 +10,22 @@ block content
 		.title Личный кабинет - вертикальное меню
 		.section-ui
 			ul.cabinet-menu
-				+menu-item('#', 'профиль')
-				+menu-item('#', 'мои заказы')(class="cabinet-menu-link--active")
-				+menu-item('#', 'корзина')
-				+menu-item('#', 'избранное')
-				+menu-item('#', 'выйти')
+				+cabinet-menu-item('#', 'профиль')
+				+cabinet-menu-item('#', 'мои заказы')(class="cabinet-menu-item__link--active")
+				+cabinet-menu-item('#', 'корзина')
+				+cabinet-menu-item('#', 'избранное')
+				+cabinet-menu-item('#', 'выйти')
 		pre.
 			ul.cabinet-menu
-				+menu-item('#', 'профиль')
-				+menu-item('#', 'мои заказы')(class="cabinet-menu-link--active")
-				+menu-item('#', 'корзина')
-				+menu-item('#', 'избранное')
-				+menu-item('#', 'выйти')
+				+cabinet-menu-item('#', 'профиль')
+				+cabinet-menu-item('#', 'мои заказы')(class="cabinet-menu-item__link--active")
+				+cabinet-menu-item('#', 'корзина')
+				+cabinet-menu-item('#', 'избранное')
+				+cabinet-menu-item('#', 'выйти')
 
 		string миксин для элемента меню
 		pre.
-			mixin menu-item(href, itemTitle)
+			mixin cabinet-menu-item(href, itemTitle)
 
 				li.cabinet-menu-item
-					a.cabinet-menu-link(href= href)&attributes(attributes) # {itemTitle}
+					a.cabinet-menu-item__link(href= href)&attributes(attributes) # {itemTitle}
