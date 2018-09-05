@@ -5,6 +5,10 @@
 	display: none;
 	background-color: @white;
 	z-index: 1;
+
+	@media @desktop {
+		width: 434px;
+	}
 }
 .order-subscribe {
 	width: 360px;
@@ -13,6 +17,10 @@
 	display: none;
 	background-color: @white;
 	z-index: 1;
+
+	@media @desktop {
+		width: 434px;
+	}	
 }
 .order-one-click__title {
 	font-size: 18px;
@@ -35,7 +43,12 @@
 	margin-bottom: 21px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+
+	@media @desktop {
+		margin-bottom: 40px;
+	}
 }	
+
 .order-one-click__subtitle {
 	line-height: 1;
 	font-size: 12px;
@@ -44,38 +57,93 @@
 	color: @text-light-grey;
 	padding-bottom: 8px;
 	border-bottom: 1px solid #C4C4C4;
-	margin-bottom: 21px;
+	margin-bottom: 5px;
+
+	@media @desktop {
+		margin-bottom: 8px;		
+	}
 }
 .order-one-click__inputs {
-	margin-left: 33px;
-	margin-right: 33px;
+	margin-left: 32px;
+	margin-right: 32px;
 	padding-bottom: 25px;
+
+	@media @desktop {
+		margin-left: 48px;
+		margin-right: 48px;
+		
+	}
+
+	.button-wide {
+		margin-top: 8px;
+	}
 }
 .order-subscribe__inputs {
-	margin-left: 33px;
-	margin-right: 33px;
-	padding-bottom: 18px;
+	margin-left: 32px;
+	margin-right: 32px;
+	padding-bottom: 31px;
+	
+	@media @desktop {
+		margin-left: 48px;
+		margin-right: 48px;
+		padding-bottom: 40px;
+	}
+
 }
-.order-one-click__inputs-item {
+
+.order-subscribe__inputs-item {
 	margin-bottom: 16px;
+
+	@media @desktop {
+		margin-bottom: 24px;
+	}
+}
+
+.order-one-click__inputs-item {
+	margin-bottom: 8px;
+
+	@media @desktop {
+		margin-bottom: 16px;
+	}
+
 }
 .order-one-click__info {
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	line-height: 1;
 	font-size: 12px;
 	color: @text-light-grey;
+
+	@media @desktop {
+		padding-top: 24px;
+	}
+
+	p {
+		margin:0;
+		line-height: 1.2;
+	}
+
 }
 .order-subscribe__info {
 	line-height: 1;
 	font-size: 12px;
 	color: @text-light-grey;
 	padding-top: 22px;
+
+	p {
+		margin:0;
+		line-height: 1.2;
+	}
 }
 .order-one-click__info-link {
 	border-bottom: 1px solid @btn-text-buy-click;
 	padding-bottom: 2px;
 	color: @btn-text-buy-click;
+	
+	@media @desktop {
+		padding-bottom: 3px;
+	}
+
 	&:hover {
 		border-bottom: none;
 		color: @btn-text-buy-click;
