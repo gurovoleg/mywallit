@@ -36,6 +36,7 @@ $(document).ready(function() {
 		}
 	);
 
+
 	//-end card hover effect
 	
 	// Product counter

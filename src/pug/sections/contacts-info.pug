@@ -1,0 +1,80 @@
+form.contacts-info(action="" method="")
+	.contacts-block
+		.title-4.contacts-title Контактная информация
+		.subtitle-block
+			.contacts-text Вы уже зарегистрированы?
+			a.contacts-link(href="#") Войти
+		
+		.form-group-user-data
+			+inputField('Имя Фамилия', 'Вы ничего не ввели', 'notEmpty', 'text')
+			+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+			+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text')
+
+	.contacts-block
+		.title-4.contacts-title Адрес доставки
+		.subtitle-block
+			.contacts-text.contacts-address Санкт-Петербург
+			a.contacts-link.select-address.city-toggle(href="#") Выбрать город
+			include ../../sections/_city-selection.pug
+
+		.contacts-block--border#delivery-pickup.contacts-block--active
+			.subtitle-block.subtitle-block--justify
+				.contacts-text.contacts-text--large #[strong Пункты самовывоза]
+				a.contacts-link.contacts-link--notbold(href="#") Изменить
+			.pickup-points.
+				Постамат: ТК Нео 7801-003, Заневский пр-т, д. 38
+			.delivery-info
+				.delivery-date Доставка: #[span.delivery-date__val] Сегодня
+				.delivery-price Стоимость доставки: #[span.delivery-price__val] Бесплатно
+
+		.contacts-block--border#delivery-courier
+			.subtitle-block
+				.contacts-text.contacts-text--large #[strong Курьерская доставка]
+			.delivery-info
+				.delivery-date.contacts-text-small Доставка: #[span.delivery-date__val] Сегодня
+				.delivery-price.contacts-text-small Стоимость доставки: #[span.delivery-price__val] 350р.
+
+		
+		.form-group-user-address
+			.row
+				.col
+					+inputField('Название улицы', 'Вы ничего не ввели', 'notEmpty', 'text')
+			.row
+				.col
+					+inputField('№ дома', 'Вы ничего не ввели', 'notEmpty', 'text')(class="field-mr-16")
+				.col
+					+inputField('№ кв./офис', 'Вы ничего не ввели', 'notEmpty', 'text')
+
+
+		.delivery-comments
+			.icon-comments.icon-comments--plus
+			a.contacts-link.delivery-comments--link(href="#") Добавить комментарий
+			.comments-field
+				textarea(name="comments-field" )
+	
+	.contacts-block
+		.title-4.contacts-title Способ оплаты
+		.subtitle-block
+			.contacts-text Выберите удобный способ оплаты
+			
+		.form-group-payment
+			.payment-type.payment-type--active
+				svg.paiment-icon(aria-hidden="true" data-prefix="far" data-icon="credit-card" class="svg-inline--fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512")
+					path( d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z")
+
+				p.contacts-text Оплата кредитной картой
+
+			.payment-type
+				svg.paiment-icon(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 487.6 487.6" style="enable-background:new 0 0 487.6 487.6;" xml:space="preserve" width="512px" height="512px")
+					path( d="M460.3,216.55h-11.6v-69.7c0-28.5-23.2-51.6-51.6-51.6h-10.7l0.1-25.9c0-19.2-15.6-34.8-34.8-34.8H42.3   c-23.1,0-42,18.6-42.3,41.7c0,0.2,0,0.4,0,0.6v341.4c0,19.2,15.6,34.8,34.8,34.8h362.4c28.5,0,51.6-23.2,51.6-51.6v-69.8h11.6   c15,0,27.2-12.2,27.2-27.2v-60.7C487.5,228.75,475.3,216.55,460.3,216.55z M42.3,58.55h309.4c5.9,0,10.8,4.8,10.8,10.7l-0.1,26   H42.3c-10.1,0-18.3-8.2-18.3-18.3S32.2,58.55,42.3,58.55z M424.7,401.35c0,15.2-12.4,27.6-27.6,27.6H34.7   c-5.9,0-10.8-4.8-10.8-10.8v-303.1c5.6,2.7,11.8,4.2,18.4,4.2h354.8c15.2,0,27.6,12.4,27.6,27.6v69.7h-81.9   c-15,0-27.2,12.2-27.2,27.2v60.7c0,15,12.2,27.2,27.2,27.2h81.9V401.35z M463.5,304.45c0,1.8-1.4,3.2-3.2,3.2H342.9   c-1.8,0-3.2-1.4-3.2-3.2v-60.7c0-1.7,1.4-3.2,3.2-3.2h117.4c1.7,0,3.2,1.4,3.2,3.2L463.5,304.45L463.5,304.45z")
+
+				p.contacts-text  Оплата наличными
+	.contacts-block
+		+button-apply('Оформить заказ', '#')
+		.contacts-block-footer.contacts-text-small
+			|Нажимая кнопку "Оформить заказ", вы соглашаетесь с
+			br
+			| 
+			a.contacts-link.a.contacts-link-small(href="#") условиями оферты 
+			| и 
+			a.contacts-link.a.contacts-link-small(href="#") политикой конфиденциальности.
