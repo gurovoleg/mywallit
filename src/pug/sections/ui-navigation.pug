@@ -13,6 +13,7 @@
 	.left-panel__section
 		p.strong База
 		.left-panel-nav
+			+linkLeftPanel("Модальные окна", "modal-window.html")
 			+linkLeftPanel("Цвета", "colors.html")
 			+linkLeftPanel("Заголовки", "")
 			+linkLeftPanel("Типографика", "typhography.html")
@@ -20,16 +21,17 @@
 			+linkLeftPanel("Вертикальный ритм", "vertical-grid.html")
 			+linkLeftPanel("Формы", "forms.html")
 			+linkLeftPanel("Хлебные крошки", "bread-crumb.html")
-			+linkLeftPanel("Кнопки для фильтра и счетчика", "btn-plus-minus.html")
+			+linkLeftPanel("Кнопки для фильтра и счетчик товара", "btn-plus-minus.html")
+			+linkLeftPanel("Извещение о наличии товара", "stock-notify.html")
+
 
 
 	.left-panel__section
 		p.strong Блоки
 		.left-panel-nav
 
+			+linkLeftPanel("Иконки", "icons.html")
 			+linkLeftPanel("Баннеры", "banner.html")
-			//- +linkLeftPanel("Баннер красный", "#")
-			//- +linkLeftPanel("Баннер с картинкой", "#")
 			+linkLeftPanel("Кнопки", "buttons.html")
 			+linkLeftPanel("Фильтр", "filter.html")
 			+linkLeftPanel("Карточки товара", "cards.html")
@@ -41,7 +43,14 @@
 			+linkLeftPanel("Социальные сети", "social.html")
 			+linkLeftPanel("Пагинация", "pagination.html")
 			+linkLeftPanel("Выпадающий список", "drop-down.html")
-
+			+linkLeftPanel("Показать заказ", "show-order.html")
+			+linkLeftPanel("Вертикальная навигация", "vertical-navigation.html")
+			+linkLeftPanel("Выпадающий список", "drop-down.html")
+			+linkLeftPanel("Показать заказ", "show-order.html")
+			+linkLeftPanel("Фото товара", "photo-of-product.html")
+			+linkLeftPanel("Форма заказа и подписки", "order-subscribe.html")
+			+linkLeftPanel("Аккордеон", "ui-accordeon.html")
+			+linkLeftPanel("Выпадающий список", "drop-down.html")
 
 
 	.left-panel__section
@@ -58,11 +67,15 @@
 			+linkLeftPanel("Подвал - Форма подписки", "footer-subscribe.html")
 			+linkLeftPanel("Подвал - Социальные сети", "ui-social.html")
 			+linkLeftPanel("Подвал - Общий, все вместе", "footer.html")
+			+linkLeftPanel("Контактная информация", "contact-info.html")
 
 	.left-panel__section
 		p.strong Страницы
 		.left-panel-nav
 			+linkLeftPanel("Главная", "../main.html")
 			+linkLeftPanel("Каталог", "../catalog.html")
+			+linkLeftPanel("Описание товара", "../product.html")
+			//- +linkLeftPanel("Каталог", "../catalog.html")
+
 
 #ui-nav-toggle Скрыть/Показать навигацию

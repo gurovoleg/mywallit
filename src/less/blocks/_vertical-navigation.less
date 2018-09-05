@@ -1,0 +1,30 @@
+.cabinet-menu{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.cabinet-menu-item{
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid @color-line;
+}
+.cabinet-menu-item__link{
+	display: block;
+	text-transform: uppercase;
+	font-size:16px;
+	color:@textMenu;
+	padding: 16px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.cabinet-menu-item__link--active{
+	border-bottom: 2px solid @color-line;
+	font-weight: 700;
+}
+.cabinet-menu-item__link.cabinet-menu-item__link--active:hover{
+	color: @textMenu;	
+	cursor: default;
+	text-decoration: none;	
+}
