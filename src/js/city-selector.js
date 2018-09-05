@@ -29,8 +29,10 @@ $(document).ready(function() {
 				$close.on('click', citySelector._toggle);
 			},
 
-			_toggle: function() {
+			_toggle: function(e) {
 								
+				e.preventDefault();
+				
 				if ($cityList.css('display') == 'none') {
 					$cityList.addClass('d-block');
 					$("body").addClass('overflow-hidden');
