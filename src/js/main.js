@@ -345,6 +345,12 @@ $(document).ready(function() {
 
     });
 
+    // Показать заказ на странице Заказа на мобильной версии
+    $('#ordered-products-toggle').on('click', function(){
+		console.log('ordered');
+		$('#ordered-products').slideToggle();
+	});
+
 	// Скрипт только для UI 
     	// // Открываем всплывающее окно Закать в 1 клик
 	// $('a[href="#order-one-click"]').on('click', function(){
