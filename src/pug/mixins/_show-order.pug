@@ -1,0 +1,11 @@
+mixin ordered-goods-item(imgSrc, alt, text, articule, price )
+
+	.ordered-item.ordered-goods-item
+		.ordered-goods-item__img
+			.label-amount 1
+			img(src="../img/"+ imgSrc, alt=""+ alt)
+		.ordered-goods-item__descrip
+			p.ordered-goods-item__descrip-title.
+				#{text}
+			p.ordered-goods-item__descrip-article Артикул: #{articule}
+		.ordered-goods-item__price #{price}

@@ -14,17 +14,20 @@ block content
 			.form.order-one-click(style="border: 1px dashed #000; display:block;" id="order-one-click")
 				.order-one-click__title Оформить заказ в 1 клик
 				.order-one-click__subtitle Перезвоним в течение часа (будни с 10:00 до 19:00)
+				
+
 				.order-one-click__inputs
+					.order-one-click__info
+						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
 					+inputField('Имя', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
 					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
 					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+button-buyclick("Оформить заказ", "#")
 					.order-one-click__info
-						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
 							a(href="").order-one-click__info-link условиями оферты 
 							| и 
 							a(href="").order-one-click__info-link политикой конфиденциальности.
-					+button-buyclick("Купить в 1 клик", "#")
 				.order-one-click__close-icon
 		.section-ui
 			pre.
@@ -49,7 +52,7 @@ block content
 			.form.order-subscribe(style="border: 1px dashed #000; display:block;" id="order-subscribe")
 				.order-subscribe__title Подписка на товар
 				.order-subscribe__inputs
-					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-subscribe__inputs-item')
 					+button-buyclick("Подписаться", "#")
 					.order-subscribe__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
