@@ -10,8 +10,8 @@ block content
 		.title Форма заказа и подписки
 		.section-ui
 			.ui-title Форма заказа
-			a(href="#order-one-click") Заказать в 1 клик
-			.form.order-one-click(style="border: 1px dashed #000;" id="order-one-click")
+			//- a(href="#order-one-click") Заказать в 1 клик
+			.form.order-one-click(style="border: 1px dashed #000; display:block;" id="order-one-click")
 				.order-one-click__title Оформить заказ в 1 клик
 				.order-one-click__subtitle Перезвоним в течение часа (будни с 10:00 до 19:00)
 				.order-one-click__inputs
@@ -45,8 +45,8 @@ block content
 					.order-one-click__close-icon
 		.section-ui
 			.ui-title Форма подписки
-			a(href="#order-subscribe") Подписаться
-			.form.order-subscribe(style="border: 1px dashed #000;" id="order-subscribe")
+			//- a(href="#order-subscribe") Подписаться
+			.form.order-subscribe(style="border: 1px dashed #000; display:block;" id="order-subscribe")
 				.order-subscribe__title Подписка на товар
 				.order-subscribe__inputs
 					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
@@ -57,6 +57,8 @@ block content
 							| и 
 							a(href="").order-subscribe__info-link политикой конфиденциальности.
 				.order-subscribe__close-icon
+			
+		.section-ui
 			pre.
 				.form.order-subscribe(style="border: 1px dashed #000;" id="order-subscribe")
 					.order-subscribe__title Подписка на товар
