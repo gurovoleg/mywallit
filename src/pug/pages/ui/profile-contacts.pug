@@ -1,0 +1,45 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Контакты на странице Профиль';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Контакты на странице Профиль
+		.contacts.contacts--profile
+			form.contacts-info.contacts-info--profile(action="" method="")
+				.contacts-block
+					.title-4.contacts-title.contacts-title--special-margin Контактная информация
+					
+					.form-group-user-data
+						+inputField('Имя Фамилия', 'Вы ничего не ввели', 'notEmpty', 'text')
+						+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+						+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'mb-0').mb-0
+
+				.contacts-block
+					.title-4.contacts-title.contacts-title--profile Адрес доставки
+					.subtitle-block
+						.contacts-text.contacts-address Санкт-Петербург
+						a.contacts-link.select-address.city-toggle(href="#") Выбрать город
+						include ../../sections/_city-selection.pug				
+					
+					.form-group-user-address.d-block
+						.row
+							.col
+								+inputField('Название улицы', 'Вы ничего не ввели', 'notEmpty', 'text')
+						.row
+							.col
+								+inputField('№ дома', 'Вы ничего не ввели', 'notEmpty', 'text')(class="field-mr-16")
+							.col
+								+inputField('№ кв./офис', 'Вы ничего не ввели', 'notEmpty', 'text')
+				.contacts-block
+					.title-4.contacts-title.contacts-title--profile Изменить пароль
+					.form-group-passw
+						+inputField('Новый пароль', 'Вы ничего не ввели', 'pass', 'password', '', '')
+						+inputField('Подтверждение пароля', 'Вы ничего не ввели', 'pass', 'password', '', '')
+				.contacts-block
+					.title-4.contacts-title.contacts-title--profile Клубная программа
+					+inputField('Номер клубной карты', '', 'notCheck', 'text', '', '')
+				+button-apply('Сохранить изменения', '#')
