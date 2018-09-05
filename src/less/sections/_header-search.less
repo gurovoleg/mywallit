@@ -77,7 +77,6 @@
 	.devide {
 		display: block;
 		width: 100%;
-		.line-gradient;
 		margin-bottom: 16px;
 		margin-top: 10px;
 	}
@@ -97,10 +96,16 @@
 }
 .header-search-result__goods {
 	margin-left: 24px;
-
+	font-weight: 500;
 	@media @desktopXL {
 		margin-left: 32px;
 	}
+}
+.header-search-result__category > .devide {
+	height: 2px;
+}
+.header-search-result__goods > .devide {
+	height: 2px;
 }
 .header-search-result-desktop {
 	// position:absolute;
@@ -124,7 +129,7 @@
 .header-search-result__link-item {
 	line-height: normal;
 	font-size: 16px;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.02em;
 	color: @text-light-grey;
 	&:hover, &:focus, &:active {
 		color: @text-red;
@@ -140,4 +145,3 @@
 		margin-left: 164px;
 	}
 }
-

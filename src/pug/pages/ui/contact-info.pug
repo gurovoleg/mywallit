@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Баннеры';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Контактная информация
+		.section-ui
+			
+			.contacts
+				include ../../sections/contacts-info.pug
+
+		string Подключение					
+		pre.
+			include ../sections/contacts-info.pug

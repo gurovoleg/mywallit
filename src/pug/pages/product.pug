@@ -1,0 +1,151 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Описание товара';
+	- var pageClass = 'index-page';
+
+block content
+	
+	//- Модальное окно
+	.bg-modal-window
+		.modal-window
+			//- Форма подписки на товар
+			.form.order-subscribe(id="order-subscribe")
+				.order-subscribe__title Подписка на товар
+				.order-subscribe__inputs
+					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+button-buyclick("Подписаться", "#")
+					.order-subscribe__info
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="").order-subscribe__info-link условиями оферты 
+							| и 
+							a(href="").order-subscribe__info-link политикой конфиденциальности.
+				.order-subscribe__close-icon(class='close-modal-window' data-modal='#order-subscribe')
+			//- Форма Купить в 1 клик
+			.form.order-one-click(id="order-one-click")
+				.order-one-click__title Оформить заказ в 1 клик
+				.order-one-click__subtitle Перезвоним в течение часа (будни с 10:00 до 19:00)
+				.order-one-click__inputs
+					+inputField('Имя', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					.order-one-click__info
+						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="").order-one-click__info-link условиями оферты 
+							| и 
+							a(href="").order-one-click__info-link политикой конфиденциальности.
+					+button-buyclick("Оформить заказ", "#")
+				.order-one-click__close-icon(class='close-modal-window' data-modal='#order-one-click')
+				
+	
+	//- Обертка для фильтра blur
+	.blur-wrapper
+
+		//- шапка
+		.header
+			include ../sections/header.pug
+		
+		//- Хлебные крошки
+		.section-breadcrumb
+			.container
+				.breadcrumb-list
+					+breadcrumb-item('#', 'Главная страница')
+					+breadcrumb-item('#', 'Описание продукта')
+
+		//- Описание товара
+		.section-product
+			.container
+				.row
+					//- Блок с фотографиями
+					.col-md-6.col-lg-7.offset-xl-1.col-xl-5
+						.product-photo__switch-block
+							.switch-block__main-photo
+								img(src="../img/goods/purse_blue/blue-purse-1.jpg" alt="Картинка товара")
+							.switch-block__thumbnails.d-flex
+								.thumbnails__image(data-img-path = "../img/goods/purse_blue/blue-purse-1.jpg")
+									img(src="../img/good_thumbnail/blue-purse/thumb_blue-purse-1.png"  alt="Картикна товара")
+								
+								.thumbnails__image(data-img-path = "../img/goods/purse_blue/blue-purse-2.jpg")
+									img(src="../img/good_thumbnail/blue-purse/thumb_blue-purse-2.png" alt="Картикна товара")
+								
+								.thumbnails__image(data-img-path = "../img/goods/purse_blue/blue-purse-3.jpg")
+									img(src="../img/good_thumbnail/blue-purse/thumb_blue-purse-3.png" alt="Картинка товара")
+								
+								.thumbnails__image(data-img-path = "../img/goods/purse_blue/blue-purse-4.jpg")
+									img(src="../img/good_thumbnail/blue-purse/thumb_blue-purse-4.png" alt="Картикна товара")
+					
+					//- Блок инфо + заказ
+					.col-md-6.col-lg-5.offset-xl-1.col-xl-5
+						.product-order-block
+							.product-heart-icon.toggle-heart-icon
+								i.fas.fa-heart
+							.title-1 Большой Zip Around Кошелек
+							.product-order__article Артикул: 1252-130
+							.product-order__price
+								span.new-price 4 893р.
+								span.old-price 6 990р.
+							.product-order__counter-block
+								.product-counter
+									.btn-counter.btn-counter--minus
+									span 1
+									.btn-counter.btn-counter--plus
+								.notice-stock.notice-stock--exist Есть в  наличии
+								.notice-stock.notice-stock--not.d-none Нет в  наличии
+							.product-order__buttons-block
+								//- Добавить в козину
+								+button-addcart("Добавить в корзину", "#")
+								//- Купить в 1 клик (запуск модального окна)
+								+button-buyclick("Купить в 1 клик", "#")(id="one-click-button" class='show-modal-window' data-modal='#order-one-click')
+								//- Подписаться (запуск модального окна)
+								.button-subscribe-block.d-none.d-lg-block
+									+button-store('Подписаться','#')(id="subscribe-button" class='show-modal-window' data-modal='#order-subscribe')
+									p Укажите свой email и мы уведомим вас о поступлении отсутствующего товара
+							.product-order__colors
+								.colors__title Доступные цвета
+								.colors__images
+									img(src="img/good_colors/violet.png" alt="Картинка")
+									img(src="img/good_colors/color-2.png" alt="Картинка")
+									img(src="img/good_colors/color-3.png" alt="Картинка")
+									img(src="img/good_colors/color-4.png" alt="Картинка")
+									img(src="img/good_colors/color-5.png" alt="Картинка")
+									img(src="img/good_colors/color-6.png" alt="Картинка")
+									img(src="img/good_colors/color-7.png" alt="Картинка")
+									img(src="img/good_colors/color-8.png" alt="Картинка")
+						
+						.d-none.d-lg-block
+							include  ../sections/accordeon.pug	
+					//- Аккордеон
+					.col-md-12.d-lg-none
+						include  ../sections/accordeon.pug
+		
+		//- Похожие товары
+		.section-similar-products
+			.container
+				.similar-products__title.title-4 Похожие товары
+				+color-line
+				.row
+					.col-6.col-md-3
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+							+button-cart('В корзину','#')
+							+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+					
+					.col-6.col-md-3.order-md-last
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+							+button-cart('В корзину','#')
+							+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+					
+					.col-6.col-md-3
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#', 'Сумка большая, коллекция "Рига"', '1 990р.')
+							+button-store('Нет в наличии','#')
+							+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+
+					.col-6.col-md-3
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#', 'Сумка большая, коллекция "Рига"', '4 893р.')
+							+button-cart('В корзину','#')
+							+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+
+
+		//- Подвал
+		.footer
+			include ../sections/footer.pug

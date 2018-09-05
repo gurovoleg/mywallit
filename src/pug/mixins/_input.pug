@@ -1,8 +1,8 @@
-mixin inputField(textLable, textError, dataType, typeField)
-	.input-wrapper
+mixin inputField(textLable, textError, dataType, typeField, addClassInput, addClassWrapper)
+	.input-wrapper(class= addClassWrapper)
 		.input-field--success-icon
 		.input-field--error-icon
-		input.input-field(type= typeField data-type= dataType)
+		input.input-field(type= typeField data-type= dataType class= addClassInput)
 		if textLable !=''
 			span.input-field__label= textLable
 		if textError !=''
