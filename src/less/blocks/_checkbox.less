@@ -1,3 +1,129 @@
+// .checkbox {
+// 	position: absolute;
+// 	opacity: 0;
+// 	outline: none;
+// 	&:focus, &:active, &:hover {
+// 		outline: none;
+// 	}
+// }
+
+// .checkbox-custom {
+// 	position: relative;
+// 	width: 16px;
+// 	height: 16px;
+// 	border: 1px solid @gray;
+// 	transition: all 0.1s ease-in;
+// 	outline: none;
+//     vertical-align: middle;
+    
+// 	&--filter {
+// 		width: 12px;
+// 		height: 12px;
+// 	}
+
+// 	&:focus, &:active, &:hover {
+// 		outline: none;
+// 	}
+// }
+
+// .checkbox-label {
+// 	width: 100%;
+// 	position: relative;
+// 	padding-top: 8px;
+// 	p {
+// 		margin-bottom: 0;
+// 	}
+// 	&-text {
+		
+// 	}
+// 	@media @desktop {
+// 		padding-top: 3px;
+// 	}
+// }
+
+// .checkbox-label-text {
+// 	width: 90%;
+// 	display: inline;
+// 	padding-left: 11px;
+// 	color: @active-checkbox;
+// 	font-size: 12px;
+// 	&--filter {
+// 		color: @gray;
+// 		font-size: 16px;
+// 		vertical-align: middle;
+// 	}
+// 	@media @tablet {
+// 		width: 90%;
+// 	}
+// 	@media @desktop {
+// 		width: 90%;
+// 		font-size: 14px;
+// 	}
+// }
+
+// .checkbox-custom,
+// .checkbox-label {
+// 	display: inline-block;
+// }
+// .checkbox-custom {
+// 	margin-top: 4px;
+// 	vertical-align: top;
+// 	&--filter {
+// 		vertical-align: bottom;
+// 		margin-bottom: 8px;
+
+// 	}
+// }
+
+// .checkbox:checked+.checkbox-custom::before {
+// 	content: url('../../img/icons/checkbox.svg');
+// 	display: block;
+// 	position: absolute;
+// 	top: -5px;
+// 	left: 2px;
+// }
+
+// .checkbox:checked+.checkbox-custom--filter::before {
+// 	content: url('../../img/icons/checkbox-small.svg');
+// 	display: block;
+// 	position: absolute;
+// 	top: -8px;
+// 	left: 1px;
+// }
+
+// .checkbox:focus+.checkbox-custom,
+// .checkbox.has-focus+.checkbox-custom {
+// 	box-shadow: 0 0 15px 0 @gray;
+// }
+
+// .checkbox:checked+.checkbox-custom {
+// 	border: 1px solid @active-checkbox;
+// }
+
+// .checkbox:checked~.checkbox-label-text--filter {
+// 	color: @active-checkbox;
+// }
+
+.checkbox-custom {
+	display: inline-block;
+	border: 1px solid @gray;
+	margin-right: 8px;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../img/icons/checkbox.svg');
+	background-repeat: no-repeat;
+	background-position: center -10px;
+	transition: 0.1s ease-out;
+	outline: none;
+	&--filter {
+		width: 12px;
+		height: 12px;
+		border: 1px solid @gray;
+		background-image: url('../../img/icons/checkbox-marker.svg');
+		color: @textMenu;
+	}
+}
+
 .checkbox {
 	position: absolute;
 	opacity: 0;
@@ -7,46 +133,20 @@
 	}
 }
 
-.checkbox-custom {
-	position: relative;
-	width: 16px;
-	height: 16px;
-	border: 1px solid @gray;
-	transition: all 0.1s ease-in;
-	outline: none;
-    vertical-align: middle;
-    
-	&--filter {
-		width: 12px;
-		height: 12px;
-	}
-
-	&:focus, &:active, &:hover {
-		outline: none;
-	}
+.checkbox:checked~.checkbox-label-text {
+	color: @active-checkbox;
 }
 
-.checkbox-label {
-	width: 100%;
-	position: relative;
-	padding-top: 8px;
-	p {
-		margin-bottom: 0;
-	}
-	&-text {
-		
-	}
-	@media @desktop {
-		padding-top: 3px;
-	}
+.checkbox:checked+.checkbox-custom {
+	background-position: center;
+	border-color: @textMenu;
 }
-
 .checkbox-label-text {
 	width: 90%;
 	display: inline;
-	padding-left: 11px;
 	color: @active-checkbox;
 	font-size: 12px;
+	vertical-align: top;
 	&--filter {
 		color: @gray;
 		font-size: 16px;
@@ -60,46 +160,7 @@
 		font-size: 14px;
 	}
 }
-
-.checkbox-custom,
-.checkbox-label {
-	display: inline-block;
-}
-.checkbox-custom {
-	margin-top: 4px;
-	vertical-align: top;
-	&--filter {
-		vertical-align: bottom;
-		margin-bottom: 8px;
-
-	}
-}
-
-.checkbox:checked+.checkbox-custom::before {
-	content: url('../../img/icons/checkbox.svg');
-	display: block;
-	position: absolute;
-	top: -5px;
-	left: 2px;
-}
-
-.checkbox:checked+.checkbox-custom--filter::before {
-	content: url('../../img/icons/checkbox-small.svg');
-	display: block;
-	position: absolute;
-	top: -8px;
-	left: 1px;
-}
-
 .checkbox:focus+.checkbox-custom,
 .checkbox.has-focus+.checkbox-custom {
 	box-shadow: 0 0 15px 0 @gray;
-}
-
-.checkbox:checked+.checkbox-custom {
-	border: 1px solid @active-checkbox;
-}
-
-.checkbox:checked~.checkbox-label-text--filter {
-	color: @active-checkbox;
 }

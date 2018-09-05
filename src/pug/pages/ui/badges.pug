@@ -14,7 +14,10 @@ block content
 			+badgeFilter('Портмоне', 'badge-pink')
 			+badgeFilter('Органайзеры', 'badge-orange')
 		pre.
-			+badgeFilter('Бумажники', 'badge-red')
+			.badge-wrapper
+				+badgeFilter('Бумажники', 'badge-red')
+				+badgeFilter('Портмоне', 'badge-pink')
+				+badgeFilter('Органайзеры', 'badge-orange')
 		p Бейджик - статус заказа в аккаунте
 		+badgeOrderStatus('Принят', 'badge-done')
 		+badgeOrderStatus('Изменен', 'badge-change')

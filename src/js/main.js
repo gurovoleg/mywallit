@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	
 	// Точка перелома между большими и мобильными экранами
 	var tabletWidth = 1152;
 	var currentWindowSize = $(window).width();
@@ -35,10 +34,9 @@ $(document).ready(function() {
 			}
 		}
 	);
+	// end card hover effect
 
 
-	//-end card hover effect
-	
 	// Product counter
 	(function productCounter() {
 		var currentValue = parseInt($('.product-counter span').text());
@@ -243,8 +241,7 @@ $(document).ready(function() {
 		    $('#menu-level-1 ul').hide();
 		    
 		    // Проверка меню на открытость при переходе
-		    if ($('.bg-header-nav').css('display') == 'block') {
-		    	console.log('sfsf');	
+		    if ($('.bg-header-nav').css('display') == 'block') {	
 		    	$('nav').appendTo('.bg-header-nav .container');
 		    	$('.blur-wrapper').removeClass('filter-blur');
 		    }
@@ -270,10 +267,47 @@ $(document).ready(function() {
 		$('#header-search-section').fadeToggle();
 	});
 
+	
 	// Фокус на custom checkbox
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); 
+	});
+
+
+	// Открываем фильтр на странице каталог при нажатии на Фильтр
+	$('.catalog-filters__title').on('click', function(e){
+		$('.catalog-filter').toggleClass('catalog-filter--show');
+		$("body").css("overflow","hidden");
+		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in-out'});
+	});
+
+	// Закрываем фильтр при нажатии крестик
+	$('#filter__close-icon').on('click', function(){
+		$('.catalog-filter').toggleClass('catalog-filter--show');
+		$("body").css("overflow","auto");
+	});
+
+	// Переход между мобильной версией и дестопом
+	$(window).resize(function(){
+		var w = $(window).width();
+
+		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
+			$('.catalog-filter').css({'transition' : 'none'});
+			$("body").css("overflow","auto");
+		}
+
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
+			$("body").css("overflow","auto");
+		}
+
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
+			$("body").css("overflow","hidden");
+		}
+
+		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+			$("body").css("overflow","auto");
+		}
 	});
 
 
