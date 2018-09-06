@@ -146,18 +146,22 @@
 .order-one-click__close-icon {
 	color: @text-light-grey;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 11px;
+	right: 11px;
 	background-image: url('../img/icons/close.svg');
 	width: 12px;
 	height: 12px;
 	cursor: pointer;
+	@media @desktop {
+		top: 21px;
+		right: 21px;
+	}
 }
 .order-subscribe__close-icon {
 	color: @text-light-grey;
 	position: absolute;
-	top: 8px;
-	right: 16px;
+	top: 21px;
+	right: 21px;
 	background-image: url('../img/icons/close.svg');
 	width: 12px;
 	height: 12px;
