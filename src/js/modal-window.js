@@ -6,6 +6,8 @@ $(document).ready(function() {
 			
 			// Обертка для страницы, элементы которой будут перекрываться модальным окном
 			$wrapper = $('.blur-wrapper'),
+
+			$allWindows = $('.bg-modal-window .modal-window').children();
 			
 			// Добавить класс к вызывающему элементу (конпки, ссылки, иконки...)
 			$showModal = $(".show-modal-window")
@@ -25,6 +27,10 @@ $(document).ready(function() {
 
 			_setupListners: function(){
 				
+				$('.modal-window').on('click', function(e){
+					e.stopPropagation();
+				});
+
 				$showModal.on('click', function(){
 					mw = $(this).attr('data-modal');
 					modalWindow._open(mw)	
@@ -34,6 +40,11 @@ $(document).ready(function() {
 					mw = $(this).attr('data-modal');
 					modalWindow._close(mw);	
 				});
+
+				$modalWindow.on('click', function(){
+					mw = 'all';
+					modalWindow._close(mw);	
+				});				
 	
 			},
 
@@ -50,10 +61,16 @@ $(document).ready(function() {
 			
 			_close: function(modalId){
 
-				$(modalId).hide(200,function(){
-					$modalWindow.hide();	
-				});
-				
+				if (mw == 'all') {
+					$allWindows.hide(200);
+				} else {
+					$(modalId).hide(200);
+				}
+
+				setTimeout(function(){
+					$modalWindow.hide();		
+				},300);
+			
 				$wrapper.removeClass('filter-blur');
 				$("body").removeClass('overflow-hidden');			
 			

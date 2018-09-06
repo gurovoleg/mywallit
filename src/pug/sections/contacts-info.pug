@@ -15,8 +15,10 @@
 			.title-4.contacts-title Адрес доставки
 			.subtitle-block
 				.contacts-text.contacts-address Санкт-Петербург
-				a.contacts-link.select-address.city-toggle(href="#") Выбрать город
-				include ./_city-selection.pug
+				a.contacts-link.select-address.city-toggle(href="#" data-city-selector='#order-city-selector') Выбрать город
+				
+					- var cityBlockId = 'order-city-selector';
+					include ./_city-selection.pug
 
 			.contacts-block--border#delivery-pickup.contacts-block--active
 				.subtitle-block.subtitle-block--justify
