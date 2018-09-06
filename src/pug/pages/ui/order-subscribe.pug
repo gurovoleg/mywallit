@@ -21,7 +21,7 @@ block content
 						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
 					+inputField('Имя', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
 					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
-					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', 'order-one-click__inputs-item', 'order-one-click-wrapper')
 					+button-buyclick("Оформить заказ", "#")
 					.order-one-click__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
@@ -52,7 +52,7 @@ block content
 			.form.order-subscribe(style="border: 1px dashed #000; display:block;" id="order-subscribe")
 				.order-subscribe__title Подписка на товар
 				.order-subscribe__inputs
-					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-subscribe__inputs-item')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', 'order-subscribe__inputs-item', 'order-subscribe-wrapper')
 					+button-buyclick("Подписаться", "#")
 					.order-subscribe__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
