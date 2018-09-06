@@ -4,7 +4,7 @@
 }
 .catalog-filter {
 	position: fixed;
-	overflow-y: scroll;
+	overflow-y: auto;
 	z-index: 1001;
 	background-color: @white;
 	top: 0;
@@ -14,7 +14,7 @@
 	transition: left 0.5s ease-in-out;
 	@media @tablet {
 		height: 100%;
-		overflow-y: scroll;
+		// overflow-y: scroll;
 		width: 270px;
 	}
 	@media @desktop {
