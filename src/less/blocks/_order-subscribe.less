@@ -90,23 +90,6 @@
 	}
 
 }
-
-.order-subscribe__inputs-item {
-	margin-bottom: 16px;
-
-	@media @desktop {
-		margin-bottom: 24px;
-	}
-}
-
-.order-one-click__inputs-item {
-	margin-bottom: 8px;
-
-	@media @desktop {
-		margin-bottom: 16px;
-	}
-
-}
 .order-one-click__info {
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -163,20 +146,42 @@
 .order-one-click__close-icon {
 	color: @text-light-grey;
 	position: absolute;
-	top: 9px;
-	right: 16px;
+	top: 11px;
+	right: 11px;
+	background-image: url('../img/icons/close.svg');
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	@media @desktop {
+		top: 21px;
+		right: 21px;
+	}
+}
+.order-subscribe__close-icon {
+	color: @text-light-grey;
+	position: absolute;
+	top: 21px;
+	right: 21px;
 	background-image: url('../img/icons/close.svg');
 	width: 12px;
 	height: 12px;
 	cursor: pointer;
 }
-.order-subscribe__close-icon {
-	color: @text-light-grey;
-	position: absolute;
-	top: 8px;
-	right: 16px;
-	background-image: url('../img/icons/close.svg');
-	width: 12px;
-	height: 12px;
-	cursor: pointer;
+.order-one-click__wrapper {
+	margin-bottom: 15px;
+	@media @desktop {
+		margin-bottom: 25px;
+	}
+}
+.order-subscribe-wrapper {
+	margin-bottom: 16px;
+	@media @desktop {
+		margin-bottom: 25px;
+	}
+}
+.order-one-click-wrapper {
+	margin-bottom: 15px;
+	@media @desktop {
+		margin-bottom: 24px;
+	}
 }

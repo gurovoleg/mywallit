@@ -87,7 +87,7 @@ $(document).ready(function() {
 		$('.container').toggleClass('container--left');
 	});
   
-	/* Show search result */
+	//- Show search result 
 	$('input.header-search__input').keydown(function(){
 
 		var inputVal = $(this).val().length;
@@ -110,18 +110,35 @@ $(document).ready(function() {
 			}
 		}
 	});	
+	//- Show search result 
 
 
-	$('.header-search__close').on('click', function(){
+	// Функция закрытия блока с поиском
+	function headerSearchClose(){
 		$('input.header-search__input').val('');
 		$('.header-search-result-mobile').slideUp(400);
 		$('.header-search-result-desktop').slideUp(400);
 		
 		setTimeout(function(){
-			$('#header-search-section').fadeToggle();	
+			$('#header-search-section').fadeOut();	
 		},400);
-	});
+	}; 
+
 	
+	// Вызвать блок с поиском
+	$('.toggle-search-block').on('click', function(){
+		// закрываем навигацию
+		$('.menu-level-2').fadeOut(100);
+		$('#header-search-section').fadeIn();
+	});
+
+	// Закрыть блок с поиском
+	$('.header-search__close').on('click', function(){
+		headerSearchClose();
+	});
+
+	
+		
 	$(window).resize(function(){
 		if( $(window).width() <= 1152 && $('input.header-search__input').val() != '') {
 			$('.header-search-result-desktop').css("display", "none");
@@ -133,7 +150,7 @@ $(document).ready(function() {
 		}
 	});
 
-	/* //Show search result */
+	
 
 
 	// Функия показа меню на мобильных экранах
@@ -214,22 +231,30 @@ $(document).ready(function() {
 		
 	});
 
-	// При клике по области, которая не является меню или его частью, сворачиваем меню
+	// Отслеживаем клики вне области элементов и закрываем их
 	$(document).on('click', function(e){
+		
+		// Навигация
 		if (($('nav').has(e.target).length == 0) && e.target.id != 'toggle-menu') {
 			
 			if ($(window).width() > tabletWidth) {
-			
 				$('.menu-level-2').fadeOut();		
-			
 			} else {
-
 				if (($('.bg-header-nav').css('display') == 'block')) {
 					mobileNavToggle();
 				}
-
 			}
 		}
+
+		// Поиск
+		if ( $('#header-search-section').has(e.target).length == 0) {
+			var searchBlock = 'toggle-search-block';
+
+			if ( !($(e.target).hasClass(searchBlock)) && $('.' + searchBlock).has(e.target).length == 0) {
+				headerSearchClose();
+			}
+		}
+
 	});
 
 	// Обрабатываем переходы между мобильным и десктоп вариантами 
@@ -260,14 +285,7 @@ $(document).ready(function() {
 	});
 
 
-	// Вызываем меню с поиском
-	$('.toggle-search-block').on('click', function(){
-		// закрываем навинацию
-		$('.menu-level-2').fadeOut(100);
-		$('#header-search-section').fadeToggle();
-	});
 
-	
 	// Фокус на custom checkbox
 	$('.footer-subscribe--checkbox-custom')
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
