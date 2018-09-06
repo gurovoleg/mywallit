@@ -1,0 +1,48 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Таблица продуктов';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Таблица продуктов
+		.products-table-wrapper
+			.products-table
+				.products-table-header
+					.products-table-header_item Дата
+					.products-table-header_item № заказа
+					.products-table-header_item Сумма
+					.products-table-header_item Статус заказа
+					.products-table-header_item Подробнее
+				
+				+products-table-row('31.08.18', '5645', '12 380р.')
+					+badgeOrderStatus('Выполнен', 'badge-done')
+				+products-table-row('31.08.18', '5645', '12 380р.')(class="products-table-row--open")
+					+badgeOrderStatus('Принят', 'badge-done')
+				.ordered
+					.thanks-header
+						.thanks-header__title.thanks-header__title--left Содержимое заказа
+					.ordered-wrapper
+						.ordered-goods
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
+
+						//- .ordered-item.ordered-promo
+						//- 	+inputField('Введите промо-код', '', 'notCheck', 'text')
+						//- 	+button-apply('Применить', '#')
+						.ordered-calc
+							.ordered-calc__item
+								span.ordered-calc-text Стоимость
+								span.ordered-calc-price 14 679р.
+							.ordered-calc__item
+								span.ordered-calc-text Скидка
+								span.ordered-calc-price -450р.
+							.ordered-calc__item
+								span.ordered-calc-text Доставка
+								span.ordered-calc-price 0р.
+							.ordered-calc__item.ordered-calc__item--bold
+								span.ordered-calc-text Всего к оплате
+								span.ordered-calc-price 14 229р.
