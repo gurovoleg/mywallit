@@ -8,15 +8,6 @@ block content
 	.container.container--left
 		
 		.title Товары в корзине
-		.goods-card-wrapper
-			.goods-cart__info
-				.goods-cart__img
-					img(src="../../img/good_thumbnail/blue-purse/thumb_blue-purse-1.png", alt="blue-purse")
-				.goods-cart__description Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой
-				.goods-cart__close X
-			.goods-cart__counter-price
-				.product-counter.goods-cart__counter
-					.btn-counter.btn-counter--minus
-					span 1
-					.btn-counter.btn-counter--plus
-				.goods-cart__price 4 893 р.
+		+goodsCart ('thumb_blue-purse-1.png', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р.')
+		+goodsCart ('thumb_blue-purse-2.png', 'Кошелек большой с двумя молниями', '4 893 р.')
+		+goodsCart ('thumb_blue-purse-1.png', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р.')

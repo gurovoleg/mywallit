@@ -1,9 +1,14 @@
-.goods-card-wrapper {
-	width: 320px;
+.goods-cart-wrapper {
+	width: 290px;
+	border-bottom: 1px solid @gray;
+	padding-bottom: 16px;
+	margin-bottom: 14px;
+	margin-left: 13px;
 }
 .goods-cart__info {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 8px;
 }
 .goods-cart__counter-price {
 	display: flex;
@@ -14,7 +19,7 @@
 	line-height: 1;
 	font-size: 12px;
 	letter-spacing: 0.04em;
-	color: #58595B;
+	color: @text-light-grey;
 }
 .goods-cart__img {
 	width: 50px;
@@ -23,3 +28,23 @@
 .goods-cart__counter {
 	align-items: center;
 }
+.goods-cart__price {
+	padding-left: 100px;
+}
+.goods-cart__count {
+	font-size: 14px;
+}
+.goods-cart__counter-minus, .goods-cart__counter-plus {
+	width: 24px;
+	height: 24px;
+}
+.close-icon {
+	color: @text-light-grey;
+	top: 9px;
+	right: 16px;
+	background-image: url('../../img/icons/close.svg');
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}
+	
