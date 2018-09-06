@@ -35,6 +35,9 @@ $(document).ready(function() {
 				});
 				
 				$close.on('click', function(e){
+					var id = $(this).parents('.city-selection-wrapper');
+					$cityList = $(id);
+					// console.log($(this).parents('.city-selection-wrapper'));
 					citySelector._toggle(e);
 				});
 			},
@@ -46,6 +49,7 @@ $(document).ready(function() {
 				if ($cityList.css('display') == 'none') {
 					
 					$cityList.addClass('d-block');
+					// $cityList.css('display','block');
 					
 					if ($(window).width() < tabletWidth) {
 						$("body").addClass('overflow-hidden');
@@ -53,7 +57,8 @@ $(document).ready(function() {
 
 				} else {
 					$cityList.removeClass('d-block');
-					$("body").removeClass('overflow-hidden');	
+					$cityList.css('display','none');
+					// $("body").removeClass('overflow-hidden');	
 					
 				}
 
