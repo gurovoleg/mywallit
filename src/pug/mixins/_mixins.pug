@@ -49,15 +49,16 @@ mixin checkboxFilter (text)
 
 //- Миксин для товаров в корзине
 mixin goodsCart (img, text, price)
-	.goods-cart-wrapper
+	.goods-cart-wrapper.clearfix
 		.goods-cart__img
 			img(src="../../img/good_thumbnail/blue-purse/" + img, alt="blue-purse")
-		.goods-cart__info	
-			.goods-cart__description= text
+		.goods-cart__info
+			.goods-cart__title-icon
+				.goods-cart__description= text
+				.close-icon
 			.goods-cart__counter-price
 				.product-counter.goods-cart__counter
 					.btn-counter.btn-counter--minus.goods-cart__counter-minus
 					span.goods-cart__count 1
 					.btn-counter.btn-counter--plus.goods-cart__counter-plus
-		.close-icon
-		.goods-cart__price= price
+				.goods-cart__price= price
