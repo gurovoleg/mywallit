@@ -4,16 +4,26 @@
 	line-height: 1;
 	font-size: 16px;
 	color: @text-light-grey;
-	cursor: pointer; 
+	cursor: pointer;
+	z-index: 10;
 	.menu-icon {
 	.icon-mixin(@textMenu, 15px, 12px);
 	}
+	@media @desktop {
+		width: 210px;
+	}
+	@media @desktopXL {
+		width: 200px;
+	}
+
 }
 .drop-down-check {
 	padding-bottom: 14px;
 	padding-top: 8px;
 	position: relative;
 	line-height: 1;
+	float: right;
+	padding-right: 30px;
 }
 .drop-down-item-block {
 	position: absolute;
