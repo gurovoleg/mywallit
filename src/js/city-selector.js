@@ -5,7 +5,8 @@ $(document).ready(function() {
 		var wrapper = '.city-selection-wrapper', // обертка по умолчанию есть в разметке блока городов
 			$toggle = $('.city-toggle'), // переключатель
 			$close = $('.close-selection'), // выключатель
-			$cityList = $(wrapper); // блок с городами
+			$cityList = $(wrapper),  // блок с городами
+			tabletWidth = 1152;
 
 		// Касмтоный скролл для списка
 		$(wrapper).niceScroll({
@@ -45,11 +46,17 @@ $(document).ready(function() {
 				if ($cityList.css('display') == 'none') {
 					
 					$cityList.addClass('d-block');
-					$("body").addClass('overflow-hidden');
+					
+					if ($(window).width() < tabletWidth) {
+						$("body").addClass('overflow-hidden');
+					}
+
 				} else {
 					$cityList.removeClass('d-block');
-					$("body").removeClass('overflow-hidden');
+					$("body").removeClass('overflow-hidden');	
+					
 				}
+
 			}
 		}
 
