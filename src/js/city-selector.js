@@ -49,16 +49,14 @@ $(document).ready(function() {
 				if ($cityList.css('display') == 'none') {
 					
 					$cityList.addClass('d-block');
-					// $cityList.css('display','block');
-					
+										
 					if ($(window).width() < tabletWidth) {
 						$("body").addClass('overflow-hidden');
 					}
 
 				} else {
 					$cityList.removeClass('d-block');
-					$cityList.css('display','none');
-					// $("body").removeClass('overflow-hidden');	
+					$("body").removeClass('overflow-hidden');	
 					
 				}
 
