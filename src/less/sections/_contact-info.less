@@ -4,17 +4,28 @@
 	color: @contacts-text;
 	padding-right: 12px;
 	padding-left: 12px;
+	padding-top: 30px;
+
 	@media @tablet{
 		padding-right: 20px;
-		padding-left: 20px;}
-	@media @desktop{font-size: 16px;}
-	@media @desktopXL{font-size: 18px;}
+		padding-left: 20px;
+		padding-top: 16px;}
+	@media @desktop{
+		font-size: 16px;
+		padding-top: 18px;}
+	@media @desktopXL{
+		font-size: 18px;
+		padding-top: 34px;}
 	
 }
 .contacts-block{
 	margin-bottom: 24px;
 	.mixin-margin(bottom,@l3);
 	width: 100%;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 .subtitle-block{
 	width: 100%;
@@ -146,9 +157,12 @@
 		width: 100%;
 		height: 88px;
 		font-size: 14px;
-		color:@textMenu;	
+		color:@textMenu;
+		outline: none;
+		padding: 16px;
 	}
 }
+.comments-field:focus{border-color:@textMenu;}
 .form-group-user-address{
 	display: none;
 	margin-right: -4px;

@@ -1,4 +1,4 @@
-//- шапка вверх
+//- Шапка без навигации и корзины
 .header-info
 	.container
 		.row.justify-content-between.align-items-center
@@ -13,29 +13,10 @@
 			.col-6.col-lg-4.d-flex.justify-content-end
 				+header-info__item("../img/icons/phone.svg", "+7 (495) 132-62-60")
 				.header-info__block.d-none.d-md-block.ml-10 +7 (800) 222-63-30
-		
+
 		- var cityBlockId = 'header-city-selector';
 		include ../sections/_city-selection.pug
 
-.header-menu
-	.container
-		a(href="main.html").logo
-		.row
-			.col-6.d-flex.d-lg-none
-				.menu-block
-					img#toggle-menu(src="../img/icons/gamburger.svg" alt="иконка")
-				.menu-block.toggle-search-block
-					img(src="../img/icons/search.svg" alt="иконка")
-			.col-6.d-flex.justify-content-end
-				.menu-block.user-registration
-					img(src="../img/icons/profile.svg" alt="иконка")
-					.user-registration__text
-						a(href="#!") Вход
-						|  или 
-						a(href="#!") Регистрация
-						|  |
-				.menu-block.cart
-					.cart__image
-						img(src="../img/icons/bag-color.svg" alt="иконка")
-						.cart__image-total 3
-					.cart__amount 5850р.
+.header-menu.header-menu--empty
+	a(href="main.html").logo
++color-line

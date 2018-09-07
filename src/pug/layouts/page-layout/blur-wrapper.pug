@@ -7,6 +7,14 @@ html(lang="ru")
 		include ./_head.pug
 		
 	body(class=pageClass)
-		block content
-					
+		
+		.blur-wrapper
+			.header
+				include ../../sections/header.pug
+			
+			block content
+		
+			.footer
+				include ../../sections/footer.pug
+
 		include ./_foot.pug
