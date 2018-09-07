@@ -9,7 +9,9 @@ block content
 		//- шапка
 		.header
 			include ../sections/header.pug
-		include ui/_page404.pug
-			.page404__title ОШИБКА 404
-			.page404__subtitle К сожалению такой страницы не существует, перейдите в 
-				a(href="catalog.html").page404__subtitle-link каталог товаров
+		.page404-wrapper
+			include ui/_page404.pug
+			.page404__text-wrapper
+				.page404__title ОШИБКА 404
+				.page404__subtitle К сожалению такой страницы не существует, перейдите в 
+					a(href="catalog.html").page404__subtitle-link каталог товаров

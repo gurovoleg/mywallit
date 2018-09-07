@@ -1,22 +1,29 @@
 .page404-wrapper {
+	position: relative;
 	height: 512px;
+	padding-top: 44px;
 	@media @tablet {
 		height: 895px;
+		padding-top: 188px;
 	}
 	@media @desktop {
 		height: 840px;
+		padding-top: 149px;
 	}
 }
 .svg-container { 
 	display: block;
 	position: relative;
 	max-width:600px;  
-	height:auto;
-	width: 100%;	
-	vertical-align: middle; 
+	// height:auto;
+	width: 100%;
+	// vertical-align: middle;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
+	@media @desktop {
+		width: 294px;
+	}
 }
 .page404__title {
 	line-height: 1;
@@ -27,15 +34,26 @@
 	text-transform: uppercase;
 	font-weight: 700;
 	padding-bottom: 16px;
+	@media @tablet {
+		padding-top: 25px;
+	}
+	@media @desktop {
+		font-size: 40px;
+	}
 }
 .page404__subtitle {
 	line-height: 1;
 	font-size: 16px;
 	text-align: center;
 	color: @text-light-grey;
-	width: 315px;
-	margin-left: auto;
-	margin-right: auto;
+	border-bottom: 1px solid transparent;
+	@media @tablet {
+		width: 336px;
+	}
+	@media @desktop {
+		font-size: 20px;
+		width: 437px;
+	}
 }
 .page404__subtitle-link {
 	border-bottom: 1px solid #58595B;
@@ -45,4 +63,20 @@
 		border-bottom: none;
 		text-decoration: none;
 	}
+}
+.page404__text-wrapper {
+	width: 311px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	@media @desktop {
+		width: 430px;
+		margin-top: 0;
+	}
+}
+svg.ldi-f17d8n {
+    width: 292px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
