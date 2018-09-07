@@ -1,0 +1,48 @@
+.page404-wrapper {
+	height: 512px;
+	@media @tablet {
+		height: 895px;
+	}
+	@media @desktop {
+		height: 840px;
+	}
+}
+.svg-container { 
+	display: block;
+	position: relative;
+	max-width:600px;  
+	height:auto;
+	width: 100%;	
+	vertical-align: middle; 
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+.page404__title {
+	line-height: 1;
+	font-size: 32px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @text-light-grey;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding-bottom: 16px;
+}
+.page404__subtitle {
+	line-height: 1;
+	font-size: 16px;
+	text-align: center;
+	color: @text-light-grey;
+	width: 315px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.page404__subtitle-link {
+	border-bottom: 1px solid #58595B;
+	color: @text-light-grey;
+	&:hover {
+		color: @text-light-grey;
+		border-bottom: none;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,12 @@
+extends ../../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Каталог товаров';
+	- var pageClass = 'index-page';
+
+block content
+	.blur-wrapper
+		//- шапка
+		.header
+			include ../../sections/header.pug
+	include _page404.pug
