@@ -52,7 +52,11 @@
 	@media @desktop{font-size: 16px;}
 }
 .products-table-row__cell--link{
-	border-bottom: 1px solid @textMenu;;
+	border-bottom: 1px solid @textMenu;
+	color:@textMenu;
+	&:hover{
+		text-decoration: none;
+		border-bottom-color: @red;}
 }
 
 .products-table-row--header{	
