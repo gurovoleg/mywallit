@@ -1,0 +1,31 @@
+extends ../layouts/page-layout/blur-wrapper.pug
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass = 'index-page';
+
+block content
+
+	//- Хлебные крошки
+	.section-breadcrumb
+		.container
+			.breadcrumb-list.col
+				+breadcrumb-item('#', 'Главная страница')
+				+breadcrumb-item('#', 'Личный кабинет')
+				+breadcrumb-item('#', 'Профиль')
+
+	//- Описание товара
+	.section-profile
+		.profile__title.title-1 ПРОФИЛЬ
+		.container
+			.row
+				.col-md-3.col-lg-3.offset-xl-1.col-xl-2.col--no-padding
+					.account__navigation
+						ul.cabinet-menu
+							+cabinet-menu-item('#', 'профиль')
+							+cabinet-menu-item('#', 'мои заказы')(class="cabinet-menu-item__link--active")
+							+cabinet-menu-item('#', 'корзина')
+							+cabinet-menu-item('#', 'избранное')
+							+cabinet-menu-item('#', 'выйти')
+				.offset-md-2.col-md-6.offset-lg-1.col-lg-4.offset-xl-1.col-xl-4
+					include ../sections/_contacts-profile.pug
