@@ -1,0 +1,15 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Спасибо за заказ';
+	- var pageClass = 'index-page';
+
+block content
+	
+		//- шапка
+		.header
+			include ../sections/header_order-page.pug
+		
+		//- Основной контент
+		.section-order-processed
+			include ../sections/thanks-for-ordering.pug
