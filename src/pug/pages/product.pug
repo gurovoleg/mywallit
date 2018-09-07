@@ -13,7 +13,7 @@ block content
 			.form.order-subscribe(id="order-subscribe")
 				.order-subscribe__title Подписка на товар
 				.order-subscribe__inputs
-					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-subscribe__inputs-item')
+					+inputField('Email', 'Неверный формат email', 'email', 'email', 'order-subscribe__inputs-item')
 					+button-buyclick("Подписаться", "#")
 					.order-subscribe__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
@@ -30,7 +30,7 @@ block content
 						p Оставьте свой номер телефона и мы перезвоним вам для уточнения деталей заказа!
 					+inputField('Имя', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
 					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
-					+inputField('Email', 'Вы ничего не ввели', 'notEmpty', 'text', 'order-one-click__inputs-item')
+					+inputField('Email', 'Неверный формат email', 'email', 'email', 'order-one-click__inputs-item', 'order-one-click-wrapper')
 					+button-buyclick("Оформить заказ", "#")
 					.order-one-click__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
@@ -40,7 +40,7 @@ block content
 				.order-one-click__close-icon(class='close-modal-window' data-modal='#order-one-click')
 				
 	
-	//- Обертка для фильтра blur
+	//- Обертка для фильтра blur и мобильной навигации
 	.blur-wrapper
 
 		//- шапка

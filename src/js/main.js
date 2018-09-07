@@ -261,7 +261,7 @@ $(document).ready(function() {
 
 	});
 
-	// Обрабатываем переходы между мобильным и десктоп вариантами 
+	// Обрабатываем переходы между мобильным и десктоп вариантами для навигации
 	$(window).resize(function(){
 		var w = $(window).width();
 		
@@ -300,36 +300,56 @@ $(document).ready(function() {
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
 	$('.catalog-filters__title').on('click', function(e){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
-		$("body").css("overflow","hidden");
+		
+		if ( $(window).width() < tabletWidth ) {
+			$("body").addClass('overflow-hidden');
+		}
+		
 		$('.catalog-filter').css({'transition' : 'left 0.5s ease-in-out'});
 	});
 
 	// Закрываем фильтр при нажатии крестик
 	$('#filter__close-icon').on('click', function(){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
-		$("body").css("overflow","auto");
+		$("body").removeClass('overflow-hidden');
 	});
 
-	// Переход между мобильной версией и дестопом
+	// Переход между мобильной версией и дестопом для городов и фильтра
 	$(window).resize(function(){
 		var w = $(window).width();
-
-		if ( w < tabletWidth && !$('.catalog-filter').hasClass('catalog-filter--show') ) {
-			$('.catalog-filter').css({'transition' : 'none'});
-			$("body").css("overflow","auto");
+		
+		// Переход на Desktop
+		if (w >= tabletWidth) {
+			$("body").removeClass('overflow-hidden');		
 		}
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w >= 1152 ) {
-			$("body").css("overflow","auto");
-		}
+		// Переход на планшет
+		if (w < tabletWidth) {
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w < 1152 ) {
-			$("body").css("overflow","hidden");
-		}
+			// Блоки с городами
+			var isOpened = false;
+			
+			$('.city-selection-wrapper').each(function(){
+				if ($(this).hasClass('d-block')) isOpened = true;
+			})
+			if (isOpened) $("body").addClass('overflow-hidden');			
+			
+			
+			// Блок фильтр
+			if ( $('.catalog-filter').hasClass('catalog-filter--show')) {
+				$("body").addClass('overflow-hidden');
+			} else {
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
-			$("body").css("overflow","auto");
+				$('.catalog-filter').css({'transition' : 'none'});
+			}
+
 		}
+		
+
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+		// 	$("body").css("overflow","auto");
+		// }
+
 	});
 
 
@@ -350,6 +370,7 @@ $(document).ready(function() {
 	$('.drop-down-check').on('click', function(){
 		$('.drop-down-item-block').toggleClass('drop-down-item-block--show');
 	});
+	
 	// при клике на элемент списка
 	$('.drop-down-item').on('click', function(e){
 		e.preventDefault();
@@ -390,5 +411,11 @@ $(document).ready(function() {
 	// $('.order-subscribe__close-icon').on('click', function(){
 	// 	$('.order-subscribe').fadeOut(400);
 	// });
+
+    // Показать заказ на странице Заказа на мобильной версии
+    $('#ordered-products-toggle').on('click', function(){
+		$('#ordered-products').slideToggle();
+	});
+
 
 });
