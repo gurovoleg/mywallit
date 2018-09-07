@@ -341,6 +341,11 @@ $(document).ready(function() {
 
 		}
 		
+
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+		// 	$("body").css("overflow","auto");
+		// }
+
 	});
 
 
