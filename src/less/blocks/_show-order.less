@@ -2,6 +2,11 @@
 	padding-left: 16px;
 	padding-right: 16px;
 	background-color: @order-item-bg;
+	display: none;
+
+	@media @tablet {
+		display: block;
+	}
 }
 
 .ordered-wrapper {
@@ -14,6 +19,12 @@
 	@media @desktopXL {
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
+}
+
+.ordered-header {
+	@media @tablet {
+		display: none;
 	}
 }
 
@@ -64,15 +75,15 @@
 }
 
 .ordered-goods-item__price {
-	font-size: 14px;
-	padding-top: 16px;
+
+	font-size: 14px;	
 	text-align: right;
 	min-width: 70px;
 	@media @desktop {
-		font-weight: 700;
+		font-weight: 700;		
 	}
-	@media @desktopXL {
-		padding-top: 0;
+
+	@media @desktopXL {		
 		font-size: 16px;
 	}
 }
@@ -92,7 +103,7 @@
 		max-width: 50px;
 		height: auto;
 		@media @desktopXL {
-			max-width: 80px;
+			// max-width: 80px;
 		}
 	}
 }
@@ -122,11 +133,12 @@
 }
 
 .ordered-goods-item__descrip-title {
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 }
 
 .ordered-goods-item__descrip-article {
 	color: @gray;
+	margin-bottom: 0;
 	@media @desktop {
 		font-size: 14px;
 	}
@@ -134,7 +146,7 @@
 
 .ordered-promo {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .ordered-promo .input-wrapper {
@@ -144,10 +156,6 @@
 
 .ordered-promo .input-wrapper .input-field {
 	min-height: 48px;
-}
-
-.ordered-promo .input-wrapper .input-field__label {
-	top: 25px;
 }
 
 .ordered-promo .button-apply {
@@ -170,12 +178,15 @@
 	font-size: 14px;
 	color: @order-calc;
 	@media @desktop {
-		padding-bottom: 8px;
+		padding-bottom: 16px;
 	}
 	@media @desktopXL {
 		font-size: 18px;
+		line-height: 21px;
 	}
 }
+.ordered-calc__item:last-child{
+	margin-top: 16px;}
 
 .ordered-calc__item--bold {
 	font-weight: 700;

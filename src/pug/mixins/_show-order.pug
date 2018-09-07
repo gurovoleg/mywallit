@@ -1,6 +1,6 @@
 mixin ordered-goods-item(imgSrc, alt, text, articule, price )
 
-	.ordered-item.ordered-goods-item
+	.ordered-item.ordered-goods-item&attributes(attributes)
 		.ordered-goods-item__img
 			.label-amount 1
 			img(src="../img/"+ imgSrc, alt=""+ alt)

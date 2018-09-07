@@ -5,13 +5,15 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
+	
+	//- Обертка для фильтра blur и мобильной навигации
 	.blur-wrapper
 		//- шапка
 		.header
 			include ../sections/header.pug
 		.container
 			.section-catalog
-				.catalog-breadcrumb
+				.section-breadcrumb
 					+breadcrumb-item('#', 'Главная страница')
 					+breadcrumb-item('#', 'Каталог')
 				.title-1.uppercase.catalog__title Мужские кошельки 
@@ -23,91 +25,105 @@ block content
 					a.catalog-badge__item(href="#")
 						+badgeFilter('Портмоне', 'badge-pink')
 					a.catalog-badge__item(href="#")
-						+badgeFilter('Органайзеры', 'badge-orange')
-				.catalog-filters
-					.catalog-filters__badge
-						a.filter-name.catalog-filters__badge-item(href="#") Мужчины	
-							.filter-close
-						a.filter-name.catalog-filters__badge-item(href="#") Кошельки
-							.filter-close
-					.catalog-filters__title Фильтр
-					.catalog-filters-small__title
-						.drop-down
-							.drop-down-check.menu-icon
-							.drop-down-item-block
-								.drop-down-item.drop-down-item--active По популярности
-								.drop-down-item Новинки
-								.drop-down-item По возрастанию цены
-								.drop-down-item По убыванию цены
-				.catalog-wrapper
-					.catalog-filter
-						form.form-filter.catalog-filter__form
-							.filter-header
-								.filter__title ФИЛЬТРЫ
-								.filter__clean-button 
-									a(href="#!") Очистить
-								.filter__close-icon#filter__close-icon
-									+icon-close
-							.line-gradient.d-none.d-lg-block
-							ul.filter-menu-l1
-								li ПО ПОЛУ
-									.filter-icon-close
-									ul.filter-menu-l2
-										li
-											+filter-checkbox('Женщинам')
-										li
-											+filter-checkbox('Мужчинам')
-								li ПО КАТЕГОРИЯМ
-									.filter-icon-close
-									ul.filter-menu-l2
-										li
-											+filter-checkbox('Кошельки')
-										li
-											+filter-checkbox('Сумки')
-										li
-											+filter-checkbox('Аксессуары')
-										li
-											+filter-checkbox('Офис и Тревел')
-								li ПО РАЗМЕРУ
-									.filter-icon-close
-									ul.filter-menu-l2
-										li
-											+filter-checkbox('Большой')
-										li
-											+filter-checkbox('Малый')
-										li
-											+filter-checkbox('Средний')
-								li ПО ЦВЕТУ
-									.filter-icon-close
-									ul.filter-menu-l2.font-size-null
-										li
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
-											+filter-color-checkbox('#C3499E')
-											+filter-color-checkbox('#FFB047')
-											+filter-color-checkbox('#002D76')
-											+filter-color-checkbox('#AF674F')
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
-											+filter-color-checkbox('#C3499E')
-											+filter-color-checkbox('#FFB047')
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
-											
-								li ПО ЦЕНЕ
-									.filter-icon-close
-									ul.filter-menu-l2
-										li
-											+filter-checkbox('До 2 000р.')
-										li
-											+filter-checkbox('От 5 000р. до 10 000р.')
-										li
-											+filter-checkbox('От 10 000р.')
+					+badgeFilter('Органайзеры', 'badge-orange')
+			.container
+				.row
+					.col-sm-0.col-md-3.col-lg-3
+						.catalog-wrapper
+							.catalog-filter
+								form.form-filter.catalog-filter__form
+									.filter-header
+										.filter__title ФИЛЬТРЫ
+										.filter__clean-button 
+											a(href="#!") Очистить
+										.filter__close-icon#filter__close-icon
+											+icon-close
+									+color-line(class="d-none d-lg-block")
+									ul.filter-menu-l1
+										li ПО ПОЛУ
+											.filter-icon-close
+											ul.filter-menu-l2
+												li
+													+filter-checkbox('Женщинам')
+												li
+													+filter-checkbox('Мужчинам')
+										li ПО КАТЕГОРИЯМ
+											.filter-icon-close
+											ul.filter-menu-l2
+												li
+													+filter-checkbox('Кошельки')
+												li
+													+filter-checkbox('Сумки')
+												li
+													+filter-checkbox('Аксессуары')
+												li
+													+filter-checkbox('Офис и Тревел')
+										li ПО РАЗМЕРУ
+											.filter-icon-close
+											ul.filter-menu-l2
+												li
+													+filter-checkbox('Большой')
+												li
+													+filter-checkbox('Малый')
+												li
+													+filter-checkbox('Средний')
+										li ПО ЦВЕТУ
+											.filter-icon-close
+											ul.filter-menu-l2.font-size-null
+												li
+													+filter-color-checkbox('#FF7979')
+													+filter-color-checkbox('#6BAC89')
+													+filter-color-checkbox('#C3499E')
+													+filter-color-checkbox('#FFB047')
+													+filter-color-checkbox('#002D76')
+													+filter-color-checkbox('#AF674F')
+													+filter-color-checkbox('#FF7979')
+													+filter-color-checkbox('#6BAC89')
+													+filter-color-checkbox('#C3499E')
+													+filter-color-checkbox('#FFB047')
+													+filter-color-checkbox('#FF7979')
+													+filter-color-checkbox('#6BAC89')
+													
+										li ПО ЦЕНЕ
+											.filter-icon-close
+											ul.filter-menu-l2
+												li
+													+filter-checkbox('До 2 000р.')
+												li
+													+filter-checkbox('От 5 000р. до 10 000р.')
+												li
+													+filter-checkbox('От 10 000р.')
 
-							+button-apply('Применить', '#')
-							label.filter-reset Очисить фильтр
-								input(type='Reset' value='Очистить фильтр')
-					.container.catalog
+									+button-apply('Применить', '#')
+									label.filter-reset Очисить фильтр
+										input(type='Reset' value='Очистить фильтр')
+					.col-md-12.col-lg-9
+						.catalog-filters
+							.catalog-filters__badge
+								a.filter-name.catalog-filters__badge-item(href="#") Мужчины	
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+									.filter-close
+							.catalog-filters__title Фильтр
+							.drop-down
+								.drop-down-check.menu-icon
+								.drop-down-item-block
+									.drop-down-item По популярности
+									.drop-down-item Новинки
+									.drop-down-item.drop-down-item--active По возрастанию цены
+									.drop-down-item По убыванию цены
 						.row
 							.col-6.col-sm-6.col-md-3.col-lg-4
 								+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
@@ -133,6 +149,161 @@ block content
 								+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#','Сумка большая, коллекция "Рига"', '4 863р.')
 									+button-cart('В корзину','#')
 									+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+							.paginator.catalog-paginator
+								.page-toggle
+									+pagination-toggle('#', 1)
+									+pagination-toggle('#', 2)(class="page-toggle__item--current")
+									+pagination-toggle('#', 3)
+									
+									span.page-toggle__item.paginator__span …
+									+pagination-toggle('#', 62)(class="page-toggle__item--last")
+
+								+button-more('Показать еще', '#')
+								.page-toggle
+									+pagination-toggle('#', 'Назад')(class="page-toggle__item--prev")
+									+pagination-toggle('#', 'Вперед')(class="page-toggle__item--next")
+		.footer
+			include ../sections/footer.pug
+
+
+
+
+
+
+				//- .catalog-badge
+				//- 	a.catalog-badge__item(href="#")
+				//- 		+badgeFilter('Бумажники', 'badge-red')
+				//- 	a.catalog-badge__item(href="#")
+				//- 		+badgeFilter('Портмоне', 'badge-pink')
+				//- 	a.catalog-badge__item(href="#")
+				//- 		+badgeFilter('Органайзеры', 'badge-orange')
+				//- .catalog-filters
+				//- 	.catalog-filters__badge
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Мужчины	
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 		a.filter-name.catalog-filters__badge-item(href="#") Кошельки
+				//- 			.filter-close
+				//- 	.catalog-filters__title Фильтр
+				//- 	.catalog-filters-small__title
+				//- 		.drop-down
+				//- 			.drop-down-check.menu-icon
+				//- 			.drop-down-item-block
+				//- 				.drop-down-item По популярности
+				//- 				.drop-down-item Новинки
+				//- 				.drop-down-item.drop-down-item--active По возрастанию цены
+				//- 				.drop-down-item По убыванию цены
+				//- .catalog-wrapper
+				//- 	.catalog-filter
+				//- 		form.form-filter.catalog-filter__form
+				//- 			.filter-header
+				//- 				.filter__title ФИЛЬТРЫ
+				//- 				.filter__clean-button 
+				//- 					a(href="#!") Очистить
+				//- 				.filter__close-icon#filter__close-icon
+				//- 					+icon-close
+				//- 			.line-gradient.d-none.d-lg-block
+				//- 			ul.filter-menu-l1
+				//- 				li ПО ПОЛУ
+				//- 					.filter-icon-close
+				//- 					ul.filter-menu-l2
+				//- 						li
+				//- 							+filter-checkbox('Женщинам')
+				//- 						li
+				//- 							+filter-checkbox('Мужчинам')
+				//- 				li ПО КАТЕГОРИЯМ
+				//- 					.filter-icon-close
+				//- 					ul.filter-menu-l2
+				//- 						li
+				//- 							+filter-checkbox('Кошельки')
+				//- 						li
+				//- 							+filter-checkbox('Сумки')
+				//- 						li
+				//- 							+filter-checkbox('Аксессуары')
+				//- 						li
+				//- 							+filter-checkbox('Офис и Тревел')
+				//- 				li ПО РАЗМЕРУ
+				//- 					.filter-icon-close
+				//- 					ul.filter-menu-l2
+				//- 						li
+				//- 							+filter-checkbox('Большой')
+				//- 						li
+				//- 							+filter-checkbox('Малый')
+				//- 						li
+				//- 							+filter-checkbox('Средний')
+				//- 				li ПО ЦВЕТУ
+				//- 					.filter-icon-close
+				//- 					ul.filter-menu-l2.font-size-null
+				//- 						li
+				//- 							+filter-color-checkbox('#FF7979')
+				//- 							+filter-color-checkbox('#6BAC89')
+				//- 							+filter-color-checkbox('#C3499E')
+				//- 							+filter-color-checkbox('#FFB047')
+				//- 							+filter-color-checkbox('#002D76')
+				//- 							+filter-color-checkbox('#AF674F')
+				//- 							+filter-color-checkbox('#FF7979')
+				//- 							+filter-color-checkbox('#6BAC89')
+				//- 							+filter-color-checkbox('#C3499E')
+				//- 							+filter-color-checkbox('#FFB047')
+				//- 							+filter-color-checkbox('#FF7979')
+				//- 							+filter-color-checkbox('#6BAC89')
+											
+				//- 				li ПО ЦЕНЕ
+				//- 					.filter-icon-close
+				//- 					ul.filter-menu-l2
+				//- 						li
+				//- 							+filter-checkbox('До 2 000р.')
+				//- 						li
+				//- 							+filter-checkbox('От 5 000р. до 10 000р.')
+				//- 						li
+				//- 							+filter-checkbox('От 10 000р.')
+
+				//- 			+button-apply('Применить', '#')
+				//- 			label.filter-reset Очисить фильтр
+				//- 				input(type='Reset' value='Очистить фильтр')
+				//- 	.container.catalog
+				//- 		.row
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+				//- 					+button-cart('В корзину','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+				//- 					+button-cart('В корзину','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#','Кошелек для монет N/S|Морской пейзаж"', '4 863р.')
+				//- 					+button-store('Нет в наличии','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#','Сумка большая, коллекция "Рига"', '4 863р.')
+				//- 					+button-cart('В корзину','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#','Кошелек для монет N/S|Морской пейзаж', '4 863р.')
+				//- 					+button-store('Нет в наличии','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+				//- 			.col-6.col-sm-6.col-md-3.col-lg-4
+				//- 				+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#','Сумка большая, коллекция "Рига"', '4 863р.')
+				//- 					+button-cart('В корзину','#')
+				//- 					+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
 						.paginator.catalog-paginator
 							.page-toggle
 								+pagination-toggle('#', 1)
@@ -146,5 +317,5 @@ block content
 							.page-toggle
 								+pagination-toggle('#', 'Назад')(class="page-toggle__item--prev")
 								+pagination-toggle('#', 'Вперед')(class="page-toggle__item--next")
-		.footer
-			include ../sections/footer.pug
+		//- .footer
+		//- 	include ../sections/footer.pug

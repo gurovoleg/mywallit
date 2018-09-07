@@ -71,14 +71,13 @@
 	color: @text-light-grey;
 }
 .devide {
-	display: none;
-}
-@media @desktop {
-	.devide {
-		display: block;
-		width: 100%;
-		margin-bottom: 16px;
-		margin-top: 10px;
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	margin-top: 10px;
+	margin-left: 16px;
+	@media @desktop {
+		margin-left: 0;
 	}
 }
 .header-search-result {
@@ -100,12 +99,6 @@
 	@media @desktopXL {
 		margin-left: 32px;
 	}
-}
-.header-search-result__category > .devide {
-	height: 2px;
-}
-.header-search-result__goods > .devide {
-	height: 2px;
 }
 .header-search-result-desktop {
 	// position:absolute;
