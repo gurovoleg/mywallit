@@ -22,7 +22,8 @@ block content
 					.title-4.contacts-title.contacts-title--profile Адрес доставки
 					.subtitle-block
 						.contacts-text.contacts-address Санкт-Петербург
-						a.contacts-link.select-address.city-toggle(href="#") Выбрать город
+						a.contacts-link.select-address.city-toggle(href="#" data-city-selector="#profile-city-selector") Выбрать город
+						- var cityBlockId = 'profile-city-selector';
 						include ../../sections/_city-selection.pug				
 					
 					.form-group-user-address.d-block

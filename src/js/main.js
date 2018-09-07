@@ -39,22 +39,26 @@ $(document).ready(function() {
 
 	// Product counter
 	(function productCounter() {
-		var currentValue = parseInt($('.product-counter span').text());
-		
+		var currentValue, currentParent;
+
 		$('.product-counter > .btn-counter--plus').on('click', function(){
+			currentParent = $(this).parent();
+			currentValue = currentParent.find('span').text();
 			updateCounter('up');	
 		});
 		
 		$('.product-counter > .btn-counter--minus').on('click', function(){
+			currentParent = $(this).parent();
+			currentValue = parseInt($(this).parent().find('span').text());
 			updateCounter('down');	
 		});
 		
 		function updateCounter(action) {
-		
+			
 			if (action == 'up') currentValue++;
 			else if (currentValue > 1) currentValue--;
-
-			$('.product-counter span').text(currentValue);	
+			
+			currentParent.find('span').text(currentValue);	
 		}
 		
 	}());
@@ -384,9 +388,34 @@ $(document).ready(function() {
 
     });
 
+    // Удалению продукта из корзины
+    $('.goods-cart__close-icon').on('click', function(){
+    	$(this).parents('.goods-cart-wrapper').remove('.goods-cart-wrapper').fadeOut(1000);
+    });
+
+	// Скрипт только для UI 
+    	// // Открываем всплывающее окно Закать в 1 клик
+	// $('a[href="#order-one-click"]').on('click', function(){
+	// 	$('.order-one-click').fadeIn(400);
+	// });
+	// // Закрытие формы Заказа
+	// $('.order-one-click__close-icon').on('click', function(){
+	// 	$('.order-one-click').fadeOut(400);
+	// });
+
+	// // Открываем всплывающее окно Подписки
+	// $('a[href="#order-subscribe"]').on('click', function(){
+	// 	$('.order-subscribe').fadeIn(400);
+	// });
+	// // Закрытие Подкиски
+	// $('.order-subscribe__close-icon').on('click', function(){
+	// 	$('.order-subscribe').fadeOut(400);
+	// });
+
     // Показать заказ на странице Заказа на мобильной версии
     $('#ordered-products-toggle').on('click', function(){
 		$('#ordered-products').slideToggle();
 	});
+
 
 });
