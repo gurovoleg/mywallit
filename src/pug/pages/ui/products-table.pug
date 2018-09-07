@@ -21,15 +21,15 @@ block content
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')(class="products-table-row--open")
 						+badgeOrderStatus('Принят', 'badge-done')
-				.ordered.ordered--products-table
+				.thanks.thanks--table
 					.thanks-header
-						.thanks-header__title.thanks-header__title--left Содержимое заказа
-					.ordered-wrapper
-						.ordered-goods
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
+						.thanks-header__text Содержимое заказа
 						
+					.ordered-wrapper.ordered-wrapper--out-padding
+						.ordered-goods
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
 						.ordered-calc
 							.ordered-calc__item
 								span.ordered-calc-text Стоимость
@@ -43,20 +43,22 @@ block content
 							.ordered-calc__item.ordered-calc__item--bold
 								span.ordered-calc-text Всего к оплате
 								span.ordered-calc-price 14 229р.
-						.thanks-header
-							.thanks-header__title.thanks-header__title--left Параметры отправки и доставки
-							.ordered-calc.ordered-footer
-								.ordered-calc__item
-									span.ordered-calc-text Платежная система
-									span.ordered-calc-price Яндекс-касса
-								.ordered-calc__item
-									span.ordered-calc-text Оплачен
-									span.ordered-calc-price Да (от #[span 31.08.18])
-								.ordered-calc__item
-									span.ordered-calc-text Служба доставки
-									span.ordered-calc-price Постаматы Pickpoint по всей России
-			
+
+					.thanks-header
+						.thanks-header__text Параметры отправки и доставки
+					.ordered-calc.ordered-footer
+						.ordered-calc__item
+							span.ordered-calc-text Платежная система
+							span.ordered-calc-price Яндекс-касса
+						.ordered-calc__item
+							span.ordered-calc-text Оплачен
+							span.ordered-calc-price Да (от #[span 31.08.18])
+						.ordered-calc__item.ordered-calc__item--out-margin
+							span.ordered-calc-text Служба доставки
+							span.ordered-calc-price Постаматы Pickpoint по всей России
+				
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')
 						+badgeOrderStatus('Отменен', 'badge-red')
+			br

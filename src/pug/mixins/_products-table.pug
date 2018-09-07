@@ -4,6 +4,7 @@ mixin products-table-row(date, price, summe, notes)
 		.products-table-row__cell #{date}
 		.products-table-row__cell #{price}
 		.products-table-row__cell #{summe}
-		.products-table-row__cell #{notes}
+		.products-table-row__cell.text-center #{notes}
 			block
-		.products-table-row__cell.products-table-row__cell--link Подробнее
+		.products-table-row__cell.text-center
+			a.products-table-row__cell--link Подробнее
