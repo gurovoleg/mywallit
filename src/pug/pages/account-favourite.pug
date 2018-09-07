@@ -1,0 +1,43 @@
+extends ../layouts/page-layout/blur-wrapper.pug
+
+block variables
+	- var title = 'Избранное';
+	- var pageClass = 'index-page';
+
+block content
+
+	//- Хлебные крошки
+	.section-breadcrumb
+		.container
+			.breadcrumb-list
+				+breadcrumb-item('#', 'Главная страница')
+				+breadcrumb-item('#', 'Личный кабинет')
+				+breadcrumb-item('#', 'Профиль')
+
+	//- Описание товара
+	.section-favourite
+		.favourite__title.title-1 ИЗБРАННОЕ
+		.container
+			.row
+				.col-md-3.offset-xl-1.col-xl-2.col--no-padding
+					.account__navigation
+						ul.cabinet-menu
+							+cabinet-menu-item('#', 'профиль')
+							+cabinet-menu-item('#', 'мои заказы')
+							+cabinet-menu-item('#', 'корзина')
+							+cabinet-menu-item('#', 'избранное')(class="cabinet-menu-item__link--active")
+							+cabinet-menu-item('#', 'выйти')
+				.col-md-9
+					.row
+						.col-6.col-md-4
+							+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+								+button-cart('В корзину','#')
+						.col-6.col-md-4
+							+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+								+button-cart('В корзину','#')
+						.col-6.col-md-4
+							+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#', 'Сумка большая, коллекция "Рига"', '1 990р.')
+								+button-store('Нет в наличии','#')
+						.col-6.col-md-4
+							+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#', 'Сумка большая, коллекция "Рига"', '4 893р.')
+								+button-cart('В корзину','#')
