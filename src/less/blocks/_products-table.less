@@ -13,11 +13,15 @@
 	text-align: left;
 	padding-left: 14px;	
 	display: table-cell;
-	padding-top: 8px;
-	padding-bottom: 16px;
+	 padding-top: 8px;
+	
+	height: 48px;
 	border-bottom: 1px solid @color-line;
 	width: 20%;
-	@media @tablet{ padding-left: 8px;	 }
+	@media @tablet{ padding-left: 8px;}
+	@media @desktop{ 
+		padding-top: 10px;
+		height: 54px; }
 }
 .products-table-row__cell:last-child{	
 	display: none;
@@ -58,7 +62,13 @@
 		text-decoration: none;
 		border-bottom-color: @red;}
 }
-
+.products-table-row__cell--btn{	
+	padding-top: 0;
+	vertical-align: middle;
+}
+.ordered-goods-item__link:hover .ordered-goods-item{
+	color: @red;
+}
 .products-table-row--header{	
 	font-weight: 700;
 	border-top: 1px solid @color-line;
@@ -140,4 +150,7 @@
 }
 .ordered-calc__item.ordered-calc__item--out-margin{
 	margin-top: 0;
+}
+.badge-order-status.badge-red:hover{
+	color: #fff;
 }

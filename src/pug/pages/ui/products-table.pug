@@ -15,21 +15,24 @@ block content
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')
-						+badgeOrderStatus('Выполнен', 'badge-done')
+						a.badge-order-status.badge-done(href="#") Выполнен
 			
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')(class="products-table-row--open")
-						+badgeOrderStatus('Принят', 'badge-done')
+						a.badge-order-status.badge-done(href="#") Принят
 				.thanks.thanks--table
 					.thanks-header
 						.thanks-header__text Содержимое заказа
 						
 					.ordered-wrapper.ordered-wrapper--out-padding
 						.ordered-goods
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
-							+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+							a.ordered-goods-item__link(href="#")
+								+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+							a.ordered-goods-item__link(href="#")
+								+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+							a.ordered-goods-item__link(href="#")
+								+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
 						.ordered-calc.ordered-calc--table
 							.ordered-calc__item
 								span.ordered-calc-text Стоимость
@@ -60,5 +63,6 @@ block content
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')
-						+badgeOrderStatus('Отменен', 'badge-red')
-			br
+						a.badge-order-status.badge-red(href="#") Отменен
+			pre.
+				include ../sections/_products-table.pug
