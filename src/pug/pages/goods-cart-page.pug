@@ -1,0 +1,22 @@
+include ../layouts/_mixins-links.pug
+
+.goods-cart__page
+	.goods-cart__title Ваша корзина (3 товара)
+	.goods-cart__color-line
+		.color-line
+			.cart-line-color-1
+			.cart-line-color-2
+			.cart-line-color-3
+			.cart-line-color-4
+			.cart-line-color-5
+			.cart-line-color-6
+	.goods-cart
+		+goodsCart('thumb_blue-purse-1.png', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р.')
+		+goodsCart('thumb_blue-purse-2.png', 'Кошелек большой с двумя молниями', '4 893 р.')
+		+goodsCart('thumb_blue-purse-1.png', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893 р.')
+	.goods-cart__footer
+		.goods-cart__button
+			a.button-order__link(href='#')
+			+button-order('Оформить заказ', '#', '14 679')
+		.goods-cart__back-link
+			a.goods-cart__back-link-item(href='catalog.html') Вернуться в каталог

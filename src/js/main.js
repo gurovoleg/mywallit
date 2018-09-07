@@ -417,5 +417,14 @@ $(document).ready(function() {
 		$('#ordered-products').slideToggle();
 	});
 
+	// Открыть товары в корзине
+	$('.menu-block.cart').on('click', function(){
+		$('.goods-cart__page').show(400);
+	});
+	// $('.goods-cart__back-link-item').on('click', function(e){
+	// 	e.preventDefault();
+	// 	$('.goods-cart__page').hide(400);
+	// });
+
 
 });
