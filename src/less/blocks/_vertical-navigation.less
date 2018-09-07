@@ -2,14 +2,24 @@
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	margin-left: 16px;
-	margin-right: 16px;
+	// margin-left: 16px;
+	// margin-right: 16px;
 }
 .cabinet-menu-item{
 	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid @color-line;
+
+	&:first-child {
+		border-top: 1px solid @color-line;
+		
+		@media @tablet {
+			border-top:none;
+		}
+
+	}
 }
+
 .cabinet-menu-item__link{
 	display: block;
 	text-transform: uppercase;
