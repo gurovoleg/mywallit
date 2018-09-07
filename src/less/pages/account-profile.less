@@ -1,5 +1,18 @@
 .profile__title {
+	display: none;
 	text-align: center;
+
+	@media @tablet {
+		display: block;
+	}
+	
+	@media @desktop {
+		margin-bottom: 36px;
+	}
+
+	@media @desktopXL {
+		margin-bottom: 48px;
+	}
 }
 
 .col--no-padding {
