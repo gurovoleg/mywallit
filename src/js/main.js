@@ -329,9 +329,9 @@ $(document).ready(function() {
 			$("body").css("overflow","hidden");
 		}
 
-		if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
-			$("body").css("overflow","auto");
-		}
+		// if ( $('.catalog-filter').hasClass('catalog-filter--show') && w > 1152 ) {
+		// 	$("body").css("overflow","auto");
+		// }
 	});
 
 

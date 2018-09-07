@@ -1,0 +1,83 @@
+.thanks{	
+	text-align: left;
+	padding-top: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 30px;
+	@media @tablet {
+		border: 1px solid @color-line;
+		padding-left: 55px;
+		padding-right: 55px;
+		padding-top: 45px;
+		padding-bottom: 56px;
+	}
+	@media @desktop {		
+		padding-left: 89px;
+		padding-right: 89px;
+	}
+	@media @desktopXL {
+		padding-top: 56px;
+		padding-left: 84px;
+		padding-right: 84px;
+	}
+}
+.thanks-header__title{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-weight: 700;
+	color: @textMenu;
+	padding-bottom: 14px;		
+	border-bottom: 1px solid @color-line;
+	@media @desktop{font-size: 26px;}
+	@media @desktopXL{padding-right: 30px;}
+}
+.thanks-header__subtitle{
+	padding-top: 22px;
+	font-size: 14px;
+	padding-left: 10px;
+	margin-bottom: 16px;
+	line-height: 18px;
+	color:@textMenu;
+	@media @desktop{
+		padding-top: 28px;
+		font-size: 20px;
+		margin-bottom: 24px;
+		line-height: 26px;
+	}
+}
+.shopper-email{
+	color:@textMenu;
+	border-bottom: 1px solid @textMenu;
+	&:hover{
+		border-bottom-color: @red;
+		text-decoration: none;
+	}
+}
+
+.thanks-order-number{
+	font-size: 16px;
+	font-weight: 700;
+	padding-left: 10px;
+	color: @textMenu;	
+	@media @desktop{		
+		font-size: 20px;
+	}
+}
+.ordered-goods-item--special:not(:first-child){
+	.mixin-margin(top;@l2);
+	padding-top: 0;
+}
+
+
+@media @desktop{
+	.ordered-goods-item--special{
+		line-height: 19px;
+		font-size: 16px;
+	}
+
+	.ordered-goods-item--special .ordered-goods-item__descrip-article{margin-top: 24px;}	
+	.ordered-goods-item--special .ordered-goods-item__img img {max-width: 100%;}
+	.ordered-goods-item--special .ordered-goods-item__descrip {padding-left: 30px;}
+}

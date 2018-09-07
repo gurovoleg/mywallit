@@ -4,7 +4,7 @@
 }
 .catalog-filter {
 	position: fixed;
-	overflow-y: scroll;
+	overflow-y: auto;
 	z-index: 1001;
 	background-color: @white;
 	top: 0;
@@ -12,15 +12,14 @@
 	height: 100%;
 	width: 100%;
 	transition: left 0.5s ease-in-out;
-	width: 270px;
 	@media @tablet {
 		height: 100%;
-		overflow-y: scroll;
+		// overflow-y: scroll;
+		width: 270px;
 	}
 	@media @desktop {
 		position: relative;
 		display: block;
-		// display: flex;
 		justify-content: space-between;
 		flex-basis: 270px;
 		width: 100%;
@@ -28,6 +27,7 @@
 		top: 0;
 		transition: none;
 		overflow: hidden;
+		z-index: 1;
 	}
 }
 .form-filter {
