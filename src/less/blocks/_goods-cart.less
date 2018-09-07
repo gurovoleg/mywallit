@@ -1,3 +1,9 @@
+.goods-cart {
+	width: 295px;
+	@media @tablet {
+		width: 422px;
+	}
+}
 .clearfix{
 	&:after {
 		content: "";
@@ -6,13 +12,10 @@
 	}
 }
 .goods-cart-wrapper {
-	width: 295px;
+	width: 100%;
 	border-bottom: 1px solid @gray;
 	margin-bottom: 14px;
 	justify-content: space-between;
-	@media @tablet {
-		width: 422px;
-	}
 }
 .goods-cart__img {
 	float: left;
@@ -82,7 +85,7 @@
 		height: 36px;
 	}
 }
-.close-icon {
+.goods-cart__close-icon {
 	color: @text-light-grey;
 	background-image: url('../../img/icons/close.svg');
 	width: 12px;
