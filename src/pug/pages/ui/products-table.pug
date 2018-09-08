@@ -15,12 +15,12 @@ block content
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')
-						a.badge-order-status.badge-done(href="#") Выполнен
+						a.badge-order-status.badge-order-status--small.badge-done(href="#") Выполнен
 			
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')(class="products-table-row--open")
-						a.badge-order-status.badge-done(href="#") Принят
+						a.badge-order-status.badge-order-status--small.badge-done(href="#") Принят
 				.thanks.thanks--table
 					.thanks-header
 						.thanks-header__text Содержимое заказа
@@ -63,6 +63,6 @@ block content
 			.products-table-group
 				.products-table
 					+products-table-row('31.08.18', '5645', '12 380р.', '')
-						a.badge-order-status.badge-red(href="#") Отменен
+						a.badge-order-status.badge-order-status--small.badge-red(href="#") Отменен
 			pre.
 				include ../sections/_products-table.pug
