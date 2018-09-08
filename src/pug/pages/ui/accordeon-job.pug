@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Страница Вакансии - Аккордеон - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Страница Вакансии - Аккордеон
+
+		include ../../sections/accordeon-job.pug
+
+		br
+		br
+		strong Подключение на страницу (готовый блок)
+		pre.
+			include ../sections/accordeon-job.pug
