@@ -420,11 +420,10 @@ $(document).ready(function() {
 	// Открыть товары в корзине
 	$('.menu-block.cart').on('click', function(){
 		$('.goods-cart__page').show(400);
+		$('.blur-wrapper').addClass('filter-blur');
+		$('.goods-cart__page').insertBefore('.blur-wrapper');
+		$('body').css('overflow', 'hidden');
 	});
-	// $('.goods-cart__back-link-item').on('click', function(e){
-	// 	e.preventDefault();
-	// 	$('.goods-cart__page').hide(400);
-	// });
 
 
 });
