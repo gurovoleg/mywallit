@@ -1,21 +1,22 @@
-extends ../layouts/page-layout/page.pug
+//- extends ../layouts/page-layout/page.pug
+extends ../layouts/page-layout/blur-wrapper.pug
 
 block variables
 	- var title = 'Каталог товаров';
 	- var pageClass = 'index-page';
 
 block content
-	
-	//- Обертка для фильтра blur и мобильной навигации
-	.blur-wrapper
-		//- шапка
-		.header
-			include ../sections/header.pug
-		.container
-			.section-catalog
-				.section-breadcrumb
+
+		//- Хлебные крошки
+		.section-breadcrumb
+			.container
+				.breadcrumb-list
 					+breadcrumb-item('#', 'Главная страница')
 					+breadcrumb-item('#', 'Каталог')
+		
+		//- Основной контент
+		.section-catalog
+			.container
 				.title-1.uppercase.catalog__title Мужские кошельки 
 					span.catalog__title-count &mdash; 235
 				p.catalog__title-description Ожидайте яркий взрыв в вашей сумке с нашими уникальными кошельками для мужчин: кожа лучшего качества, элегантные конструкции и уникальные детали для непревзойденного продукта, который вы Можете наслаждаться каждый день!
@@ -162,8 +163,7 @@ block content
 								.page-toggle
 									+pagination-toggle('#', 'Назад')(class="page-toggle__item--prev")
 									+pagination-toggle('#', 'Вперед')(class="page-toggle__item--next")
-		.footer
-			include ../sections/footer.pug
+
 
 
 

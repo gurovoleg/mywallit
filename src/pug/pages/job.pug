@@ -14,11 +14,11 @@ block content
 				+breadcrumb-item('#', 'О компании')
 				+breadcrumb-item('#', 'Вакансии')
 
-	//- Описание товара
+	//- Основной контент
 	.section-job
-		//- .profile__title.title-1 ПРОФИЛЬ
 		.container
 			.row
+				//- Навигация
 				.col-md-3.col-lg-3.offset-xl-1.col-xl-2.col--no-padding
 					.company__navigation
 						ul.cabinet-menu
@@ -27,9 +27,11 @@ block content
 							+cabinet-menu-item('#', 'вакансии')(class="cabinet-menu-item__link--active")
 							+cabinet-menu-item('#', 'сотрудничество')
 							+cabinet-menu-item('#', 'блог')
+				//-Заголовок
 				.col-12.order-md-first
 					.job__title.title-1 ВАКАНСИИ
 				
+				//- Инфо + аккардеон
 				.col-md-9.offset-lg-1.col-lg-7.offset-xl-1.col-xl-6
 					.job-column-wrapper
 						.job-slogan-block
@@ -41,4 +43,5 @@ block content
 								Мы ждем ваше резюме на почтовый ящик отдела персонала   hr@mywalit.ru с указанием желаемой должности.
 						.job__text Актуальные вакансии
 
+						//- Аккардеон
 						include ../sections/accordeon-job.pug		 
