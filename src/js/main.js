@@ -425,6 +425,13 @@ $(document).ready(function() {
 		$('.goods-cart__page').insertBefore('.blur-wrapper');
 		$('body').css('overflow', 'hidden');
 	});
+	// Вернуться на страницу из корзины
+	$('.goods-cart__back-link-item').on('click', function(e){
+		e.preventDefault();
+		$('.goods-cart__page').hide(400);
+		$('.blur-wrapper').removeClass('filter-blur');
+		$('.goods-cart__page-bg').css('display', 'none');
+	});
 
 
 });
