@@ -1,0 +1,56 @@
+.products-table-wrapper
+	.products-table
+		+products-table-row('Дата', '№ заказа', 'Сумма', 'Статус заказа')(class="products-table-row--header")
+	
+	.products-table-group
+		.products-table
+			+products-table-row('31.08.18', '5645', '12 380р.', '')
+				a.badge-order-status.badge-done(href="#") Выполнен
+	
+	.products-table-group
+		.products-table
+			+products-table-row('31.08.18', '5645', '12 380р.', '')(class="products-table-row--open")
+				a.badge-order-status.badge-done(href="#") Принят
+		.thanks.thanks--table
+			.thanks-header
+				.thanks-header__text Содержимое заказа
+				
+			.ordered-wrapper.ordered-wrapper--out-padding
+				.ordered-goods
+					a.ordered-goods-item__link(href="#")
+						+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+					a.ordered-goods-item__link(href="#")
+						+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+					a.ordered-goods-item__link(href="#")
+						+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )(class="ordered-goods-item--special")
+				.ordered-calc.ordered-calc--table
+					.ordered-calc__item
+						span.ordered-calc-text Стоимость
+						span.ordered-calc-price 14 679р.
+					.ordered-calc__item
+						span.ordered-calc-text Скидка
+						span.ordered-calc-price -450р.
+					.ordered-calc__item
+						span.ordered-calc-text Доставка
+						span.ordered-calc-price 0р.
+					.ordered-calc__item.ordered-calc__item--bold
+						span.ordered-calc-text Всего к оплате
+						span.ordered-calc-price 14 229р.
+
+			.thanks-header
+				.thanks-header__text Параметры отправки и доставки
+			.ordered-calc.ordered-footer
+				.ordered-calc__item
+					span.ordered-calc-text Платежная система
+					span.ordered-calc-price Яндекс-касса
+				.ordered-calc__item
+					span.ordered-calc-text Оплачен
+					span.ordered-calc-price Да (от #[span 31.08.18])
+				.ordered-calc__item.ordered-calc__item--out-margin
+					span.ordered-calc-text Служба доставки
+					span.ordered-calc-price Постаматы Pickpoint по всей России
+		
+	.products-table-group
+		.products-table
+			+products-table-row('31.08.18', '5645', '12 380р.', '')
+				a.badge-order-status.badge-red(href="#") Отменен
