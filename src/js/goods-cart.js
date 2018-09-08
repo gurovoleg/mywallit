@@ -6,7 +6,6 @@
 		var heightFooterCart = $('.goods-cart__footer').innerHeight();
 		var h = $(window).height();
 		if (heightCart <= h) {
-			console.log(heightCart);
 			$('.goods-cart').css('min-height', '0');
 		}
 	}
