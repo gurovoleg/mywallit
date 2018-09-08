@@ -43,10 +43,16 @@
 	padding-bottom: 6px;
 	padding-right: 9px;
 	padding-left: 9px;
+	transition: opacity;
 	@media @tablet{
 		padding-right: 10px;
 		padding-left: 10px;
 	}
+}
+.badge-order-status--small:hover{
+	color:#fff;
+	text-decoration: none;
+	opacity: .8;
 }
 .products-table-row--open{
 	border-bottom: 2px solid @color-line;
@@ -70,6 +76,10 @@
 }
 .ordered-goods-item__link:hover .ordered-goods-item{
 	color: @red;
+}
+.ordered-goods-item__link:hover .ordered-goods-item__descrip-article{	
+	color: @red;
+	text-decoration: none;
 }
 .products-table-row--header{	
 	font-weight: 700;
@@ -152,7 +162,4 @@
 }
 .ordered-calc__item.ordered-calc__item--out-margin{
 	margin-top: 0;
-}
-.badge-order-status.badge-red:hover{
-	color: #fff;
 }
