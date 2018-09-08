@@ -417,21 +417,5 @@ $(document).ready(function() {
 		$('#ordered-products').slideToggle();
 	});
 
-	// Открыть товары в корзине
-	$('.menu-block.cart').on('click', function(){
-		$('.goods-cart__page').show(400);
-		$('.goods-cart__page-bg').css('display', 'block');
-		$('.blur-wrapper').addClass('filter-blur');
-		$('.goods-cart__page').insertBefore('.blur-wrapper');
-		$('body').css('overflow', 'hidden');
-	});
-	// Вернуться на страницу из корзины
-	$('.goods-cart__back-link-item').on('click', function(e){
-		e.preventDefault();
-		$('.goods-cart__page').hide(400);
-		$('.blur-wrapper').removeClass('filter-blur');
-		$('.goods-cart__page-bg').css('display', 'none');
-	});
-
 
 });
