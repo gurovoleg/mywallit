@@ -11,13 +11,14 @@
 		padding-top: 149px;
 	}
 }
-.svg-container { 
-	display: block;
+.svg-container {
+	display: inline-block;
 	position: relative;
 	max-width:600px;  
-	// height:auto;
-	width: 100%;
-	// vertical-align: middle;
+	height:auto;
+	width: 100%;	
+	vertical-align: middle; 
+	position: relative;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
@@ -79,4 +80,7 @@ svg.ldi-f17d8n {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    @media @desktop {
+    	width: 100%;
+    }
 }
