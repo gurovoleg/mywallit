@@ -1,3 +1,14 @@
+.goods-cart__page-bg {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.25);
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
 .goods-cart__page {
 	overflow: hidden;
 	height: 100vh;
@@ -10,12 +21,6 @@
 	background-color: @white;
 	@media @tablet {
 		width: 460px;
-	}
-	&:before {
-		content: '';
-		background: rgba(0, 0, 0, 1);
-		width: 100%;
-		height: 100%; 
 	}
 }
 .goods-cart__title {
@@ -73,6 +78,7 @@
 	padding-top: 13px;
 	padding-bottom: 11px;
 	margin-bottom: 11px;
+	background-color: @white;
 }
 .goods-cart__back-link-item {
 	line-height: normal;

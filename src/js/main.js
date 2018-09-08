@@ -420,6 +420,7 @@ $(document).ready(function() {
 	// Открыть товары в корзине
 	$('.menu-block.cart').on('click', function(){
 		$('.goods-cart__page').show(400);
+		$('.goods-cart__page-bg').css('display', 'block');
 		$('.blur-wrapper').addClass('filter-blur');
 		$('.goods-cart__page').insertBefore('.blur-wrapper');
 		$('body').css('overflow', 'hidden');
