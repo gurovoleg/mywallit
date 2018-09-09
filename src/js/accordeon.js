@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	// Аккордеон	
+	// Аккордеон страница Описание товара	
 	(function() {
 
 		$('.accordion-item__title').on('click',function(){
@@ -20,6 +20,30 @@ $(document).ready(function(){
 		});
 
 	}());
-	//-- Аккордеон
+	//-- Аккордеон страница Описание товара
+
+
+	// Аккордеон страница Вакансии
+	(function() {
+
+		$('.job-accordeon-item__title').on('click',function(){
+			var activeClass = 'is-opened',
+			    $content = $(this).next(),
+			    $icon = $(this).children('.content-icon');
+			
+			if ( !($icon.hasClass(activeClass)) ) {
+				$('.job-accordeon').find('.job-accordeon-item__content').slideUp();
+				$('.job-accordeon').find('.is-opened').removeClass(activeClass);
+				
+				$icon.addClass(activeClass);
+				$content.slideDown();
+			} else {
+				$icon.removeClass(activeClass);
+				$content.slideUp();
+			}
+		});
+
+	}());
+	//-- Аккордеон страница Вакансии
 
 });
