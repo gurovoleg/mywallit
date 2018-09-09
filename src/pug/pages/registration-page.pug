@@ -1,0 +1,18 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Форма входа в личный кабинет';
+	- var pageClass = 'index-page';
+
+block content
+	
+	//- Обертка для фильтра blur и мобильной навигации
+	.blur-wrapper
+		//- шапка
+		.header
+			include ../sections/header.pug
+		.container
+			.row
+				.col-md-6.offset-md-3.col-lg-6.offset-lg-3.col-xl-4.offset-xl-4
+					include ../sections/registration-form.pug		
+		include ../sections/footer.pug
