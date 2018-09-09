@@ -1,0 +1,40 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Форма входа в ЛК';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Форма входа в ЛК
+		.login
+			form.login-form
+				.login-form-title Войти
+				.login-form-subtitle
+					p.login-form-subtitle__text Еще нет аккаунта?						
+					a.login-form-subtitle__link(href="#") Зарегистрироваться
+				.login-form__form-group
+					+inputField('Email', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text', '', '')
+					+inputField('Пароль', 'Вы ничего не ввели', 'pass', 'password', '', '')
+					.login-form__form-group--checkbox
+						+checkbox('Запомнить меня')
+						a.login-form-subtitle__link.login-form-text--small(href="#") Забыли пароль?
+				+button-apply('Войти', '#')
+
+			.login-footer
+				.login-footer-title Или войдите через
+						br
+						| социальные сети
+				.login-footer-content
+					a.login-footer-content__item(href="#")
+						img(src="../img/social/mail.svg", alt="icon")
+					a.login-footer-content__item(href="#")
+						img(src="../img/social/yandex.svg", alt="icon")
+					a.login-footer-content__item(href="#")
+						img(src="../img/social/vk.svg", alt="icon")
+					a.login-footer-content__item(href="#")
+						img(src="../img/social/fb.svg", alt="icon")
+
+		pre.
+			include ../sections/login-form.pug
