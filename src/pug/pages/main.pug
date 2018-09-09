@@ -23,29 +23,46 @@ block content
 				source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
 				source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
 				img(src='../img/banners/banner-mobile-blue.png')
-	
-	//- хиты продаж
-	.section-top-sales
-		.container
-			a.title-1.title--link(href="#") Хиты продаж				
-			.row
-				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
-						+button-cart('В корзину','#')
-				
-				.col-6.col-md-3.order-lg-4
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
-						+button-cart('В корзину','#')
-				
-				.col-6.col-md-3.order-md-4.order-lg-3
-					+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#', 'Сумка большая, коллекция "Рига"', '1 990р.')
-						+button-store('Нет в наличии','#')
+		//- секция банер 1
+		.section-banner-1
+			.container
+				picture
+					source(srcset='../img/banners/banner_desktopxl_red.png 1392w', media='(min-width: 1440px)')
+					source(srcset='../img/banners/banner_desktop_red.png 1064w', media='(min-width: 1152px)')
+					source(srcset='../img/banners/banner_tablet_red.png 752w', media='(min-width: 784px)')
+					source(srcset='../img/banners/banner_mobile_red.png 344w', media='(min-width: 360px)')
+					img(src='../img/banners/banner_mobile_red.png')
+		//- секция банер 2
+		.section-banner-2
+			.container
+				picture
+					source(srcset='../img/banners/banner-desktopxl-blue.png 1392w', media='(min-width: 1440px)')
+					source(srcset='../img/banners/banner-desktop-blue.png 1064w', media='(min-width: 1152px)')
+					source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
+					source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
+					img(src='../img/banners/banner-mobile-blue.png')
+		
+		//- хиты продаж
+		.section-top-sales
+			.container
+				a.title-1.title--link(href="#") Хиты продаж				
+				.row
+					.col-6.col-md-3
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+							+button-cart('В корзину','#')
+					
+					.col-6.col-md-3.order-lg-4
+						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )
+							+button-cart('В корзину','#')
+					
+					.col-6.col-md-3.order-md-4.order-lg-3
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_green.png', 'purse green', '#', 'Сумка большая, коллекция "Рига"', '1 990р.')
+							+button-store('Нет в наличии','#')
 
-				.col-6.col-md-3.order-md-3.order-lg-2
-					+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#', 'Сумка большая, коллекция "Рига"', '4 893р.')
-						+button-cart('В корзину','#')
+					.col-6.col-md-3.order-md-3.order-lg-2
+						+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#', 'Сумка большая, коллекция "Рига"', '4 893р.')
+							+button-cart('В корзину','#')
 
-	//- аксессуары
-	.section-accessories
-		include ../sections/accessories.pug
-	
+		//- аксессуары
+		.section-accessories
+			include ../sections/accessories.pug
