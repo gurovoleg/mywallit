@@ -2,7 +2,10 @@
 	width: 100%;
 	padding: 16px;
 	padding-bottom: 62px;
-	@media @tablet{padding-bottom: 68px;}
+	@media @tablet{
+		padding-left: 23px;
+		padding-right: 23px;
+		padding-bottom: 68px;}
 	@media @desktop{
 		padding-top: 40px;
 		padding-left: 55px;
@@ -12,8 +15,12 @@
 	}
 }
 .login.login--passw-recover{
-	margin-top: 4px;
-	padding-bottom: 58px;
+	padding-top: 20px;
+	padding-bottom: 74px;
+	@media @tablet{padding-bottom: 68px;}
+	@media @desktop{
+		padding-bottom: 44px;
+		padding-top: 44px;}
 }
 .login-form{
 	width: 100%;
@@ -21,8 +28,9 @@
 	margin-bottom: 44px;
 	@media @desktop{margin-bottom: 60px;}
 }
-.login-form--passw-recover{
+.login-form.login-form--passw-recover{
 	margin-bottom: 0;
+	padding-bottom: 0;
 }
 .login-form-title{
 	font-size: 24px;
