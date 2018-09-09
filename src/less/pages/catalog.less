@@ -12,12 +12,17 @@
 	height: 100%;
 	width: 100%;
 	transition: left 0.5s ease-in-out;
+	
+
+
 	@media @tablet {
 		height: 100%;
 		// overflow-y: scroll;
 		width: 270px;
+		box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.2);
 	}
 	@media @desktop {
+		box-shadow: none;
 		position: relative;
 		display: block;
 		justify-content: space-between;
@@ -99,7 +104,7 @@
 .catalog-filter--show {
 	display: flex;
 	left: 0;
-	transition: left 0.5s ease-in-out;
+	transition: left 0.5s ease-in-out;	
 	@media @desktop {
 		transition: none;
 	}

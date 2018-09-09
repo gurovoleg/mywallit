@@ -1,0 +1,119 @@
+.job-accordeon {
+	color:@textMenu;
+	.button-apply {
+		width: 312px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.job-accordeon-item {
+	border:1px solid @textMenu;
+	font-size: 16px;
+	margin-bottom: 8px;
+
+	@media @desktop {
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+	@media @desktopXL {
+		font-size: 20px;
+		margin-bottom: 24px;	
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.job-accordeon-item__title {
+	padding:8px 56px 8px 16px;
+	font-size: 16px;
+	position:relative;
+	cursor: pointer;
+
+	@media @tablet {
+		padding:16px 16px;
+	}
+	@media @desktop {
+		padding:20px 24px;	
+	}
+	@media @desktopXL {
+		padding:20px 24px;
+	}
+}
+
+.job-accordeon-item__content {
+	display: none;
+	padding:0px 16px 32px;
+
+	@media @desktop {
+		padding:0px 24px 32px;	
+	}
+	@media @desktopXL {
+		padding:8px 24px 40px;
+	}
+}
+
+
+.content__list-title {
+	margin-bottom: 8px;
+
+	@media @desktop {
+		margin-bottom: 14px;
+	}	
+}
+
+ul.content__list {
+	margin:0;
+	padding-left:18px;
+	font-size: 14px;
+	margin-bottom: 32px;
+
+	@media @desktop {
+		font-size: 16px;
+		margin-bottom: 40px;
+	}
+	@media @desktopXL {
+		font-size: 18px;	
+	}
+}
+
+// Иконка
+.content-icon {
+	&:before {
+		content: "+";
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform:translateY(-50%);
+		color: @textMenu;
+		font-size: 28px;
+
+		@media @desktop {right:24px;}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform:translateY(-50%);
+		height: 2px;
+		width: 15px;
+		background-color: transparent;
+				
+		@media @desktop {right:24px;}
+	}
+}
+
+// класс для изменения иконки
+.is-opened.content-icon:before {
+	content: '';
+}
+
+.is-opened.content-icon:after {
+	background-color: @textMenu;
+}
+
+
+
