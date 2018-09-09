@@ -37,19 +37,23 @@ block content
 		//- Основной контент
 		.section-order
 			.container
+				//- Заголовок + Купить в 1 клик (для планшета и более)
 				.col
 					.order-title-block.d-none.d-md-flex
 						.order__tile.title-1 ОФОРМИТЬ И ОПЛАТИТЬ
 						+button-buyclick("Купить в 1 клик", "#")(class='show-modal-window' data-modal='#order-one-click')
 				.row
+					//- Заказ
 					.col-12.col-md-6.col-lg-5.offset-xl-1.col-xl-5
 						include ../sections/show-order.pug
 					
+					//- Заголовок + Купить в 1 клик (для мобильных экранов)
 					.col-12
 						.order-title-mobile-block.d-md-none
 							+button-buyclick("Купить в 1 клик", "#")(class='show-modal-window' data-modal='#order-one-click')
 							.order__mobile-title Или оформить и оплатить
 					
+					//- Контактная информация
 					.col-12.col-md-6.order-md-first.offset-lg-1.col-lg-6.offset-xl-2.col-xl-4
 						include ../sections/contacts-info.pug
 
