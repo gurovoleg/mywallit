@@ -1,13 +1,19 @@
 .login{
 	width: 100%;
 	padding: 16px;
-	padding-bottom: 60px;
+	padding-bottom: 62px;
+	@media @tablet{padding-bottom: 68px;}
 	@media @desktop{
 		padding-top: 40px;
 		padding-left: 55px;
 		padding-right: 55px;
+		padding-bottom: 40px;
 		border: 1px solid @color-line;
 	}
+}
+.login.login--passw-recover{
+	margin-top: 4px;
+	padding-bottom: 58px;
 }
 .login-form{
 	width: 100%;
@@ -15,7 +21,7 @@
 	margin-bottom: 44px;
 	@media @desktop{margin-bottom: 60px;}
 }
-.login-form--mb-0{
+.login-form--passw-recover{
 	margin-bottom: 0;
 }
 .login-form-title{
