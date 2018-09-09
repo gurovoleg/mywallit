@@ -1,4 +1,4 @@
-extends ../layouts/page-layout/page.pug
+extends ../layouts/page-layout/blur-wrapper.pug
 
 block variables
 	- var title = 'Главная страница';
@@ -6,12 +6,6 @@ block variables
 
 block content
 	
-	//- Обертка для фильтра blur и мобильной навигации
-	.blur-wrapper
-		//- шапка
-		.header
-			include ../sections/header.pug
-		
 		//- секция банер 1
 		.section-banner-1
 			.container
@@ -55,11 +49,3 @@ block content
 		//- аксессуары
 		.section-accessories
 			include ../sections/accessories.pug
-
-		//- Подвал
-		.footer
-			include ../sections/footer.pug
-	
-
-
-	
