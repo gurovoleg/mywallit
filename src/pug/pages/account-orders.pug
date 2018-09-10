@@ -1,0 +1,36 @@
+extends ../layouts/page-layout/blur-wrapper.pug
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass = 'index-page';
+
+block content
+
+	//- Хлебные крошки
+	.section-breadcrumb
+		.container
+			.breadcrumb-list
+				+breadcrumb-item('#', 'Главная страница')
+				+breadcrumb-item('#', 'Личный кабинет')
+				+breadcrumb-item('#', 'Профиль')
+
+	//- Основной контент
+	.section-profile.section-profile--orders
+		.container
+			.row
+				//- Навигация
+				.col-md-4.col-lg-3.col-xl-2.offset-xl-1.col--no-padding
+					.account__navigation
+						ul.cabinet-menu
+							+cabinet-menu-item('#', 'профиль')(class="cabinet-menu-item__link--active")
+							+cabinet-menu-item('#', 'мои заказы')
+							+cabinet-menu-item('#', 'корзина')
+							+cabinet-menu-item('#', 'избранное')
+							+cabinet-menu-item('#', 'выйти')
+				//- Заголовок
+				.col-12.order-md-first
+					.profile__title.profile__title--mb.title-1 МОИ ЗАКАЗЫ
+
+				//- таблица заказов
+				.col-md-8.col-lg-8.offset-lg-1.col-xl-6.offset-xl-1
+					include ../sections/_products-table.pug
