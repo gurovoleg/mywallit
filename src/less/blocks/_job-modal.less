@@ -1,0 +1,66 @@
+.order-subscribe {
+	width: 360px;
+	padding-top: 5px;
+	// position: absolute;
+	display: none;
+	background-color: @white;
+	z-index: 1;
+
+	@media @desktop {
+		width: 434px;
+	}	
+}
+.order-subscribe__title {
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: @text-light-grey;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: 600;
+	border-bottom: 1px solid #C4C4C4;
+	margin-bottom: 21px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	@media @desktop {
+		margin-bottom: 40px;
+	}
+}	
+.order-subscribe__inputs {
+	margin-left: 32px;
+	margin-right: 32px;
+	padding-bottom: 31px;
+	
+	@media @desktop {
+		margin-left: 48px;
+		margin-right: 48px;
+		padding-bottom: 40px;
+	}
+
+}
+
+.order-one-click__close-icon {
+	color: @text-light-grey;
+	position: absolute;
+	top: 11px;
+	right: 11px;
+	background-image: url('../img/icons/close.svg');
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	@media @desktop {
+		top: 21px;
+		right: 21px;
+	}
+}
+.order-subscribe__close-icon {
+	color: @text-light-grey;
+	position: absolute;
+	top: 21px;
+	right: 21px;
+	background-image: url('../img/icons/close.svg');
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}
