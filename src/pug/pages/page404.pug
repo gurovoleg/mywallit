@@ -2,7 +2,7 @@ extends ../layouts/page-layout/page.pug
 
 block variables
 	- var title = 'Каталог товаров';
-	- var pageClass = 'index-page';
+	- var pageClass = 'page-404';
 
 block content
 	.blur-wrapper
@@ -10,7 +10,7 @@ block content
 		.header
 			include ../sections/header.pug
 		.page404-wrapper
-			include ui/_page404.pug
+			include ../icons/page404.pug
 			.page404__text-wrapper
 				.page404__title ОШИБКА 404
 				.page404__subtitle К сожалению такой страницы не существует, перейдите в 

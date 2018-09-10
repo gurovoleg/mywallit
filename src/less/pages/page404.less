@@ -1,33 +1,45 @@
+body.page-404 {
+	height: 100vh;
+}
+
+.page-404 .blur-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 .page404-wrapper {
 	// position: fixed;
 	// height: 100vh;
-	top: 112px;
-	bottom: 0;
-	width: 100%;
-	padding-top: 44px;
+	position: static;
+	flex-grow: 1;
+	top: 112px; // bottom: 0;
+	width: 100%; // padding-top: 44px;
 	background-color: @bgc-404;
-	overflow-y:  hidden;
+	overflow-y: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	@media @tablet {
-		padding-top: 155px;
+		// padding-top: 155px;
 	}
 	@media @desktop {
-		padding-top: 49px;
-		top: 195px;
+		// padding-top: 49px;
+		// top: 195px;
 	}
 }
+
 .svg-container {
-	overflow-y:  hidden;
-	
-	display: inline-block;
+	overflow-y: hidden; // display: inline-block;
+	position: relative; // height:auto;
+	width: 100%; // vertical-align: middle;
 	position: relative;
-	// height:auto;
-	width: 100%;	
-	vertical-align: middle;
-	position: relative;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
+	overflow: hidden; // margin-left: auto;
+	// margin-right: auto;
+	margin-top: -150px;
 }
+
 .page404__title {
 	line-height: 1;
 	font-size: 32px;
@@ -38,18 +50,23 @@
 	font-weight: 700;
 	padding-bottom: 16px;
 	@media @tablet {
-		padding-top: 25px;
+		// padding-top: 25px;
 	}
 	@media @desktop {
 		font-size: 40px;
 	}
 }
+
 .page404__subtitle {
 	line-height: 1.5;
 	font-size: 16px;
 	text-align: center;
 	color: @text-light-grey;
 	border-bottom: 1px solid transparent;
+	
+	@media @mobile{
+		width: 360px;
+	}
 	@media @tablet {
 		width: 336px;
 	}
@@ -58,6 +75,7 @@
 		width: 437px;
 	}
 }
+
 .page404__subtitle-link {
 	border-bottom: 1px solid #58595B;
 	color: @text-light-grey;
@@ -67,22 +85,33 @@
 		text-decoration: none;
 	}
 }
+
 .page404__text-wrapper {
-	width: 311px;
+	width: auto;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	@media @tablet {
+		width: 311px;
+	}
+
 	@media @desktop {
 		width: 430px;
 		margin-top: 0;
+		// padding-bottom: 55px;
 	}
 }
-svg.ldi-f17d8n {
-    width: 292px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    @media @desktop {
-    	width: 420px;
-    }
+
+svg.svgsmile {
+	// width: 400px;
+	// height: 400px;
+	width: 280px;
+	height: 280px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	@media @desktop {
+		width: 400px;
+		height: 400px;
+	}
 }
