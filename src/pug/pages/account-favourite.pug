@@ -14,10 +14,11 @@ block content
 				+breadcrumb-item('#', 'Личный кабинет')
 				+breadcrumb-item('#', 'Профиль')
 
-	//- Описание товара
+	//- Основной контент
 	.section-favourite
 		.container
 			.row
+				//- Навигация
 				.col-md-3.offset-xl-1.col-xl-2.col--no-padding
 					.account__navigation
 						ul.cabinet-menu
@@ -27,9 +28,11 @@ block content
 							+cabinet-menu-item('#', 'избранное')(class="cabinet-menu-item__link--active")
 							+cabinet-menu-item('#', 'выйти')
 				
+				//- Заголовок
 				.col-12.order-md-first
 					.favourite__title.title-1 ИЗБРАННОЕ
 
+				//- Избранное
 				.col-md-9
 					.row
 						.col-6.col-md-4

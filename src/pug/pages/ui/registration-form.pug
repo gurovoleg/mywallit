@@ -8,7 +8,7 @@ block content
 
 	.container.container--left
 		.title Форма регистрации
-		.login
+		.login.login--reg
 			form.login-form
 				.login-form-title Регистрация
 				.login-form-subtitle
@@ -20,10 +20,13 @@ block content
 					+inputField('Повторить пароль', 'Вы ничего не ввели', 'pass', 'password', '', '')
 					
 				+button-apply('Регистрация', '#')
-				p.contacts-block-footer.contacts-text-small.text-left.
+				p.contacts-block-footer.contacts-text-small.contacts-text-small--reg.text-left.
+
 					Нажимая кнопку "Регистрация", вы соглашаетесь с #[a.contacts-link.contacts-link--small(href="#") условиями оферты] и #[a.contacts-link.contacts-link--small(href="#") политикой конфиденциальности.]
+
+
 			.login-footer
-				.login-footer-title Или зарегистрируйтесь
+				.login-footer-title.login-footer-title--reg Или зарегистрируйтесь
 						br
 						| через социальные сети
 				.login-footer-content
