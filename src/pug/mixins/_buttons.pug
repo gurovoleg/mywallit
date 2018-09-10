@@ -38,3 +38,11 @@ mixin button-apply(text, link)
 //- Button more
 mixin button-more(text, link)
 	a(class="button-more" href=link)&attributes(attributes) #{text}
+
+
+mixin button-file(name, buttonText)
+	.button-file-wrapper
+		label.button-file__label
+			input.button-file__input(name='file', type='file')
+			span.button-file #{buttonText}
+		.button-file_inner-caption Формат файла: .doc, до 5мб
