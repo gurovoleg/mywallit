@@ -35,11 +35,6 @@ $(document).ready(function() {
 		}
 	);
 
-	if($('.products-table-row').hasClass('products-table-row--open')){
-		$('.products-table-row--open').find('.products-table-row__cell--link').text('Скрыть');
-	} else {
-		$(this).find('.products-table-row__cell--link').text('Подробнее');
-	}
 	// end card hover effect
 
 
