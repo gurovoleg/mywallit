@@ -8,7 +8,7 @@
 .cabinet-menu-item{
 	margin: 0;
 	padding: 0;
-	border-bottom: 1px solid @color-line;
+	
 
 	&:first-child {
 		border-top: 1px solid @color-line;
@@ -21,6 +21,7 @@
 }
 
 .cabinet-menu-item__link{
+	border-bottom: 1px solid @color-line;
 	display: block;
 	text-transform: uppercase;
 	font-size:16px;
@@ -32,6 +33,7 @@
 .cabinet-menu-item__link--active{
 	border-bottom: 2px solid @color-line;
 	font-weight: 700;
+	padding-bottom: 14px;	
 }
 .cabinet-menu-item__link.cabinet-menu-item__link--active:hover{
 	color: @textMenu;	
