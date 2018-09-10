@@ -1,0 +1,22 @@
+//- Шапка без навигации и корзины
+.header-info
+	.container
+		.row.justify-content-between.align-items-center
+			.col-6.col-lg-4.d-flex
+				.header-info__block.d-flex
+					img(src="../img/icons/marker.svg" alt="иконка")
+					a.city-toggle(href="#" data-city-selector='#header-city-selector').menu-icon
+						span Санкт-Петербург
+			.col-lg-4.d-none.d-lg-flex
+				+header-info__item("../img/icons/car.svg", "Доставка по всей России")(class="mr-20")
+				+header-info__item("../img/icons/warranty.svg", "Гарантия 1 год")
+			.col-6.col-lg-4.d-flex.justify-content-end
+				+header-info__item("../img/icons/phone.svg", "+7 (495) 132-62-60")
+				.header-info__block.d-none.d-md-block.ml-10 +7 (800) 222-63-30
+
+		- var cityBlockId = 'header-city-selector';
+		include ../sections/_city-selection.pug
+
+.header-menu.header-menu--empty
+	a(href="main.html").logo
++color-line

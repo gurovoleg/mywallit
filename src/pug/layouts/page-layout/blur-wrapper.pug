@@ -1,0 +1,20 @@
+include ../_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./_head.pug
+		
+	body(class=pageClass)
+		include ../../sections/goods-cart-page.pug
+		.blur-wrapper
+			.header
+				include ../../sections/header.pug
+			
+			block content
+		
+			.footer
+				include ../../sections/footer.pug
+
+		include ./_foot.pug
