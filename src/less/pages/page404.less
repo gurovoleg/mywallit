@@ -1,6 +1,7 @@
 .page404-wrapper {
-	position: absolute;
-	height: 100vh;
+	position: fixed;
+	top: 112px;
+	bottom: 0;
 	width: 100%;
 	padding-top: 44px;
 	background-color: @bgc-404;
@@ -9,14 +10,15 @@
 	}
 	@media @desktop {
 		padding-top: 49px;
+		top: 195px;
 	}
 }
 .svg-container {
 	display: inline-block;
 	position: relative;
-	height:auto;
+	// height:auto;
 	width: 100%;	
-	vertical-align: middle; 
+	vertical-align: middle;
 	position: relative;
 	overflow: hidden;
 	margin-left: auto;
