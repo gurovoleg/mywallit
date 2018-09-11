@@ -8,7 +8,7 @@ block content
 	//- Модальное окно
 	.bg-modal-window
 		.modal-window
-			.form.job-modal(style="border: 1px dashed #000; display:block;" id="job-modal")
+			.form.job-modal#job-modal
 				.job-modal__title Отклики на вакансию
 				.job-modal__inputs
 					+inputField('Фамилия Имя', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
