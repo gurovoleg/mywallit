@@ -26,6 +26,9 @@ block content
 
 	//- Обертка для фильтра
 	.blur-wrapper
+		//- шапка
+		.header
+			include ../sections/header_order-page.pug
 		//- Хлебные крошки
 		.section-breadcrumb
 			.container
@@ -64,4 +67,7 @@ block content
 							.job__text Актуальные вакансии
 
 							//- Аккардеон
-							include ../sections/accordeon-job.pug		 
+							include ../sections/accordeon-job.pug
+			//-футер				
+		.footer
+			include ../sections/footer.pug		 
