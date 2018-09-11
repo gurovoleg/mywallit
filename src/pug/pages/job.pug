@@ -5,43 +5,63 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
+	//- Модальное окно
+	.bg-modal-window
+		.modal-window
+			.form.job-modal(style="border: 1px dashed #000; display:block;" id="job-modal")
+				.job-modal__title Отклики на вакансию
+				.job-modal__inputs
+					+inputField('Фамилия Имя', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', '', '')
+					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					.job-modal__btn-file
+						+button-file('file', 'Прикрепить резюме')
+					+button-buyclick("Отправить резюме", "#")
+					.job-modal__info
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="#").job-modal__info-link условиями оферты 
+							| и 
+							a(href="#").job-modal__info-link политикой конфиденциальности.
+				.job-modal__close-icon(class='close-modal-window' data-modal='#job-modal')
 
-	//- Хлебные крошки
-	.section-breadcrumb
-		.container
-			.breadcrumb-list
-				+breadcrumb-item('#', 'Главная страница')
-				+breadcrumb-item('#', 'О компании')
-				+breadcrumb-item('#', 'Вакансии')
+	//- Обертка для фильтра
+	.blur-wrapper
+		//- Хлебные крошки
+		.section-breadcrumb
+			.container
+				.breadcrumb-list
+					+breadcrumb-item('#', 'Главная страница')
+					+breadcrumb-item('#', 'О компании')
+					+breadcrumb-item('#', 'Вакансии')
 
-	//- Основной контент
-	.section-job
-		.container
-			.row
-				//- Навигация
-				.col-md-3.col-lg-3.offset-xl-1.col-xl-2.col--no-padding
-					.company__navigation
-						ul.cabinet-menu
-							+cabinet-menu-item('#', 'о компании')
-							+cabinet-menu-item('#', 'о бренде')
-							+cabinet-menu-item('#', 'вакансии')(class="cabinet-menu-item__link--active")
-							+cabinet-menu-item('#', 'сотрудничество')
-							+cabinet-menu-item('#', 'блог')
-				//-Заголовок
-				.col-12.order-md-first
-					.job__title.title-1 ВАКАНСИИ
-				
-				//- Инфо + аккардеон
-				.col-md-9.offset-lg-1.col-lg-7.offset-xl-1.col-xl-6
-					.job-column-wrapper
-						.job-slogan-block
-							p.
-								Компания Mywalit считает основным активом и залогом успеха потенциал своих сотрудников. Компания активно развивается и ищет молодых перспективных специалистов и опытных профессионалов.
-							p.
-								Мы создаем атмосферу, способствующую командной работе, профессиональному и личностному росту.
-							p.
-								Мы ждем ваше резюме на почтовый ящик отдела персонала   hr@mywalit.ru с указанием желаемой должности.
-						.job__text Актуальные вакансии
+		//- Основной контент
+		.section-job
+			.container
+				.row
+					//- Навигация
+					.col-md-3.col-lg-3.offset-xl-1.col-xl-2.col--no-padding
+						.company__navigation
+							ul.cabinet-menu
+								+cabinet-menu-item('#', 'о компании')
+								+cabinet-menu-item('#', 'о бренде')
+								+cabinet-menu-item('#', 'вакансии')(class="cabinet-menu-item__link--active")
+								+cabinet-menu-item('#', 'сотрудничество')
+								+cabinet-menu-item('#', 'блог')
+					//-Заголовок
+					.col-12.order-md-first
+						.job__title.title-1 ВАКАНСИИ
+					
+					//- Инфо + аккардеон
+					.col-md-9.offset-lg-1.col-lg-7.offset-xl-1.col-xl-6
+						.job-column-wrapper
+							.job-slogan-block
+								p.
+									Компания Mywalit считает основным активом и залогом успеха потенциал своих сотрудников. Компания активно развивается и ищет молодых перспективных специалистов и опытных профессионалов.
+								p.
+									Мы создаем атмосферу, способствующую командной работе, профессиональному и личностному росту.
+								p.
+									Мы ждем ваше резюме на почтовый ящик отдела персонала   hr@mywalit.ru с указанием желаемой должности.
+							.job__text Актуальные вакансии
 
-						//- Аккардеон
-						include ../sections/accordeon-job.pug		 
+							//- Аккардеон
+							include ../sections/accordeon-job.pug		 
