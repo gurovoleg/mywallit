@@ -147,8 +147,21 @@
 .ordered-promo {
 	display: flex;
 	align-items: flex-start;
+	margin-bottom: 16px;	
 }
-
+.ordered-promo-type__code{
+	margin-right: 60px;
+}
+.ordered-promo-type__code,
+.ordered-promo-type__card{
+	color:@order-calc;
+	text-decoration: none;
+	border-bottom: 1px solid @order-calc;
+	&:hover{
+		text-decoration: none;
+		border-bottom-color: @red;
+	}
+}
 .ordered-promo .input-wrapper {
 	width: 60%;
 	margin-right: 8px;
