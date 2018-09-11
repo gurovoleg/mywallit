@@ -9,18 +9,19 @@ block content
 	.container.container--left
 		.title Модальное окно "Отклики на вакансию"
 		.modal-window
-			.form.order-subscribe(style="border: 1px dashed #000; display:block;" id="order-subscribe")
-				.order-subscribe__title Отклики на вакансию
-				.order-subscribe__inputs
+			.form.job-modal(style="border: 1px dashed #000; display:block;" id="job-modal")
+				.job-modal__title Отклики на вакансию
+				.job-modal__inputs
 					+inputField('Фамилия Имя', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
-					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', 'order-subscribe__inputs-item', 'order-subscribe-wrapper')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', '', '')
 					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
-					input(type="file" name="choose-file")
+					.job-modal__btn-file
+						+button-file('file', 'Прикрепить резюме')
 					+button-buyclick("Отправить резюме", "#")
-					.order-subscribe__info
+					.job-modal__info
 						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
-							a(href="").order-subscribe__info-link условиями оферты 
+							a(href="#").job-modal__info-link условиями оферты 
 							| и 
-							a(href="").order-subscribe__info-link политикой конфиденциальности.
-				.order-subscribe__close-icon
+							a(href="#").job-modal__info-link политикой конфиденциальности.
+				.job-modal__close-icon
 

@@ -1,4 +1,4 @@
-.order-subscribe {
+.job-modal {
 	width: 360px;
 	padding-top: 5px;
 	// position: absolute;
@@ -10,7 +10,7 @@
 		width: 434px;
 	}	
 }
-.order-subscribe__title {
+.job-modal__title {
 	font-size: 18px;
 	text-align: center;
 	letter-spacing: 0.05em;
@@ -27,7 +27,7 @@
 		margin-bottom: 40px;
 	}
 }	
-.order-subscribe__inputs {
+.job-modal__inputs {
 	margin-left: 32px;
 	margin-right: 32px;
 	padding-bottom: 31px;
@@ -37,24 +37,50 @@
 		margin-right: 48px;
 		padding-bottom: 40px;
 	}
+}
+.job-modal__btn-file{
+	position: relative;
+	margin-top: 24px;
+	margin-bottom: 28px;
 
 }
+.button-file-wrapper{
+	position: relative;
+}
 
-.order-one-click__close-icon {
+.job-modal__close-icon {
 	color: @text-light-grey;
 	position: absolute;
-	top: 11px;
-	right: 11px;
+	top: 21px;
+	right: 21px;
 	background-image: url('../img/icons/close.svg');
 	width: 12px;
 	height: 12px;
 	cursor: pointer;
-	@media @desktop {
-		top: 21px;
-		right: 21px;
+}
+.job-modal__info {
+	line-height: 1;
+	font-size: 12px;
+	color: @text-light-grey;
+	padding-top: 22px;
+
+	p {
+		margin:0;
+		line-height: 1.2;
 	}
 }
-.order-subscribe__close-icon {
+.job-modal__info-link {
+	border-bottom: 1px solid @btn-text-buy-click;
+	padding-bottom: 2px;
+	color: @btn-text-buy-click;
+	&:hover {
+		border-bottom: none;
+		color: @btn-text-buy-click;
+		text-decoration: none;
+	}
+}
+
+.job-modal_close-icon {
 	color: @text-light-grey;
 	position: absolute;
 	top: 21px;
