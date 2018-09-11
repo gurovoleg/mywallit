@@ -36,6 +36,24 @@ $(document).ready(function() {
 	);
 
 	// end card hover effect
+	// promo-code input
+	
+	var promoCode = 'Введите промо-код';
+	var clubeCard = 'Введите номер клубной карты';
+	$('.ordered-promo-type__code').on('click', function(e){
+		e.preventDefault();
+		$(this).addClass('active-type');
+		$(this).siblings('a').removeClass('active-type');
+		$('.promo-input').siblings('span').text(promoCode);
+	});
+	$('.ordered-promo-type__card').on('click', function(e){
+		e.preventDefault();
+		$(this).addClass('active-type');
+		$(this).siblings('a').removeClass('active-type');
+		$('.promo-input').siblings('span').text(clubeCard);
+	});
+	
+	//end promo-code input
 
 
 	// Product counter

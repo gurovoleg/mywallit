@@ -21,10 +21,10 @@ block content
 
 				.ordered-item
 					.ordered-promo
-						+inputField('Введите промо-код', '', 'notCheck', 'text')
+						+inputField('Введите промо-код', '', 'notCheck', 'text', 'promo-input')
 						+button-apply('Применить', '#')
 					.ordered-promo-type
-						a.ordered-promo-type__code(href="#") Введите промо-код
+						a.ordered-promo-type__code.active-type(href="#") Введите промо-код
 						a.ordered-promo-type__card(href="#") Введите номер клубной карты
 				.ordered-calc
 					.ordered-calc__item

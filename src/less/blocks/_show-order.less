@@ -149,19 +149,27 @@
 	align-items: flex-start;
 	margin-bottom: 16px;	
 }
-.ordered-promo-type__code{
-	margin-right: 60px;
+.ordered-promo-type{	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+
 .ordered-promo-type__code,
 .ordered-promo-type__card{
+	font-size: 12px;
 	color:@order-calc;
 	text-decoration: none;
 	border-bottom: 1px solid @order-calc;
+	@media @tablet {
+		font-size: 14px;
+	}
 	&:hover{
 		text-decoration: none;
 		border-bottom-color: @red;
 	}
 }
+.active-type{border-bottom: 0px;}
 .ordered-promo .input-wrapper {
 	width: 60%;
 	margin-right: 8px;
