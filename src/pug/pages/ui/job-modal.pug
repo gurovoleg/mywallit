@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Модальное окно "Отклики на вакансию"';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Модальное окно "Отклики на вакансию"
+		.modal-window
+			.form.job-modal(style="border: 1px dashed #000; display:block;" id="job-modal")
+				.job-modal__title Отклики на вакансию
+				.job-modal__inputs
+					+inputField('Фамилия Имя', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', '', '')
+					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					.job-modal__btn-file
+						+button-file('file', 'Прикрепить резюме')
+					+button-buyclick("Отправить резюме", "#")
+					.job-modal__info
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="#").job-modal__info-link условиями оферты 
+							| и 
+							a(href="#").job-modal__info-link политикой конфиденциальности.
+				.job-modal__close-icon
+
