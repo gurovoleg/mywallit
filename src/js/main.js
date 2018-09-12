@@ -310,11 +310,9 @@ $(document).ready(function() {
 
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
 	$('.catalog-filters__title').on('click', function(e){
-		// $('.catalog-filter').toggleClass('catalog-filter--show');
-		$('.catalog-filter').animate({left: 0}, 100);
+		$('.catalog-filter').toggleClass('catalog-filter--show');
+		// $('.catalog-filter').animate({left: 0}, 100);
 
-
-		
 		if ( $(window).width() < tabletWidth ) {
 			$("body").addClass('overflow-hidden');
 		}
@@ -324,8 +322,8 @@ $(document).ready(function() {
 
 	// Закрываем фильтр при нажатии крестик
 	$('#filter__close-icon').on('click', function(){
-		// $('.catalog-filter').removeClass('catalog-filter--show');
-		$('.catalog-filter').animate({left: "-200vh"}, 100);
+		$('.catalog-filter').removeClass('catalog-filter--show');
+		// $('.catalog-filter').animate({left: "-200vh"}, 100);
 		$("body").removeClass('overflow-hidden');
 	});
 
