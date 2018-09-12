@@ -37,6 +37,16 @@ $(document).ready(function() {
 
 	// end card hover effect
 
+	// promo-code input		
+	$('.ordered-promo-type__link').on('click', function(e){
+		var inputPlaceholder = $(this).attr('data-placeholder');
+		e.preventDefault();
+		$(this).removeClass('passive-type');
+		$(this).siblings('a').addClass('passive-type');
+		$('.promo-input').siblings('span').text(inputPlaceholder);
+	});	
+	//end promo-code input
+
 
 	// Product counter
 	(function productCounter() {

@@ -159,9 +159,33 @@
 }
 .ordered-promo__type__link:first-child{
 	margin-right: 50px;
-	
+	margin-bottom: 16px;	
+}
+.ordered-promo-type{	
+	display: flex;	
+	align-items: center;
 }
 
+.ordered-promo-type__code,
+.ordered-promo-type__card{
+	font-size: 12px;
+	color:@order-calc;
+	text-decoration: none;
+	border-bottom: 1px solid @order-calc;
+	@media @desktop {
+		font-size: 14px;
+	}
+	&:hover{
+		text-decoration: none;
+		border-bottom-color: @red;
+	}
+}
+.ordered-promo-type__code{
+	margin-right: 40px;
+	@media (min-width:576px) {margin-right: 100px;}
+	@media @tablet {margin-right: 40px;}
+}
+.passive-type{border-bottom: 0px;}
 .ordered-promo .input-wrapper {
 	width: 60%;
 	margin-right: 8px;

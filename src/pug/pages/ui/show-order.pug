@@ -21,12 +21,11 @@ block content
 
 				.ordered-item
 					.ordered-promo
-						+inputField('Введите промо-код', '', 'notCheck', 'text')
+						+inputField('Введите промо-код', '', 'notCheck', 'text', 'promo-input')
 						+button-apply('Применить', '#')
-
-					.ordered-promo__type
-						a.ordered-promo__type__link(href="#") Введите промо-код
-						a.ordered-promo__type__link(href="#") Введите номер клубной карты
+					.ordered-promo-type
+						a.ordered-promo-type__link.ordered-promo-type__code(href="#" data-placeholder="Введите промо-код") Промо-код
+						a.ordered-promo-type__link.ordered-promo-type__card.passive-type(href="#" data-placeholder="Введите номер клубной карты") Клубная карта
 				.ordered-calc
 					.ordered-calc__item
 						span.ordered-calc-text Стоимость
