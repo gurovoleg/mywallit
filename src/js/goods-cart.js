@@ -11,7 +11,7 @@
 	}
 	// Открыть товары в корзине
 	$('.menu-block.cart').on('click', function(){
-		$('.goods-cart__page').css('right', '0');
+		$('.goods-cart__page').animate().css('right', '0');
 		$('.goods-cart__page-bg').css('display', 'block');
 		$('.blur-wrapper').addClass('filter-blur');
 		$('body').css('overflow', 'hidden');
@@ -30,14 +30,13 @@
 	// Вернуться на страницу из корзины
 	$('.goods-cart__back-link-item').on('click', function(e){
 		e.preventDefault();
-		$('body').css('overflow', 'auto');
 		$('.goods-cart__page').css('right', '-360px');
 		var w = $(window).width();
 		if (w >= 786) {
-			$('.goods-cart__page').css('right', '-460px');
+			$('.goods-cart__page').css('right', '-560px');
 		}
 		$('.blur-wrapper').removeClass('filter-blur');
 		setTimeout(function(){
 			$('.goods-cart__page-bg').css('display', 'none');
-		}, 700);
+		}, 600);
 	});
