@@ -30,6 +30,7 @@
 	// Вернуться на страницу из корзины
 	$('.goods-cart__back-link-item').on('click', function(e){
 		e.preventDefault();
+		$('body').css('overflow', 'auto');
 		$('.goods-cart__page').css('right', '-360px');
 		var w = $(window).width();
 		if (w >= 786) {
