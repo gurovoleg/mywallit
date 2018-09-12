@@ -12,7 +12,7 @@ $(document).ready(function() {
 }
 // Открыть товары в корзине
 $('.menu-block.cart').on('click', function(){
-	$('.goods-cart__page').animate().css('right', '0');
+	$('.goods-cart__page').animate({right: 0}, 100);
 	$('.goods-cart__page-bg').css('display', 'block');
 	$('.blur-wrapper').addClass('filter-blur');
 	$('body').css('overflow', 'hidden');
@@ -31,10 +31,12 @@ $('.goods-cart__close-icon').on('click', function(){
 // Вернуться на страницу из корзины
 $('.goods-cart__back-link-item').on('click', function(e){
 	e.preventDefault();
-	$('.goods-cart__page').css('right', '-360px');
+	$('.goods-cart__page').animate({right: -360}, 100);
+
 	var w = $(window).width();
 	if (w >= 786) {
-		$('.goods-cart__page').css('right', '-560px');
+	$('.goods-cart__page').animate({right: -560}, 100);
+
 	}
 	$('.blur-wrapper').removeClass('filter-blur');
 	setTimeout(function(){
