@@ -14,8 +14,8 @@
 				+inputField('Введите промо-код', '', 'notCheck', 'text', 'promo-input')
 				+button-apply('Применить', '#')
 			.ordered-promo-type
-				a.ordered-promo-type__code.active-type(href="#") Промо-код
-				a.ordered-promo-type__card(href="#") Клубная карта
+				a.ordered-promo-type__link.ordered-promo-type__code(href="#" data-placeholder="Введите промо-код") Промо-код
+				a.ordered-promo-type__link.ordered-promo-type__card.passive-type(href="#" data-placeholder="Введите номер клубной карты") Клубная карта
 		.ordered-calc
 			.ordered-calc__item
 				span.ordered-calc-text Стоимость

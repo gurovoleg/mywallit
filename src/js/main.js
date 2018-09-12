@@ -36,23 +36,15 @@ $(document).ready(function() {
 	);
 
 	// end card hover effect
-	// promo-code input
-	
-	var promoCode = 'Введите промо-код';
-	var clubeCard = 'Введите номер клубной карты';
-	$('.ordered-promo-type__code').on('click', function(e){
+
+	// promo-code input		
+	$('.ordered-promo-type__link').on('click', function(e){
+		var inputPlaceholder = $(this).attr('data-placeholder');
 		e.preventDefault();
-		$(this).addClass('active-type');
-		$(this).siblings('a').removeClass('active-type');
-		$('.promo-input').siblings('span').text(promoCode);
-	});
-	$('.ordered-promo-type__card').on('click', function(e){
-		e.preventDefault();
-		$(this).addClass('active-type');
-		$(this).siblings('a').removeClass('active-type');
-		$('.promo-input').siblings('span').text(clubeCard);
-	});
-	
+		$(this).removeClass('passive-type');
+		$(this).siblings('a').addClass('passive-type');
+		$('.promo-input').siblings('span').text(inputPlaceholder);
+	});	
 	//end promo-code input
 
 
