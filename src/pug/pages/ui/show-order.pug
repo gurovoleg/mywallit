@@ -19,9 +19,13 @@ block content
 					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-2.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
 					+ordered-goods-item('good_thumbnail/blue-purse/thumb_blue-purse-1.png',' кошелек синий', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '1252-130', '4 893р.' )
 
-				.ordered-item.ordered-promo
-					+inputField('Введите промо-код', '', 'notCheck', 'text')
-					+button-apply('Применить', '#')
+				.ordered-item
+					.ordered-promo
+						+inputField('Введите промо-код', '', 'notCheck', 'text', 'promo-input')
+						+button-apply('Применить', '#')
+					.ordered-promo-type
+						a.ordered-promo-type__link.ordered-promo-type__code(href="#" data-placeholder="Введите промо-код") Промо-код
+						a.ordered-promo-type__link.ordered-promo-type__card.passive-type(href="#" data-placeholder="Введите номер клубной карты") Клубная карта
 				.ordered-calc
 					.ordered-calc__item
 						span.ordered-calc-text Стоимость
