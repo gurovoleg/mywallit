@@ -1,0 +1,72 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Сотрудничество';
+	- var pageClass = 'article-page';
+
+block content
+	
+	//- Обертка для фильтра
+	.blur-wrapper
+		//- шапка
+		.header
+			include ../sections/header_order-page.pug
+		//- Хлебные крошки
+		.section-breadcrumb
+			.container
+				.breadcrumb-list
+					+breadcrumb-item('#', 'Главная страница')
+					+breadcrumb-item('#', 'О компании')
+					+breadcrumb-item('#', 'Сотрудничество')
+
+		//- Основной контент
+		.section-article
+			.container
+				.row
+					//- Навигация
+					.col-md-3.col-lg-3.offset-xl-1.col-xl-2.col--no-padding
+						.company__navigation
+							ul.cabinet-menu
+								+cabinet-menu-item('#', 'о компании')
+								+cabinet-menu-item('#', 'о бренде')
+								+cabinet-menu-item('#', 'вакансии')
+								+cabinet-menu-item('#', 'сотрудничество')(class="cabinet-menu-item__link--active")
+								+cabinet-menu-item('#', 'блог')
+					//-Заголовок
+					.col-12.order-md-first
+						h1.title-1.title-1--center СОТРУДНИЧЕСТВО
+					.col-md-4.col-lg-7.offset-lg-1
+						.section-article-content
+							.section-article__banner
+								img(src="../img/bg/article-banner.jpg", alt="banner")
+							.text-block
+								h1.title-1.title-1--grey.text-block__title Заголовок первого уровня
+								p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+							.text-block
+								h2.title-2.title-2--grey.text-block__title Заголовок второго уровня
+								p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+							.text-block
+								h3.title-3.title-3--grey.text-block__title Заголовок третьего уровня
+								p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+							.text-block.text-block--border
+								p.text-block__paragrafe.text-block__paragrafe--mb
+									| Дорогие участники клубной программы Mywalit!
+									br
+									| К сожалению, до марта 2018 года включительно при покупке товаров на нашем сайте, скидки по клубной карте не начисляются. Но совершается накопление суммы по карте - для этого, пожалуйста, оставьте номер вашей карты в поле "Комментарий". Совсем скоро мы станем удобнее и лучше для Вас!				
+								p.text-block__paragrafe Благодарим за понимание.
+							.text-block
+								h3.title-3.title-3--grey.text-block__title Оплата заказов
+								ul.text-block-list
+									li.text-block-list__item Достойная и стабильная заработная плата
+										|
+										br
+										|(оклад + премии) 
+									li.text-block-list__item Бесплатное обучение
+									li.text-block-list__item Возможность карьерного роста
+									li.text-block-list__item Сменный график работы
+									li.text-block-list__item Оформление согласно ТК РФ
+
+							.text-block
+								p.text-block__paragrafe.
+									Компания Mywalit считает основным активом и залогом успеха потенциал своих сотрудников. Компания активно развивается и ищет молодых перспективных специалистов и опытных профессионалов.
+		include ../sections/footer.pug
