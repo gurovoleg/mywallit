@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Текстовые блоки на странице Article';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Текстовые блоки на странице Article
+		.text-block
+			h1.title-1.title-1--grey.text-block__title Заголовок первого уровня
+			p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+		.text-block
+			h2.title-2.title-2--grey.text-block__title Заголовок второго уровня
+			p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+		.text-block
+			h3.title-3.title-3--grey.text-block__title Заголовок третьего уровня
+			p.text-block__paragrafe  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo eos cumque at accusamus id eveniet dignissimos, nisi pariatur ea quo maxime commodi, magni earum beatae nam quidem a, provident inventore.
+		.text-block.text-block--border
+			p.text-block__paragrafe.text-block__paragrafe--mb
+				| Дорогие участники клубной программы Mywalit!
+				br
+				| К сожалению, до марта 2018 года включительно при покупке товаров на нашем сайте, скидки по клубной карте не начисляются. Но совершается накопление суммы по карте - для этого, пожалуйста, оставьте номер вашей карты в поле "Комментарий". Совсем скоро мы станем удобнее и лучше для Вас!				
+			p.text-block__paragrafe Благодарим за понимание.
