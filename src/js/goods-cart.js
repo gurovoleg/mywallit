@@ -45,4 +45,26 @@ $('.goods-cart__back-link-item').on('click', function(e){
 	$('body').css('overflow', 'auto');
 });
 
+// Закрываем корзину при клике вне
+$(document).mouseup(function (e){
+	if  ( $('.blur-wrapper').hasClass('filter-blur' ) ) {
+		var cart = $('.goods-cart__page');
+		if (!cart.is(e.target) && cart.has(e.target).length === 0) {
+			$('.goods-cart__page').animate({right: -360}, 100);
+
+			var w = $(window).width();
+			if (w >= 786) {
+				$('.goods-cart__page').animate({right: -560}, 100);
+			}
+			$('.blur-wrapper').removeClass('filter-blur');
+			setTimeout(function(){
+				$('.goods-cart__page-bg').css('display', 'none');
+			}, 600);
+			$('body').css('overflow', 'auto');
+		}
+	}
+});
+
+
+
 });
