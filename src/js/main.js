@@ -345,7 +345,7 @@ $(document).ready(function() {
 			$('.city-selection-wrapper').each(function(){
 				if ($(this).hasClass('d-block')) isOpened = true;
 			})
-			if (isOpened) $("body").addClass('overflow-hidden');			
+			if (isOpened) $("body").addClass('overflow-hidden');	
 			
 			
 			// Блок фильтр
