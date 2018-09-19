@@ -13,7 +13,7 @@ block content
 				source(srcset='../img/banners/banner_desktop_red.png 1064w', media='(min-width: 1152px)')
 				source(srcset='../img/banners/banner_tablet_red.png 752w', media='(min-width: 784px)')
 				source(srcset='../img/banners/banner_mobile_red.png 344w', media='(min-width: 360px)')
-				img(src='../img/banners/banner_mobile_red.png')
+				img(src='../img/banners/banner_desktopxl_red.png')
 	//- секция банер 2
 	.section-banner-2
 		.container
@@ -22,30 +22,13 @@ block content
 				source(srcset='../img/banners/banner-desktop-blue.png 1064w', media='(min-width: 1152px)')
 				source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
 				source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
-				img(src='../img/banners/banner-mobile-blue.png')
-		//- секция банер 1
-		.section-banner-1
-			.container
-				picture
-					source(srcset='../img/banners/banner_desktopxl_red.png 1392w', media='(min-width: 1440px)')
-					source(srcset='../img/banners/banner_desktop_red.png 1064w', media='(min-width: 1152px)')
-					source(srcset='../img/banners/banner_tablet_red.png 752w', media='(min-width: 784px)')
-					source(srcset='../img/banners/banner_mobile_red.png 344w', media='(min-width: 360px)')
-					img(src='../img/banners/banner_mobile_red.png')
-		//- секция банер 2
-		.section-banner-2
-			.container
-				picture
-					source(srcset='../img/banners/banner-desktopxl-blue.png 1392w', media='(min-width: 1440px)')
-					source(srcset='../img/banners/banner-desktop-blue.png 1064w', media='(min-width: 1152px)')
-					source(srcset='../img/banners/banner-tablet-blue.png 752w', media='(min-width: 784px)')
-					source(srcset='../img/banners/banner-mobile-blue.png 344w', media='(min-width: 360px)')
-					img(src='../img/banners/banner-mobile-blue.png')
-		
+				img(src='../img/banners/banner-desktopxl-blue.png')
+
 		//- хиты продаж
 		.section-top-sales
 			.container
-				a.title-1.title--link(href="#") Хиты продаж				
+				a.title--link(href="#")
+					h1.title-1 Хиты продаж				
 				.row
 					.col-6.col-md-3
 						+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown', '#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 893р.', '6 990р.' )

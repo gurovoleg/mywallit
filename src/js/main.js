@@ -37,6 +37,16 @@ $(document).ready(function() {
 
 	// end card hover effect
 
+	// promo-code input		
+	$('.ordered-promo-type__link').on('click', function(e){
+		var inputPlaceholder = $(this).attr('data-placeholder');
+		e.preventDefault();
+		$(this).removeClass('passive-type');
+		$(this).siblings('a').addClass('passive-type');
+		$('.promo-input').siblings('span').text(inputPlaceholder);
+	});	
+	//end promo-code input
+
 
 	// Product counter
 	(function productCounter() {
@@ -301,7 +311,8 @@ $(document).ready(function() {
 	// Открываем фильтр на странице каталог при нажатии на Фильтр
 	$('.catalog-filters__title').on('click', function(e){
 		$('.catalog-filter').toggleClass('catalog-filter--show');
-		
+		// $('.catalog-filter').animate({left: 0}, 100);
+
 		if ( $(window).width() < tabletWidth ) {
 			$("body").addClass('overflow-hidden');
 		}
@@ -311,7 +322,8 @@ $(document).ready(function() {
 
 	// Закрываем фильтр при нажатии крестик
 	$('#filter__close-icon').on('click', function(){
-		$('.catalog-filter').toggleClass('catalog-filter--show');
+		$('.catalog-filter').removeClass('catalog-filter--show');
+		// $('.catalog-filter').animate({left: "-200vh"}, 100);
 		$("body").removeClass('overflow-hidden');
 	});
 
@@ -333,7 +345,7 @@ $(document).ready(function() {
 			$('.city-selection-wrapper').each(function(){
 				if ($(this).hasClass('d-block')) isOpened = true;
 			})
-			if (isOpened) $("body").addClass('overflow-hidden');			
+			if (isOpened) $("body").addClass('overflow-hidden');	
 			
 			
 			// Блок фильтр
