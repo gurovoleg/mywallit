@@ -46,6 +46,10 @@
 	padding-bottom: 24px;
 	@media @desktop{padding: 24px 24px 38px;}
 }
+.text-block--border .text-block__paragrafe{
+	letter-spacing: -0.3px;
+	@media @tablet {letter-spacing: 0;}
+}
 .text-block--border:before{
 	content:"";
 	position: absolute;
@@ -69,9 +73,10 @@
 }
 .text-block-list__item{
 	font-size: 14px;
-	margin-bottom: 10px;
+	
 	@media @desktop{font-size: 16px;}
 	@media @desktopXL{
 		font-size: 18px;
-		margin-bottom: 13px;}
+		
+	}
 }
