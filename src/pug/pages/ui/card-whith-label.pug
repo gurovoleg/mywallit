@@ -1,0 +1,49 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточки - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard body-bg';
+
+block content
+
+	.container.container--left
+		.title Карточки
+		
+		.section-ui
+			.row
+				.col-6.col-md-3
+					+card--sale( '-40%','','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+						+button-cart('В корзину','#')
+
+				.col-6.col-md-3
+					+card--sale( 'хiт','card-label-sale--hit','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+						+button-cart('В корзину','#')
+
+				.col-6.col-md-3
+					+card--sale( 'new','card-label-sale--new' ,'goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme ")
+						+button-store('Нет в наличии','#')
+						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+
+				.col-6.col-md-3
+					+card--sale( '- 40%','' ,'goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+						+button-store('Нет в наличии','#')
+						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+		strong Карточка с лейблом -40% 
+		pre.
+			+card--sale( '-40%','','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+				+button-cart('В корзину','#')
+				
+		strong Карточка с лейблом ХИТ 
+		pre.
+			+card--sale( 'хiт','card-label-sale--hit','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+				+button-cart('В корзину','#')
+		strong Карточка с лейблом NEW и цветовой схемой
+		pre.
+			+card--sale( 'new','card-label-sale--new' ,'goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme ")
+				+button-store('Нет в наличии','#')
+				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
+		strong Карточка с лейблом -40% и цветовой схемой
+		pre.
+			+card--sale( '- 40%','' ,'goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+				+button-store('Нет в наличии','#')
+				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
