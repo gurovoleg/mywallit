@@ -1,0 +1,62 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Вакансии';
+	- var pageClass = 'index-page';
+
+block content
+	//- Модальное окно
+	.bg-modal-window
+		.modal-window
+			.form.job-modal#job-modal
+				.job-modal__title Отклики на вакансию
+				.job-modal__inputs
+					+inputField('Фамилия Имя', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					+inputField('Email', 'Вы ничего не ввели', 'email', 'email', '', '')
+					+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', '', '')
+					.job-modal__btn-file
+						+button-file('file', 'Прикрепить резюме')
+					+button-buyclick("Отправить резюме", "#")
+					.job-modal__info
+						p Нажимая кнопку "Оформить заказ", вы соглашаетесь с 
+							a(href="#").job-modal__info-link условиями оферты 
+							| и 
+							a(href="#").job-modal__info-link политикой конфиденциальности.
+				.job-modal__close-icon(class='close-modal-window' data-modal='#job-modal')
+
+	//- Обертка для фильтра
+	.blur-wrapper
+		//- шапка
+		.header
+			include ../sections/header_order-page.pug
+		//- Хлебные крошки
+		.section-breadcrumb
+			.container
+				.breadcrumb-list
+					+breadcrumb-item('#', 'Главная страница')
+					+breadcrumb-item('#', 'Адреса магазинов')
+
+		//- Основной контент
+		h1.text-center.section-shops-title Все магазины
+		.section-shops-map
+			.container
+				.row
+					script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abeb4be68bd8b9218ca548f4878118dc58a83cfb684d8f47955faf9f8d04e308a&width=100%&height=311&lang=ru_RU&scroll=true')
+		.section-shops-adress
+			.container
+				.row
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+					.col-xs-12.col-sm-6.col-md-4
+						+shop-card('Центральный офис', 'ул. Зорге, 22А', '+7 (495) 132-62-60', 'Ежедневно с 9.00 до 20.00', '13 этаж')
+			//-футер				
+		.footer
+			include ../sections/footer.pug		 
