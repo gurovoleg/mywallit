@@ -9,9 +9,9 @@ mixin card( imgHover, imgSrc, imgAlt, href, cardText, cardPrice )
 		.card-product__price #{cardPrice}
 		block
 
-mixin card--sale( prosent, imgHover, imgSrc, imgAlt, href, cardText, priceOld, priceNew )
+mixin card--sale( labelText,modificatorClass, imgHover, imgSrc, imgAlt, href, cardText, priceOld, priceNew )
 	.card-product&attributes(attributes)
-		.card-label-sale #{prosent}
+		.card-label-sale(class="card-label-sale--"+ modificatorClass) #{labelText}
 		.card-heart-icon.toggle-heart-icon
 			i.fas.fa-heart
 		.card-product__img

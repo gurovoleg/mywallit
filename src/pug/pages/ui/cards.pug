@@ -16,7 +16,7 @@ block content
 						+button-store('Нет в наличии','#')
 
 				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+					+card--sale( 'хит','hit','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
 						+button-cart('В корзину','#')
 
 				.col-6.col-md-3
@@ -25,16 +25,16 @@ block content
 						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
 
 				.col-6.col-md-3
-					+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+					+card--sale( '- 40%','','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
 						+button-store('Нет в наличии','#')
 						+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
 		strong Карточка обычная 				
 		pre.
 			+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#','Сумка большая, коллекция "Рига"', '4 863р.')
 				+button-store('Нет в наличии','#')
-		strong Карточка со скидкой				
+		strong Карточка с лейблом ХИТ				
 		pre.
-			+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
+			+card--sale( 'хит','hit','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )
 				+button-cart('В корзину','#')
 
 		strong Карточка обычная с цветовой палитрой 				
@@ -42,8 +42,9 @@ block content
 			+card( 'goods/purse-brown-hover.png', 'goods/purse_yellow.png', 'purse yellow', '#','Сумка большая, коллекция "Рига"', '4 863р.')(class="card-product--colorscheme")
 				+button-cart('В корзину','#')
 				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
-		strong Карточка со скидкой с цветовой палитрой				
+		strong Карточка с лейблом -40% и  цветовой палитрой				
 		pre.
-			+card--sale( '- 40%','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
+			
+			+card--sale( '- 40%','','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
 				+button-store('Нет в наличии','#')
 				+colors-product('#FF7979', '#6BAC89', '#C3499E', '#FFB047', '#002D76', '#AF674F')
