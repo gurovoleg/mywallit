@@ -1,7 +1,7 @@
 extends ../layouts/page-layout/page.pug
 
 block variables
-	- var title = 'Каталог товаров';
+	- var title = 'Страница 404';
 	- var pageClass = 'page-404';
 
 block content
@@ -12,6 +12,6 @@ block content
 		.page404-wrapper
 			include ../icons/page404.pug
 			.page404__text-wrapper
-				.page404__title ОШИБКА 404
+				h1.page404__title ОШИБКА 404
 				.page404__subtitle К сожалению такой страницы не существует, перейдите в 
 					a(href="catalog.html").page404__subtitle-link каталог товаров

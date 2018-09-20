@@ -40,6 +40,20 @@ $(document).ready(function() {
 					// console.log($(this).parents('.city-selection-wrapper'));
 					citySelector._toggle(e);
 				});
+
+				$(document).mouseup(function (e) {
+					var container = $('#header-city-selector');
+					if (container.has(e.target).length === 0 && container.css('display') == 'block'){
+						container.removeClass('d-block');
+					}
+				});
+
+				$(document).mouseup(function (e) {
+					var container = $('#order-city-selector');
+					if (container.has(e.target).length === 0 && container.css('display') == 'block'){
+						container.removeClass('d-block');
+					}
+				});	
 			},
 
 			_toggle: function(e) {

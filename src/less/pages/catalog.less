@@ -11,7 +11,7 @@
 	left: -200vw;
 	height: 100%;
 	width: 100%;
-	transition: left 0.5s ease-in-out;
+	transition: all 0.5s;
 	
 
 
@@ -24,7 +24,7 @@
 	@media @desktop {
 		box-shadow: none;
 		position: relative;
-		display: block;
+		display: flex;
 		justify-content: space-between;
 		flex-basis: 270px;
 		width: 100%;
@@ -104,7 +104,7 @@
 .catalog-filter--show {
 	display: flex;
 	left: 0;
-	transition: left 0.5s ease-in-out;	
+	transition: all 0.5s;
 	@media @desktop {
 		transition: none;
 	}
