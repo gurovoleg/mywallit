@@ -1,0 +1,17 @@
+mixin shop-card(cardTitle, cardAddress, cardPhone, cardTime, cardstage)
+	.shop-card&attributes(attributes)
+		.shop-card__title #{cardTitle}
+		.shop-card__item
+			span.shop-card__item-name Адрес:
+			span.shop-card__item-value #{cardAddress}
+		.shop-card__item
+			span.shop-card__item-name Телефон:
+			span.shop-card__item-value #{cardPhone} 
+		.shop-card__item
+			span.shop-card__item-name Время работы:
+			span.shop-card__item-value #{cardTime} 
+		.shop-card__item
+			span.shop-card__item-name Этаж:
+			span.shop-card__item-value #{cardstage} 
+		.shop-card__item
+			a.shop-card__link(href="#") Показать на карте
