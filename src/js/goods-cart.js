@@ -49,8 +49,6 @@ $('.goods-cart__back-link-item').on('click', function(e){
 $(document).mouseup(function (e){
 	var cart = $('.goods-cart__page');
 	if  ( $('.blur-wrapper').hasClass('filter-blur') && !cart.is(e.target) && cart.has(e.target).length == 0) {
-		
-		// if (!cart.is(e.target) && cart.has(e.target).length === 0) {
 			$('.goods-cart__page').animate({right: -360}, 100);
 
 			var w = $(window).width();
@@ -64,8 +62,6 @@ $(document).mouseup(function (e){
 				}, 600);
 			$('body').css('overflow', 'auto');
 			}
-
-		// }
 	}
 });
 

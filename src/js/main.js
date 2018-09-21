@@ -275,7 +275,7 @@ $(document).ready(function() {
 	// Обрабатываем переходы между мобильным и десктоп вариантами для навигации
 	$(window).resize(function(){
 		var w = $(window).width();
-		
+		$('.header-nav').removeClass('mobile-nav-open');
 		// Переход на десктоп
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
 		    $('#menu-level-1 ul').hide();
