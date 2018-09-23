@@ -275,11 +275,10 @@ $(document).ready(function() {
 	// Обрабатываем переходы между мобильным и десктоп вариантами для навигации
 	$(window).resize(function(){
 		var w = $(window).width();
-		
 		// Переход на десктоп
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
 		    $('#menu-level-1 ul').hide();
-		    
+		    $('.header-nav').removeClass('mobile-nav-open');
 		    // Проверка меню на открытость при переходе
 		    if ($('.bg-header-nav').css('display') == 'block') {	
 		    	$('nav').appendTo('.bg-header-nav .container');
@@ -430,5 +429,41 @@ $(document).ready(function() {
 		$('#ordered-products').slideToggle();
 	});
 
+	// Лейбл в textarea на странице Контакты
+	
+	$('.form-contact-page__textarea')
+	.on('focus', function() {
+		$('.form-contact-page__textarea-label').addClass('form-contact-page__textarea-label--focus');
+		$('.form-contact-page__textarea-label').on('click', function() {
+			$('.form-contact-page__textarea-label').addClass('form-contact-page__textarea-label--focus');
+		});
+		$('.form-contact-page__textarea').parent().find('.input-field__error-text').css('display', 'none');
 
+	})
+	.on('blur', function() {
+		if( $('.form-contact-page__textarea').val() == '' ){
+			$('.form-contact-page__textarea-label').removeClass('form-contact-page__textarea-label--focus');	
+		}		
+	})
+	.on('keydown', function( event ){ 
+		var keycode = event.which;
+		var textareaVal = $('.form-contact-page__textarea').val().length;
+		// textareaVal++;
+		if ( keycode == 8 ) {
+			console.log(textareaVal);
+		}
+		if( textareaVal == 1 && keycode == 8 ) {
+			$('.form-contact-page__textarea').parent().find('.input-field__error-text').css('display', 'block');
+		}
+	});
+
+	$('.form-contact-page__textarea-label')
+	.on('click',function(){
+	$('.form-contact-page__textarea-label').addClass('form-contact-page__textarea-label--focus');
+	$(this).parent().find($('.form-contact-page__textarea')).select();
+
+	})
+	.on('blur', function(){
+		$('.form-contact-page__textarea-label').removeClass('form-contact-page__textarea-label--focus');
+	});
 });
