@@ -1,5 +1,9 @@
 .form-contact-page__textarea-wrapper {
 	position: relative;
+	padding-bottom: 11px;
+	@media @desktop {
+		padding-bottom: 13px;
+	}
 }
 .form-contact-page__textarea {
 	width: 100%;
@@ -8,7 +12,6 @@
 	font-size: 14px;
 	color: @active-checkbox;
 	padding-left: 15px;
-	padding-top: 13px;
 	height: 116px;
 	&:focus, &:active {
 		border: 1px solid @active-checkbox;
