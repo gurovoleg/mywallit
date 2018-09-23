@@ -82,17 +82,17 @@ $(document).ready(function() {
 
 	
 	//Scrollbar mobile menu
-	$(".header-nav").niceScroll({
-			cursorcolor:"#ACACAC",
-			cursorwidth:"8px",
-			background:"#DBDBDB",
-			cursorborder:"none",
-			nativeparentscrolling: false,
-			cursorfixedheight: 70,
-			scrollspeed: 300,
-			autohidemode: "scroll",
-			cursorborderradius:4
-	});
+	// $(".header-nav").niceScroll({
+	// 		cursorcolor:"#ACACAC",
+	// 		cursorwidth:"8px",
+	// 		background:"#DBDBDB",
+	// 		cursorborder:"none",
+	// 		nativeparentscrolling: false,
+	// 		cursorfixedheight: 70,
+	// 		scrollspeed: 300,
+	// 		autohidemode: "scroll",
+	// 		cursorborderradius:4
+	// });
 
 
 	// Убрать/Добавить боковую панель (меню)

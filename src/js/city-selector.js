@@ -45,6 +45,7 @@ $(document).ready(function() {
 					var container = $('#header-city-selector');
 					if (container.has(e.target).length === 0 && container.css('display') == 'block'){
 						container.removeClass('d-block');
+						$('body').removeClass('overflow-hidden');
 					}
 				});
 

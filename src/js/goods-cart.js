@@ -15,7 +15,7 @@ $('.menu-block.cart').on('click', function(){
 	$('.goods-cart__page').animate({right: 0}, 100);
 	$('.goods-cart__page-bg').css('display', 'block');
 	$('.blur-wrapper').addClass('filter-blur');
-	$('body').css('overflow', 'hidden');
+	$('body').addClass('overflow-hidden');
 
 	// Убираем скролл, если товар не выходит за пределы блока
 	scrollCart();
@@ -60,7 +60,7 @@ $(document).mouseup(function (e){
 					$('.goods-cart__page-bg').css('display', 'none');
 					$('.blur-wrapper').removeClass('filter-blur');
 				}, 600);
-			$('body').css('overflow', 'auto');
+			$('body').removeClass('overflow-hidden');
 			}
 	}
 });
