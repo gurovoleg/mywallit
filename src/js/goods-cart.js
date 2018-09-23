@@ -60,6 +60,7 @@ $(document).mouseup(function (e){
 					$('.goods-cart__page-bg').css('display', 'none');
 					$('.blur-wrapper').removeClass('filter-blur');
 				}, 600);
+			$('body').css('overflow', 'auto');
 			}
 	}
 });
