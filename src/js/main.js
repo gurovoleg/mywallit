@@ -277,11 +277,13 @@ $(document).ready(function() {
 		var w = $(window).width();
 		// Переход на десктоп
 		if ((w >= tabletWidth) && currentWindowSize <= tabletWidth)  {
-		    $('#menu-level-1 ul').hide();
-		    $('.header-nav').removeClass('mobile-nav-open');
+		    $('#menu-level-1 ul').hide(); // сворачивает все меню при ресазе
 		    // Проверка меню на открытость при переходе
-		    if ($('.bg-header-nav').css('display') == 'block') {	
-		    	$('nav').appendTo('.bg-header-nav .container');
+		    if ($('.bg-header-nav').css('display') == 'block') {
+		    	if ($(".header-nav").hasClass('mobile-nav-open')) {
+		    		$('.header-nav').removeClass('mobile-nav-open');
+		    		$('nav').appendTo('.bg-header-nav .container');
+		    	}
 		    	$('.blur-wrapper').removeClass('filter-blur');
 		    }
 				
