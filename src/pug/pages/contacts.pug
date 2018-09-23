@@ -1,7 +1,7 @@
 extends ../layouts/page-layout/blur-wrapper.pug
 
 block variables
-	- var title = 'Вакансии';
+	- var title = 'Контакты';
 	- var pageClass = 'index-page';
 
 block content
@@ -13,11 +13,11 @@ block content
 				+breadcrumb-item('#', 'Контакты')
 
 	//- Основной контент
-	h1.text-center.section-shops-title Все магазины
-	.section-shops-adress
+	h1.text-center.contact-page__title Контакты
+	.section-contacts
 		.container
 			.row
-				.col-6
+				.col-xs-12.col-sm-12.col-md-6.col-xl-5.offset-xl-1
 					section.text-block.text-block--spacing-normal
 						.text-block.pl-0.mb-20
 							h3.title-3.title-3--grey.text-block__title Контакты интернет-магазина:
@@ -60,9 +60,9 @@ block content
 							p.text-block__paragrafe.text-block__paragrafe--special Пожелания и предложения присылайте на 
 								a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-none.d-xl-inline-block  mywalit@mywalit.ru
 							a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-xl-none  mywalit@mywalit.ru
-				.col-6
+				.col-xs-12.col-sm-12.col-md-6.col-xl-4
 					form.form-contact-page
-						.form-contact-page__title Форма обратной связи
+						h3.title-3.title-3--grey.text-block__title Форма обратной связи
 						.form-contact-page__input-block
 							+inputField('Имя Фамилия*', 'Вы ничего не ввели', 'notEmpty', 'text')
 							+inputField('Email*', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
