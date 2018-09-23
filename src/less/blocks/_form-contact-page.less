@@ -1,5 +1,24 @@
+.contact-page__title {
+	font-size: 24px;
+	color: @title;
+	text-transform: uppercase;
+	padding-bottom: 8px;
+	@media @tablet {
+		padding-bottom: 12px;
+	}
+	@media @desktop {
+		font-size: 28px;
+	}
+	@media @desktopXL {
+		padding-bottom: 25px;
+	}
+}
 .form-contact-page__textarea-wrapper {
 	position: relative;
+	padding-bottom: 11px;
+	@media @desktop {
+		padding-bottom: 13px;
+	}
 }
 .form-contact-page__textarea {
 	width: 100%;
@@ -8,7 +27,7 @@
 	font-size: 14px;
 	color: @active-checkbox;
 	padding-left: 15px;
-	padding-top: 13px;
+	padding-top: 15px;
 	height: 116px;
 	&:focus, &:active {
 		border: 1px solid @active-checkbox;
@@ -42,6 +61,7 @@
 .form-contact-page__title {
 	font-size: 18px;
 	padding-bottom: 16px;
+	color: @text-light-grey;
 	@media @desktop {
 		font-size: 22px;
 		padding-bottom: 19px;
@@ -52,6 +72,9 @@
 	font-size: 12px;
 	color: @text-light-grey;
 	padding-top: 14px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 35px;
 	p {
 		margin:0;
 		line-height: 1.2;

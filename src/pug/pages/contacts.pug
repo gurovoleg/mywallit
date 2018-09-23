@@ -1,0 +1,79 @@
+extends ../layouts/page-layout/blur-wrapper.pug
+
+block variables
+	- var title = 'Контакты';
+	- var pageClass = 'index-page';
+
+block content
+	//- Хлебные крошки
+	.section-breadcrumb
+		.container
+			.breadcrumb-list
+				+breadcrumb-item('#', 'Главная страница')
+				+breadcrumb-item('#', 'Контакты')
+
+	//- Основной контент
+	h1.text-center.contact-page__title Контакты
+	.section-contacts
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-6.col-xl-5.offset-xl-1
+					section.text-block.text-block--spacing-normal
+						.text-block.pl-0.mb-20
+							h3.title-3.title-3--grey.text-block__title Контакты интернет-магазина:
+							p.text-block__paragrafe.text-block__paragrafe--flex.text-block__paragrafe--special
+								span.text-block__paragrafe--phone +7 (800) 222-63-30
+								span.text-block__paragrafe--phone +7 (495) 132-62-60
+								a(href="#").text-block__paragrafe.text-block__paragrafe--email.text-block__paragrafe--special.d-none.d-md-block online@mywalit.ru
+							a(href="#").text-block__paragrafe.text-block__paragrafe--email.text-block__paragrafe--special.d-md-none online@mywalit.ru
+
+						.text-block.pl-0
+							p.text-block__paragrafe.text-block__paragrafe--special График работы:
+							p.text-block__paragrafe.text-block__paragrafe--special ежедневно, с 09:00 до 20:00
+							p.text-block__paragrafe.text-block__paragrafe--special Прием заказов через сайт - круглосуточно
+						.text-block.pl-0
+							p.text-block__paragrafe.text-block__paragrafe--special Ваши вопросы и пожелания присылайте по адресу:
+							a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email  mywalit@mywalit.ru
+							p.text-block__paragrafe.text-block__paragrafe--special Отдел маркетинга и рекламы: 
+								a(href="#").text-block__paragrafe.text-block__paragrafe--email reklama@mywalit.ru
+					section.text-block.text-block--spacing-normal
+						.text-block.pl-0
+							h3.title-3.title-3--grey.text-block__title Контакты центрального офиса:
+							p.text-block__paragrafe.text-block__paragrafe--special Адрес:  Москва, Зорге ул., д. 22А, 13 этаж.
+
+							p.text-block__paragrafe.text-block__paragrafe--flex.text-block__paragrafe--special
+								span.text-block__paragrafe--phone +7 (499) 403-13-36
+								a(href="#").text-block__paragrafe.text-block__paragrafe--email online@mywalit.ru
+						.text-block.pl-0
+							p.text-block__paragrafe.text-block__paragrafe--special График работы:
+							p.text-block__paragrafe.text-block__paragrafe--special ежедневно, с 09:00 до 20:00
+							p.text-block__paragrafe.text-block__paragrafe--special Прием заказов через сайт - круглосуточно
+						.text-block.pl-0
+							p.text-block__paragrafe.text-block__paragrafe--special.
+								По вопросам корпоративных заказов, франчайзинга, сотрудничества с мультибрендовыми магазинами:
+							p.text-block__paragrafe.text-block__paragrafe--flex.text-block__paragrafe--special
+								span.text-block__paragrafe--phone +7 (499) 403-13-36
+								span.text-block__paragrafe--phone +7 (903) 562-91-98
+								a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-none.d-md-block dealer@mywalit.ru
+							a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-md-none dealer@mywalit.ru
+						.text-block.pl-0
+							p.text-block__paragrafe.text-block__paragrafe--special Пожелания и предложения присылайте на 
+								a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-none.d-xl-inline-block  mywalit@mywalit.ru
+							a(href="#").text-block__paragrafe.text-block__paragrafe--special.text-block__paragrafe--email.d-xl-none  mywalit@mywalit.ru
+				.col-xs-12.col-sm-12.col-md-6.col-xl-4
+					form.form-contact-page
+						h3.title-3.title-3--grey.text-block__title Форма обратной связи
+						.form-contact-page__input-block
+							+inputField('Имя Фамилия*', 'Вы ничего не ввели', 'notEmpty', 'text')
+							+inputField('Email*', 'Пожалуйста, введите действительный адрес электронной почты', 'email', 'text')
+							+inputField('Телефон', 'Вы ничего не ввели', 'notEmpty', 'text', 'mb-0').mb-0
+							.form-contact-page__textarea-wrapper
+								textarea.form-contact-page__textarea(name="message", cols="30", rows="10")
+								span.form-contact-page__textarea-label Сообщение*
+								.input-field__error-text.input-field__error-text--textarea Введите сообщение
+						+button-apply('Отправить', '#')
+						.form-contact-page__info
+								p Нажимая кнопку "Отправить", вы соглашаетесь с 
+									a(href="").form-contact-page__info-link условиями оферты 
+									| и 
+									a(href="").form-contact-page__info-link политикой конфиденциальности. 
