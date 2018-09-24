@@ -9,16 +9,16 @@ $(document).ready(function() {
 			tabletWidth = 1152;
 
 		// Касмтоный скролл для списка
-		$(wrapper).niceScroll({
-				cursorcolor:"#ACACAC",
-				cursorwidth:"8px",
-				background:"#DBDBDB",
-				cursorborder:"none",
-				cursorborderradius:4,
-				cursorfixedheight: 70,
-				scrollspeed: 300,
-				autohidemode: false			
-		}); 	
+		// $(wrapper).niceScroll({
+		// 		cursorcolor:"#ACACAC",
+		// 		cursorwidth:"8px",
+		// 		background:"#DBDBDB",
+		// 		cursorborder:"none",
+		// 		cursorborderradius:4,
+		// 		cursorfixedheight: 70,
+		// 		scrollspeed: 300,
+		// 		autohidemode: false			
+		// }); 	
 
 		var citySelector = {
 
