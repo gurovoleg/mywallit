@@ -43,7 +43,7 @@ $('.goods-cart__back-link-item').on('click', function(e){
 		$('.goods-cart__page-bg').css('display', 'none');
 		$('.blur-wrapper').removeClass('filter-blur');
 	}, 600);
-	$('body').css('overflow', 'auto');
+	$('body').removeClass('overflow-hidden');
 });
 
 // Закрываем корзину при клике вне
