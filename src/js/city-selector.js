@@ -53,6 +53,7 @@ $(document).ready(function() {
 					var container = $('#order-city-selector');
 					if (container.has(e.target).length === 0 && container.css('display') == 'block'){
 						container.removeClass('d-block');
+						$('body').removeClass('overflow-hidden');
 					}
 				});	
 			},

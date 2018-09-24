@@ -10,6 +10,7 @@ $(document).ready(function() {
 		$('.goods-cart').css('min-height', '0');
 	}
 }
+
 // Открыть товары в корзине
 $('.menu-block.cart').on('click', function(){
 	$('.goods-cart__page').animate({right: 0}, 100);
@@ -64,7 +65,5 @@ $(document).mouseup(function (e){
 			}
 	}
 });
-
-
 
 });
