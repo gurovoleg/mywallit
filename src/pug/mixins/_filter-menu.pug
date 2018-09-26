@@ -6,8 +6,14 @@ mixin  filter-checkbox (text)
 	label.filter-label 
 		input.filter-checkbox(type='checkbox')
 		span.filter-checkbox-custom
-		span.filter-label-custom #{text}	
+		span.filter-label-custom #{text}
 
+mixin  filter-menu-checkbox (text)
+	label.filter-label 
+		span.filter-span
+			input.filter-checkbox.filter-checkbox-custom(type='checkbox')
+			| #{text}
+			
 mixin  filter-color-checkbox (color)
 	label.label-color-checkbox
 		input(type='checkbox')

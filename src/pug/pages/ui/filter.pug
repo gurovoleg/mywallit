@@ -16,60 +16,51 @@ block content
 				.filter__close-icon#filter__close-icon
 					+icon-close
 			.line-gradient.d-none.d-lg-block
-			ul.filter-menu-l1
-				li ПО ПОЛУ
+			.filter-menu-l1.filter-menu-block
+				.filter-menu-block__title ПО ПОЛУ
 					.filter-icon-close
-					ul.filter-menu-l2
-						li
-							+checkboxFilter('Женщинам')
-						li
-							+checkboxFilter('Мужчинам')
-				li ПО КАТЕГОРИЯМ
+				.filter-menu-l2
+					+filter-menu-checkbox('Женщинам')
+					+filter-menu-checkbox('Мужчинам')
+			.filter-menu-block
+				.filter-menu-block__title ПО КАТЕГОРИЯМ
 					.filter-icon-close
-					ul.filter-menu-l2
-						li
-							+checkboxFilter('Кошельки')
-						li
-							+checkboxFilter('Сумки')
-						li
-							+checkboxFilter('Аксессуары')
-						li
-							+checkboxFilter('Офис и Тревел')
-				li ПО РАЗМЕРУ
+				.filter-menu-l2
+					+filter-menu-checkbox('Кошельки')
+					+filter-menu-checkbox('Сумки')
+					+filter-menu-checkbox('Аксессуары')
+					+filter-menu-checkbox('Офис и Тревел')
+			.filter-menu-block
+				.filter-menu-block__title ПО РАЗМЕРУ
 					.filter-icon-close
-					ul.filter-menu-l2
-						li
-							+checkboxFilter('Большой')
-						li
-							+filter-checkbox('Малый')
-						li
-							+filter-checkbox('Средний')
-				li ПО ЦВЕТУ
+				.filter-menu-l2
+					+filter-menu-checkbox('Большой')
+					+filter-menu-checkbox('Малый')
+					+filter-menu-checkbox('Средний')
+			.filter-menu-block
+				.filter-menu-block__title ПО ЦВЕТУ
 					.filter-icon-close
-					ul.filter-menu-l2.font-size-null
-						li
-							+filter-color-checkbox('#FF7979')
-							+filter-color-checkbox('#6BAC89')
-							+filter-color-checkbox('#C3499E')
-							+filter-color-checkbox('#FFB047')
-							+filter-color-checkbox('#002D76')
-							+filter-color-checkbox('#AF674F')
-							+filter-color-checkbox('#FF7979')
-							+filter-color-checkbox('#6BAC89')
-							+filter-color-checkbox('#C3499E')
-							+filter-color-checkbox('#FFB047')
-							+filter-color-checkbox('#FF7979')
-							+filter-color-checkbox('#6BAC89')
-							
-				li ПО ЦЕНЕ
+				.filter-menu-l2.font-size-null.pb-10
+					+filter-color-checkbox('#FF7979')
+					+filter-color-checkbox('#6BAC89')
+					+filter-color-checkbox('#C3499E')
+					+filter-color-checkbox('#FFB047')
+					+filter-color-checkbox('#002D76')
+					+filter-color-checkbox('#AF674F')
+					+filter-color-checkbox('#FF7979')
+					+filter-color-checkbox('#6BAC89')
+					+filter-color-checkbox('#C3499E')
+					+filter-color-checkbox('#FFB047')
+					+filter-color-checkbox('#FF7979')
+					+filter-color-checkbox('#6BAC89')
+
+			.filter-menu-block
+				.filter-menu-block__title ПО цене
 					.filter-icon-close
-					ul.filter-menu-l2
-						li
-							+checkboxFilter('До 2 000р.')
-						li
-							+checkboxFilter('От 5 000р. до 10 000р.')
-						li
-							+checkboxFilter('От 10 000р.')
+				.filter-menu-l2
+					+filter-menu-checkbox('До 2 000р.')
+					+filter-menu-checkbox('От 5 000р. до 10 000р.')
+					+filter-menu-checkbox('От 10 000р.')
 
 			+button-apply('Применить', '#')
 			label.filter-reset Очисить фильтр
