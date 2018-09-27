@@ -4,12 +4,16 @@
 	color: @textMenu;
 	line-height: 1;
 	
-	// display: flex;
-	// min-height: 100vh;
-	// flex-direction: column;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 
 	@media @desktop {
-		// display: block;
+		display: block;
 		width: 270px;
 	}
 
@@ -28,11 +32,14 @@
 	}
 }
 
-// Wrapper чтобы располодить кнопки меню внизу на мобильном варианте
-// .filter-items-wrapper {
-// 	flex: 1;
-// }
+// Wrapper чтобы расположить кнопки меню внизу на мобильном варианте
+.filter-items-wrapper {
+	flex: 1 0 auto;
+}
 
+.filter-buttons-wrapper {
+	flex: 0 0 auto;
+}
 
 
 // Заголовок формы
