@@ -32,71 +32,62 @@ block content
 						.catalog-wrapper
 							.catalog-filter
 								form.form-filter.catalog-filter__form
-									.filter-header
-										.filter__title ФИЛЬТРЫ
-										.filter__clean-button 
-											a(href="#!") Очистить
-										.filter__close-icon#filter__close-icon
-											+icon-close
-									+color-line(class="d-none d-lg-block")
-									ul.filter-menu-l1
-										li ПО ПОЛУ
-											.filter-icon-close
-											ul.filter-menu-l2
-												li
-													+filter-checkbox('Женщинам')
-												li
-													+filter-checkbox('Мужчинам')
-										li ПО КАТЕГОРИЯМ
-											.filter-icon-close
-											ul.filter-menu-l2
-												li
-													+filter-checkbox('Кошельки')
-												li
-													+filter-checkbox('Сумки')
-												li
-													+filter-checkbox('Аксессуары')
-												li
-													+filter-checkbox('Офис и Тревел')
-										li ПО РАЗМЕРУ
-											.filter-icon-close
-											ul.filter-menu-l2
-												li
-													+filter-checkbox('Большой')
-												li
-													+filter-checkbox('Малый')
-												li
-													+filter-checkbox('Средний')
-										li ПО ЦВЕТУ
-											.filter-icon-close
-											ul.filter-menu-l2.font-size-null
-												li
-													+filter-color-checkbox('col1.png', 'черный/аллюр')
-													+filter-color-checkbox('col2.png', 'черный/аллюр')
-													+filter-color-checkbox('col5.png', 'черный/аллюр')
-													+filter-color-checkbox('col4.png', 'черный/аллюр')
-													+filter-color-checkbox('col6.png', 'черный/аллюр')
-													+filter-color-checkbox('col7.jpg', 'черный/аллюр')
-													+filter-color-checkbox('col9.png', 'черный/аллюр')
-													+filter-color-checkbox('col8.png', 'черный/аллюр')
-													+filter-color-checkbox('col10.png', 'черный/аллюр')
-													+filter-color-checkbox('col11.png', 'черный/аллюр')
-													+filter-color-checkbox('col1.png', 'черный/аллюр')
-													+filter-color-checkbox('col2.png', 'черный/аллюр')
-													
-										li ПО ЦЕНЕ
-											.filter-icon-close
-											ul.filter-menu-l2
-												li
-													+filter-checkbox('До 2 000р.')
-												li
-													+filter-checkbox('От 5 000р. до 10 000р.')
-												li
-													+filter-checkbox('От 10 000р.')
-
-									+button-apply('Применить', '#')
-									label.filter-reset Очисить фильтр
-										input(type='Reset' value='Очистить фильтр')
+									.filter-items-wrapper
+										.filter-header
+											.filter__title ФИЛЬТРЫ
+											.filter__clean-button 
+												a(href="#!") Очистить
+											.filter__close-icon#filter__close-icon
+												+icon-close
+										+color-line(class="d-none d-lg-block")
+										.filter-menu-block
+											.filter-menu-block__title ПО ПОЛУ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Женщинам')
+												+filter-menu-checkbox('Мужчинам')
+										.filter-menu-block
+											.filter-menu-block__title ПО КАТЕГОРИЯМ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Кошельки')
+												+filter-menu-checkbox('Сумки')
+												+filter-menu-checkbox('Аксессуары')
+												+filter-menu-checkbox('Офис и Тревел')
+										.filter-menu-block
+											.filter-menu-block__title ПО РАЗМЕРУ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Большой')
+												+filter-menu-checkbox('Малый')
+												+filter-menu-checkbox('Средний')
+										.filter-menu-block
+											.filter-menu-block__title ПО ЦВЕТУ
+												.filter-item-toggle
+											.filter-submenu-block.font-size-null.pb-10
+												+filter-color-checkbox('col1.png', 'черный/аллюр')
+												+filter-color-checkbox('col2.png', 'черный/аллюр')
+												+filter-color-checkbox('col5.png', 'черный/аллюр')
+												+filter-color-checkbox('col4.png', 'черный/аллюр')
+												+filter-color-checkbox('col6.png', 'черный/аллюр')
+												+filter-color-checkbox('col7.jpg', 'черный/аллюр')
+												+filter-color-checkbox('col9.png', 'черный/аллюр')
+												+filter-color-checkbox('col8.png', 'черный/аллюр')
+												+filter-color-checkbox('col10.png', 'черный/аллюр')
+												+filter-color-checkbox('col11.png', 'черный/аллюр')
+												+filter-color-checkbox('col1.png', 'черный/аллюр')
+												+filter-color-checkbox('col2.png', 'черный/аллюр')
+										.filter-menu-block
+											.filter-menu-block__title ПО цене
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('До 2 000р.')
+												+filter-menu-checkbox('От 5 000р. до 10 000р.')
+												+filter-menu-checkbox('От 10 000р.')
+									.filter-buttons-wrapper
+										+button-apply('Применить', '#')
+										label.filter-reset Очисить фильтр
+											input(type='Reset' value='Очистить фильтр')
 					.col-md-12.col-lg-9
 						.catalog-filters
 							.catalog-filters__badge

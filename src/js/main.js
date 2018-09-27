@@ -312,7 +312,7 @@ $(document).ready(function() {
 
 	// Переход между мобильной версией и дестопом для городов и фильтра
 	$(window).resize(function(){
-		var w = $(window).width();
+		var w = $(window).outerWidth();
 		
 		// Переход на Desktop (исключая открытую корзину)
 		if ( w >= tabletWidth && $('.goods-cart__page-bg').css('display') == 'none' ) {
@@ -321,7 +321,6 @@ $(document).ready(function() {
 
 		// Переход на планшет
 		if (w < tabletWidth) {
-
 			// Блоки с городами
 			var isOpened = false;
 			
@@ -332,11 +331,11 @@ $(document).ready(function() {
 			
 			// Блок фильтр
 			if ( $('.catalog-filter').hasClass('catalog-filter--show')) {
+				console.log('add');
 				$('body').addClass('overflow-hidden');
 			} else {
 				$('.catalog-filter').css({'transition' : 'none'});
 			}
-
 		}
 
 	});
