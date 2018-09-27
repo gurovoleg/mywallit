@@ -3,43 +3,42 @@
 	width: 360px;
 	color: @textMenu;
 	line-height: 1;
-	//text-align: center;
+	// text-align: center;
 
 	@media @desktop {
 		width: 270px;
 	}
 
-	ul {
-		list-style: none;
-	}
 	.filter-label {
 		margin: 0; // margin-left: 8px;
 		cursor: pointer;
 		display: block;
+
+		&:last-child .filter-span {
+			margin-bottom: 0;
+
+			@media @desktop {
+				margin-bottom: 8px;
+			}
+		}
 	}
 }
 
 // Заголовок формы
 .filter-header {
 	display: block;
-	align-items: center;
-	justify-content: space-between;
+	text-align: center;
 	padding: 16px 0;
 	position: relative;
 	border-bottom: 1px solid @borderMenu;
 
 	@media @desktop {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		border:none;
 		padding: 12px 0;
 	}
-}
-.filter-menu-block{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	@media @desktop {
-	border-bottom: 1px solid @borderMenu;}
 }
 
 .filter__title {
@@ -51,22 +50,8 @@
 		font-size: 20px;
 	}
 }
-.filter-menu-block__title{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 16px;
-	color:@textMenu;
-	text-transform: uppercase;
-	border-bottom:1px solid @borderMenu;
-	padding-left: 16px;
-	@media @desktop {
-		padding-top: 20px;
-		padding-bottom: 0;
-		margin-bottom: 20px;
-		border-bottom: 0px;
-	}
-}
 
+// Очистить
 .filter__clean-button {
 	display: none;
 	font-size: 16px;
@@ -80,9 +65,7 @@
 	a {
 		text-decoration: none;
 		color: @text-light-grey;
-		&:hover {
-			color: @text-red;
-		}
+		&:hover {color: @text-red;}
 	}
 }
 
@@ -95,67 +78,59 @@
 	top: 50%;
 	transform: translateY(-50%);
 
+	@media @desktop {display: none;}
+}
+
+// Меню
+.filter-menu-block{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	// @media @desktop {
+	// border-bottom: 1px solid @borderMenu;}
+}
+
+.filter-menu-block__title{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color:@textMenu;
+	text-transform: uppercase;
+	border-bottom:1px solid @borderMenu;
+	padding-left: 16px;
+	cursor: pointer;
 
 	@media @desktop {
-		display: none;
+		cursor:default;
+		padding-top: 20px;
+		padding-bottom: 0;
+		padding-left: 0;
+		margin-bottom: 8px;
+		border-bottom: 0px;
 	}
 }
 
-
-// Меню 1 уровня
-.filter-menu-l1 {
-	margin: 0;
-	padding: 0 0;
-	text-transform: uppercase;
-	text-align: left;
-	>li {
-		position: relative;
-		padding: 12px 16px;
-		cursor: pointer;
-		border-bottom: 1px solid @borderMenu; // отступ от кнопки
-		&:last-child {
-			margin-bottom: 94px;
-		}
-
-		@media @desktop {
-			padding: 16px 8px 0px 8px;
-			border: none;
-
-			&:last-child {
-				margin-bottom: 22px;
-			}
-		} // Убрать border у послденего
-		&:last-child .filter-menu-l2 {
-			border-bottom: none;
-		}
-	}
-}
-
-// Меню 2 уровня
-.filter-menu-l2 {
+// Подменю
+.filter-submenu-block {
 	display: none;
-	margin: 0;
-	padding: 0;
 	text-transform: none; // border-bottom:none;
 	color: @borderMenu;
-	padding-left: 16px;
-
-	/* >li {
-		padding: 8px 0;
-	}
+	// padding-left: 26px;
+	padding: 14px 0 8px 26px;
 	
 	@media @desktop {
 		display: block;
+		padding-left: 0px;
 		border-bottom: 1px solid @borderMenu;
-	} */
+	} 
 }
 
-// Кастомный чекбокс
+// Кастомный чекбокс 
 .filter-checkbox-custom:before {
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 2px;
+	top: 0;
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -167,29 +142,33 @@
 	transition: 0.1s ease-out;
 	cursor:pointer;
 }
+
 .filter-span{
 	position: relative;
 	padding-left: 20px;
 	display: block;
-	@media @desktop{
-	margin-bottom: 19px;}	
+	margin-bottom: 20px;
+
+	// @media @desktop{margin-bottom: 19px;}	
 }
 
 .filter-checkbox {
 	width: 0.1px;
 	height: 0.1px;
-
 }
-
-
 
 .filter-checkbox.filter-checkbox-custom:checked:before {
 	background-position: center;
 	border-color: @textMenu;
 }
 
+.filter-checkbox:checked ~ .filter-label-custom {
+	color:@textMenu;
+}
+
 // Кнопка сброс RESET
 .filter-reset {
+	display: block;
 	text-align: center;
 	padding: 12px 0;
 	cursor: pointer;
@@ -204,13 +183,9 @@
 	margin-right: 8px;
 	margin-bottom: 8px;
 
-	&:last-child {
-		margin-right: 0;
-	}
+	&:last-child {margin-right: 0;}
 
-	input {
-		display: none;
-	}
+	input {display: none;}
 }
 
 // Псевдо чекбокс
@@ -227,7 +202,7 @@
 	}
 }
 
-// Жобавляем рамку при выборе
+// Добавляем рамку при выборе
 .label-color-checkbox input:checked+.filter-color-checkbox {
 	box-shadow: 0 0 0 1px @white,
 	0 0 0 3px @color-11;
@@ -253,9 +228,7 @@
 		background-color: transparent;
 	}
 
-	@media @desktop {
-		display: none;
-	}
+	@media @desktop {display: none;}
 }
 
 // класс для открытия/закрытия иконки
@@ -266,5 +239,34 @@
 .is-opened.filter-icon-close:after {
 	background-color: @textMenu;
 }
-.filter-menu-block{	
-	}
+
+
+
+// Меню 1 уровня
+// .filter-menu-l1 {
+// 	margin: 0;
+// 	padding: 0 0;
+// 	text-transform: uppercase;
+// 	text-align: left;
+// 	// >li {
+// 	// 	position: relative;
+// 	// 	padding: 12px 16px;
+// 	// 	cursor: pointer;
+// 	// 	border-bottom: 1px solid @borderMenu; // отступ от кнопки
+// 	// 	&:last-child {
+// 	// 		margin-bottom: 94px;
+// 	// 	}
+
+// 	// 	@media @desktop {
+// 	// 		padding: 16px 8px 0px 8px;
+// 	// 		border: none;
+
+// 	// 		&:last-child {
+// 	// 			margin-bottom: 22px;
+// 	// 		}
+// 	// 	} // Убрать border у послденего
+// 	// 	&:last-child .filter-menu-l2 {
+// 	// 		border-bottom: none;
+// 	// 	}
+// 	// }
+// }

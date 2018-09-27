@@ -15,17 +15,17 @@ block content
 					a(href="#!") Очистить
 				.filter__close-icon#filter__close-icon
 					+icon-close
-			.line-gradient.d-none.d-lg-block
-			.filter-menu-l1.filter-menu-block
+			+color-line(class="d-none d-lg-block")
+			.filter-menu-block
 				.filter-menu-block__title ПО ПОЛУ
 					.filter-icon-close
-				.filter-menu-l2
+				.filter-submenu-block
 					+filter-menu-checkbox('Женщинам')
 					+filter-menu-checkbox('Мужчинам')
 			.filter-menu-block
 				.filter-menu-block__title ПО КАТЕГОРИЯМ
 					.filter-icon-close
-				.filter-menu-l2
+				.filter-submenu-block
 					+filter-menu-checkbox('Кошельки')
 					+filter-menu-checkbox('Сумки')
 					+filter-menu-checkbox('Аксессуары')
@@ -33,14 +33,14 @@ block content
 			.filter-menu-block
 				.filter-menu-block__title ПО РАЗМЕРУ
 					.filter-icon-close
-				.filter-menu-l2
+				.filter-submenu-block
 					+filter-menu-checkbox('Большой')
 					+filter-menu-checkbox('Малый')
 					+filter-menu-checkbox('Средний')
 			.filter-menu-block
 				.filter-menu-block__title ПО ЦВЕТУ
 					.filter-icon-close
-				.filter-menu-l2.font-size-null.pb-10
+				.filter-submenu-block.font-size-null.pb-10
 					+filter-color-checkbox('#FF7979')
 					+filter-color-checkbox('#6BAC89')
 					+filter-color-checkbox('#C3499E')
@@ -57,7 +57,7 @@ block content
 			.filter-menu-block
 				.filter-menu-block__title ПО цене
 					.filter-icon-close
-				.filter-menu-l2
+				.filter-submenu-block
 					+filter-menu-checkbox('До 2 000р.')
 					+filter-menu-checkbox('От 5 000р. до 10 000р.')
 					+filter-menu-checkbox('От 10 000р.')
