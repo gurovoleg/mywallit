@@ -36,10 +36,11 @@
 }
 .filter-menu-block{
 	position: relative;
-	//padding-top: 20px;
-	//padding-bottom: 20px;
-
+	display: flex;
+	flex-direction: column;
+	
 }
+
 .filter__title {
 	font-size: 18px;
 	color: @textMenu;
@@ -56,6 +57,7 @@
 	color:@textMenu;
 	text-transform: uppercase;
 	border-bottom:1px solid @borderMenu;
+	padding-left: 16px;
 	@media @desktop {
 		padding-top: 20px;
 		padding-bottom: 0;
@@ -135,16 +137,16 @@
 	padding: 0;
 	text-transform: none; // border-bottom:none;
 	color: @borderMenu;
-	//padding: 8px 0;
+	padding-left: 16px;
 
-	>li {
+	/* >li {
 		padding: 8px 0;
 	}
-
+	
 	@media @desktop {
 		display: block;
 		border-bottom: 1px solid @borderMenu;
-	}
+	} */
 }
 
 // Кастомный чекбокс
@@ -236,7 +238,7 @@
 		content: "+";
 		position: absolute;
 		right: 14px;
-		top: 7px;
+		top: 5px;
 		color: @textMenu;
 		font-size: 28px;
 	}
@@ -264,7 +266,4 @@
 	background-color: @textMenu;
 }
 .filter-menu-block{	
-	display: flex;
-	flex-direction: column;
-	padding-left: 10px;
-}
+	}
