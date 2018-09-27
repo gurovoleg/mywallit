@@ -4,12 +4,12 @@
 	color: @textMenu;
 	line-height: 1;
 	
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+	// display: flex;
+	// min-height: 100vh;
+	// flex-direction: column;
 
 	@media @desktop {
-		display: block;
+		// display: block;
 		width: 270px;
 	}
 
@@ -29,9 +29,11 @@
 }
 
 // Wrapper чтобы располодить кнопки меню внизу на мобильном варианте
-.filter-items-wrapper {
-	flex: 1;
-}
+// .filter-items-wrapper {
+// 	flex: 1;
+// }
+
+
 
 // Заголовок формы
 .filter-header {
@@ -135,11 +137,12 @@
 }
 
 // Кастомный чекбокс 
-.filter-checkbox-custom:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
+// .filter-checkbox-custom:before {
+.filter-checkbox-custom {
+	// content: "";
+	// position: absolute;
+	// left: 0;
+	// top: 0;
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -153,8 +156,8 @@
 }
 
 .filter-span{
-	position: relative;
-	padding-left: 20px;
+	// position: relative;
+	// padding-left: 20px;
 	display: block;
 	margin-bottom: 20px;
 }
@@ -164,10 +167,16 @@
 	height: 0.1px;
 }
 
-.filter-checkbox.filter-checkbox-custom:checked:before {
+// .filter-checkbox.filter-checkbox-custom:checked:before {
+// 	background-position: center;
+// 	border-color: @textMenu;
+// }
+
+.filter-checkbox:checked ~ .filter-checkbox-custom {
 	background-position: center;
 	border-color: @textMenu;
 }
+
 
 .filter-checkbox:checked ~ .filter-label-custom {
 	color:@textMenu;
@@ -207,12 +216,16 @@
 	&:hover {
 		transform: scale(1.1);
 	}
+
+	img {
+		pointer-events: none;
+	}
 }
 
 // Добавляем рамку при выборе
-.label-color-checkbox input:checked+.filter-color-checkbox {
-	box-shadow: 0 0 0 1px @white,
-	0 0 0 3px @text-salad;
+.label-color-checkbox input[type="checkbox"]:checked + .filter-color-checkbox {
+	box-shadow: 0 0 0 2px @white,
+	0 0 0 4px @text-salad;
 }
 
 // Иконка плюс-минус

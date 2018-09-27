@@ -11,7 +11,9 @@ mixin  filter-checkbox (text)
 mixin  filter-menu-checkbox (text)
 	label.filter-label 
 		span.filter-span
-			input.filter-checkbox.filter-checkbox-custom(type='checkbox')
+			//- input.filter-checkbox.filter-checkbox-custom(type='checkbox')
+			input.filter-checkbox(type='checkbox')
+			span.filter-checkbox-custom
 			span.filter-label-custom #{text}
 			
 //- mixin  filter-color-checkbox (color)
