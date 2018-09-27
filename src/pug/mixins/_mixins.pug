@@ -1,9 +1,9 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
-mixin colors-product__circle(imgSrc)
+mixin colors-product__circle(imgSrc, titleText)
 	
 		.colors-product__circle
 			a.colors-product-link(href="#")
-				img(src="../img/good_colors/"+ imgSrc)
+				img(src="../img/good_colors/"+ imgSrc  alt="color" title =""+ titleText)
 
 //- Mixn for search result
 mixin searchResult (img, text)
