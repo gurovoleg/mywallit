@@ -32,62 +32,64 @@ block content
 						.catalog-wrapper
 							.catalog-filter
 								form.form-filter.catalog-filter__form
-									.filter-header
-										.filter__title ФИЛЬТРЫ
-										.filter__clean-button 
-											a(href="#!") Очистить
-										.filter__close-icon#filter__close-icon
-											+icon-close
-									+color-line(class="d-none d-lg-block")
-									.filter-menu-block
-										.filter-menu-block__title ПО ПОЛУ
-											.filter-icon-close
-										.filter-submenu-block
-											+filter-menu-checkbox('Женщинам')
-											+filter-menu-checkbox('Мужчинам')
-									.filter-menu-block
-										.filter-menu-block__title ПО КАТЕГОРИЯМ
-											.filter-icon-close
-										.filter-submenu-block
-											+filter-menu-checkbox('Кошельки')
-											+filter-menu-checkbox('Сумки')
-											+filter-menu-checkbox('Аксессуары')
-											+filter-menu-checkbox('Офис и Тревел')
-									.filter-menu-block
-										.filter-menu-block__title ПО РАЗМЕРУ
-											.filter-icon-close
-										.filter-submenu-block
-											+filter-menu-checkbox('Большой')
-											+filter-menu-checkbox('Малый')
-											+filter-menu-checkbox('Средний')
-									.filter-menu-block
-										.filter-menu-block__title ПО ЦВЕТУ
-											.filter-icon-close
-										.filter-submenu-block.font-size-null.pb-10
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
-											+filter-color-checkbox('#C3499E')
-											+filter-color-checkbox('#FFB047')
-											+filter-color-checkbox('#002D76')
-											+filter-color-checkbox('#AF674F')
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
-											+filter-color-checkbox('#C3499E')
-											+filter-color-checkbox('#FFB047')
-											+filter-color-checkbox('#FF7979')
-											+filter-color-checkbox('#6BAC89')
+									.filter-items-wrapper
+										.filter-header
+											.filter__title ФИЛЬТРЫ
+											.filter__clean-button 
+												a(href="#!") Очистить
+											.filter__close-icon#filter__close-icon
+												+icon-close
+										+color-line(class="d-none d-lg-block")
+										.filter-menu-block
+											.filter-menu-block__title ПО ПОЛУ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Женщинам')
+												+filter-menu-checkbox('Мужчинам')
+										.filter-menu-block
+											.filter-menu-block__title ПО КАТЕГОРИЯМ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Кошельки')
+												+filter-menu-checkbox('Сумки')
+												+filter-menu-checkbox('Аксессуары')
+												+filter-menu-checkbox('Офис и Тревел')
+										.filter-menu-block
+											.filter-menu-block__title ПО РАЗМЕРУ
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('Большой')
+												+filter-menu-checkbox('Малый')
+												+filter-menu-checkbox('Средний')
+										.filter-menu-block
+											.filter-menu-block__title ПО ЦВЕТУ
+												.filter-item-toggle
+											.filter-submenu-block.font-size-null.pb-10
+												+filter-color-checkbox('#FF7979')
+												+filter-color-checkbox('#6BAC89')
+												+filter-color-checkbox('#C3499E')
+												+filter-color-checkbox('#FFB047')
+												+filter-color-checkbox('#002D76')
+												+filter-color-checkbox('#AF674F')
+												+filter-color-checkbox('#FF7979')
+												+filter-color-checkbox('#6BAC89')
+												+filter-color-checkbox('#C3499E')
+												+filter-color-checkbox('#FFB047')
+												+filter-color-checkbox('#FF7979')
+												+filter-color-checkbox('#6BAC89')
 
-									.filter-menu-block
-										.filter-menu-block__title ПО цене
-											.filter-icon-close
-										.filter-submenu-block
-											+filter-menu-checkbox('До 2 000р.')
-											+filter-menu-checkbox('От 5 000р. до 10 000р.')
-											+filter-menu-checkbox('От 10 000р.')
+										.filter-menu-block
+											.filter-menu-block__title ПО цене
+												.filter-item-toggle
+											.filter-submenu-block
+												+filter-menu-checkbox('До 2 000р.')
+												+filter-menu-checkbox('От 5 000р. до 10 000р.')
+												+filter-menu-checkbox('От 10 000р.')
 
-									+button-apply('Применить', '#')
-									label.filter-reset Очисить фильтр
-										input(type='Reset' value='Очистить фильтр')
+									.filter-buttons-wrapper
+										+button-apply('Применить', '#')
+										label.filter-reset Очисить фильтр
+											input(type='Reset' value='Очистить фильтр')
 					.col-md-12.col-lg-9
 						.catalog-filters
 							.catalog-filters__badge
