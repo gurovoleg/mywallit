@@ -14,7 +14,10 @@ mixin  filter-menu-checkbox (text)
 			input.filter-checkbox.filter-checkbox-custom(type='checkbox')
 			span.filter-label-custom #{text}
 			
-mixin  filter-color-checkbox (color)
+//- mixin  filter-color-checkbox (color)
+
+mixin  filter-color-checkbox (imgSrc, titleText)
 	label.label-color-checkbox
 		input(type='checkbox')
-		.filter-color-checkbox(Style="background-color: " + color)
+		.filter-color-checkbox
+			img(src="../img/good_colors/"+ imgSrc, alt="color" title=""+ titleText)
