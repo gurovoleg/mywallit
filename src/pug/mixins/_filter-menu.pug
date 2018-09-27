@@ -8,7 +8,8 @@ mixin  filter-checkbox (text)
 		span.filter-checkbox-custom
 		span.filter-label-custom #{text}	
 
-mixin  filter-color-checkbox (color)
+mixin  filter-color-checkbox (imgSrc, titleText)
 	label.label-color-checkbox
 		input(type='checkbox')
-		.filter-color-checkbox(Style="background-color: " + color)
+		.filter-color-checkbox
+			img(src="../img/good_colors/"+ imgSrc, alt="color" title=""+ titleText)
