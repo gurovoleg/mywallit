@@ -117,13 +117,27 @@ block content
 								a.filter-name.catalog-filters__badge-item(href="#") Кошельки
 									.filter-close
 							.catalog-filters__title Фильтр
-							.drop-down
-								.drop-down-check.menu-icon
-								.drop-down-item-block
-									.drop-down-item По популярности
-									.drop-down-item Новинки
-									.drop-down-item.drop-down-item--active По возрастанию цены
-									.drop-down-item По убыванию цены
+							//- .drop-down
+							//- 	.drop-down-check.menu-icon
+							//- 	.drop-down-item-block
+							//- 		.drop-down-item По популярности
+							//- 		.drop-down-item Новинки
+							//- 		.drop-down-item.drop-down-item--active По возрастанию цены
+							//- 		.drop-down-item По убыванию цены
+							//- .drop-down
+							//- 	select.drop-down-item-block
+							//- 		option.drop-down-item По популярности
+							//- 		option.drop-down-item Новинки
+							//- 		option.drop-down-item По популярности
+							//- 		option.drop-down-item.drop-down-item--active По возрастанию цены
+							//- 		option.drop-down-item По убыванию цены
+							form.drop-down#drop-down(action='#')
+									#drop-down-check.drop-down-check.menu-icon
+									select.turnintodropdown#turnintodropdown
+										option По возрастанию цены
+										option По популярности
+										option Новинки
+										option По убыванию цены										
 						.row
 							.col-6.col-sm-6.col-md-3.col-lg-4
 								+card--sale( '- 40%','','goods/purse-brown-hover.png', 'goods/purse_brown.png', 'purse brown','#', 'Портмоне тройного сложения с внешним карманом для монет на молнии, с ручкой', '4 863р.', '4 863р.' )(class="card-product--colorscheme")
