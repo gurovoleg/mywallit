@@ -158,8 +158,10 @@ function tamingselect()
 	}
 }
 
-window.onload=function()
-{
-	tamingselect();
-	// add more functions if necessary
-}
+tamingselect();
+
+// window.onload=function()
+// {
+// 	tamingselect();
+// 	// add more functions if necessary
+// }
