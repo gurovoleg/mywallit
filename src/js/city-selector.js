@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$cityList = $(wrapper),  // блок с городами
 			tabletWidth = 1152;
 
-		// Касмтоный скролл для списка
+		// Касмтоный скролл для списка 
 		// $(wrapper).niceScroll({
 		// 		cursorcolor:"#ACACAC",
 		// 		cursorwidth:"8px",
