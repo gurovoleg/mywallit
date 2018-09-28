@@ -9,19 +9,27 @@ block content
 	.container.container--left
 		.title Фильтр - популярные
 		.section-ui
-			.drop-down
-				.drop-down-check.menu-icon
-				.drop-down-item-block
-					.drop-down-item.drop-down-item--active По популярности
-					.drop-down-item Новинки
-					.drop-down-item По возрастанию цены
-					.drop-down-item По убыванию цены
+			//- .drop-down
+			//- 	.drop-down-check.menu-icon
+			//- 	.drop-down-item-block
+			//- 		.drop-down-item.drop-down-item--active По популярности
+			//- 		.drop-down-item Новинки
+			//- 		.drop-down-item По возрастанию цены
+			//- 		.drop-down-item По убыванию цены
+			form.drop-down#drop-down(action='#' style="margin-right: 20px;")
+				#drop-down-check.drop-down-check.menu-icon
+				select.turnintodropdown#turnintodropdown
+					option По возрастанию цены
+					option По возрастанию цены
+					option По популярности
+					option Новинки
+					option По убыванию цены
 		pre.
-			.drop-down
-				.drop-down-check.menu-icon
-				.drop-down-item-block
-					.drop-down-item.drop-down-item--active По популярности
-					.drop-down-item Новинки
-					.drop-down-item По возрастанию цены
-					.drop-down-item По убыванию цены
+			form.drop-down#drop-down(action='#')
+				#drop-down-check.drop-down-check.menu-icon
+				select.turnintodropdown#turnintodropdown
+					option По возрастанию цены
+					option По популярности
+					option Новинки
+					option По убыванию цены
 
