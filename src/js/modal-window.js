@@ -27,10 +27,6 @@ $(document).ready(function() {
 
 			_setupListners: function(){
 				
-				$('.modal-window').on('click', function(e){
-					e.stopPropagation();
-				});
-
 				$showModal.on('click', function(){
 					mw = $(this).attr('data-modal');
 					modalWindow._open(mw)	
@@ -45,6 +41,10 @@ $(document).ready(function() {
 					mw = 'all';
 					modalWindow._close(mw);	
 				});				
+
+					$('.modal-window').on('click', function(e){
+					e.stopPropagation();
+				});
 	
 			},
 

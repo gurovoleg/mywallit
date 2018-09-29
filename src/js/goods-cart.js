@@ -49,7 +49,10 @@ $('.goods-cart__back-link-item').on('click', function(e){
 // Закрываем корзину при клике вне
 $(document).mouseup(function (e){
 	var cart = $('.goods-cart__page');
-	if  ( $('.blur-wrapper').hasClass('filter-blur') && !cart.is(e.target) && cart.has(e.target).length == 0) {
+	
+	// если коризна открыта
+	if ( $('.goods-cart__page-bg').css('display')=='block' ) {
+		if  ( $('.blur-wrapper').hasClass('filter-blur') && !cart.is(e.target) && cart.has(e.target).length == 0) {
 			$('.goods-cart__page').animate({right: -360}, 100);
 
 			var w = $(window).width();
@@ -60,9 +63,12 @@ $(document).mouseup(function (e){
 				setTimeout(function(){
 					$('.goods-cart__page-bg').css('display', 'none');
 					$('.blur-wrapper').removeClass('filter-blur');
+					console.log('test');
 				}, 600);
 			$('body').removeClass('overflow-hidden');
 			}
+		}
+	
 	}
 });
 
